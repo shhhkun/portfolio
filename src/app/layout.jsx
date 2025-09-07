@@ -1,5 +1,6 @@
 import React from "react";
 import HomeWindow from "./components/HomeWindow";
+import "./globals.css";
 
 const Layout = ({}) => {
   return (
