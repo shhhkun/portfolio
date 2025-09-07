@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 
-const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
+const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const nodeRef = useRef(null);
 
   const [bounds, setBounds] = useState({
@@ -18,7 +18,7 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56; // adjust later
+        const headerHeight = 53; // adjust later
 
         setBounds({
           top: 0,
@@ -45,18 +45,32 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
     >
       <div
         ref={nodeRef}
-        className="rounded-2xl shadow-2xl overflow-hidden bg-purple-800"
+        className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "400px",
-          height: "300px",
+          width: "809px",
+          height: "561.9px",
+          borderRadius: "10px",
+          border: "2px solid ",
+          boxSizing: "border-box",
           position: "absolute",
         }}
         onMouseDown={onFocus}
       >
         {/* Window Header */}
-        <div className="handle p-4 bg-purple-600 text-white cursor-grab flex items-center justify-between">
-          <p className="font-bold">Drag Me!</p>
+        <div
+          className="handle cursor-grab flex items-center justify-between text-white px-4 py-2 font-light"
+          style={{
+            fontSize: "1.25rem",
+            backgroundColor: "#171717",
+            height: "53px",
+            borderBottom: "2px solid white",
+            display: "flex",
+            alignItems: "center",
+            paddingLeft: "1.5rem",
+          }}
+        >
+          <p className="font-bold">About Me</p>
           <button
             onClick={onClose}
             className="text-white bg-transparent border-none p-1 leading-none text-xl font-bold rounded-full hover:bg-purple-700 transition-colors"
@@ -66,7 +80,12 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
         </div>
 
         {/* Main Content Area */}
-        <div className="p-4 flex-grow">
+        <div
+          className="p-4 flex-grow overflow-y-auto"
+          style={{
+            backgroundColor: "#132135",
+          }}
+        >
           <p className="text-white">
             This is the content of the draggable window. This content can be
             hidden when dragged below the viewport.
@@ -77,4 +96,4 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
   );
 };
 
-export default DraggableWrapper;
+export default AboutWindow;

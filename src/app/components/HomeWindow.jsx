@@ -22,7 +22,7 @@ const HomeWindow = ({ children }) => {
           borderBottom: "2px solid white",
           display: "flex",
           alignItems: "center",
-          paddingLeft: "1.5rem"
+          paddingLeft: "1.5rem",
         }}
       >
         <p>home</p>
