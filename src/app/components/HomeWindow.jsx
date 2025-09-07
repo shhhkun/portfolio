@@ -30,7 +30,7 @@ const HomeWindow = ({ children }) => {
 
       {/* Main Content Area */}
       <div
-        className="w-full flex-grow"
+        className="w-full flex-grow overflow-y-auto"
         style={{
           backgroundColor: "#132135",
         }}

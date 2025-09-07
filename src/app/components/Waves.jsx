@@ -57,6 +57,9 @@ const Waves = ({ theme }) => {
       <Wave
         fill="url(#gradient-wave1)"
         className="z-9 absolute bottom-0 h-60 w-full"
+        options={{
+          amplitude: 35,
+        }}
       >
         <defs>
           <linearGradient id="gradient-wave1" gradientTransform="rotate(90)">
@@ -71,7 +74,7 @@ const Waves = ({ theme }) => {
         <Wave
           fill="url(#gradient-wave2)"
           options={{
-            amplitude: 5,
+            amplitude: 15,
           }}
         >
           <defs>
@@ -91,7 +94,7 @@ const Waves = ({ theme }) => {
         <Wave
           fill={palette.wave3_fill}
           options={{
-            amplitude: 10,
+            amplitude: 25,
           }}
         />
       </div>

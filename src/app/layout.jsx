@@ -3,6 +3,8 @@ import HomeWindow from "./components/HomeWindow";
 import Waves from "./components/Waves";
 import "./globals.css";
 
+import DraggableWrapper from "./components/DraggableWrapper";
+
 const Layout = ({}) => {
   return (
     <html lang="en">
@@ -20,6 +22,9 @@ const Layout = ({}) => {
 
           {/* Bottom Wavify Animation */}
           <Waves />
+
+          <DraggableWrapper />
+
         </div>
       </body>
     </html>
