@@ -48,8 +48,8 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "809px",
-          height: "561.9px",
+          width: "800px",
+          height: "560px",
           borderRadius: "10px",
           border: "2px solid ",
           boxSizing: "border-box",
@@ -85,7 +85,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{ backgroundColor: "#132135" }}
         >
           {/* Profile Picture and Name */}
-          <div className="flex items-center p-12">
+          <div className="flex items-center px-12 py-8">
             <div
               className="rounded-full overflow-hidden"
               style={{

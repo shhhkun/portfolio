@@ -7,9 +7,11 @@ import "./globals.css";
 
 import DraggableWrapper from "./components/DraggableWrapper";
 import AboutWindow from "./components/AboutWindow";
+import WorkWindow from "./components/WorkWindow";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
+  work: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
   test: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
 };
 
@@ -89,6 +91,15 @@ const Layout = ({ children }) => {
               onStop={(e, ui) => handleStop("about", e, ui)}
               zIndex={windows.about.zIndex}
               position={windows.about.position}
+            />
+          )}
+          {windows.work.isOpen && (
+            <WorkWindow
+              onClose={() => handleClose("work")}
+              onFocus={() => handleFocus("work")}
+              onStop={(e, ui) => handleStop("work", e, ui)}
+              zIndex={windows.work.zIndex}
+              position={windows.work.position}
             />
           )}
           {windows.test.isOpen && (
