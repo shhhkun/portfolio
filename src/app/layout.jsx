@@ -74,27 +74,11 @@ const Layout = ({ children }) => {
           <div className="absolute inset-0 flex flex-col items-center justify-center">
             {/* Home Window */}
             <div className="z-10">
-              <HomeWindow />
+              <HomeWindow handleOpen={handleOpen} />
             </div>
 
             {/* Bottom Wavify Animation */}
             <Waves theme="sunset" />
-
-            {/* Temp buttons for windows (to be moved to Home Window div later) */}
-            <div className="absolute bottom-10 flex space-x-4 z-20">
-              <button
-                onClick={() => handleOpen("about")}
-                className="px-4 py-2 rounded-full bg-purple-600 text-white font-bold shadow-lg hover:bg-purple-700 transition-colors"
-              >
-                Open About Window
-              </button>
-              <button
-                onClick={() => handleOpen("test")}
-                className="px-4 py-2 rounded-full bg-purple-600 text-white font-bold shadow-lg hover:bg-purple-700 transition-colors"
-              >
-                Open Test Window
-              </button>
-            </div>
           </div>
 
           {/* Window Renders */}
