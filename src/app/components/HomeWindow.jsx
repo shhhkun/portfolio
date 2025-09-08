@@ -12,20 +12,20 @@ const HomeWindow = ({ children }) => {
         boxSizing: "border-box",
       }}
     >
-      {/* Window Title Bar */}
+      {/* Window Header */}
       <div
         className="text-white px-4 py-2 font-light"
         style={{
           fontSize: "1.25rem",
           backgroundColor: "#171717",
-          height: "53px",
+          height: "48px", // fix visual: should be 56 fixed
           borderBottom: "2px solid white",
           display: "flex",
           alignItems: "center",
           paddingLeft: "1.5rem",
         }}
       >
-        <p>home</p>
+        <p className="font-bold">home</p>
       </div>
 
       {/* Main Content Area */}

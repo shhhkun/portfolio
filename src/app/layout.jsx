@@ -78,7 +78,7 @@ const Layout = ({ children }) => {
             </div>
 
             {/* Bottom Wavify Animation */}
-            <Waves theme="default" />
+            <Waves theme="sunset" />
 
             {/* Temp buttons for windows (to be moved to Home Window div later) */}
             <div className="absolute bottom-10 flex space-x-4 z-20">
