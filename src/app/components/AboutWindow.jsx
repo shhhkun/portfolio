@@ -91,8 +91,6 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{
                 width: "136px",
                 height: "136px",
-                //border: "2px solid white",
-                // backgroundColor: "#2E5276",
               }}
             >
               <img
