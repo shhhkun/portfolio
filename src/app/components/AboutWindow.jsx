@@ -18,7 +18,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56; // adjust later
+        const headerHeight = 56;
 
         setBounds({
           top: 0,
@@ -59,7 +59,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       >
         {/* Window Header */}
         <div
-          className="handle cursor-grab flex items-center justify-between text-white px-4 py-2 font-light"
+          className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "#171717",
@@ -67,15 +67,14 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             borderBottom: "2px solid white",
             display: "flex",
             alignItems: "center",
-            paddingLeft: "1.5rem",
           }}
         >
           <p className="font-bold">about</p>
           <button
             onClick={onClose}
-            className="text-white bg-transparent border-none p-1 leading-none text-xl font-bold rounded-full hover:bg-purple-700 transition-colors"
+            className="font-bold transition-transform hover:scale-110"
           >
-            &times;
+            x
           </button>
         </div>
 

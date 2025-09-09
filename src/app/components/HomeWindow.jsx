@@ -14,8 +14,8 @@ const HomeWindow = ({ handleOpen }) => {
     <div
       className="flex flex-col overflow-hidden"
       style={{
-        width: "809px",
-        height: "561.9px",
+        width: "800px",
+        height: "560px",
         borderRadius: "10px",
         border: "2px solid ",
         boxSizing: "border-box",
@@ -23,11 +23,11 @@ const HomeWindow = ({ handleOpen }) => {
     >
       {/* Window Header */}
       <div
-        className="text-white px-4 py-2"
+        className="flex items-center justify-between px-4 py-2"
         style={{
           fontSize: "1.25rem",
           backgroundColor: "#171717",
-          height: "48px", // fix visual: should be 56 fixed
+          height: "48px",
           borderBottom: "2px solid white",
           display: "flex",
           alignItems: "center",
@@ -39,19 +39,29 @@ const HomeWindow = ({ handleOpen }) => {
 
       {/* Main Content Area */}
       <div
-        className="w-full flex-grow"
+        className="w-full justify-center items-center flex flex-grow flex-col"
         style={{
           backgroundColor: "#132135",
         }}
       >
-        <div
-          className="text-center font-bold pl-12 pt-12 pr-12"
-          style={{ color: "#9c1b75ff", fontSize: "4rem" }}
+        <h1
+          className="font-bold"
+          style={{
+            fontSize: "4rem",
+          }}
         >
-          Big text
-        </div>
+          Hi I'm Serjo
+        </h1>
+        <h2
+          style={{
+            fontSize: "1.5rem",
+          }}
+        >
+          Full-stack developer, web and app creator.
+        </h2>
+
         {/* Desktop Icons */}
-        <div className="flex flex-row items-start justify-start flex-wrap gap-12 p-12">
+        <div className="flex flex-row items-center justify-center flex-wrap gap-12 p-8">
           {/* About Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -72,29 +82,6 @@ const HomeWindow = ({ handleOpen }) => {
               />
             </div>
             <p className="font-bold mt-2">about</p>
-          </button>
-
-          {/* Work Button */}
-          <button
-            className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("work")}
-          >
-            <div className="relative w-16 h-16">
-              <RectangleIcon
-                size={64}
-                color="#171717"
-                weight="fill"
-                className="absolute top-0 left-0"
-                style={{ transform: "translateY(2px) scaleY(0.8) scaleX(0.9)" }}
-              />
-              <BriefcaseIcon
-                size={64}
-                color="#ffffff"
-                weight="light"
-                className="absolute top-0 left-0 z-10"
-              />
-            </div>
-            <p className="font-bold mt-2">work</p>
           </button>
 
           {/* Links Button */}
@@ -122,7 +109,8 @@ const HomeWindow = ({ handleOpen }) => {
                   width: "32px",
                   height: "19px",
                   borderRadius: "9999px",
-                  transform: "rotate(-42.5deg) translateX(-12px) translateY(-4px)",
+                  transform:
+                    "rotate(-42.5deg) translateX(-12px) translateY(-4px)",
                 }}
               />
               {/* Top-right filler. */}
@@ -133,7 +121,8 @@ const HomeWindow = ({ handleOpen }) => {
                   width: "32px",
                   height: "19px",
                   borderRadius: "9999px",
-                  transform: "rotate(-42.5deg) translateX(12px) translateY(4px)",
+                  transform:
+                    "rotate(-42.5deg) translateX(12px) translateY(4px)",
                 }}
               />
               <div className="relative w-16 h-16 flex items-center justify-center">
@@ -146,6 +135,29 @@ const HomeWindow = ({ handleOpen }) => {
               </div>
             </div>
             <p className="font-bold mt-2">links</p>
+          </button>
+
+          {/* Work Button */}
+          <button
+            className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+            onClick={() => handleOpen("work")}
+          >
+            <div className="relative w-16 h-16">
+              <RectangleIcon
+                size={64}
+                color="#171717"
+                weight="fill"
+                className="absolute top-0 left-0"
+                style={{ transform: "translateY(2px) scaleY(0.8) scaleX(0.9)" }}
+              />
+              <BriefcaseIcon
+                size={64}
+                color="#ffffff"
+                weight="light"
+                className="absolute top-0 left-0 z-10"
+              />
+            </div>
+            <p className="font-bold mt-2">work</p>
           </button>
 
           {/* Mail/Contact Button */}
@@ -195,28 +207,6 @@ const HomeWindow = ({ handleOpen }) => {
               />
             </div>
             <p className="font-bold mt-2">resume</p>
-          </button>
-
-          {/* Test Button */}
-          <button
-            className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("test")}
-          >
-            <div className="relative w-16 h-16">
-              <RectangleIcon
-                size={64}
-                color="#171717"
-                weight="fill"
-                className="absolute top-0 left-0"
-              />
-              <RectangleIcon
-                size={64}
-                color="#ffffff"
-                weight="light"
-                className="absolute top-0 left-0 z-10"
-              />
-            </div>
-            <p className="font-bold mt-2">test</p>
           </button>
         </div>
       </div>

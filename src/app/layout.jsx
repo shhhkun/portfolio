@@ -5,14 +5,12 @@ import HomeWindow from "./components/HomeWindow";
 import Waves from "./components/Waves";
 import "./globals.css";
 
-import DraggableWrapper from "./components/DraggableWrapper";
 import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
   work: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-  test: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
 };
 
 const Layout = ({ children }) => {
@@ -100,16 +98,6 @@ const Layout = ({ children }) => {
               onStop={(e, ui) => handleStop("work", e, ui)}
               zIndex={windows.work.zIndex}
               position={windows.work.position}
-            />
-          )}
-          {windows.test.isOpen && (
-            <DraggableWrapper
-              id="test"
-              onClose={() => handleClose("test")}
-              onFocus={() => handleFocus("test")}
-              onStop={(e, ui) => handleStop("test", e, ui)}
-              zIndex={windows.test.zIndex}
-              position={windows.test.position}
             />
           )}
         </div>

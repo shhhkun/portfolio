@@ -1,3 +1,4 @@
+// was used for testing react-draggable
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
