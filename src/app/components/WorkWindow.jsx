@@ -86,7 +86,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* Intro Card */}
           <div
             className="intro-card rounded-lg p-8"
-            style={{ backgroundColor: "#233d61ff" }}
+            style={{ backgroundColor: "#273b54" }}
           >
             <h3 className="font-bold" style={{ fontSize: "1.25rem" }}>
               Open for opportunities. Connect with me at{" "}

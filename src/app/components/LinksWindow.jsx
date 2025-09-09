@@ -53,13 +53,35 @@ const LeetCodeLogo = ({ size, color, weight, className }) => {
 
 const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const nodeRef = useRef(null);
-
   const [bounds, setBounds] = useState({
     top: 0,
     left: 0,
     right: 0,
     bottom: 0,
   });
+  const [toastMessage, setToastMessage] = useState("");
+
+  const handleCopyDiscord = async () => {
+    const discordUsername = "shhhkun";
+
+    try {
+      await navigator.clipboard.writeText(discordUsername);
+      setToastMessage("copied!");
+    } catch (err) {
+      // fallback
+      const textarea = document.createElement("textarea");
+      textarea.value = discordUsername;
+      document.body.appendChild(textarea);
+      textarea.select();
+      document.execCommand("copy");
+      document.body.removeChild(textarea);
+      setToastMessage("copied!");
+    } finally {
+      setTimeout(() => {
+        setToastMessage("");
+      }, 2000);
+    }
+  };
 
   useEffect(() => {
     const handleResize = () => {
@@ -131,21 +153,11 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
           style={{ backgroundColor: "#132135" }}
         >
-          {/* Intro Card */}
-          <div
-            className="intro-card w-full rounded-lg p-4"
-            style={{ backgroundColor: "#233d61ff" }}
-          >
-            <h2 className="font-bold" style={{ fontSize: "1.25rem" }}>
-              Stuff
-            </h2>
-          </div>
-
           {/* Link Icons */}
           <div className="flex flex-row flex-wrap gap-8 p-4">
             {/* GitHub Button */}
             <a
-              href="https://github.com/your-username" // Replace with the correct link
+              href="https://github.com/shhhkun" // Replace with the correct link
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -169,7 +181,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* LeetCode Button */}
             <a
-              href="https://leetcode.com/your-username/" // Replace with the correct link
+              href="https://leetcode.com/u/shhhkun"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -197,7 +209,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* LinkedIn Button */}
             <a
-              href="https://github.com/your-username" // Replace with the correct link
+              href="https://linkedin.com/in/serjobarron"
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -220,28 +232,50 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </a>
 
             {/* Discord Button */}
-            <a
-              href="https://github.com/your-username" // Replace with the correct link
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+            <div className="relative">
+              <button
+                onClick={handleCopyDiscord}
+                className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              >
+                <div className="relative w-16 h-16">
+                  <SquareIcon
+                    size={64}
+                    color="#171717"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                  <DiscordLogoIcon
+                    size={64}
+                    color="#ffffff"
+                    weight="light"
+                    className="absolute top-0 left-0 z-10"
+                  />
+                </div>
+                <p className="font-bold mt-2">discord</p>
+              </button>
+
+              {/* Toast Notification */}
+              {toastMessage && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2">
+                  <p
+                    className="text-center"
+                    style={{
+                      fontSize: "0.75rem",
+                    }}
+                  >
+                    {toastMessage}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            {/* Intro Card */}
+            <div
+              className="intro-card rounded-lg text-center mx-auto py-4 px-16"
+              style={{ backgroundColor: "#273b54" }}
             >
-              <div className="relative w-16 h-16">
-                <DiscordLogoIcon
-                  size={64}
-                  color="#171717"
-                  weight="fill"
-                  className="absolute top-0 left-0"
-                />
-                <DiscordLogoIcon
-                  size={64}
-                  color="#ffffff"
-                  weight="light"
-                  className="absolute top-0 left-0 z-10"
-                />
-              </div>
-              <p className="font-bold mt-2">discord</p>
-            </a>
+              <h2>All the places to say hi</h2>
+            </div>
           </div>
         </div>
       </div>
