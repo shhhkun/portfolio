@@ -256,16 +256,12 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Toast Notification */}
               {toastMessage && (
-                <div className="absolute top-full left-1/2 -translate-x-1/2">
-                  <p
-                    className="text-center"
-                    style={{
-                      fontSize: "0.75rem",
-                    }}
-                  >
-                    {toastMessage}
-                  </p>
-                </div>
+                <span
+                  className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-4 left-1/2 transform -translate-x-1/2"
+                  style={{ fontSize: "0.75rem" }}
+                >
+                  {toastMessage}
+                </span>
               )}
             </div>
 

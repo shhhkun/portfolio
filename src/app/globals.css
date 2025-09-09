@@ -118,3 +118,11 @@ body {
 .pill-button:hover {
   transform: translateY(-0.125rem);
 }
+
+.contact-button {
+  background-color: #273b54;
+}
+
+.contact-button:hover {
+  background-color: #3e5470;
+}

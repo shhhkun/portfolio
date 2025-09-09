@@ -8,6 +8,7 @@ import "./globals.css";
 import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
 import LinksWindow from "./components/LinksWindow";
+import ContactWindow from "./components/ContactWindow";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -111,6 +112,15 @@ const Layout = ({ children }) => {
               onStop={(e, ui) => handleStop("work", e, ui)}
               zIndex={windows.work.zIndex}
               position={windows.work.position}
+            />
+          )}
+          {windows.contact.isOpen && (
+            <ContactWindow
+              onClose={() => handleClose("contact")}
+              onFocus={() => handleFocus("contact")}
+              onStop={(e, ui) => handleStop("contact", e, ui)}
+              zIndex={windows.contact.zIndex}
+              position={windows.contact.position}
             />
           )}
         </div>
