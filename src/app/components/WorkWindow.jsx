@@ -86,14 +86,22 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Intro Card */}
           <div
-            className="intro-card rounded-lg p-4 text-center"
-            style={{ backgroundColor: "#384158" }}
+            className="intro-card rounded-lg p-8"
+            style={{ backgroundColor: "#233d61ff" }}
           >
             <h3 className="font-bold" style={{ fontSize: "1.25rem" }}>
-              Replace
+              Open for opportunities. Connect with me at{" "}
+              <a
+                href="mailto:serjobarron@gmail.com"
+                className="underline"
+                style={{ color: "#C0FAFF" }}
+              >
+                serjobarron@gmail.com
+              </a>
             </h3>
             <p className="mt-2" style={{ fontSize: "1.125rem" }}>
-              Replace
+              My expertise includes full-stack development, with a focus on
+              creating robust, user-friendly software for web and apps.
             </p>
           </div>
 
@@ -107,7 +115,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <div className="skills-container flex flex-col md:flex-row gap-6 md:gap-12">
               {/* Tools Column */}
               <div className="skill-column flex-1">
-                <h2 className="text-lg font-semibold mb-4">TOOLS</h2>
+                <h2
+                  className="font-semibold mb-4"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  TOOLS
+                </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
                   <div className="skill-pill">Git</div>
                   <div className="skill-pill">GitHub</div>
@@ -123,7 +136,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               {/* Development Column */}
               <div className="skill-column flex-1">
-                <h2 className="text-lg font-semibold mb-4">DEVELOPMENT</h2>
+                <h2
+                  className="font-semibold mb-4"
+                  style={{ fontSize: "1.5rem" }}
+                >
+                  DEVELOPMENT
+                </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
                   <div className="skill-pill">JavaScript</div>
                   <div className="skill-pill">TypeScript</div>
@@ -149,18 +167,24 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           ></div>
 
           {/* Projects Section */}
-          <h2 className="section-title text-2xl font-semibold mb-4 text-gray-200">
-            Project Work
+          <h2
+            className="section-title font-semibold mb-4 text-gray-200"
+            style={{
+              fontSize: "1.5rem",
+            }}
+          >
+            PROJECTS
           </h2>
+
           <div className="projects-section flex flex-col gap-8">
             {/* Project Card 1 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col md:flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ height: "250px", backgroundColor: "#161b22" }}
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container w-full md:w-1/2 md:h-auto overflow-hidden relative"
-                style={{ backgroundColor: "#30363d" }}
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
               >
                 <img
                   className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
@@ -168,69 +192,382 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   alt="Placeholder for project 1"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full md:w-1/2">
+              <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Project Name 1</h4>
-                  <p className="text-sm leading-relaxed flex-grow">
-                    Description
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    Trashu
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    A desktop storage manager app built with Electron and React
+                    to intelligently manage and optimize local storage. It uses
+                    smart cleanup metrics to provide recommendations, all within
+                    a playful, "panda" themed UI.
                   </p>
                 </div>
-                <div className="mt-4 flex gap-3">
-                  <a
-                    href="#"
-                    className="px-4 py-2 bg-[#384158] rounded-full font-semibold text-white transition-colors duration-200"
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
                   >
-                    GitHub Repo
-                  </a>
-                  <a
-                    href="#"
-                    className="px-4 py-2 bg-[#384158] rounded-full font-semibold text-white transition-colors duration-200"
-                  >
-                    Live Demo
-                  </a>
+                    Electron, React, Node.js, Vite, TypeScript
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
-            {/* Project Card 1 */}
+            {/* Project Card 2 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col md:flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ height: "250px", backgroundColor: "#161b22" }}
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container w-full md:w-1/2 md:h-auto overflow-hidden relative"
-                style={{ backgroundColor: "#30363d" }}
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
               >
                 <img
                   className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+1"
-                  alt="Placeholder for project 1"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+2"
+                  alt="Placeholder for project 2"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full md:w-1/2">
+              <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
-                  <h4 className="text-xl font-semibold mb-2">Project Name 1</h4>
-                  <p className="text-sm leading-relaxed flex-grow">
-                    Description
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    Kept
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    A personalized task scheduler with a 24-hour timetable and a
+                    gamified system that uses XP and badges to encourage
+                    consistent productivity. It integrates with Firebase for
+                    secure data persistence & Firestore for profiles.
                   </p>
                 </div>
-                <div className="mt-4 flex gap-3">
-                  <a
-                    href="#"
-                    className="px-4 py-2 bg-[#384158] rounded-full font-semibold text-white transition-colors duration-200"
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
                   >
-                    GitHub Repo
-                  </a>
-                  <a
-                    href="#"
-                    className="px-4 py-2 bg-[#384158] rounded-full font-semibold text-white transition-colors duration-200"
-                  >
-                    Live Demo
-                  </a>
+                    React, Node.js, Vite, Firebase/Firestore
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
 
+            {/* Project Card 3 */}
+            <div
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
+            >
+              <div
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
+              >
+                <img
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+3"
+                  alt="Placeholder for project 3"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    SmartMirror
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    An IoT device that enables real-time data exchange between a
+                    Raspberry Pi and a mobile app via Bluetooth Low Energy. The
+                    project involved designing modular protocols and working in
+                    an Agile team environment.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    Python, React/React Native, Node.js, JavaScript, BLE,
+                    Raspberry Pi
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 4 */}
+            <div
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
+            >
+              <div
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
+              >
+                <img
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+4"
+                  alt="Placeholder for project 4"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    Multi-Threaded HTTP Server
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Implemented a high-performance HTTP server from scratch,
+                    demonstrating a fundamental understanding of network
+                    protocols, concurrency, and low-level memory management. A
+                    core systems project.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    C
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 5 */}
+            <div
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
+            >
+              <div
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
+              >
+                <img
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+5"
+                  alt="Placeholder for project 5"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    Huffman Data Compressor
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Developed a complete Huffman encoding and decoding tool to
+                    efficiently compress and decompress files. This project
+                    highlights a strong grasp of data structures and algorithm
+                    design.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    C
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 6 */}
+            <div
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
+            >
+              <div
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
+              >
+                <img
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+6"
+                  alt="Placeholder for project 6"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    RSA Public Key Cryptography
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    Built a command-line tool that implements the RSA algorithm
+                    from scratch. This project demonstrates a core understanding
+                    of public key cryptography and security principles.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    C
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 7 */}
+            <div
+              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "#161b22" }}
+            >
+              <div
+                className="project-image-container overflow-hidden relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "320px" }}
+              >
+                <img
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+7"
+                  alt="Placeholder for project 7"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    DollHouse
+                  </h3>
+                  <p
+                    className="flex-grow"
+                    style={{
+                      fontSize: "1rem",
+                    }}
+                  >
+                    A simple 2D game built in Construct 3 created to explore the
+                    principles of game design and logic using a game development
+                    engine. A fun project to showcase creativity and
+                    problem-solving.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium text-gray-500 mb-2"
+                    style={{ fontSize: "0.75rem" }}
+                  >
+                    Construct 3
+                  </p>
+                  <div className="flex gap-3">
+                    <a href="#" className="pill-button">
+                      GitHub Repo
+                    </a>
+                    <a href="#" className="pill-button">
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
