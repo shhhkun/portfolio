@@ -7,10 +7,14 @@ import "./globals.css";
 
 import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
+import LinksWindow from "./components/LinksWindow";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
+  links: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
   work: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
+  contact: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
+  resume: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
 };
 
 const Layout = ({ children }) => {
@@ -89,6 +93,15 @@ const Layout = ({ children }) => {
               onStop={(e, ui) => handleStop("about", e, ui)}
               zIndex={windows.about.zIndex}
               position={windows.about.position}
+            />
+          )}
+          {windows.links.isOpen && (
+            <LinksWindow
+              onClose={() => handleClose("links")}
+              onFocus={() => handleFocus("links")}
+              onStop={(e, ui) => handleStop("links", e, ui)}
+              zIndex={windows.links.zIndex}
+              position={windows.links.position}
             />
           )}
           {windows.work.isOpen && (

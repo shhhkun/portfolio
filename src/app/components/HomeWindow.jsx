@@ -87,7 +87,7 @@ const HomeWindow = ({ handleOpen }) => {
           {/* Links Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("")}
+            onClick={() => handleOpen("links")}
           >
             <div className="relative w-16 h-16">
               {/* Center filler */}
