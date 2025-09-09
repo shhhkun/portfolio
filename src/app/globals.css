@@ -100,3 +100,21 @@ body {
 .skill-pill:hover {
   transform: translateY(-0.125rem); /* -translate-y-0.5 */
 }
+
+.pill-button {
+  background-color: #384158;
+  color: white;
+  font-size: 0.75rem;
+  height: 1.5rem;
+  border-radius: 9999px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem 1rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.pill-button:hover {
+  transform: translateY(-0.125rem);
+}
