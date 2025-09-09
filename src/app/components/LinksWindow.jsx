@@ -97,7 +97,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         style={{
           zIndex: zIndex,
           width: "640px",
-          height: "300px",
+          height: "400px",
           borderRadius: "10px",
           border: "2px solid ",
           boxSizing: "border-box",
@@ -128,10 +128,21 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
         {/* Main Content Area */}
         <div
-          className="justify-center items-center flex flex-col flex-grow min-h-0"
+          className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
           style={{ backgroundColor: "#132135" }}
         >
-          <div className="flex flex-row flex-wrap gap-12 p-8">
+          {/* Intro Card */}
+          <div
+            className="intro-card w-full rounded-lg p-4"
+            style={{ backgroundColor: "#233d61ff" }}
+          >
+            <h2 className="font-bold" style={{ fontSize: "1.25rem" }}>
+              Stuff
+            </h2>
+          </div>
+
+          {/* Link Icons */}
+          <div className="flex flex-row flex-wrap gap-8 p-4">
             {/* GitHub Button */}
             <a
               href="https://github.com/your-username" // Replace with the correct link
