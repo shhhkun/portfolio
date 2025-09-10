@@ -11,6 +11,7 @@ import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
 import ResumeWindow from "./components/ResumeWindow";
 import { AudioPlayerProvider } from "./components/AudioPlayer";
+import MuteButton from "./components/MuteButton";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -79,6 +80,9 @@ const Layout = ({ children }) => {
               overflow: "hidden",
             }}
           >
+            <div className="absolute top-4 left-4 z-10">
+              <MuteButton />
+            </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
               {/* Home Window */}
               <div className="z-10">
