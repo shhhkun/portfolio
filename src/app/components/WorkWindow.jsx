@@ -2,6 +2,7 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
+import { GithubLogoIcon } from "@phosphor-icons/react";
 
 const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const nodeRef = useRef(null);
@@ -186,7 +187,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/trashu.png"
                   alt="Placeholder for project 1"
                 />
@@ -216,7 +217,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     Electron, React, Node.js, Vite, TypeScript
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/Trashu"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>
@@ -234,7 +239,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/kept.png"
                   alt="Placeholder for project 2"
                 />
@@ -264,10 +269,18 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     React, Node.js, Vite, Firebase/Firestore
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/Kept"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://productivityapp-eb15a.web.app/"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       Live Demo
                     </a>
                   </div>
@@ -281,14 +294,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "#b3e6ff", width: "420px" }}
               >
-                <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+3"
-                  alt="Placeholder for project 3"
-                />
+                <div className="relative w-16 h-16">
+                  <GithubLogoIcon
+                    size={64}
+                    color="#171717"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                </div>
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
@@ -316,7 +332,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     Raspberry Pi
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/SmartMirror"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>
@@ -330,14 +350,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "#ffb3b3", width: "420px" }}
               >
-                <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+4"
-                  alt="Placeholder for project 4"
-                />
+                <div className="relative w-16 h-16">
+                  <GithubLogoIcon
+                    size={64}
+                    color="#171717"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                </div>
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
@@ -364,7 +387,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     C
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/CSE130/tree/main/asgn4"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>
@@ -378,14 +405,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container relative"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "#fdfd96", width: "420px" }}
               >
-                <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+5"
-                  alt="Placeholder for project 5"
-                />
+                <div className="relative w-16 h-16">
+                  <GithubLogoIcon
+                    size={64}
+                    color="#171717"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                </div>
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
@@ -412,7 +442,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     C
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn5"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>
@@ -426,14 +460,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-containerrelative"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "#a8e6cf", width: "420px" }}
               >
-                <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+6"
-                  alt="Placeholder for project 6"
-                />
+                <div className="relative w-16 h-16">
+                  <GithubLogoIcon
+                    size={64}
+                    color="#171717"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                </div>
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
@@ -460,7 +497,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     C
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn6"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>
@@ -478,7 +519,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/dollhouse.png"
                   alt="Placeholder for project 7"
                 />
@@ -495,10 +536,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </h3>
                   <p className="flex-grow">
                     A simple 2D game built in Construct 3 to explore core game
-                    design principles. As a key member of a small team, I was
-                    responsible for implementing all of the game's event-based
-                    logic, as well as contributing to level design and asset
-                    creation.
+                    design principles. As a key member of a small team, I
+                    implemented all of the event-based logic, as well as
+                    contributed to level design and asset creation. Due to
+                    engine export limitations, a live demo of the game is not
+                    available.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -509,7 +551,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     Construct 3
                   </p>
                   <div className="flex gap-3">
-                    <a href="#" className="pill-button">
+                    <a
+                      href="https://github.com/shhhkun/dollhouse"
+                      target="_blank"
+                      className="pill-button"
+                    >
                       GitHub Repo
                     </a>
                   </div>

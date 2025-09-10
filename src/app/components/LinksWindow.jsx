@@ -238,7 +238,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
               >
                 <div className="relative w-16 h-16">
-                  <SquareIcon
+                  <DiscordLogoIcon
                     size={64}
                     color="#171717"
                     weight="fill"
