@@ -45,7 +45,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   }, []);
 
   const downloadResume = () => {
-    const resumeUrl = "https://example.com/serjo_barron_resume.pdf";
+    const resumeUrl = "/Serjo_Barron_Resume.pdf";
     window.open(resumeUrl, "_blank");
   };
 

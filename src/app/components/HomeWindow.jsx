@@ -39,7 +39,7 @@ const HomeWindow = ({ handleOpen }) => {
 
       {/* Main Content Area */}
       <div
-        className="w-full justify-center items-center flex flex-grow flex-col"
+        className="w-full justify-end items-center flex flex-grow flex-col p-12"
         style={{
           backgroundColor: "#132135",
         }}
@@ -61,7 +61,7 @@ const HomeWindow = ({ handleOpen }) => {
         </h2>
 
         {/* Desktop Icons */}
-        <div className="flex flex-row items-center justify-center flex-wrap gap-8 p-8">
+        <div className="flex flex-row items-center justify-center flex-wrap gap-4 p-8">
           {/* About Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
