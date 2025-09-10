@@ -178,16 +178,16 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           <div className="projects-section flex flex-col gap-8">
             {/* Project Card 1 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-container relative"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+1"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/trashu.png"
                   alt="Placeholder for project 1"
                 />
               </div>
@@ -196,17 +196,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.25rem",
+                      fontSize: "1.375rem",
                     }}
                   >
                     Trashu
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
+                  <p className="flex-grow">
                     A desktop storage manager app built with Electron and React
                     to intelligently manage and optimize local storage. It uses
                     smart cleanup metrics to provide recommendations, all within
@@ -216,16 +211,13 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     Electron, React, Node.js, Vite, TypeScript
                   </p>
                   <div className="flex gap-3">
                     <a href="#" className="pill-button">
                       GitHub Repo
-                    </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
                     </a>
                   </div>
                 </div>
@@ -234,16 +226,16 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 2 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-container relative"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+2"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/kept.png"
                   alt="Placeholder for project 2"
                 />
               </div>
@@ -257,12 +249,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     Kept
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
+                  <p className="flex-grow">
                     A personalized task scheduler with a 24-hour timetable and a
                     gamified system that uses XP and badges to encourage
                     consistent productivity. It integrates with Firebase for
@@ -272,7 +259,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     React, Node.js, Vite, Firebase/Firestore
                   </p>
@@ -290,15 +277,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 3 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
                 className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+3"
                   alt="Placeholder for project 3"
                 />
@@ -313,12 +300,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     SmartMirror
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
+                  <p className="flex-grow">
                     An IoT device that enables real-time data exchange between a
                     Raspberry Pi and a mobile app via Bluetooth Low Energy. The
                     project involved designing modular protocols and working in
@@ -328,7 +310,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     Python, React/React Native, Node.js, JavaScript, BLE,
                     Raspberry Pi
@@ -337,9 +319,6 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <a href="#" className="pill-button">
                       GitHub Repo
                     </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
-                    </a>
                   </div>
                 </div>
               </div>
@@ -347,15 +326,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 4 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-container relative aspect-square"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+4"
                   alt="Placeholder for project 4"
                 />
@@ -370,31 +349,23 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     Multi-Threaded HTTP Server
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
-                    Implemented a high-performance HTTP server from scratch,
-                    demonstrating a fundamental understanding of network
-                    protocols, concurrency, and low-level memory management. A
-                    core systems project.
+                  <p className="flex-grow">
+                    Developed a HTTP server that handles GET and PUT requests
+                    using POSIX threads for concurrency. The project includes a
+                    dedicated logging file to monitor all incoming and outgoing
+                    traffic.
                   </p>
                 </div>
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     C
                   </p>
                   <div className="flex gap-3">
                     <a href="#" className="pill-button">
                       GitHub Repo
-                    </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
                     </a>
                   </div>
                 </div>
@@ -403,15 +374,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 5 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-container relative"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+5"
                   alt="Placeholder for project 5"
                 />
@@ -426,31 +397,23 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     Huffman Data Compressor
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
-                    Developed a complete Huffman encoding and decoding tool to
-                    efficiently compress and decompress files. This project
-                    highlights a strong grasp of data structures and algorithm
-                    design.
+                  <p className="flex-grow">
+                    A command-line tool that efficiently compresses and
+                    decompresses files using the Huffman encoding algorithm. The
+                    project's core is an implementation that leverages classic
+                    data structures like priority queues and binary trees.
                   </p>
                 </div>
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     C
                   </p>
                   <div className="flex gap-3">
                     <a href="#" className="pill-button">
                       GitHub Repo
-                    </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
                     </a>
                   </div>
                 </div>
@@ -459,15 +422,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 6 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-containerrelative"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+6"
                   alt="Placeholder for project 6"
                 />
@@ -482,30 +445,23 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     RSA Public Key Cryptography
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
-                    Built a command-line tool that implements the RSA algorithm
-                    from scratch. This project demonstrates a core understanding
-                    of public key cryptography and security principles.
+                  <p className="flex-grow">
+                    Built a command-line tool that implements the RSA public key
+                    cryptography algorithm from the ground up. The program
+                    securely encrypts and decrypts messages by generating public
+                    and private keys.
                   </p>
                 </div>
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     C
                   </p>
                   <div className="flex gap-3">
                     <a href="#" className="pill-button">
                       GitHub Repo
-                    </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
                     </a>
                   </div>
                 </div>
@@ -514,16 +470,16 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 7 */}
             <div
-              className="project-card rounded-lg overflow-hidden flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "#161b22" }}
             >
               <div
-                className="project-image-container overflow-hidden relative aspect-square"
-                style={{ backgroundColor: "#30363d", width: "320px" }}
+                className="project-image-container relative"
+                style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
-                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-105 rounded-lg"
-                  src="https://placehold.co/400x250/2f363d/f0f6fc?text=Project+7"
+                  className="project-image w-full h-full object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/dollhouse.png"
                   alt="Placeholder for project 7"
                 />
               </div>
@@ -537,31 +493,24 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   >
                     DollHouse
                   </h3>
-                  <p
-                    className="flex-grow"
-                    style={{
-                      fontSize: "1rem",
-                    }}
-                  >
-                    A simple 2D game built in Construct 3 created to explore the
-                    principles of game design and logic using a game development
-                    engine. A fun project to showcase creativity and
-                    problem-solving.
+                  <p className="flex-grow">
+                    A simple 2D game built in Construct 3 to explore core game
+                    design principles. As a key member of a small team, I was
+                    responsible for implementing all of the game's event-based
+                    logic, as well as contributing to level design and asset
+                    creation.
                   </p>
                 </div>
                 <div className="mt-4">
                   <p
                     className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.75rem" }}
+                    style={{ fontSize: "0.875rem" }}
                   >
                     Construct 3
                   </p>
                   <div className="flex gap-3">
                     <a href="#" className="pill-button">
                       GitHub Repo
-                    </a>
-                    <a href="#" className="pill-button">
-                      Live Demo
                     </a>
                   </div>
                 </div>

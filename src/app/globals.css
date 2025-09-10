@@ -104,8 +104,8 @@ body {
 .pill-button {
   background-color: #384158;
   color: white;
-  font-size: 0.75rem;
-  height: 1.5rem;
+  font-size: 0.875rem;
+  height: 1.75rem;
   border-radius: 9999px;
   cursor: pointer;
   display: flex;
