@@ -10,6 +10,7 @@ import WorkWindow from "./components/WorkWindow";
 import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
 import ResumeWindow from "./components/ResumeWindow";
+import { AudioPlayerProvider } from "./components/AudioPlayer";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -70,70 +71,72 @@ const Layout = ({ children }) => {
   return (
     <html lang="en">
       <body>
-        <div
-          className="min-h-screen relative"
-          style={{
-            backgroundColor: "#171717",
-            overflow: "hidden",
-          }}
-        >
-          <div className="absolute inset-0 flex flex-col items-center justify-center">
-            {/* Home Window */}
-            <div className="z-10">
-              <HomeWindow handleOpen={handleOpen} />
+        <AudioPlayerProvider>
+          <div
+            className="min-h-screen relative"
+            style={{
+              backgroundColor: "#171717",
+              overflow: "hidden",
+            }}
+          >
+            <div className="absolute inset-0 flex flex-col items-center justify-center">
+              {/* Home Window */}
+              <div className="z-10">
+                <HomeWindow handleOpen={handleOpen} />
+              </div>
+
+              {/* Bottom Wavify Animation */}
+              <Waves theme="sunset" />
             </div>
 
-            {/* Bottom Wavify Animation */}
-            <Waves theme="sunset" />
+            {/* Window Renders */}
+            {windows.about.isOpen && (
+              <AboutWindow
+                onClose={() => handleClose("about")}
+                onFocus={() => handleFocus("about")}
+                onStop={(e, ui) => handleStop("about", e, ui)}
+                zIndex={windows.about.zIndex}
+                position={windows.about.position}
+              />
+            )}
+            {windows.links.isOpen && (
+              <LinksWindow
+                onClose={() => handleClose("links")}
+                onFocus={() => handleFocus("links")}
+                onStop={(e, ui) => handleStop("links", e, ui)}
+                zIndex={windows.links.zIndex}
+                position={windows.links.position}
+              />
+            )}
+            {windows.work.isOpen && (
+              <WorkWindow
+                onClose={() => handleClose("work")}
+                onFocus={() => handleFocus("work")}
+                onStop={(e, ui) => handleStop("work", e, ui)}
+                zIndex={windows.work.zIndex}
+                position={windows.work.position}
+              />
+            )}
+            {windows.contact.isOpen && (
+              <ContactWindow
+                onClose={() => handleClose("contact")}
+                onFocus={() => handleFocus("contact")}
+                onStop={(e, ui) => handleStop("contact", e, ui)}
+                zIndex={windows.contact.zIndex}
+                position={windows.contact.position}
+              />
+            )}
+            {windows.resume.isOpen && (
+              <ResumeWindow
+                onClose={() => handleClose("resume")}
+                onFocus={() => handleFocus("resume")}
+                onStop={(e, ui) => handleStop("resume", e, ui)}
+                zIndex={windows.resume.zIndex}
+                position={windows.resume.position}
+              />
+            )}
           </div>
-
-          {/* Window Renders */}
-          {windows.about.isOpen && (
-            <AboutWindow
-              onClose={() => handleClose("about")}
-              onFocus={() => handleFocus("about")}
-              onStop={(e, ui) => handleStop("about", e, ui)}
-              zIndex={windows.about.zIndex}
-              position={windows.about.position}
-            />
-          )}
-          {windows.links.isOpen && (
-            <LinksWindow
-              onClose={() => handleClose("links")}
-              onFocus={() => handleFocus("links")}
-              onStop={(e, ui) => handleStop("links", e, ui)}
-              zIndex={windows.links.zIndex}
-              position={windows.links.position}
-            />
-          )}
-          {windows.work.isOpen && (
-            <WorkWindow
-              onClose={() => handleClose("work")}
-              onFocus={() => handleFocus("work")}
-              onStop={(e, ui) => handleStop("work", e, ui)}
-              zIndex={windows.work.zIndex}
-              position={windows.work.position}
-            />
-          )}
-          {windows.contact.isOpen && (
-            <ContactWindow
-              onClose={() => handleClose("contact")}
-              onFocus={() => handleFocus("contact")}
-              onStop={(e, ui) => handleStop("contact", e, ui)}
-              zIndex={windows.contact.zIndex}
-              position={windows.contact.position}
-            />
-          )}
-          {windows.resume.isOpen && (
-            <ResumeWindow
-              onClose={() => handleClose("resume")}
-              onFocus={() => handleFocus("resume")}
-              onStop={(e, ui) => handleStop("resume", e, ui)}
-              zIndex={windows.resume.zIndex}
-              position={windows.resume.position}
-            />
-          )}
-        </div>
+        </AudioPlayerProvider>
       </body>
     </html>
   );

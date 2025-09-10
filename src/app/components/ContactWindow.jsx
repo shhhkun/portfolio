@@ -120,7 +120,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </p>
 
           <p
-            className="relative cursor-p    ointer mt-4"
+            className="relative cursor-pointer mt-4"
             style={{ fontSize: "1.25rem" }}
             onClick={handleCopyEmail}
           >

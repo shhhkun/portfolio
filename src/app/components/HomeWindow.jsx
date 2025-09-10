@@ -8,8 +8,11 @@ import {
   EnvelopeSimpleIcon,
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const HomeWindow = ({ handleOpen }) => {
+  const { playAudio1 } = useAudioPlayer();
+
   return (
     <div
       className="flex flex-col overflow-hidden"
@@ -65,7 +68,10 @@ const HomeWindow = ({ handleOpen }) => {
           {/* About Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("about")}
+            onClick={() => {
+              handleOpen("about");
+              playAudio1();
+            }}
           >
             <div className="relative w-16 h-16">
               <CircleIcon
@@ -87,7 +93,10 @@ const HomeWindow = ({ handleOpen }) => {
           {/* Links Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("links")}
+            onClick={() => {
+              handleOpen("links");
+              playAudio1();
+            }}
           >
             <div className="relative w-16 h-16">
               {/* Center filler */}
@@ -140,7 +149,10 @@ const HomeWindow = ({ handleOpen }) => {
           {/* Work Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("work")}
+            onClick={() => {
+              handleOpen("work");
+              playAudio1();
+            }}
           >
             <div className="relative w-16 h-16">
               <RectangleIcon
@@ -163,7 +175,10 @@ const HomeWindow = ({ handleOpen }) => {
           {/* Mail/Contact Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("contact")}
+            onClick={() => {
+              handleOpen("contact");
+              playAudio1();
+            }}
           >
             <div className="relative w-16 h-16">
               <RectangleIcon
@@ -186,7 +201,10 @@ const HomeWindow = ({ handleOpen }) => {
           {/* Resume/CV Button */}
           <button
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-            onClick={() => handleOpen("resume")}
+            onClick={() => {
+              handleOpen("resume");
+              playAudio1();
+            }}
           >
             <div className="relative w-16 h-16">
               <RectangleIcon
