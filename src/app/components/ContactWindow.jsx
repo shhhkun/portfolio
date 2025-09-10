@@ -75,7 +75,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "576px",
+          width: "584px",
           height: "400px",
           borderRadius: "10px",
           border: "2px solid ",

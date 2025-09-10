@@ -179,7 +179,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               className="p-3 mt-5"
               style={{
                 fontSize: "1.25rem",
-                borderLeft: "6px solid #233d61ff",
+                borderLeft: "6px solid #5f5b82",
               }}
             >
               <h3 style={{ fontSize: "1.25rem" }}>
@@ -214,7 +214,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">English</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#2e5276" }}
+                    style={{ backgroundColor: "#273b54" }}
                   >
                     <div
                       className="bar-english h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
@@ -233,7 +233,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">Tagalog</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#2e5276" }}
+                    style={{ backgroundColor: "#273b54" }}
                   >
                     <div
                       className="bar-tagalog h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
@@ -252,7 +252,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">Japanese</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#2e5276" }}
+                    style={{ backgroundColor: "#273b54" }}
                   >
                     <div
                       className="bar-japanese h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
