@@ -70,7 +70,7 @@ const HomeWindow = ({ handleOpen }) => {
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
             onClick={() => {
               handleOpen("about");
-              playAudio1();
+              playAudio1(0.2);
             }}
           >
             <div className="relative w-16 h-16">
@@ -95,7 +95,7 @@ const HomeWindow = ({ handleOpen }) => {
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
             onClick={() => {
               handleOpen("links");
-              playAudio1();
+              playAudio1(0.2);
             }}
           >
             <div className="relative w-16 h-16">
@@ -151,7 +151,7 @@ const HomeWindow = ({ handleOpen }) => {
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
             onClick={() => {
               handleOpen("work");
-              playAudio1();
+              playAudio1(0.2);
             }}
           >
             <div className="relative w-16 h-16">
@@ -177,7 +177,7 @@ const HomeWindow = ({ handleOpen }) => {
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
             onClick={() => {
               handleOpen("contact");
-              playAudio1();
+              playAudio1(0.2);
             }}
           >
             <div className="relative w-16 h-16">
@@ -203,7 +203,7 @@ const HomeWindow = ({ handleOpen }) => {
             className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
             onClick={() => {
               handleOpen("resume");
-              playAudio1();
+              playAudio1(0.2);
             }}
           >
             <div className="relative w-16 h-16">

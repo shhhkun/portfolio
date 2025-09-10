@@ -13,7 +13,7 @@ export const AudioPlayerProvider = ({ children }) => {
   useEffect(() => {
     audioRefs.current = {
       audio1: new Audio("/mouseclick.wav"),
-      audio2: new Audio(),
+      audio2: new Audio("/pop.mp3"),
       audio3: new Audio(),
     };
   }, []);

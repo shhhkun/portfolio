@@ -3,8 +3,10 @@
 import React, { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 import { GithubLogoIcon } from "@phosphor-icons/react";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+  const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
 
   const [bounds, setBounds] = useState({
@@ -19,7 +21,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56;
+        const headerHeight = 48;
 
         setBounds({
           top: 0,
@@ -64,7 +66,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{
             fontSize: "1.25rem",
             backgroundColor: "#171717",
-            height: "56px",
+            height: "48px",
             borderBottom: "2px solid white",
             display: "flex",
             alignItems: "center",
@@ -72,7 +74,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           <p className="font-bold">work</p>
           <button
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+              playAudio2(0.1);
+            }}
             className="font-bold transition-transform hover:scale-110"
           >
             x
@@ -95,6 +100,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 href="mailto:serjobarron@gmail.com"
                 className="underline"
                 style={{ color: "#C0FAFF" }}
+                onClick={() => playAudio1(0.2)}
               >
                 serjobarron@gmail.com
               </a>
@@ -221,6 +227,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/Trashu"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -273,6 +280,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/Kept"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -280,6 +288,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://productivityapp-eb15a.web.app/"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
                     </a>
@@ -336,6 +345,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/SmartMirror"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -391,6 +401,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/CSE130/tree/main/asgn4"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -446,6 +457,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn5"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -501,6 +513,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn6"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>
@@ -555,6 +568,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       href="https://github.com/shhhkun/dollhouse"
                       target="_blank"
                       className="pill-button"
+                      onClick={() => playAudio1(0.2)}
                     >
                       GitHub Repo
                     </a>

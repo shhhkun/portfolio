@@ -2,8 +2,10 @@
 
 import React, { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+  const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
   const [bounds, setBounds] = useState({
     top: 0,
@@ -45,7 +47,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56;
+        const headerHeight = 48;
 
         setBounds({
           top: 0,
@@ -90,7 +92,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{
             fontSize: "1.25rem",
             backgroundColor: "#171717",
-            height: "56px",
+            height: "48px",
             borderBottom: "2px solid white",
             display: "flex",
             alignItems: "center",
@@ -98,7 +100,10 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           <p className="font-bold">contact</p>
           <button
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+              playAudio2(0.1);
+            }}
             className="font-bold transition-transform hover:scale-110"
           >
             x
@@ -122,7 +127,10 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           <p
             className="relative cursor-pointer mt-4"
             style={{ fontSize: "1.25rem" }}
-            onClick={handleCopyEmail}
+            onClick={() => {
+              handleCopyEmail();
+              playAudio1(0.2);
+            }}
           >
             reach out at:{" "}
             <span style={{ color: "#C0FAFF", textDecoration: "underline" }}>
@@ -140,8 +148,11 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Email Me Button */}
           <button
-            onClick={handleEmailButtonClick}
-            className="contact-button mt-8 px-4 py-2 rounded-md"
+            onClick={() => {
+              handleEmailButtonClick();
+              playAudio1(0.2);
+            }}
+            className="contact-button mt-10 px-4 py-2 rounded-md"
             style={{ fontSize: "1.25rem" }}
           >
             send me an email!

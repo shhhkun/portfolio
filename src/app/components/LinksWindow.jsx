@@ -8,6 +8,7 @@ import {
   LinkedinLogoIcon,
   SquareIcon,
 } from "@phosphor-icons/react";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const LeetCodeLogo = ({ size, color, weight, className }) => {
   let strokeWidth = "1.5";
@@ -52,6 +53,7 @@ const LeetCodeLogo = ({ size, color, weight, className }) => {
 };
 
 const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+  const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
   const [bounds, setBounds] = useState({
     top: 0,
@@ -88,7 +90,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56;
+        const headerHeight = 48;
 
         setBounds({
           top: 0,
@@ -133,7 +135,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{
             fontSize: "1.25rem",
             backgroundColor: "#171717",
-            height: "56px",
+            height: "48px",
             borderBottom: "2px solid white",
             display: "flex",
             alignItems: "center",
@@ -141,7 +143,10 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           <p className="font-bold">links</p>
           <button
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+              playAudio2(0.1);
+            }}
             className="font-bold transition-transform hover:scale-110"
           >
             x
@@ -161,6 +166,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
                 <GithubLogoIcon
@@ -185,6 +191,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
                 <SquareIcon
@@ -213,6 +220,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               target="_blank"
               rel="noopener noreferrer"
               className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
                 <LinkedinLogoIcon
@@ -234,7 +242,10 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Discord Button */}
             <div className="relative">
               <button
-                onClick={handleCopyDiscord}
+                onClick={() => {
+                  handleCopyDiscord();
+                  playAudio1(0.2);
+                }}
                 className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
               >
                 <div className="relative w-16 h-16">

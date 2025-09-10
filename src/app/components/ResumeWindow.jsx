@@ -9,8 +9,10 @@ import {
   MapPinIcon,
   PhoneIcon,
 } from "@phosphor-icons/react";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+  const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
 
   const [bounds, setBounds] = useState({
@@ -25,7 +27,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
       if (nodeRef.current) {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 56;
+        const headerHeight = 48;
 
         setBounds({
           top: 0,
@@ -75,7 +77,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{
             fontSize: "1.25rem",
             backgroundColor: "#171717",
-            height: "56px",
+            height: "48px",
             borderBottom: "2px solid white",
             display: "flex",
             alignItems: "center",
@@ -83,7 +85,10 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           <p className="font-bold">resume</p>
           <button
-            onClick={onClose}
+            onClick={() => {
+              onClose();
+              playAudio2(0.1);
+            }}
             className="font-bold transition-transform hover:scale-110"
           >
             x
@@ -106,7 +111,10 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   SERJO BARRON
                 </h1>
                 <button
-                  onClick={downloadResume}
+                  onClick={() => {
+                    downloadResume();
+                    playAudio1(0.2);
+                  }}
                   className="download-button flex items-center px-4 py-2 rounded-md"
                   style={{ fontSize: "1.25rem" }}
                 >
@@ -147,6 +155,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <a
                   href="mailto:serjobarron@gmail.com"
                   className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
                     <div className="relative w-6 h-6">
@@ -167,6 +176,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
                     <div className="relative w-6 h-6">
@@ -184,6 +194,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
                     <div className="relative w-6 h-6">
