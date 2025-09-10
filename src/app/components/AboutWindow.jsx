@@ -121,7 +121,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           <div
             className="h-1"
-            style={{ backgroundColor: "#233d61ff", height: "1px" }}
+            style={{ backgroundColor: "#5f5b82", height: "1px" }}
           ></div>
 
           {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}

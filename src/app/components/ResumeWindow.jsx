@@ -62,7 +62,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "1000px",
+          width: "1040px",
           height: "600px",
           borderRadius: "10px",
           border: "2px solid ",
@@ -98,20 +98,23 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{ backgroundColor: "#132135" }}
         >
           {/* HEADER */}
-          <div className="flex justify-between items-center mb-8">
+          <div
+            className="flex justify-between items-center mb-8 p-8 rounded-lg shadow-lg"
+            style={{ backgroundColor: "#273b54" }}
+          >
             <div className="flex flex-col">
-              <div>
+              <div className="flex flex-row justify-between">
+                <h1 className="font-bold" style={{ fontSize: "1.75rem" }}>
+                  SERJO BARRON
+                </h1>
                 <button
                   onClick={downloadResume}
-                  className="contact-button flex items-center px-4 py-2 rounded-md"
+                  className="download-button flex items-center px-4 py-2 rounded-md"
                   style={{ fontSize: "1.25rem" }}
                 >
                   Download PDF
                 </button>
               </div>
-              <h1 className="font-bold" style={{ fontSize: "1.75rem" }}>
-                SERJO BARRON
-              </h1>
               <div
                 className="flex flex-wrap gap-6 mt-4"
                 style={{
@@ -235,268 +238,306 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </div>
 
           {/* PROJECTS */}
-          <h2
-            className="font-bold mb-4 border-b-1 border-white pb-4"
-            style={{
-              fontSize: "1.5rem",
-            }}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "#273b54" }}
           >
-            PROJECTS
-          </h2>
-          <div>
-            <div className="flex justify-between items-center mt-4">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                Trashu (Smart Storage Manager)
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                08/2025 – Present
-              </span>
-            </div>
-            <p className="italic" style={{ fontSize: "1.125rem", color: "#ccc" }}>
-              Electron, React, Vite, Node.js, JavaScript, Tailwind CSS
-            </p>
-            <ul
-              className="list-disc ml-8 mt-4"
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.25rem",
+                fontSize: "1.5rem",
               }}
             >
-              <li className="mb-2">
-                Built a desktop app using Electron and React that helps users
-                find and manage duplicate, large, and unused files.
-              </li>
-              <li className="mb-2">
-                Engineered a set of "smart cleanup" metrics that analyze user
-                behavior (last accessed date, usage frequency, app usage time)
-                to provide intelligent recommendations for storage optimization.
-              </li>
-              <li className="mb-2">
-                Designed a playful, panda-themed UI with Tailwind CSS and Figma,
-                translating complex data into an intuitive, user-friendly
-                interface that improves file organization.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-center mt-4">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                Kept (Productivity Scheduler App)
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                07/2025 – 08/2025
-              </span>
+              PROJECTS
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Trashu (Smart Storage Manager)
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  08/2025 – Present
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "#ccc" }}
+              >
+                Electron, React, Vite, Node.js, JavaScript, TypeScript
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  Built a desktop app using Electron and React that helps users
+                  find and manage duplicate, large, and unused files.
+                </li>
+                <li className="mb-2">
+                  Engineered a set of "smart cleanup" metrics that analyze user
+                  behavior (last accessed date, usage frequency, app usage time)
+                  to provide intelligent recommendations for storage
+                  optimization.
+                </li>
+                <li className="mb-2">
+                  Designed a playful, panda-themed UI with Figma, translating
+                  complex data into an intuitive, user-friendly interface that
+                  improves file organization.
+                </li>
+              </ul>
             </div>
-            <p className="italic" style={{ fontSize: "1.125rem", color: "#ccc" }}>
-              React, Vite, Firebase (Firestore & Auth), Framer Motion, Tailwind
-              CSS
-            </p>
-            <ul
-              className="list-disc ml-8 mt-4"
-              style={{
-                fontSize: "1.25rem",
-              }}
-            >
-              <li className="mb-2">
-                Built and deployed a personalized task scheduler with 24-hour
-                timetable, modal task form, and 7-day navigation.
-              </li>
-              <li className="mb-2">
-                Integrated Firebase Auth and Firestore to persist user data and
-                tasks securely per account.
-              </li>
-              <li className="mb-2">
-                Designed gamified system with XP, badges, and animations to
-                encourage consistent productivity.
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <div className="flex justify-between items-center mt-4">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                SmartMirror (IoT Device with BLE-Enabled Mobile App)
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                01/2024 – 06/2024
-              </span>
+            <div>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Kept (Productivity Scheduler App)
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  07/2025 – 08/2025
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "#ccc" }}
+              >
+                React, Vite, Firebase (Firestore & Auth), JavaScript
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  Built and deployed a personalized task scheduler with 24-hour
+                  timetable, modal task form, and 7-day navigation.
+                </li>
+                <li className="mb-2">
+                  Integrated Firebase Auth and Firestore to persist user data
+                  and tasks securely per account.
+                </li>
+                <li className="mb-2">
+                  Designed gamified system with XP, badges, and animations to
+                  encourage consistent productivity.
+                </li>
+              </ul>
             </div>
-            <p className="italic" style={{ fontSize: "1.125rem", color: "#ccc" }}>
-              Python, React Native, Node.js, JavaScript, BLE, Raspberry Pi
-            </p>
-            <ul
-              className="list-disc ml-8 mt-4"
-              style={{
-                fontSize: "1.25rem",
-              }}
-            >
-              <li className="mb-2">
-                Built and tested the BLE communication pipeline enabling
-                real-time data exchange between a Raspberry Pi and React Native
-                mobile app.
-              </li>
-              <li className="mb-2">
-                Designed modular protocols and ran end-to-end integration tests
-                to validate data transfer and device compatibility.
-              </li>
-              <li className="mb-2">
-                Maintained shared system documentation and coordinated project
-                milestones, facilitating smooth team collaboration under Agile
-                workflows.
-              </li>
-            </ul>
+            <div>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  SmartMirror (IoT Device with BLE-Enabled Mobile App)
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  01/2024 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "#ccc" }}
+              >
+                Python, React Native, Node.js, JavaScript, BLE, Raspberry Pi
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  Built and tested the BLE communication pipeline enabling
+                  real-time data exchange between a Raspberry Pi and React
+                  Native mobile app.
+                </li>
+                <li className="mb-2">
+                  Designed modular protocols and ran end-to-end integration
+                  tests to validate data transfer and device compatibility.
+                </li>
+                <li className="mb-2">
+                  Maintained shared system documentation and coordinated project
+                  milestones, facilitating smooth team collaboration under Agile
+                  workflows.
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* TECHNICAL EXPERIENCE */}
-          <h2
-            className="font-bold mb-2 border-b-1 border-white pb-4 mt-8"
-            style={{
-              fontSize: "1.5rem",
-            }}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "#273b54" }}
           >
-            TECHNICAL EXPERIENCE
-          </h2>
-          <div>
-            <div className="flex justify-between items-center mt-2">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                Computer Systems and C Programming Reader
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                09/2023 – 06/2024
-              </span>
-            </div>
-            <p className="italic" style={{ fontSize: "1.125rem", color: "#ccc" }}>
-              Baskin School of Engineering – Santa Cruz, CA
-            </p>
-            <ul
-              className="list-disc ml-8 mt-4"
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.25rem",
+                fontSize: "1.5rem",
               }}
             >
-              <li className="mb-2">
-                Graded and provided feedback on weekly lab reports for over 200
-                students in systems programming and C.
-              </li>
-              <li className="mb-2">
-                Explained technical concepts clearly to support student learning
-                and LaTeX formatting conventions.
-              </li>
-            </ul>
+              TECHNICAL EXPERIENCE
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Computer Systems and C Programming Reader
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "#ccc" }}
+              >
+                Baskin School of Engineering – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  Graded and provided feedback on weekly lab reports for over
+                  200 students in systems programming and C.
+                </li>
+                <li className="mb-2">
+                  Explained technical concepts clearly to support student
+                  learning and LaTeX formatting conventions.
+                </li>
+              </ul>
+            </div>
           </div>
 
           {/* LEADERSHIP EXPERIENCE */}
-          <h2
-            className="font-bold mb-2 border-b-1 border-white pb-4 mt-8"
-            style={{
-              fontSize: "1.5rem",
-            }}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "#273b54" }}
           >
-            LEADERSHIP EXPERIENCE
-          </h2>
-          <div>
-            <div className="flex justify-between items-center mt-2">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                Tech Manager
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                09/2023 – 06/2024
-              </span>
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              style={{
+                fontSize: "1.5rem",
+              }}
+            >
+              LEADERSHIP EXPERIENCE
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Tech Manager
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "#ccc" }}
+              >
+                Slug Anime and Manga Association – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  Managed AV, streaming, and live troubleshooting for weekly
+                  meetings and SlugCon, a 1000+ person convention.
+                </li>
+                <li className="mb-2">
+                  Coordinated technical logistics and relayed setup plans across
+                  officers, guests, and event partners.
+                </li>
+                <li className="mb-2">
+                  Provided ongoing tech support and contributed to outreach and
+                  event funding initiatives.
+                </li>
+              </ul>
             </div>
-            <p className="italic" style={{ fontSize: "1.125rem", color: "#ccc" }}>
-              Slug Anime and Manga Association – Santa Cruz, CA
-            </p>
+          </div>
+
+          {/* TECHNICAL SKILLS */}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "#273b54" }}
+          >
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              style={{
+                fontSize: "1.5rem",
+              }}
+            >
+              TECHNICAL SKILLS
+            </h2>
             <ul
-              className="list-disc ml-8 mt-4"
+              className="list-disc ml-8"
               style={{
                 fontSize: "1.25rem",
               }}
             >
               <li className="mb-2">
-                Managed AV, streaming, and live troubleshooting for weekly
-                meetings and SlugCon, a 1000+ person convention.
+                <span className="font-bold">Programming Languages:</span>{" "}
+                Python, C/C++, JavaScript, TypeScript, HTML, CSS, Verilog
               </li>
               <li className="mb-2">
-                Coordinated technical logistics and relayed setup plans across
-                officers, guests, and event partners.
+                <span className="font-bold">Frameworks & Libraries:</span>{" "}
+                React, Node.js, Next.js, Vite, Electron, Tailwind CSS, Firebase
               </li>
               <li className="mb-2">
-                Provided ongoing tech support and contributed to outreach and
-                event funding initiatives.
+                <span className="font-bold">Tools:</span> Git, GitHub, Visual
+                Studio, Figma, LaTeX
+              </li>
+              <li className="mb-2">
+                <span className="font-bold">Methodologies & Systems:</span>{" "}
+                Agile, Scrum, CI/CD, Windows, Linux
               </li>
             </ul>
           </div>
 
-          {/* TECHNICAL SKILLS */}
-          <h2
-            className="font-bold mb-2 border-b-1 border-white pb-4 mt-8"
-            style={{
-              fontSize: "1.5rem",
-            }}
-          >
-            TECHNICAL SKILLS
-          </h2>
-          <ul
-            className="list-disc ml-8"
-            style={{
-              fontSize: "1.25rem",
-            }}
-          >
-            <li className="mb-2">
-              <span className="font-bold">Programming Languages:</span> Python,
-              C/C++, JavaScript, TypeScript, HTML, CSS, Verilog
-            </li>
-            <li className="mb-2">
-              <span className="font-bold">Frameworks & Libraries:</span> React,
-              Node.js, Vite, Electron, Tailwind CSS, Firebase, Framer Motion
-            </li>
-            <li className="mb-2">
-              <span className="font-bold">Tools:</span> Git, GitHub, Visual
-              Studio, Figma, LaTeX
-            </li>
-            <li className="mb-2">
-              <span className="font-bold">Methodologies & Systems:</span> Agile,
-              Scrum, CI/CD, Windows, Linux
-            </li>
-          </ul>
-
           {/* EDUCATION */}
-          <h2
-            className="font-bold mb-2 border-b-1 border-white pb-4 mt-8"
-            style={{
-              fontSize: "1.5rem",
-            }}
+          <div
+            className="rounded-lg shadow-lg p-8"
+            style={{ backgroundColor: "#273b54" }}
           >
-            EDUCATION
-          </h2>
-          <div>
-            <div className="flex justify-between items-center mt-2">
-              <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                University of California, Santa Cruz
-              </span>
-              <span className="italic" style={{ fontSize: "1.25rem" }}>
-                06/2024
-              </span>
-            </div>
-            <p style={{ fontSize: "1.25rem" }}>
-              Bachelor of Science &mdash; Computer Engineering
-            </p>
-            <ul
-              className="list-disc ml-8 mt-4"
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.25rem",
+                fontSize: "1.5rem",
               }}
             >
-              <li className="mb-2">
-                <span className="font-bold">GPA:</span> 3.70
-              </li>
-              <li className="mb-2">
-                <span className="font-bold">Relevant Coursework:</span> Embedded
-                Systems, Data Structures & Algorithms, Systems Design, Computer
-                Architecture, Network Programming, Logic Design, Electronic
-                Circuits
-              </li>
-            </ul>
+              EDUCATION
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  University of California, Santa Cruz
+                </span>
+                <span className="italic" style={{ fontSize: "1.25rem" }}>
+                  06/2024
+                </span>
+              </div>
+              <p style={{ fontSize: "1.25rem" }}>
+                Bachelor of Science &mdash; Computer Engineering
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                }}
+              >
+                <li className="mb-2">
+                  <span className="font-bold">GPA:</span> 3.70
+                </li>
+                <li className="mb-2">
+                  <span className="font-bold">Relevant Coursework:</span>{" "}
+                  Embedded Systems, Data Structures & Algorithms, Systems
+                  Design, Computer Architecture, Network Programming, Logic
+                  Design, Electronic Circuits
+                </li>
+              </ul>
+            </div>
           </div>
           {/* placeholder */}
         </div>

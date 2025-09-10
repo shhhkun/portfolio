@@ -126,3 +126,11 @@ body {
 .contact-button:hover {
   background-color: #3e5470;
 }
+
+.download-button {
+  background-color: #34465d;
+}
+
+.download-button:hover {
+  background-color: #3e5470;
+}
