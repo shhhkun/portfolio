@@ -5,11 +5,9 @@ import Draggable from "react-draggable";
 import {
   GithubLogoIcon,
   LinkedinLogoIcon,
-  RectangleIcon,
   EnvelopeSimpleIcon,
   MapPinIcon,
   PhoneIcon,
-  DeviceMobileIcon,
 } from "@phosphor-icons/react";
 
 const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
@@ -118,7 +116,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div
                 className="flex flex-wrap gap-6 mt-4"
                 style={{
-                  color: "#808080",
+                  color: "#a0a0a0",
                   fontSize: "1.25rem",
                 }}
               >
@@ -127,15 +125,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <div className="relative w-6 h-6">
                       <MapPinIcon
                         size={24}
-                        color="#171717"
                         weight="fill"
                         className="absolute top-0 left-0"
-                      />
-                      <MapPinIcon
-                        size={24}
-                        color="#ffffff"
-                        weight="light"
-                        className="absolute top-0 left-0 z-10"
                       />
                     </div>
                   </span>
@@ -146,15 +137,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <div className="relative w-6 h-6">
                       <PhoneIcon
                         size={24}
-                        color="#171717"
                         weight="fill"
                         className="absolute top-0 left-0"
-                      />
-                      <PhoneIcon
-                        size={24}
-                        color="#ffffff"
-                        weight="light"
-                        className="absolute top-0 left-0 z-10"
                       />
                     </div>
                   </span>
@@ -166,20 +150,13 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <span className="mr-1">
                     <div className="relative w-6 h-6">
-                      <RectangleIcon
+                      <EnvelopeSimpleIcon
                         size={24}
-                        color="#171717"
                         weight="fill"
                         className="absolute top-0 left-0"
                         style={{
                           transform: "translateY(0px) scaleY(0.9) scaleX(0.9)",
                         }}
-                      />
-                      <EnvelopeSimpleIcon
-                        size={24}
-                        color="#ffffff"
-                        weight="light"
-                        className="absolute top-0 left-0 z-10"
                       />
                     </div>
                   </span>
@@ -195,15 +172,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <div className="relative w-6 h-6">
                       <LinkedinLogoIcon
                         size={24}
-                        color="#171717"
                         weight="fill"
                         className="absolute top-0 left-0"
-                      />
-                      <LinkedinLogoIcon
-                        size={24}
-                        color="#ffffff"
-                        weight="light"
-                        className="absolute top-0 left-0 z-10"
                       />
                     </div>
                   </span>
@@ -219,15 +189,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <div className="relative w-6 h-6">
                       <GithubLogoIcon
                         size={24}
-                        color="#171717"
                         weight="fill"
                         className="absolute top-0 left-0"
-                      />
-                      <GithubLogoIcon
-                        size={24}
-                        color="#ffffff"
-                        weight="light"
-                        className="absolute top-0 left-0 z-10"
                       />
                     </div>
                   </span>
