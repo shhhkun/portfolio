@@ -9,6 +9,7 @@ import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
 import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
+import ResumeWindow from "./components/ResumeWindow";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -121,6 +122,15 @@ const Layout = ({ children }) => {
               onStop={(e, ui) => handleStop("contact", e, ui)}
               zIndex={windows.contact.zIndex}
               position={windows.contact.position}
+            />
+          )}
+          {windows.resume.isOpen && (
+            <ResumeWindow
+              onClose={() => handleClose("resume")}
+              onFocus={() => handleFocus("resume")}
+              onStop={(e, ui) => handleStop("resume", e, ui)}
+              zIndex={windows.resume.zIndex}
+              position={windows.resume.position}
             />
           )}
         </div>
