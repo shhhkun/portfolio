@@ -107,7 +107,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               />
             </div>
             <div className="ml-12">
-              <div
+              <h2
                 style={{
                   fontWeight: "500",
                   color: "var(--text3)",
@@ -115,15 +115,15 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 Serjo Barron
-              </div>
-              <div
+              </h2>
+              <h3
                 className="pl-2"
                 style={{ color: "var(--text)", fontSize: "1.125rem" }}
               >
                 Full-Stack Developer
                 <br />
                 UI/UX Enthusiast
-              </div>
+              </h3>
             </div>
           </div>
 

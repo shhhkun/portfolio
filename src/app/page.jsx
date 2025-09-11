@@ -77,7 +77,7 @@ const Page = () => {
   };
 
   return (
-    <main className="text-white text-lg">
+    <main>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="z-10">
           <HomeWindow handleOpen={handleOpen} />

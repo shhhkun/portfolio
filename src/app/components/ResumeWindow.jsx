@@ -62,7 +62,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "1040px",
+          width: "1058px",
           height: "600px",
           borderRadius: "10px",
           border: "2px solid ",

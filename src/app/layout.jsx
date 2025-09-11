@@ -38,7 +38,6 @@ const Layout = ({ children }) => {
             <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
             <FloatingObject />
             
-            {/* The children prop is where your page content will be rendered */}
             {children}
             
           </div>

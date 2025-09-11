@@ -286,7 +286,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 backgroundColor: "var(--card-bg2)",
               }}
             >
-              <h2>All the places to say hi</h2>
+              <p>All the places to say hi</p>
             </div>
           </div>
         </div>

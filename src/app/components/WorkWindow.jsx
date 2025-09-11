@@ -51,7 +51,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
-          width: "1000px",
+          width: "1056px",
           height: "600px",
           borderRadius: "10px",
           border: "2px solid ",

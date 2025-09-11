@@ -66,7 +66,7 @@ const FloatingObject = ({
     <div
       ref={containerRef}
       id="floating-container"
-      className="absolute bottom-32 left-0 w-full flex justify-start z-10"
+      className="absolute bottom-32 left-0 w-full flex justify-start z-12"
     >
       <div
         className="w-32 h-32 relative"
