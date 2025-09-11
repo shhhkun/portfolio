@@ -1,36 +1,59 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# My Portfolio Website
+
+This is a personal portfolio website built to showcase my skills, projects, and professional background. The site is designed to be clean, modern, and fully responsive across all devices.
+
+## Features
+
+- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable, resizable windows for different sections (e.g., About, Projects, Contact).
+
+- **Dynamic Theming:** Users can toggle between light and dark modes, which smoothly changes the entire color palette of the site.
+
+- **Sound Effects:** Subtle audio cues enhance the user experience as they interact with the virtual desktop.
+
+- **Dynamic Waves:** The animated wave background creates a serene and engaging visual experience.
+
+## Some Technologies Used
+
+- **Google Fonts:** For custom typography, including the header font, Oswald, and the body font, Inter.
+
+- **Zapsplat:** For sound effects and audio assets.
+
+- **react-wavify:** A React component used to generate the dynamic, animated wave effects.
+
+- **react-draggable:** A React component used to make the windows draggable.
 
 ## Getting Started
 
-First, run the development server:
+To run this project locally:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+1. Clone the repository:
+
+```
+git clone https://github.com/shhhkun/portfolio.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Navigate to the project directory:
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+```
+cd your-portfolio
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Install dependencies:
 
-## Learn More
+```
+npm install
+```
 
-To learn more about Next.js, take a look at the following resources:
+4. Start the development server:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```
+npm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Acknowledgements
 
-## Deploy on Vercel
+I would like to extend my gratitude to the following resources that were instrumental in the creation of this project:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- **Zapsplat:** For providing high-quality, free sound effects that were used for various interactive elements on the site.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- **Shar:** For the web page and layout inspiration, which helped shape the design and user experience of this portfolio.
