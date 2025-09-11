@@ -64,20 +64,23 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "var(--bg)",
+            backgroundColor: "var(--card-header)",
             height: "48px",
             borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
         >
-          <p className="font-bold">about</p>
+          <p className="font-bold" style={{ color: "var(--text-header)" }}>
+            about
+          </p>
           <button
             onClick={() => {
               onClose();
               playAudio2(0.1);
             }}
             className="font-bold transition-transform hover:scale-110"
+            style={{ color: "var(--text-header)" }}
           >
             x
           </button>
@@ -132,7 +135,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}
           <div
             className="custom-scrollbar p-12 text-white flex-grow overflow-y-auto"
-            style={{ color: "var(--text2)" }}
+            style={{ color: "var(--text)" }}
           >
             <div style={{ fontSize: "1.25rem" }}>
               <p>

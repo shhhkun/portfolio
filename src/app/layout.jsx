@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomeWindow from "./components/HomeWindow";
 import Waves from "./components/Waves";
 import "./globals.css";
@@ -70,6 +70,13 @@ const Layout = ({ children }) => {
     }));
   };
 
+  const [theme, setTheme] = useState("dark"); 
+
+  useEffect(() => {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    setTheme(prefersDark ? "dark" : "light");
+  }, []);
+
   return (
     <html lang="en">
       <body>
@@ -84,7 +91,7 @@ const Layout = ({ children }) => {
             {/* <div className="sunset-glow"></div> */}
 
             <div className="absolute flex flex-row top-4 left-4 z-10">
-              <ThemeButton />
+              <ThemeButton theme={theme} setTheme={setTheme} />
               <MuteButton />
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">
@@ -94,7 +101,7 @@ const Layout = ({ children }) => {
               </div>
 
               {/* Bottom Wavify Animation */}
-              <Waves theme="sunset" />
+              <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
             </div>
 
             {/* Window Renders */}

@@ -65,20 +65,23 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "var(--bg)",
+            backgroundColor: "var(--card-header)",
             height: "48px",
             borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
         >
-          <p className="font-bold">work</p>
+          <p className="font-bold" style={{ color: "var(--text-header)" }}>
+            work
+          </p>
           <button
             onClick={() => {
               onClose();
               playAudio2(0.1);
             }}
             className="font-bold transition-transform hover:scale-110"
+            style={{ color: "var(--text-header)" }}
           >
             x
           </button>
@@ -174,7 +177,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Projects Section */}
           <h2
-            className="section-title font-semibold mb-4 text-gray-200"
+            className="section-title font-semibold mb-4"
             style={{
               fontSize: "1.5rem",
             }}
@@ -189,7 +192,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative"
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
@@ -242,7 +245,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative"
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img
@@ -528,7 +531,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative"
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
                 style={{ backgroundColor: "#30363d", width: "420px" }}
               >
                 <img

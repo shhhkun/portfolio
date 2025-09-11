@@ -29,7 +29,7 @@ const HomeWindow = ({ handleOpen }) => {
         className="flex items-center justify-between px-4 py-2"
         style={{
           fontSize: "1.25rem",
-          backgroundColor: "var(--bg)",
+          backgroundColor: "var(--card-header)",
           height: "48px",
           borderBottom: "2px solid var(--border)",
           display: "flex",
@@ -37,7 +37,9 @@ const HomeWindow = ({ handleOpen }) => {
           paddingLeft: "1.5rem",
         }}
       >
-        <p className="font-bold">home</p>
+        <p className="font-bold" style={{ color: "var(--text-header)" }}>
+          home
+        </p>
       </div>
 
       {/* Main Content Area */}

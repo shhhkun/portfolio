@@ -22,6 +22,8 @@ export const AudioPlayerProvider = ({ children }) => {
       audio1: new Audio("/mouseclick.wav"),
       audio2: new Audio("/pop.mp3"),
       audio3: new Audio("/unmute.mp3"),
+      audio4: new Audio("/sun.mp3"),
+      audio5: new Audio("/moon.mp3"),
     };
   }, []);
 
@@ -59,6 +61,8 @@ export const AudioPlayerProvider = ({ children }) => {
     playAudio1: (volume) => playAudio("audio1", volume),
     playAudio2: (volume) => playAudio("audio2", volume),
     playAudio3: (volume) => playAudio("audio3", volume),
+    playAudio4: (volume) => playAudio("audio4", volume),
+    playAudio5: (volume) => playAudio("audio5", volume),
     isMuted,
     toggleMute,
   };

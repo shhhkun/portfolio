@@ -1,7 +1,7 @@
 import React from "react";
 import Wave from "react-wavify";
 
-const Waves = ({ theme }) => {
+const Waves = ({ style }) => {
   // color palettes
   const themes = {
     starryNight: {
@@ -48,8 +48,8 @@ const Waves = ({ theme }) => {
     },
   };
 
-  // get the correct palette based on the theme prop, w/ default as fallback
-  const palette = themes[theme] || themes.default;
+  // get the correct palette based on the style prop, w/ default as fallback
+  const palette = themes[style] || themes.default;
 
   return (
     <div className="w-full">

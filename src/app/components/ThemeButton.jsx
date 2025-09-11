@@ -1,16 +1,11 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
+import { useAudioPlayer } from "./AudioPlayer";
 import { SunIcon, MoonIcon } from "@phosphor-icons/react";
 
-const ThemeButton = () => {
-  const initialTheme =
-    typeof window !== "undefined" &&
-    window.matchMedia("(prefers-color-scheme: dark)").matches
-      ? "dark"
-      : "light";
-
-  const [theme, setTheme] = useState(initialTheme);
+const ThemeButton = ({ theme, setTheme }) => {
+  const { playAudio4, playAudio5 } = useAudioPlayer();
 
   const toggleTheme = () => {
     setTheme((prevTheme) => (prevTheme === "dark" ? "light" : "dark"));
@@ -23,7 +18,10 @@ const ThemeButton = () => {
   return (
     <button
       className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
-      onClick={toggleTheme}
+      onClick={() => {
+        toggleTheme();
+        theme === "dark" ? playAudio4(0.1) : playAudio5(0.1);
+      }}
     >
       {theme === "dark" ? (
         <div className="relative w-8 h-8">

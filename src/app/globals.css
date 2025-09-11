@@ -2,39 +2,43 @@
 
 /* default: light */
 :root {
-  --bg: #ffffff;
-  --card-bg: #e2e8f0;
-  --card-bg2: #f0f4f9;
-  --card-bg3: #dce4ef;
-  --bar-bg: #273b54;
-  --text: #171717;
-  --text2: #007bff;
-  --text3: #6b7280;
-  --text4: #a0a0a0;
-  --border: #5a5a5a;
-  --border2: #d1d5db;
-  --button-bg: #e5e7eb;
-  --button-bg2: #d1d5db;
-  --button-bg3: #9ca3af;
-  --button-hover: #6b7280;
-  --scroll: #273b54;
+  --bg: #f0f4f8;
+  --card-header: #9db3c2;
+  --card-bg: #eaf0f6;
+  --card-bg2: #d3dce5;
+  --card-bg3: #c0c8d1;
+  --bar-bg: #e0e8f0;
+  --text: #2d3e50;
+  --text2: #5f7386;
+  --text3: #34495e;
+  --text4: #6b7786;
+  --text-header: #2d3e50;
+  --border: #c8d1d9;
+  --border2: #adc0d3;
+  --button-bg: #c8d1d9;
+  --button-bg2: #b2b8c0;
+  --button-bg3: #a9b3bd;
+  --button-hover: #9da9b8;
+  --scroll: #a0a0a0;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
     --bg: #171717;
+    --card-header: #171717;
     --card-bg: #132135;
     --card-bg2: #273b54; /* smaller inner cards */
     --card-bg3: #161b22; /* project cards */
     --bar-bg: #273b54;
     --text: #ffffff;
     --text2: #d8dade;
-    --text3: #c0faff; /* light blue 'accent' text */
+    --text3: #c0faff; /* accent text */
     --text4: #a0a0a0; /* resume info/italic text */
+    --text-header: #ffffff;
     --border: #ffffff; /* window borders */
     --border2: #5f5b82; /* for inside cards */
     --button-bg: #273b54; /* for contact */
-    --button-bg2: #384158; /* for pill-button & project tools */
+    --button-bg2: #384158; /* for pill-button */
     --button-bg3: #34465d; /* for download */
     --button-hover: #3e5470; /* for contact & download */
     --scroll: #273b54;
@@ -42,38 +46,42 @@
 }
 
 html.light {
-  --bg: #ffffff;
-  --card-bg: #e2e8f0;
-  --card-bg2: #f0f4f9;
-  --card-bg3: #dce4ef;
-  --bar-bg: #273b54;
-  --text: #171717;
-  --text2: #007bff;
-  --text3: #6b7280;
-  --text4: #a0a0a0;
-  --border: #5a5a5a;
-  --border2: #d1d5db;
-  --button-bg: #e5e7eb;
-  --button-bg2: #d1d5db;
-  --button-bg3: #9ca3af;
-  --button-hover: #6b7280;
-  --scroll: #273b54;
+  --bg: #f0f4f8;
+  --card-header: #9db3c2;
+  --card-bg: #eaf0f6;
+  --card-bg2: #d3dce5;
+  --card-bg3: #c0c8d1;
+  --bar-bg: #e0e8f0;
+  --text: #2d3e50;
+  --text2: #5f7386;
+  --text3: #34495e;
+  --text4: #6b7786;
+  --text-header: #2d3e50;
+  --border: #c8d1d9;
+  --border2: #adc0d3;
+  --button-bg: #c8d1d9;
+  --button-bg2: #b2b8c0;
+  --button-bg3: #a9b3bd;
+  --button-hover: #9da9b8;
+  --scroll: #a0a0a0;
 }
 
 html.dark {
   --bg: #171717;
+  --card-header: #171717;
   --card-bg: #132135;
   --card-bg2: #273b54; /* smaller inner cards */
   --card-bg3: #161b22; /* project cards */
   --bar-bg: #273b54;
   --text: #ffffff;
   --text2: #d8dade;
-  --text3: #c0faff; /* light blue 'accent' text */
+  --text3: #d89b74; /* accent text */
   --text4: #a0a0a0; /* resume info/italic text */
+  --text-header: #ffffff;
   --border: #ffffff; /* window borders */
   --border2: #5f5b82; /* for inside cards */
   --button-bg: #273b54; /* for contact */
-  --button-bg2: #384158; /* for pill-button & project tools */
+  --button-bg2: #384158; /* for pill-button */
   --button-bg3: #34465d; /* for download */
   --button-hover: #3e5470; /* for contact & download */
   --scroll: #273b54;
