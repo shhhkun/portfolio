@@ -1,77 +1,15 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import HomeWindow from "./components/HomeWindow";
-import Waves from "./components/Waves";
 import "./globals.css";
 
-import AboutWindow from "./components/AboutWindow";
-import WorkWindow from "./components/WorkWindow";
-import LinksWindow from "./components/LinksWindow";
-import ContactWindow from "./components/ContactWindow";
-import ResumeWindow from "./components/ResumeWindow";
+import Waves from "./components/Waves";
+import FloatingObject from "./components/FloatingObject";
 import { AudioPlayerProvider } from "./components/AudioPlayer";
 import MuteButton from "./components/MuteButton";
 import ThemeButton from "./components/ThemeButton";
 
-import FloatingObject from "./components/FloatingObject";
-
-const initialWindowsState = {
-  about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-  links: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-  work: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-  contact: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-  resume: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
-};
-
 const Layout = ({ children }) => {
-  const [windows, setWindows] = useState(initialWindowsState);
-  const [highestZIndex, setHighestZIndex] = useState(100);
-
-  const handleOpen = (windowId) => {
-    setWindows((prevWindows) => {
-      const newZIndex = highestZIndex + 1;
-      setHighestZIndex(newZIndex);
-      return {
-        ...prevWindows,
-        [windowId]: {
-          ...prevWindows[windowId],
-          isOpen: true,
-          zIndex: newZIndex,
-        },
-      };
-    });
-  };
-
-  const handleClose = (windowId) => {
-    setWindows((prevWindows) => ({
-      ...prevWindows,
-      [windowId]: { ...prevWindows[windowId], isOpen: false },
-    }));
-  };
-
-  const handleFocus = (windowId) => {
-    setWindows((prevWindows) => {
-      // update zIndex if it isn't already the top-most window
-      if (prevWindows[windowId].zIndex === highestZIndex) {
-        return prevWindows;
-      }
-      const newZIndex = highestZIndex + 1;
-      setHighestZIndex(newZIndex);
-      return {
-        ...prevWindows,
-        [windowId]: { ...prevWindows[windowId], zIndex: newZIndex },
-      };
-    });
-  };
-
-  const handleStop = (windowId, e, ui) => {
-    setWindows((prevWindows) => ({
-      ...prevWindows,
-      [windowId]: { ...prevWindows[windowId], position: { x: ui.x, y: ui.y } },
-    }));
-  };
-
   const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
@@ -92,71 +30,17 @@ const Layout = ({ children }) => {
               overflow: "hidden",
             }}
           >
-            {/* <div className="sunset-glow"></div> */}
-
             <div className="absolute flex flex-row top-4 left-4 z-10">
               <ThemeButton theme={theme} setTheme={setTheme} />
               <MuteButton />
             </div>
-            <div className="absolute inset-0 flex flex-col items-center justify-center">
-              {/* Home Window */}
-              <div className="z-10">
-                <HomeWindow handleOpen={handleOpen} />
-              </div>
 
-              {/* Bottom Wavify Animation */}
-              <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
-
-              {/* Floating Bear */}
-              <FloatingObject />
-            </div>
-
-            {/* Window Renders */}
-            {windows.about.isOpen && (
-              <AboutWindow
-                onClose={() => handleClose("about")}
-                onFocus={() => handleFocus("about")}
-                onStop={(e, ui) => handleStop("about", e, ui)}
-                zIndex={windows.about.zIndex}
-                position={windows.about.position}
-              />
-            )}
-            {windows.links.isOpen && (
-              <LinksWindow
-                onClose={() => handleClose("links")}
-                onFocus={() => handleFocus("links")}
-                onStop={(e, ui) => handleStop("links", e, ui)}
-                zIndex={windows.links.zIndex}
-                position={windows.links.position}
-              />
-            )}
-            {windows.work.isOpen && (
-              <WorkWindow
-                onClose={() => handleClose("work")}
-                onFocus={() => handleFocus("work")}
-                onStop={(e, ui) => handleStop("work", e, ui)}
-                zIndex={windows.work.zIndex}
-                position={windows.work.position}
-              />
-            )}
-            {windows.contact.isOpen && (
-              <ContactWindow
-                onClose={() => handleClose("contact")}
-                onFocus={() => handleFocus("contact")}
-                onStop={(e, ui) => handleStop("contact", e, ui)}
-                zIndex={windows.contact.zIndex}
-                position={windows.contact.position}
-              />
-            )}
-            {windows.resume.isOpen && (
-              <ResumeWindow
-                onClose={() => handleClose("resume")}
-                onFocus={() => handleFocus("resume")}
-                onStop={(e, ui) => handleStop("resume", e, ui)}
-                zIndex={windows.resume.zIndex}
-                position={windows.resume.position}
-              />
-            )}
+            <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
+            <FloatingObject />
+            
+            {/* The children prop is where your page content will be rendered */}
+            {children}
+            
           </div>
         </AudioPlayerProvider>
       </body>

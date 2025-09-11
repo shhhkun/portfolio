@@ -197,7 +197,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/trashu.png"
+                  src="/trashu.webp"
                   alt="Placeholder for project 1"
                 />
               </div>
@@ -250,7 +250,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/kept.png"
+                  src="/kept.webp"
                   alt="Placeholder for project 2"
                 />
               </div>
@@ -536,7 +536,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/dollhouse.png"
+                  src="/dollhouse.webp"
                   alt="Placeholder for project 7"
                 />
               </div>
