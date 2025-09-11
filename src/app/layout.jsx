@@ -14,6 +14,8 @@ import { AudioPlayerProvider } from "./components/AudioPlayer";
 import MuteButton from "./components/MuteButton";
 import ThemeButton from "./components/ThemeButton";
 
+import FloatingObject from "./components/FloatingObject";
+
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
   links: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -70,10 +72,12 @@ const Layout = ({ children }) => {
     }));
   };
 
-  const [theme, setTheme] = useState("dark"); 
+  const [theme, setTheme] = useState("dark");
 
   useEffect(() => {
-    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    const prefersDark = window.matchMedia(
+      "(prefers-color-scheme: dark)"
+    ).matches;
     setTheme(prefersDark ? "dark" : "light");
   }, []);
 
@@ -102,6 +106,9 @@ const Layout = ({ children }) => {
 
               {/* Bottom Wavify Animation */}
               <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
+
+              {/* Floating Bear */}
+              <FloatingObject />
             </div>
 
             {/* Window Renders */}

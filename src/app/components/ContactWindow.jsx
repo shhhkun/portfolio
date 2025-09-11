@@ -144,7 +144,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {toastMessage && (
               <span
                 className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2"
-                style={{ fontSize: "0.75rem" }}
+                style={{ color: "#ffffff", fontSize: "0.75rem" }}
               >
                 {toastMessage}
               </span>

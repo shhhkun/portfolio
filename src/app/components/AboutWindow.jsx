@@ -101,7 +101,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               }}
             >
               <img
-                src="/bear.png"
+                src="/pfp.png"
                 alt="Serjo Barron Profile"
                 className="w-full h-full object-cover"
               />
