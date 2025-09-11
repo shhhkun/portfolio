@@ -65,9 +65,9 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "#171717",
+            backgroundColor: "var(--bg)",
             height: "48px",
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
@@ -87,19 +87,19 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         {/* Main Content Area */}
         <div
           className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
-          style={{ backgroundColor: "#132135" }}
+          style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Intro Card */}
           <div
             className="intro-card rounded-lg p-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h3 className="font-bold" style={{ fontSize: "1.25rem" }}>
               Open for opportunities. Connect with me at{" "}
               <a
                 href="mailto:serjobarron@gmail.com"
                 className="underline"
-                style={{ color: "#C0FAFF" }}
+                style={{ color: "var(--text3)" }}
                 onClick={() => playAudio1(0.2)}
               >
                 serjobarron@gmail.com
@@ -113,7 +113,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           <div
             className="h-1 my-8"
-            style={{ backgroundColor: "#5f5b82", height: "1px" }}
+            style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
           {/* Development & Tools Section */}
@@ -169,7 +169,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           <div
             className="h-1 my-8"
-            style={{ backgroundColor: "#5f5b82", height: "1px" }}
+            style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
           {/* Projects Section */}
@@ -186,7 +186,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 1 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative"
@@ -217,8 +217,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     Electron, React, Node.js, Vite, TypeScript
                   </p>
@@ -239,7 +239,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 2 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative"
@@ -270,8 +270,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Node.js, Vite, Firebase/Firestore
                   </p>
@@ -300,7 +300,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 3 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
@@ -309,7 +309,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="relative w-16 h-16">
                   <GithubLogoIcon
                     size={64}
-                    color="#171717"
+                    color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
@@ -334,8 +334,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     Python, React/React Native, Node.js, JavaScript, BLE,
                     Raspberry Pi
@@ -357,7 +357,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 4 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
@@ -366,7 +366,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="relative w-16 h-16">
                   <GithubLogoIcon
                     size={64}
-                    color="#171717"
+                    color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
@@ -391,8 +391,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
                   </p>
@@ -413,7 +413,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 5 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
@@ -422,7 +422,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="relative w-16 h-16">
                   <GithubLogoIcon
                     size={64}
-                    color="#171717"
+                    color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
@@ -447,8 +447,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
                   </p>
@@ -469,7 +469,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 6 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
@@ -478,7 +478,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="relative w-16 h-16">
                   <GithubLogoIcon
                     size={64}
-                    color="#171717"
+                    color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
@@ -503,8 +503,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
                   </p>
@@ -525,7 +525,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Project Card 7 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
-              style={{ backgroundColor: "#161b22" }}
+              style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
                 className="project-image-container relative"
@@ -558,8 +558,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium text-gray-500 mb-2"
-                    style={{ fontSize: "0.875rem" }}
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     Construct 3
                   </p>

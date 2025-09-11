@@ -91,9 +91,9 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "#171717",
+            backgroundColor: "var(--bg)",
             height: "48px",
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
@@ -113,7 +113,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         {/* Main Content Area */}
         <div
           className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
-          style={{ backgroundColor: "#132135" }}
+          style={{ backgroundColor: "var(--card-bg)" }}
         >
           <h2 className="font-bold mb-4" style={{ fontSize: "1.5rem" }}>
             You've got mail!
@@ -133,7 +133,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             }}
           >
             reach out at:{" "}
-            <span style={{ color: "#C0FAFF", textDecoration: "underline" }}>
+            <span style={{ color: "var(--text3)", textDecoration: "underline" }}>
               {emailAddress}
             </span>
             {toastMessage && (

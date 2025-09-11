@@ -16,7 +16,7 @@ const MuteButton = () => {
         <div className="relative w-8 h-8">
           <SpeakerXIcon
             size={32}
-            color="#ffffff"
+            color="var(--text)"
             weight="fill"
             className="absolute top-0 left-0"
           />
@@ -25,7 +25,7 @@ const MuteButton = () => {
         <div className="relative w-8 h-8">
           <SpeakerNoneIcon
             size={32}
-            color="#ffffff"
+            color="var(--text)"
             weight="fill"
             className="absolute top-0 left-0"
           />

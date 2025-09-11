@@ -134,9 +134,9 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "#171717",
+            backgroundColor: "var(--bg)",
             height: "48px",
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
@@ -156,7 +156,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         {/* Main Content Area */}
         <div
           className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
-          style={{ backgroundColor: "#132135" }}
+          style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Link Icons */}
           <div className="flex flex-row flex-wrap gap-8 p-4">
@@ -171,13 +171,13 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div className="relative w-16 h-16">
                 <GithubLogoIcon
                   size={64}
-                  color="#171717"
+                  color="var(--bg)"
                   weight="fill"
                   className="absolute top-0 left-0"
                 />
                 <GithubLogoIcon
                   size={64}
-                  color="#ffffff"
+                  color="var(--text)"
                   weight="light"
                   className="absolute top-0 left-0 z-10"
                 />
@@ -196,7 +196,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div className="relative w-16 h-16">
                 <SquareIcon
                   size={64}
-                  color="#171717"
+                  color="var(--bg)"
                   weight="fill"
                   className="absolute top-0 left-0"
                   style={{
@@ -206,7 +206,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 />
                 <LeetCodeLogo
                   size={64}
-                  color="#ffffff"
+                  color="var(--text)"
                   weight="regular"
                   className="absolute top-0 left-0 z-10"
                 />
@@ -225,13 +225,13 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div className="relative w-16 h-16">
                 <LinkedinLogoIcon
                   size={64}
-                  color="#171717"
+                  color="var(--bg)"
                   weight="fill"
                   className="absolute top-0 left-0"
                 />
                 <LinkedinLogoIcon
                   size={64}
-                  color="#ffffff"
+                  color="var(--text)"
                   weight="light"
                   className="absolute top-0 left-0 z-10"
                 />
@@ -251,13 +251,13 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="relative w-16 h-16">
                   <DiscordLogoIcon
                     size={64}
-                    color="#171717"
+                    color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
                   <DiscordLogoIcon
                     size={64}
-                    color="#ffffff"
+                    color="var(--text)"
                     weight="light"
                     className="absolute top-0 left-0 z-10"
                   />
@@ -279,7 +279,9 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             {/* Intro Card */}
             <div
               className="intro-card rounded-lg text-center mx-auto py-4 px-16"
-              style={{ backgroundColor: "#273b54" }}
+              style={{
+                backgroundColor: "var(--card-bg2)",
+              }}
             >
               <h2>All the places to say hi</h2>
             </div>

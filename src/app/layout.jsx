@@ -12,6 +12,7 @@ import ContactWindow from "./components/ContactWindow";
 import ResumeWindow from "./components/ResumeWindow";
 import { AudioPlayerProvider } from "./components/AudioPlayer";
 import MuteButton from "./components/MuteButton";
+import ThemeButton from "./components/ThemeButton";
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -76,11 +77,14 @@ const Layout = ({ children }) => {
           <div
             className="min-h-screen relative"
             style={{
-              backgroundColor: "#171717",
+              backgroundColor: "var(--bg)",
               overflow: "hidden",
             }}
           >
-            <div className="absolute top-4 left-4 z-10">
+            {/* <div className="sunset-glow"></div> */}
+
+            <div className="absolute flex flex-row top-4 left-4 z-10">
+              <ThemeButton />
               <MuteButton />
             </div>
             <div className="absolute inset-0 flex flex-col items-center justify-center">

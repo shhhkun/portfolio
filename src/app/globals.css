@@ -1,27 +1,87 @@
 @import "tailwindcss";
 
+/* default: light */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+  --bg: #ffffff;
+  --card-bg: #e2e8f0;
+  --card-bg2: #f0f4f9;
+  --card-bg3: #dce4ef;
+  --bar-bg: #273b54;
+  --text: #171717;
+  --text2: #007bff;
+  --text3: #6b7280;
+  --text4: #a0a0a0;
+  --border: #5a5a5a;
+  --border2: #d1d5db;
+  --button-bg: #e5e7eb;
+  --button-bg2: #d1d5db;
+  --button-bg3: #9ca3af;
+  --button-hover: #6b7280;
+  --scroll: #273b54;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --bg: #171717;
+    --card-bg: #132135;
+    --card-bg2: #273b54; /* smaller inner cards */
+    --card-bg3: #161b22; /* project cards */
+    --bar-bg: #273b54;
+    --text: #ffffff;
+    --text2: #d8dade;
+    --text3: #c0faff; /* light blue 'accent' text */
+    --text4: #a0a0a0; /* resume info/italic text */
+    --border: #ffffff; /* window borders */
+    --border2: #5f5b82; /* for inside cards */
+    --button-bg: #273b54; /* for contact */
+    --button-bg2: #384158; /* for pill-button & project tools */
+    --button-bg3: #34465d; /* for download */
+    --button-hover: #3e5470; /* for contact & download */
+    --scroll: #273b54;
   }
 }
 
+html.light {
+  --bg: #ffffff;
+  --card-bg: #e2e8f0;
+  --card-bg2: #f0f4f9;
+  --card-bg3: #dce4ef;
+  --bar-bg: #273b54;
+  --text: #171717;
+  --text2: #007bff;
+  --text3: #6b7280;
+  --text4: #a0a0a0;
+  --border: #5a5a5a;
+  --border2: #d1d5db;
+  --button-bg: #e5e7eb;
+  --button-bg2: #d1d5db;
+  --button-bg3: #9ca3af;
+  --button-hover: #6b7280;
+  --scroll: #273b54;
+}
+
+html.dark {
+  --bg: #171717;
+  --card-bg: #132135;
+  --card-bg2: #273b54; /* smaller inner cards */
+  --card-bg3: #161b22; /* project cards */
+  --bar-bg: #273b54;
+  --text: #ffffff;
+  --text2: #d8dade;
+  --text3: #c0faff; /* light blue 'accent' text */
+  --text4: #a0a0a0; /* resume info/italic text */
+  --border: #ffffff; /* window borders */
+  --border2: #5f5b82; /* for inside cards */
+  --button-bg: #273b54; /* for contact */
+  --button-bg2: #384158; /* for pill-button & project tools */
+  --button-bg3: #34465d; /* for download */
+  --button-hover: #3e5470; /* for contact & download */
+  --scroll: #273b54;
+}
+
 body {
-  background: var(--background);
-  color: var(--foreground);
+  background: var(--bg);
+  color: var(--text);
   font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -32,7 +92,7 @@ body {
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
-  background-color: #273b54;
+  background-color: var(--scroll);
   border-radius: 15px;
 }
 
@@ -87,8 +147,8 @@ body {
 }
 
 .skill-pill {
-  background-color: #171717;
-  border: 1px solid #ffffff;
+  background-color: var(--bg);
+  border: 1px solid var(--border2);
   border-radius: 0.375rem; /* rounded-md */
   padding: 0.5rem 1rem; /* px-4 py-2 */
   text-align: center;
@@ -102,8 +162,8 @@ body {
 }
 
 .pill-button {
-  background-color: #384158;
-  color: white;
+  background-color: var(--button-bg2);
+  color: var(--text);
   font-size: 0.875rem;
   height: 1.75rem;
   border-radius: 9999px;
@@ -120,17 +180,17 @@ body {
 }
 
 .contact-button {
-  background-color: #273b54;
+  background-color: var(--button-bg);
 }
 
 .contact-button:hover {
-  background-color: #3e5470;
+  background-color: var(--button-hover);
 }
 
 .download-button {
-  background-color: #34465d;
+  background-color: var(--button-bg3);
 }
 
 .download-button:hover {
-  background-color: #3e5470;
+  background-color: var(--button-hover);
 }

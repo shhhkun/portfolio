@@ -64,9 +64,9 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "#171717",
+            backgroundColor: "var(--bg)",
             height: "48px",
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
@@ -86,12 +86,12 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         {/* Main Content Area */}
         <div
           className="flex flex-col flex-grow min-h-0"
-          style={{ backgroundColor: "#132135" }}
+          style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Profile Picture and Name */}
           <div className="flex items-center px-12 py-8">
             <div
-              className="rounded-full overflow-hidden"
+              className="rounded-full overflow-hidden cursor-pointer transition-transform duration-300 transform hover:scale-110"
               style={{
                 width: "136px",
                 height: "136px",
@@ -107,7 +107,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div
                 style={{
                   fontWeight: "500",
-                  color: "#C0FAFF",
+                  color: "var(--text3)",
                   fontSize: "3rem",
                 }}
               >
@@ -115,7 +115,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <div
                 className="pl-2"
-                style={{ color: "#d8dade", fontSize: "1.125rem" }}
+                style={{ color: "var(--text)", fontSize: "1.125rem" }}
               >
                 Full-Stack Developer
                 <br />
@@ -126,13 +126,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           <div
             className="h-1"
-            style={{ backgroundColor: "#5f5b82", height: "1px" }}
+            style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
           {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}
           <div
             className="custom-scrollbar p-12 text-white flex-grow overflow-y-auto"
-            style={{ color: "#d8dade" }}
+            style={{ color: "var(--text2)" }}
           >
             <div style={{ fontSize: "1.25rem" }}>
               <p>
@@ -142,21 +142,21 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </p>
               <ul className="list-disc mt-5 ml-5">
                 <li>
-                  <span style={{ color: "#C0FAFF" }}>
+                  <span style={{ color: "var(--text3)" }}>
                     <b>Full-Stack Development: </b>
                   </span>
                   Bringing innovative ideas to life from the backend to the user
                   interface.
                 </li>
                 <li>
-                  <span style={{ color: "#C0FAFF" }}>
+                  <span style={{ color: "var(--text3)" }}>
                     <b>User Experience: </b>
                   </span>
                   Designing and building intuitive applications that are a
                   pleasure to use.
                 </li>
                 <li>
-                  <span style={{ color: "#C0FAFF" }}>
+                  <span style={{ color: "var(--text3)" }}>
                     <b>Problem-Solving: </b>
                   </span>
                   Translating complex concepts into elegant and user-friendly
@@ -169,7 +169,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <a
                   href="mailto:serjobarron@gmail.com"
                   className="underline"
-                  style={{ color: "#C0FAFF" }}
+                  style={{ color: "var(--text3)" }}
                   onClick={() => playAudio1(0.2)}
                 >
                   serjobarron@gmail.com
@@ -178,14 +178,17 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </p>
             </div>
 
-            <h2 className="mt-5 font-bold" style={{ fontSize: "1.5rem" }}>
+            <h2
+              className="mt-5 font-bold"
+              style={{ color: "var(--text)", fontSize: "1.5rem" }}
+            >
               EDUCATION
             </h2>
             <blockquote
               className="p-3 mt-5"
               style={{
                 fontSize: "1.25rem",
-                borderLeft: "6px solid #5f5b82",
+                borderLeft: "6px solid var(--border2)",
               }}
             >
               <h3 style={{ fontSize: "1.25rem" }}>
@@ -197,7 +200,10 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </p>
             </blockquote>
 
-            <h2 className="mt-5 font-bold" style={{ fontSize: "1.5rem" }}>
+            <h2
+              className="mt-5 font-bold"
+              style={{ color: "var(--text)", fontSize: "1.5rem" }}
+            >
               HOBBIES
             </h2>
             <ul className="list-disc mt-5 ml-5" style={{ fontSize: "1.25rem" }}>
@@ -207,12 +213,15 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <li>Anime & Manga</li>
             </ul>
 
-            <h2 className="mt-5 font-bold" style={{ fontSize: "1.5rem" }}>
+            <h2
+              className="mt-5 font-bold"
+              style={{ color: "var(--text)", fontSize: "1.5rem" }}
+            >
               LANGUAGE PROFICIENCY
             </h2>
             <div
               className="flex flex-col mt-5 gap-y-4"
-              style={{ color: "#d8dade", fontSize: "1.125rem" }}
+              style={{ color: "var(--text2)", fontSize: "1.125rem" }}
             >
               {/* English */}
               <div className="flex flex-col gap-y-1 group">
@@ -220,7 +229,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">English</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#273b54" }}
+                    style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
                       className="bar-english h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
@@ -239,7 +248,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">Tagalog</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#273b54" }}
+                    style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
                       className="bar-tagalog h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
@@ -258,7 +267,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="w-24">Japanese</span>
                   <div
                     className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "#273b54" }}
+                    style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
                       className="bar-japanese h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"

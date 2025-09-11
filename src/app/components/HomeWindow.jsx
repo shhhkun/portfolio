@@ -29,9 +29,9 @@ const HomeWindow = ({ handleOpen }) => {
         className="flex items-center justify-between px-4 py-2"
         style={{
           fontSize: "1.25rem",
-          backgroundColor: "#171717",
+          backgroundColor: "var(--bg)",
           height: "48px",
-          borderBottom: "2px solid white",
+          borderBottom: "2px solid var(--border)",
           display: "flex",
           alignItems: "center",
           paddingLeft: "1.5rem",
@@ -44,7 +44,7 @@ const HomeWindow = ({ handleOpen }) => {
       <div
         className="w-full justify-end items-center flex flex-grow flex-col p-12"
         style={{
-          backgroundColor: "#132135",
+          backgroundColor: "var(--card-bg)",
         }}
       >
         <h1
@@ -76,13 +76,13 @@ const HomeWindow = ({ handleOpen }) => {
             <div className="relative w-16 h-16">
               <CircleIcon
                 size={64}
-                color="#171717"
+                color="var(--bg)"
                 weight="fill"
                 className="absolute top-0 left-0"
               />
               <UserCircleIcon
                 size={64}
-                color="#ffffff"
+                color="var(--text)"
                 weight="light"
                 className="absolute top-0 left-0 z-10"
               />
@@ -103,7 +103,7 @@ const HomeWindow = ({ handleOpen }) => {
               <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{
-                  backgroundColor: "#171717",
+                  backgroundColor: "var(--bg)",
                   width: "60px",
                   height: "19px",
                   borderRadius: "9999px",
@@ -114,7 +114,7 @@ const HomeWindow = ({ handleOpen }) => {
               <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{
-                  backgroundColor: "#171717",
+                  backgroundColor: "var(--bg)",
                   width: "32px",
                   height: "19px",
                   borderRadius: "9999px",
@@ -126,7 +126,7 @@ const HomeWindow = ({ handleOpen }) => {
               <div
                 className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                 style={{
-                  backgroundColor: "#171717",
+                  backgroundColor: "var(--bg)",
                   width: "32px",
                   height: "19px",
                   borderRadius: "9999px",
@@ -137,7 +137,7 @@ const HomeWindow = ({ handleOpen }) => {
               <div className="relative w-16 h-16 flex items-center justify-center">
                 <LinkIcon
                   size={64}
-                  color="#ffffff"
+                  color="var(--text)"
                   weight="light"
                   className="absolute z-10"
                 />
@@ -157,14 +157,14 @@ const HomeWindow = ({ handleOpen }) => {
             <div className="relative w-16 h-16">
               <RectangleIcon
                 size={64}
-                color="#171717"
+                color="var(--bg)"
                 weight="fill"
                 className="absolute top-0 left-0"
                 style={{ transform: "translateY(2px) scaleY(0.8) scaleX(0.9)" }}
               />
               <BriefcaseIcon
                 size={64}
-                color="#ffffff"
+                color="var(--text)"
                 weight="light"
                 className="absolute top-0 left-0 z-10"
               />
@@ -183,14 +183,14 @@ const HomeWindow = ({ handleOpen }) => {
             <div className="relative w-16 h-16">
               <RectangleIcon
                 size={64}
-                color="#171717"
+                color="var(--bg)"
                 weight="fill"
                 className="absolute top-0 left-0"
                 style={{ transform: "translateY(0px) scaleY(0.9) scaleX(0.9)" }}
               />
               <EnvelopeSimpleIcon
                 size={64}
-                color="#ffffff"
+                color="var(--text)"
                 weight="light"
                 className="absolute top-0 left-0 z-10"
               />
@@ -209,7 +209,7 @@ const HomeWindow = ({ handleOpen }) => {
             <div className="relative w-16 h-16">
               <RectangleIcon
                 size={64}
-                color="#171717"
+                color="var(--bg)"
                 weight="fill"
                 className="absolute top-0 left-0"
                 style={{
@@ -219,7 +219,7 @@ const HomeWindow = ({ handleOpen }) => {
               />
               <ReadCvLogoIcon
                 size={64}
-                color="#ffffff"
+                color="var(--text)"
                 weight="light"
                 className="absolute top-0 left-0 z-10"
               />

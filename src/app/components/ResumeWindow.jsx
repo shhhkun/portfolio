@@ -76,9 +76,9 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           className="handle cursor-grab flex items-center justify-between px-6 py-2"
           style={{
             fontSize: "1.25rem",
-            backgroundColor: "#171717",
+            backgroundColor: "var(--bg)",
             height: "48px",
-            borderBottom: "2px solid white",
+            borderBottom: "2px solid var(--border)",
             display: "flex",
             alignItems: "center",
           }}
@@ -98,12 +98,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         {/* Main Content Area */}
         <div
           className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
-          style={{ backgroundColor: "#132135" }}
+          style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* HEADER */}
           <div
             className="flex justify-between items-center mb-8 p-8 rounded-lg shadow-lg"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
@@ -124,7 +124,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div
                 className="flex flex-wrap gap-6 mt-4"
                 style={{
-                  color: "#a0a0a0",
+                  color: "var(--text4)",
                   fontSize: "1.25rem",
                 }}
               >
@@ -214,7 +214,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* PROJECTS */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
@@ -235,7 +235,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "#ccc" }}
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
                 Electron, React, Vite, Node.js, JavaScript, TypeScript
               </p>
@@ -273,7 +273,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "#ccc" }}
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
                 React, Vite, Firebase (Firestore & Auth), JavaScript
               </p>
@@ -308,7 +308,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "#ccc" }}
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
                 Python, React Native, Node.js, JavaScript, BLE, Raspberry Pi
               </p>
@@ -339,7 +339,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* TECHNICAL EXPERIENCE */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
@@ -360,7 +360,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "#ccc" }}
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
                 Baskin School of Engineering – Santa Cruz, CA
               </p>
@@ -385,7 +385,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* LEADERSHIP EXPERIENCE */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
@@ -406,7 +406,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "#ccc" }}
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
                 Slug Anime and Manga Association – Santa Cruz, CA
               </p>
@@ -435,7 +435,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* TECHNICAL SKILLS */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
@@ -473,7 +473,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* EDUCATION */}
           <div
             className="rounded-lg shadow-lg p-8"
-            style={{ backgroundColor: "#273b54" }}
+            style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
