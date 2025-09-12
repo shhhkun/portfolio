@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { Analytics } from "@vercel/analytics/next"
 import "./globals.css";
 
 import Waves from "./components/Waves";
@@ -22,6 +23,8 @@ const Layout = ({ children }) => {
   return (
     <html lang="en">
       <body>
+        <Analytics />
+        
         <AudioPlayerProvider>
           <div
             className="min-h-screen relative"
