@@ -2,7 +2,7 @@
 
 This is a personal portfolio website built to showcase my skills, projects, and professional background. The site is designed to be clean, modern, and fully responsive across all devices.
 
-[**Website**](https://portfolio-ashen-one-71.vercel.app/)
+[**Website**](https://serjo.vercel.app/)
 
 ## Features
 

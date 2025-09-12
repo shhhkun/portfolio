@@ -193,11 +193,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             >
               <div
                 className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                style={{ backgroundColor: "transparent", width: "420px" }}
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/trashu.webp"
+                  src="/trashu2.webp"
                   alt="Placeholder for project 1"
                 />
               </div>
@@ -246,11 +246,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             >
               <div
                 className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                style={{ backgroundColor: "transparent", width: "420px" }}
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/kept.webp"
+                  src="/kept2.webp"
                   alt="Placeholder for project 2"
                 />
               </div>
@@ -532,7 +532,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             >
               <div
                 className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#30363d", width: "420px" }}
+                style={{ backgroundColor: "transparent", width: "420px" }}
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
