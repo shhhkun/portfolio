@@ -456,11 +456,15 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             >
               <li className="mb-2">
                 <span className="font-bold">Programming Languages:</span>{" "}
-                Python, C/C++, JavaScript, TypeScript, HTML, CSS, Verilog
+                Python, C, C++, JavaScript, TypeScript, HTML, CSS, Verilog
               </li>
               <li className="mb-2">
                 <span className="font-bold">Frameworks & Libraries:</span>{" "}
-                React, Node.js, Next.js, Vite, Electron, Tailwind CSS, Firebase
+                React, Next.js, Node.js, Express.js, Tailwind CSS, Vite,
+                Electron, Firebase
+              </li>
+              <li className="mb-2">
+                <span className="font-bold">Databases:</span> PostgreSQL, Firestore
               </li>
               <li className="mb-2">
                 <span className="font-bold">Tools:</span> Git, GitHub, Visual
@@ -508,10 +512,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="font-bold">GPA:</span> 3.70
                 </li>
                 <li className="mb-2">
-                  <span className="font-bold">Relevant Coursework:</span>{" "}
-                  Embedded Systems, Data Structures & Algorithms, Systems
-                  Design, Computer Architecture, Network Programming, Logic
-                  Design, Electronic Circuits
+                  <span className="font-bold">Relevant Coursework:</span> Data
+                  Structures & Algorithms, Computer Architecture, Computer
+                  System Design, Embedded System Design, Computer Networks,
+                  Network Programming, Electronic Circuits, Logic Design,
+                  Signals & Systems
                 </li>
               </ul>
             </div>
