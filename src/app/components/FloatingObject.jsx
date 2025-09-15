@@ -2,7 +2,7 @@ import React, { useState, useEffect, useRef } from "react";
 
 const FloatingObject = ({
   amplitude = 20,
-  speed = 0.0002,
+  speed = 0.0002, // 0.0002
   direction = "right",
 }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
@@ -42,7 +42,7 @@ const FloatingObject = ({
         currentX -= movement;
         // if the object moves past the left edge, reset it to the far right
         if (currentX < -objectWidth) {
-          currentX = containerWidth + objectWidth;
+          currentX = containerWidth;
         }
       }
 

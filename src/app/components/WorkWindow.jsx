@@ -157,6 +157,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="skill-pill">Next.js</div>
                   <div className="skill-pill">React</div>
                   <div className="skill-pill">Node.js</div>
+                  <div className="skill-pill">Express.js</div>
+                  <div className="skill-pill">PostgreSQL</div>
                   <div className="skill-pill">Python</div>
                   <div className="skill-pill">C/C++</div>
                   <div className="skill-pill">HTML</div>
@@ -186,6 +188,60 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </h2>
 
           <div className="projects-section flex flex-col gap-8">
+            {/* Project Card 0 */}
+            <div
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "var(--card-bg3)" }}
+            >
+              <div
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "transparent", width: "420px" }}
+              >
+                <img
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/ramentimer.webp"
+                  alt="Placeholder for project 0"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.375rem",
+                    }}
+                  >
+                    Ramen Timer
+                  </h3>
+                  <p className="flex-grow">
+                    A simple, mobile-first ramen timer web app with a nostalgic,
+                    pixel-art aesthetic. It was built using a Next.js frontend,
+                    an Express.js backend, and a PostgreSQL database to record
+                    timer data for my favorite ramen brands.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
+                  >
+                    Next.js, React, Node.js, Express.js, PostgreSQL, Vercel,
+                    Tailwind CSS
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com/shhhkun/ramentimer"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Project Card 1 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
