@@ -154,19 +154,21 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <div className="skill-grid flex flex-wrap gap-2">
                   <div className="skill-pill">JavaScript</div>
                   <div className="skill-pill">TypeScript</div>
+                  <div className="skill-pill">HTML</div>
+                  <div className="skill-pill">CSS</div>
+                  <div className="skill-pill">Python</div>
+                  <div className="skill-pill">C/C++</div>
+                  <div className="skill-pill">Verilog</div>
                   <div className="skill-pill">Next.js</div>
                   <div className="skill-pill">React</div>
                   <div className="skill-pill">Node.js</div>
                   <div className="skill-pill">Express.js</div>
-                  <div className="skill-pill">PostgreSQL</div>
-                  <div className="skill-pill">Python</div>
-                  <div className="skill-pill">C/C++</div>
-                  <div className="skill-pill">HTML</div>
-                  <div className="skill-pill">CSS</div>
                   <div className="skill-pill">Vite</div>
-                  <div className="skill-pill">Firebase</div>
                   <div className="skill-pill">Electron</div>
-                  <div className="skill-pill">Verilog</div>
+                  <div className="skill-pill">Prisma</div>
+                  <div className="skill-pill">PostgreSQL</div>
+                  <div className="skill-pill">Firebase/Firestore</div>
+                  <div className="skill-pill">OAuth 2.0</div>
                 </div>
               </div>
             </div>
@@ -188,7 +190,62 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </h2>
 
           <div className="projects-section flex flex-col gap-8">
-            {/* Project Card 0 */}
+            {/* Project Card 9 */}
+            <div
+              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "var(--card-bg3)" }}
+            >
+              <div
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "transparent", width: "420px" }}
+              >
+                <img
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/chromatica.webp"
+                  alt="Placeholder for project 9"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.375rem",
+                    }}
+                  >
+                    Chromatica
+                  </h3>
+                  <p className="flex-grow">
+                    A web application that connects with the Spotify API to
+                    generate unique color palettes based on a user’s top tracks
+                    and artists. It was built with a Next.js frontend, a Next.js
+                    API routes backend with Prisma, and a PostgreSQL database
+                    for authentication and data storage.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
+                  >
+                    React, Next.js, Tailwind CSS, Spotify API & OAuth 2.0,
+                    Prisma & PostgreSQL, Vercel
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com/shhhkun/chromatica"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            {/* Project Card 8 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -200,7 +257,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/ramentimer.webp"
-                  alt="Placeholder for project 0"
+                  alt="Placeholder for project 8"
                 />
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
@@ -225,8 +282,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="font-medium mb-2"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    Next.js, React, Node.js, Express.js, PostgreSQL, Vercel,
-                    Tailwind CSS
+                    React, Next.js, Tailwind CSS, Express.js, PostgreSQL,
+                    Node.js, Vercel
                   </p>
                   <div className="flex gap-3">
                     <a
@@ -250,7 +307,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 1 */}
+            {/* Project Card 7 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -262,7 +319,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/trashu2.webp"
-                  alt="Placeholder for project 1"
+                  alt="Placeholder for project 7"
                 />
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
@@ -287,7 +344,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="font-medium mb-2"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    Electron, React, Node.js, Vite, TypeScript
+                    React, Vite, Node.js, Electron, TypeScript
                   </p>
                   <div className="flex gap-3">
                     <a
@@ -303,7 +360,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 2 */}
+            {/* Project Card 6 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -315,7 +372,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/kept2.webp"
-                  alt="Placeholder for project 2"
+                  alt="Placeholder for project 6"
                 />
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
@@ -340,7 +397,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="font-medium mb-2"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Node.js, Vite, Firebase/Firestore
+                    React, Vite, Firebase/Firestore, Node.js
                   </p>
                   <div className="flex gap-3">
                     <a
@@ -364,7 +421,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 3 */}
+            {/* Project Card 5 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -404,8 +461,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="font-medium mb-2"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    Python, React/React Native, Node.js, JavaScript, BLE,
-                    Raspberry Pi
+                    React/React Native, Node.js, Python, Raspberry Pi, BLE,
+                    JavaScript
                   </p>
                   <div className="flex gap-3">
                     <a
@@ -477,7 +534,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 5 */}
+            {/* Project Card 3 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -533,7 +590,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 6 */}
+            {/* Project Card 2 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -589,7 +646,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
             </div>
 
-            {/* Project Card 7 */}
+            {/* Project Card 1 */}
             <div
               className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
@@ -601,7 +658,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
                   src="/dollhouse.webp"
-                  alt="Placeholder for project 7"
+                  alt="Placeholder for project 1"
                 />
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
