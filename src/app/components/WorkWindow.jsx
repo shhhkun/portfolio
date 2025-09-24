@@ -216,11 +216,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     Chromatica
                   </h3>
                   <p className="flex-grow">
-                    A web application that connects with the Spotify API to
-                    generate unique color palettes based on a user’s top tracks
+                    A web app that connects with the Spotify API to
+                    generate unique color palettes based on your top tracks
                     and artists. It was built with a Next.js frontend, a Next.js
-                    API routes backend with Prisma, and a PostgreSQL database
-                    for authentication and data storage.
+                    API routes backend with Prisma, and a PostgreSQL database.
                   </p>
                 </div>
                 <div className="mt-4">
