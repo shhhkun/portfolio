@@ -239,6 +239,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     >
                       GitHub Repo
                     </a>
+                    <a
+                      href="https://chromatica-music.vercel.app"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Live Demo
+                    </a>
                   </div>
                 </div>
               </div>
