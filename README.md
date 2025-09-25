@@ -1,6 +1,6 @@
 # My Portfolio Website
 
-This is a personal portfolio website built to showcase my skills, projects, and professional background. The site is designed to be clean, modern, and fully responsive across all devices.
+This is a personal portfolio website built to showcase my skills, projects, and professional background.
 
 [**Website**](https://serjo.vercel.app/)
 
@@ -8,11 +8,11 @@ This is a personal portfolio website built to showcase my skills, projects, and 
 
 - **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable, resizable windows for different sections (e.g., About, Projects, Contact).
 
-- **Dynamic Theming:** Users can toggle between light and dark modes, which smoothly changes the entire color palette of the site.
+- **Dynamic Theming:** Users can toggle between light and dark modes, which changes the entire color palette of the site.
 
-- **Sound Effects:** Subtle audio cues enhance the user experience as they interact with the virtual desktop.
+- **Sound Effects:** Subtle audio cues to enhance the user experience as you interact with the virtual desktop.
 
-- **Dynamic Waves:** The animated wave background creates a serene and engaging visual experience.
+- **Dynamic Waves:** The animated wave background.
 
 ## Some Technologies Used
 
