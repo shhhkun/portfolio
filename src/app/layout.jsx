@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 import Waves from "./components/Waves";
@@ -24,7 +24,6 @@ const Layout = ({ children }) => {
     <html lang="en">
       <body>
         <Analytics />
-        
         <AudioPlayerProvider>
           <div
             className="min-h-screen relative"
@@ -38,11 +37,17 @@ const Layout = ({ children }) => {
               <MuteButton />
             </div>
 
+            <p
+              className="absolute flex w-full justify-center bottom-0 font-light mb-2 z-11"
+              style={{ fontSize: "1rem" }}
+            >
+              © 2025 Serjo Barron
+            </p>
+            
             <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
             <FloatingObject />
-            
+
             {children}
-            
           </div>
         </AudioPlayerProvider>
       </body>
