@@ -39,11 +39,11 @@ const Layout = ({ children }) => {
 
             <p
               className="absolute flex w-full justify-center bottom-0 font-light mb-2 z-11"
-              style={{ fontSize: "1rem" }}
+              style={{ fontSize: "0.875rem" }}
             >
               © 2025 Serjo Barron
             </p>
-            
+
             <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
             <FloatingObject />
 
