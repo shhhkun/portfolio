@@ -22,7 +22,7 @@ const Layout = ({ children }) => {
 
   return (
     <html lang="en">
-      <body>
+      <body className="m-0 p-0 overflow-x-hidden">
         <Analytics />
         <AudioPlayerProvider>
           <div
