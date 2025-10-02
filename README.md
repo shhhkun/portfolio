@@ -6,7 +6,9 @@ This is a personal portfolio website built to showcase my skills, projects, and 
 
 ## Features
 
-- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable, resizable windows for different sections (e.g., About, Projects, Contact).
+- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable, resizable windows for different sections (e.g., About Me, Projects, Contact Info).
+
+- **Responsive Interface**: The portfolio sizes accordingly to your device viewport (works on mobile/smaller devices).
 
 - **Dynamic Theming:** Users can toggle between light and dark modes, which changes the entire color palette of the site.
 
