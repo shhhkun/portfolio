@@ -26,7 +26,7 @@ const Layout = ({ children }) => {
         <Analytics />
         <AudioPlayerProvider>
           <div
-            className="min-h-screen relative"
+            className="min-h-dvh relative"
             style={{
               backgroundColor: "var(--bg)",
               overflow: "hidden",
