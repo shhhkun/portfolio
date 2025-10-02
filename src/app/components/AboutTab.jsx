@@ -1,6 +1,9 @@
 import React from "react";
+import { useAudioPlayer } from "./AudioPlayer";
 
 const AboutTab = ({ isOpen, windowId, handleClose }) => {
+  const { playAudio1, playAudio2 } = useAudioPlayer();
+  
   // determine the translation state for the sliding animation
   // if the component is not open, it slides down (translate-y-full)
   const transformClass = isOpen ? "translate-y-0" : "translate-y-full";

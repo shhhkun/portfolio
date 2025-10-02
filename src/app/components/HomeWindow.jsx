@@ -33,8 +33,8 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
         </h2>
 
         {/* Desktop Icons */}
-        <div className="flex flex-col items-center justify-center flex-wrap pt-8">
-          <div className="max-w-64 flex flex-wrap justify-center gap-4">
+        <div className="flex flex-col items-center justify-center pt-8">
+          <div className="max-w-64 flex justify-center gap-4">
             {/* About Button */}
             <button
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -205,10 +205,10 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
           </h2>
 
           {/* Desktop Icons */}
-          <div className="flex flex-row items-center justify-center flex-wrap gap-4 p-8">
+          <div className="flex flex-row items-center justify-center gap-4 p-8">
             {/* About Button */}
             <button
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("about");
                 playAudio1(0.2);
@@ -233,7 +233,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Links Button */}
             <button
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("links");
                 playAudio1(0.2);
@@ -289,7 +289,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Work Button */}
             <button
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("work");
                 playAudio1(0.2);
@@ -317,7 +317,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Mail/Contact Button */}
             <button
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("contact");
                 playAudio1(0.2);
@@ -345,7 +345,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Resume/CV Button */}
             <button
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("resume");
                 playAudio1(0.2);

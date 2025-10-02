@@ -8,49 +8,8 @@ import {
   LinkedinLogoIcon,
   SquareIcon,
 } from "@phosphor-icons/react";
+import LeetCodeLogo from "../utils/LeetCodeLogo";
 import { useAudioPlayer } from "./AudioPlayer";
-
-const LeetCodeLogo = ({ size, color, weight, className }) => {
-  let strokeWidth = "1.5";
-  if (weight === "light") {
-    strokeWidth = "1";
-  } else if (weight === "regular") {
-    strokeWidth = "2.5";
-  } else if (weight === "bold") {
-    strokeWidth = "4";
-  }
-
-  return (
-    <svg
-      xmlns="http://www.w3.org/2000/svg"
-      width={size}
-      height={size}
-      viewBox="0 0 48 48"
-      fill="none"
-      className={`${className}`}
-    >
-      <defs>
-        <style>
-          {`
-            .a,.b {
-              fill: none;
-              stroke: ${color};
-              stroke-linecap: round;
-              stroke-linejoin: round;
-              stroke-width: ${strokeWidth};
-            }
-          `}
-        </style>
-      </defs>
-      <path
-        className="a"
-        d="M33.8092,34.8772,26.8725,41.814a5.7258,5.7258,0,0,1-8.1154,0L8.6127,31.67a5.726,5.726,0,0,1,0-8.1155L18.7571,13.41a5.7258,5.7258,0,0,1,8.1154,0L34.5,21.0373"
-      />
-      <path className="b" d="M18.7571,13.41,27.7647,4.5" />
-      <path className="a" d="M19.5838,27.5918h21.49" />
-    </svg>
-  );
-};
 
 const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
@@ -162,13 +121,13 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Link Icons */}
-          <div className="flex flex-row flex-wrap gap-8 p-4">
+          <div className="flex flex-row items-center justify-center gap-8 p-4">
             {/* GitHub Button */}
             <a
-              href="https://github.com/shhhkun" // Replace with the correct link
+              href="https://github.com/shhhkun"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
@@ -193,7 +152,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               href="https://leetcode.com/u/shhhkun"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
@@ -222,7 +181,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               href="https://linkedin.com/in/serjobarron"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
               <div className="relative w-16 h-16">
@@ -249,7 +208,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   handleCopyDiscord();
                   playAudio1(0.2);
                 }}
-                className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               >
                 <div className="relative w-16 h-16">
                   <DiscordLogoIcon
@@ -278,16 +237,15 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </span>
               )}
             </div>
-
-            {/* Intro Card */}
-            <div
-              className="intro-card rounded-lg text-center mx-auto py-4 px-16"
-              style={{
-                backgroundColor: "var(--card-bg2)",
-              }}
-            >
-              <p>All the places to say hi</p>
-            </div>
+          </div>
+          {/* Intro Card */}
+          <div
+            className="intro-card rounded-lg text-center mx-auto py-4 px-16"
+            style={{
+              backgroundColor: "var(--card-bg2)",
+            }}
+          >
+            <p>All the places to say hi</p>
           </div>
         </div>
       </div>
