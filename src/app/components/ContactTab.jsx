@@ -58,7 +58,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[90vh] bg-gray-800 text-white z-50 
+        className={`fixed bottom-0 left-0 w-full max-h-[90vh] z-50 
                    flex flex-col transition-transform duration-500 ease-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"

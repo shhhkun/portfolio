@@ -1,85 +1,56 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Draggable from "react-draggable";
+import React from "react";
 import { GithubLogoIcon } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
-const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+const WorkTab = ({ isOpen, windowId, handleClose }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
-  const nodeRef = useRef(null);
 
-  const [bounds, setBounds] = useState({
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  });
+  // determine the translation state for the sliding animation
+  // if the component is not open, it slides down (translate-y-full)
+  const transformClass = isOpen ? "translate-y-0" : "translate-y-full";
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (nodeRef.current) {
-        const windowWidth = nodeRef.current.offsetWidth;
-        const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 48;
+  // determine the visibility and backdrop state
+  // when closed, prevent interaction with the backdrop and modal
+  const visibilityClass = isOpen
+    ? "pointer-events-auto"
+    : "pointer-events-none";
+  const backdropOpacityClass = isOpen ? "opacity-75" : "opacity-0";
 
-        setBounds({
-          top: 0,
-          left: 0,
-          right: window.innerWidth - windowWidth,
-          bottom: window.innerHeight - headerHeight,
-        });
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const closeModal = () => {
+    handleClose(windowId);
+  };
 
   return (
-    <Draggable
-      nodeRef={nodeRef}
-      handle=".handle"
-      bounds={bounds}
-      position={position}
-      onStop={onStop}
-    >
+    <>
+      {/* Backdrop (handles outside clicks) */}
       <div
-        ref={nodeRef}
-        className="flex flex-col overflow-hidden"
-        style={{
-          zIndex: zIndex,
-          width: "1056px",
-          height: "600px",
-          borderRadius: "10px",
-          border: "2px solid ",
-          boxSizing: "border-box",
-          position: "absolute",
-        }}
-        onMouseDown={onFocus}
+        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
+        onClick={closeModal}
+        aria-hidden={!isOpen}
+      />
+
+      {/* Modal Container (Fixed at the bottom, full width) */}
+      <div
+        className={`fixed bottom-0 left-0 w-full max-h-[90vh] z-50 
+                   flex flex-col transition-transform duration-500 ease-out ${transformClass} overflow-hidden`}
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!isOpen}
       >
-        {/* Window Header */}
+        {/* Header */}
         <div
-          className="handle cursor-grab flex items-center justify-between px-6 py-2"
+          className="flex justify-between relative rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
-            height: "48px",
-            borderBottom: "2px solid var(--border)",
-            display: "flex",
-            alignItems: "center",
+            border: "2px solid ",
           }}
         >
           <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            work
+            {windowId}
           </p>
           <button
-            onClick={() => {
-              onClose();
-              playAudio2(0.1);
-            }}
+            onClick={closeModal}
             className="font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
@@ -89,7 +60,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
         {/* Main Content Area */}
         <div
-          className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
+          className="p-8 overflow-y-auto"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Intro Card */}
@@ -97,7 +68,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             className="intro-card rounded-lg p-8"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
-            <h3 className="font-bold" style={{ fontSize: "1.25rem" }}>
+            <h3 className="font-bold" style={{ fontSize: "1.125rem" }}>
               Open for opportunities. Connect with me at{" "}
               <a
                 href="mailto:serjobarron@gmail.com"
@@ -108,14 +79,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 serjobarron@gmail.com
               </a>
             </h3>
-            <p className="mt-2" style={{ fontSize: "1.125rem" }}>
+            <p className="mt-2" style={{ fontSize: "1rem" }}>
               My expertise includes full-stack development, with a focus on
               creating robust, user-friendly software for web and apps.
             </p>
           </div>
 
           <div
-            className="h-1 my-8"
+            className="h-1 my-8 mx-[-32px]"
             style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
@@ -126,7 +97,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div className="skill-column flex-1">
                 <h2
                   className="font-semibold mb-4"
-                  style={{ fontSize: "1.5rem" }}
+                  style={{ fontSize: "1.25rem" }}
                 >
                   TOOLS
                 </h2>
@@ -147,7 +118,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               <div className="skill-column flex-1">
                 <h2
                   className="font-semibold mb-4"
-                  style={{ fontSize: "1.5rem" }}
+                  style={{ fontSize: "1.25rem" }}
                 >
                   DEVELOPMENT
                 </h2>
@@ -175,7 +146,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </div>
 
           <div
-            className="h-1 my-8"
+            className="h-1 my-8 mx-[-32px]"
             style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
@@ -183,7 +154,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           <h2
             className="section-title font-semibold mb-4"
             style={{
-              fontSize: "1.5rem",
+              fontSize: "1.25rem",
             }}
           >
             PROJECTS
@@ -192,34 +163,32 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           <div className="projects-section flex flex-col gap-8">
             {/* Project Card 9 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "transparent", width: "420px" }}
-              >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
-                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/chromatica.webp"
                   alt="Placeholder for project 9"
                 />
               </div>
+
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Chromatica
                   </h3>
                   <p className="flex-grow">
-                    A web app that connects with the Spotify API to
-                    generate unique color palettes based on your top tracks
-                    and artists. It was built with a Next.js frontend, a Next.js
-                    API routes backend with Prisma, and a PostgreSQL database.
+                    A web app that connects with the Spotify API to generate
+                    unique color palettes based on your top tracks and artists.
+                    It was built with a Next.js frontend, a Next.js API routes
+                    backend with Prisma, and a PostgreSQL database.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -254,15 +223,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 8 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "transparent", width: "420px" }}
-              >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
-                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/ramentimer.webp"
                   alt="Placeholder for project 8"
                 />
@@ -272,7 +238,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Ramen Timer
@@ -316,16 +282,13 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 7 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "transparent", width: "420px" }}
-              >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
-                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/trashu2.webp"
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
+                  src="/trashu.webp"
                   alt="Placeholder for project 7"
                 />
               </div>
@@ -334,7 +297,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Trashu
@@ -369,15 +332,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 6 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "transparent", width: "420px" }}
-              >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
-                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/kept2.webp"
                   alt="Placeholder for project 6"
                 />
@@ -387,7 +347,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Kept
@@ -430,16 +390,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 5 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#b3e6ff", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center overflow-hidden
+                           rounded-t-lg aspect-video group"
+                style={{ backgroundColor: "#b3e6ff" }}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
-                    size={64}
+                    size={56}
                     color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
@@ -451,7 +412,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     SmartMirror
@@ -487,16 +448,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 4 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#ffb3b3", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center overflow-hidden
+                           rounded-t-lg aspect-video group"
+                style={{ backgroundColor: "#ffb3b3" }}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
-                    size={64}
+                    size={56}
                     color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
@@ -508,7 +470,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Multi-Threaded HTTP Server
@@ -543,16 +505,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 3 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#fdfd96", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center overflow-hidden
+                           rounded-t-lg aspect-video group"
+                style={{ backgroundColor: "#fdfd96" }}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
-                    size={64}
+                    size={56}
                     color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
@@ -564,7 +527,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     Huffman Data Compressor
@@ -599,16 +562,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 2 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "#a8e6cf", width: "420px" }}
+                className="project-image-container relative flex items-center justify-center overflow-hidden
+                           rounded-t-lg aspect-video group"
+                style={{ backgroundColor: "#a8e6cf" }}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
-                    size={64}
+                    size={56}
                     color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
@@ -620,7 +584,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     RSA Public Key Cryptography
@@ -655,15 +619,12 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 1 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
-                style={{ backgroundColor: "transparent", width: "420px" }}
-              >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
-                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/dollhouse.webp"
                   alt="Placeholder for project 1"
                 />
@@ -673,7 +634,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <h3
                     className="font-semibold mb-2"
                     style={{
-                      fontSize: "1.375rem",
+                      fontSize: "1.25rem",
                     }}
                   >
                     DollHouse
@@ -710,8 +671,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </div>
         </div>
       </div>
-    </Draggable>
+    </>
   );
 };
 
-export default WorkWindow;
+export default WorkTab;
