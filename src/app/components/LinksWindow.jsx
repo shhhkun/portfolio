@@ -108,7 +108,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               onClose();
               playAudio2(0.1);
             }}
-            className="font-bold transition-transform hover:scale-110"
+            className="cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             x

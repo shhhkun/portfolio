@@ -106,7 +106,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               onClose();
               playAudio2(0.1);
             }}
-            className="font-bold transition-transform hover:scale-110"
+            className="cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             x
@@ -157,7 +157,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               handleEmailButtonClick();
               playAudio1(0.2);
             }}
-            className="contact-button mt-10 px-4 py-2 rounded-md"
+            className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
             style={{ fontSize: "1.25rem" }}
           >
             send me an email!

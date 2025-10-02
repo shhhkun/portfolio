@@ -1,7 +1,4 @@
-"use client";
-
-import React, { useState, useRef, useEffect } from "react";
-import Draggable from "react-draggable";
+import React, { useState } from "react";
 import {
   GithubLogoIcon,
   LinkedinLogoIcon,
@@ -11,38 +8,23 @@ import {
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
-const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+const ContactTab = ({ isOpen, windowId, handleClose }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
-  const nodeRef = useRef(null);
 
-  const [bounds, setBounds] = useState({
-    top: 0,
-    left: 0,
-    right: 0,
-    bottom: 0,
-  });
+  // determine the translation state for the sliding animation
+  // if the component is not open, it slides down (translate-y-full)
+  const transformClass = isOpen ? "translate-y-0" : "translate-y-full";
 
-  useEffect(() => {
-    const handleResize = () => {
-      if (nodeRef.current) {
-        const windowWidth = nodeRef.current.offsetWidth;
-        const windowHeight = nodeRef.current.offsetHeight;
-        const headerHeight = 48;
+  // determine the visibility and backdrop state
+  // when closed, prevent interaction with the backdrop and modal
+  const visibilityClass = isOpen
+    ? "pointer-events-auto"
+    : "pointer-events-none";
+  const backdropOpacityClass = isOpen ? "opacity-75" : "opacity-0";
 
-        setBounds({
-          top: 0,
-          left: 0,
-          right: window.innerWidth - windowWidth,
-          bottom: window.innerHeight - headerHeight,
-        });
-      }
-    };
-
-    handleResize();
-    window.addEventListener("resize", handleResize);
-
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
+  const closeModal = () => {
+    handleClose(windowId);
+  };
 
   const downloadResume = () => {
     const resumeUrl = "/Serjo_Barron_Resume.pdf";
@@ -50,45 +32,40 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   };
 
   return (
-    <Draggable
-      nodeRef={nodeRef}
-      handle=".handle"
-      bounds={bounds}
-      position={position}
-      onStop={onStop}
-    >
+    <>
+      {/* Backdrop (handles outside clicks) */}
       <div
-        ref={nodeRef}
-        className="flex flex-col overflow-hidden"
-        style={{
-          zIndex: zIndex,
-          width: "1058px",
-          height: "600px",
-          borderRadius: "10px",
-          border: "2px solid ",
-          boxSizing: "border-box",
-          position: "absolute",
+        className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
+        onClick={() => {
+          closeModal();
+          playAudio2(0.1);
         }}
-        onMouseDown={onFocus}
+        aria-hidden={!isOpen}
+      />
+
+      {/* Modal Container (Fixed at the bottom, full width) */}
+      <div
+        className={`fixed bottom-0 left-0 w-full max-h-[90vh] z-50 
+                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        role="dialog"
+        aria-modal="true"
+        aria-hidden={!isOpen}
       >
-        {/* Window Header */}
+        {/* Header */}
         <div
-          className="handle cursor-grab flex items-center justify-between px-6 py-2"
+          className="flex justify-between relative rounded-t-lg px-6 py-2 flex-shrink-0 "
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
-            height: "48px",
-            borderBottom: "2px solid var(--border)",
-            display: "flex",
-            alignItems: "center",
+            border: "2px solid ",
           }}
         >
           <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            resume
+            {windowId}
           </p>
           <button
             onClick={() => {
-              onClose();
+              closeModal();
               playAudio2(0.1);
             }}
             className="cursor-pointer font-bold transition-transform hover:scale-110"
@@ -100,17 +77,17 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
         {/* Main Content Area */}
         <div
-          className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
+          className="custom-scrollbar-thin p-8 overflow-y-auto"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* HEADER */}
           <div
-            className="flex justify-between items-center mb-8 p-8 rounded-lg shadow-lg"
+            className="flex justify-between items-center mb-8 p-4 rounded-lg shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <div className="flex flex-col">
               <div className="flex flex-row justify-between">
-                <h1 className="font-bold" style={{ fontSize: "1.75rem" }}>
+                <h1 className="font-bold" style={{ fontSize: "1.5rem" }}>
                   SERJO BARRON
                 </h1>
                 <button
@@ -119,7 +96,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     playAudio1(0.2);
                   }}
                   className="download-button cursor-pointer flex items-center px-4 py-2 rounded-md"
-                  style={{ fontSize: "1.25rem" }}
+                  style={{ fontSize: "1rem" }}
                 >
                   Download PDF
                 </button>
@@ -128,7 +105,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="flex flex-wrap gap-6 mt-4"
                 style={{
                   color: "var(--text4)",
-                  fontSize: "1.25rem",
+                  fontSize: "1rem",
                 }}
               >
                 <span className="flex items-center">
@@ -216,39 +193,33 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* PROJECTS */}
           <div
-            className="rounded-lg shadow-lg p-8 mb-8"
+            className="rounded-lg shadow-lg p-4 mb-8"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
               }}
             >
               PROJECTS
             </h2>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Chromatica
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">Chromatica</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2025 – Present
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 React, Next.js, Node.js, Prisma & PostgreSQL, Vercel
               </p>
               <p
                 className="mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -258,59 +229,47 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 experience that showcases expertise in OAuth integration.
               </p>
             </div>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Ramen Timer
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">Ramen Timer</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2025
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 React, Next.js, Express.js, Node.js, PostgreSQL, Vercel
               </p>
               <p
                 className="mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
-                Developed and deployed a mobile-first ramen timer
-                web app with a nostalgic, pixel-art aesthetic. Built to record timer
-                data for your favorite ramen brands, showcasing fundamental
-                full-stack development skills with PostgreSQL.
+                Developed and deployed a mobile-first ramen timer web app with a
+                nostalgic, pixel-art aesthetic. Built to record timer data for
+                your favorite ramen brands, showcasing fundamental full-stack
+                development skills with PostgreSQL.
               </p>
             </div>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Trashu
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">Trashu</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   08/2025 – Present
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 React, Vite, Node.js, Electron
               </p>
               <p
                 className="mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -320,28 +279,22 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 translating complex data into an intuitive interface.
               </p>
             </div>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Kept
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">Kept</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   07/2025 – 08/2025
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 React, Vite, Firebase/Firestore, Node.js
               </p>
               <p
                 className="mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -350,28 +303,22 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 increased user engagement by an estimated 20%.
               </p>
             </div>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  SmartMirror
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">SmartMirror</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   01/2024 – 06/2024
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 React/React Native, Node.js, Electron, Python, BLE, Raspberry Pi
               </p>
               <p
                 className="mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -387,39 +334,35 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* EXPERIENCE */}
           <div
-            className="rounded-lg shadow-lg p-8 mb-8"
+            className="rounded-lg shadow-lg p-4 mb-8"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
               }}
             >
               EXPERIENCE
             </h2>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-2">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                <span className="font-bold">
                   Computer Systems and C Programming Reader
                 </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2023 – 06/2024
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 Baskin School of Engineering – Santa Cruz, CA
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="list-disc ml-6 mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -434,28 +377,22 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </ul>
             </div>
 
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Tech Manager
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="font-bold">Tech Manager</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2023 – 06/2024
                 </span>
               </div>
               <p
                 className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
                 Slug Anime and Manga Association – Santa Cruz, CA
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="list-disc ml-6 mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -477,21 +414,21 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* SKILLS */}
           <div
-            className="rounded-lg shadow-lg p-8 mb-8"
+            className="rounded-lg shadow-lg p-4 mb-8"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
               }}
             >
               SKILLS
             </h2>
             <ul
-              className="list-disc ml-8"
+              className="list-disc ml-6"
               style={{
-                fontSize: "1.25rem",
+                fontSize: "1rem",
                 color: "var(--text4)",
               }}
             >
@@ -525,36 +462,32 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* EDUCATION */}
           <div
-            className="rounded-lg shadow-lg p-8"
+            className="rounded-lg shadow-lg p-4"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
               className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
               style={{
-                fontSize: "1.5rem",
+                fontSize: "1.25rem",
               }}
             >
               EDUCATION
             </h2>
-            <div>
+            <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-2">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                <span className="font-bold">
                   University of California, Santa Cruz
                 </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
+                <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2020 – 06/2024
                 </span>
               </div>
-              <p style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
+              <p style={{ color: "var(--text4)" }}>
                 Bachelor of Science &mdash; Computer Engineering
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="list-disc ml-6 mt-4"
                 style={{
-                  fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
@@ -579,8 +512,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           {/* placeholder */}
         </div>
       </div>
-    </Draggable>
+    </>
   );
 };
 
-export default ResumeWindow;
+export default ContactTab;

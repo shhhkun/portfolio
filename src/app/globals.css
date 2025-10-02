@@ -101,13 +101,23 @@ h1, h2, h3, h4, h5, h6 {
 
 /* Custom scrollbar styles */
 .custom-scrollbar::-webkit-scrollbar {
-  width: 12px;
+  width: 8px;
   background-color: transparent;
 }
 
 .custom-scrollbar::-webkit-scrollbar-thumb {
   background-color: var(--scroll);
-  border-radius: 15px;
+  border-radius: 16px;
+}
+
+.custom-scrollbar-thin::-webkit-scrollbar {
+  width: 4px;
+  background-color: transparent;
+}
+
+.custom-scrollbar-thin::-webkit-scrollbar-thumb {
+  background-color: var(--scroll);
+  border-radius: 8px;
 }
 
 /* Animation keyframes for the fill effect */

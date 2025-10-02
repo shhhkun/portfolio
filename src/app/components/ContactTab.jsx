@@ -52,14 +52,17 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
       {/* Backdrop (handles outside clicks) */}
       <div
         className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
-        onClick={closeModal}
+        onClick={() => {
+          closeModal();
+          playAudio2(0.1);
+        }}
         aria-hidden={!isOpen}
       />
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
         className={`fixed bottom-0 left-0 w-full max-h-[90vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-out ${transformClass} overflow-hidden`}
+                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
@@ -77,8 +80,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             {windowId}
           </p>
           <button
-            onClick={closeModal}
-            className="font-bold transition-transform hover:scale-110"
+            onClick={() => {
+              closeModal();
+              playAudio2(0.1);
+            }}
+            className="cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             x
@@ -88,7 +94,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
         {/* Main Content Area */}
         <div
           className="justify-center items-center flex flex-col p-8"
-          style={{ backgroundColor: "var(--card-bg)", fontSize: "1rem"}}
+          style={{ backgroundColor: "var(--card-bg)", fontSize: "1rem" }}
         >
           <h2 className="font-bold mb-4" style={{ fontSize: "1.25rem" }}>
             You've got mail!
@@ -128,7 +134,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               handleEmailButtonClick();
               playAudio1(0.2);
             }}
-            className="contact-button mt-10 px-4 py-2 rounded-md"
+            className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
           >
             send me an email!
           </button>

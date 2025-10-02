@@ -1,12 +1,36 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import HomeWindow from "./components/HomeWindow";
 import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
 import LinksWindow from "./components/LinksWindow";
 import ContactWindow from "./components/ContactWindow";
 import ResumeWindow from "./components/ResumeWindow";
+
+import AboutTab from "./components/AboutTab";
+import LinksTab from "./components/LinksTab";
+import WorkTab from "./components/WorkTab";
+import ContactTab from "./components/ContactTab";
+import ResumeTab from "./components/ResumeTab";
+
+const useIsMobile = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    // define the media query for screen size <= 768px
+    const mediaQuery = window.matchMedia("(max-width: 768px)");
+    const handleResize = () => setIsMobile(mediaQuery.matches);
+
+    // initial check and set up listener
+    handleResize();
+    mediaQuery.addEventListener("change", handleResize);
+
+    return () => mediaQuery.removeEventListener("change", handleResize);
+  }, []);
+
+  return isMobile;
+};
 
 const initialWindowsState = {
   about: { isOpen: false, zIndex: 100, position: { x: 0, y: 0 } },
@@ -25,9 +49,19 @@ const windowComponents = {
   resume: ResumeWindow,
 };
 
+// mapping of tab IDs to their component
+const tabComponents = {
+  about: AboutTab,
+  links: LinksTab,
+  work: WorkTab,
+  contact: ContactTab,
+  resume: ResumeTab,
+};
+
 const Page = () => {
   const [windows, setWindows] = useState(initialWindowsState);
   const [highestZIndex, setHighestZIndex] = useState(100);
+  const isMobile = useIsMobile();
 
   // handle open window
   const handleOpen = (windowId) => {
@@ -80,27 +114,37 @@ const Page = () => {
     <main>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
         <div className="z-10">
-          <HomeWindow handleOpen={handleOpen} />
+          <HomeWindow handleOpen={handleOpen} isMobile={isMobile} />
         </div>
       </div>
 
       {/* dynamically render windows based on their `isOpen` state */}
       {Object.entries(windows).map(([windowId, windowState]) => {
-        // get the correct component from our mapping
-        const WindowComponent = windowComponents[windowId];
+        let ComponentToRender = null;
+        let props = {};
 
-        // only render the component if it's supposed to be open
-        if (windowState.isOpen) {
-          return (
-            <WindowComponent
-              key={windowId}
-              onClose={() => handleClose(windowId)}
-              onFocus={() => handleFocus(windowId)}
-              onStop={(e, ui) => handleStop(windowId, e, ui)}
-              zIndex={windowState.zIndex}
-              position={windowState.position}
-            />
-          );
+        if (isMobile) {
+          ComponentToRender = tabComponents[windowId];
+          props = {
+            windowId: windowId,
+            isOpen: windowState.isOpen,
+            handleClose: handleClose,
+          };
+        } else {
+          if (!windowState.isOpen) return null;
+
+          ComponentToRender = windowComponents[windowId];
+          props = {
+            onClose: () => handleClose(windowId),
+            onFocus: () => handleFocus(windowId),
+            onStop: (e, ui) => handleStop(windowId, e, ui),
+            zIndex: windowState.zIndex,
+            position: windowState.position,
+          };
+        }
+
+        if (ComponentToRender) {
+          return <ComponentToRender key={windowId} {...props} />;
         }
         return null;
       })}
