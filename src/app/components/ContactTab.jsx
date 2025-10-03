@@ -1,6 +1,13 @@
 import React, { useState } from "react";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const HandleBar = () => (
+  <div
+    className="w-12 h-1 rounded-full mx-auto"
+    style={{ backgroundColor: "var(--text-header)" }}
+  />
+);
+
 const ContactTab = ({ isOpen, windowId, handleClose }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const [toastMessage, setToastMessage] = useState("");
@@ -69,11 +76,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
       >
         {/* Header */}
         <div
-          className="flex justify-between relative rounded-t-lg px-6 py-2 flex-shrink-0 "
+          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
-            border: "2px solid ",
+            border: "2px solid",
           }}
         >
           <p className="font-bold" style={{ color: "var(--text-header)" }}>
@@ -84,10 +91,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
-            x
+            <HandleBar />
           </button>
         </div>
 
