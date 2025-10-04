@@ -1,55 +1,20 @@
-"use client";
-
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
-import Waves from "./components/Waves";
-import FloatingObject from "./components/FloatingObject";
-import { AudioPlayerProvider } from "./components/AudioPlayer";
-import MuteButton from "./components/MuteButton";
-import ThemeButton from "./components/ThemeButton";
+import Home from "./components/Home";
+
+export const metadata = {
+  title: "Serjo's Website",
+  description: "My personal website showcasing my latest projects and work.",
+};
 
 const Layout = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)"
-    ).matches;
-    setTheme(prefersDark ? "dark" : "light");
-  }, []);
-
   return (
     <html lang="en">
       <body className="m-0 p-0 overflow-x-hidden">
         <Analytics />
-        <AudioPlayerProvider>
-          <div
-            className="min-h-dvh relative"
-            style={{
-              backgroundColor: "var(--bg)",
-              overflow: "hidden",
-            }}
-          >
-            <div className="absolute flex flex-row top-4 left-4 z-10">
-              <ThemeButton theme={theme} setTheme={setTheme} />
-              <MuteButton />
-            </div>
-
-            <p
-              className="absolute flex w-full justify-center bottom-0 font-light mb-2 z-11"
-              style={{ fontSize: "0.875rem" }}
-            >
-              © 2025 Serjo Barron
-            </p>
-
-            <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
-            <FloatingObject />
-
-            {children}
-          </div>
-        </AudioPlayerProvider>
+        <Home children={children} />
       </body>
     </html>
   );
