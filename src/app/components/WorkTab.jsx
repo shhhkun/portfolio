@@ -182,7 +182,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/"
+                  src="/lofiscape.webp"
                   alt="Placeholder for project 10"
                 />
               </div>

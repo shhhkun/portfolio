@@ -201,7 +201,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 <img
                   className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  src="/"
+                  src="/lofiscape.webp"
                   alt="Placeholder for project 10"
                 />
               </div>
