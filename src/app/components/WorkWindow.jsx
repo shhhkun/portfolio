@@ -213,7 +213,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       fontSize: "1.375rem",
                     }}
                   >
-                    LoFi Scape
+                    LoFi Scape (WIP)
                   </h3>
                   <p className="flex-grow">
                     Curate your perfect productivity environment. Mix calming

@@ -195,7 +195,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       fontSize: "1.25rem",
                     }}
                   >
-                    LoFi Scape
+                    LoFi Scape (WIP)
                   </h3>
                   <p className="flex-grow">
                     Curate your perfect productivity environment. Mix calming
