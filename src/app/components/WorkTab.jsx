@@ -174,6 +174,65 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           </h2>
 
           <div className="projects-section flex flex-col gap-8">
+            {/* Project Card 10 */}
+            <div
+              className="project-card rounded-lg flex flex-col"
+              style={{ backgroundColor: "var(--card-bg3)" }}
+            >
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+                <img
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
+                  src="/"
+                  alt="Placeholder for project 10"
+                />
+              </div>
+
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    LoFi Scape
+                  </h3>
+                  <p className="flex-grow">
+                    Curate your perfect productivity environment. Mix calming
+                    LoFi beats with custom ambient soundscapes, from gentle rain to
+                    a lively cafe. Built with Next.js, Tailwind CSS, and
+                    the Youtube Player API.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
+                  >
+                    React, Next.js, Tailwind CSS, Youtube Player API, Vercel
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com/shhhkun/lofiscape"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
+                    </a>
+                    <a
+                      href="https://lofiscape.vercel.app"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Project Card 9 */}
             <div
               className="project-card rounded-lg flex flex-col"
