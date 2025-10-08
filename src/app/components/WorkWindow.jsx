@@ -192,7 +192,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           <div className="projects-section flex flex-col gap-8">
             {/* Project Card 9 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -254,7 +254,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 8 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -316,7 +316,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 7 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -369,7 +369,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 6 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -430,7 +430,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 5 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -487,7 +487,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 4 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -543,7 +543,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 3 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -599,7 +599,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 2 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
@@ -655,7 +655,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* Project Card 1 */}
             <div
-              className="project-card rounded-lg flex flex-col flex-row animate-[slideIn_0.6s_ease-out]"
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
