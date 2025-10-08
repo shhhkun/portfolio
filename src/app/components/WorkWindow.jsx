@@ -190,6 +190,67 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           </h2>
 
           <div className="projects-section flex flex-col gap-8">
+            {/* Project Card 10 */}
+            <div
+              className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+              style={{ backgroundColor: "var(--card-bg3)" }}
+            >
+              <div
+                className="project-image-container relative rounded-tl-lg rounded-bl-lg"
+                style={{ backgroundColor: "transparent", width: "420px" }}
+              >
+                <img
+                  className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  src="/"
+                  alt="Placeholder for project 10"
+                />
+              </div>
+              <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div>
+                  <h3
+                    className="font-semibold mb-2"
+                    style={{
+                      fontSize: "1.375rem",
+                    }}
+                  >
+                    LoFi Scape
+                  </h3>
+                  <p className="flex-grow">
+                    Curate your perfect productivity environment. Mix calming
+                    LoFi beats with custom ambient soundscapes, from gentle rain to
+                    a lively cafe. Built with Next.js, Tailwind CSS, and
+                    the Youtube Player API.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="font-medium mb-2"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
+                  >
+                    React, Next.js, Tailwind CSS, Youtube Player API, Vercel
+                  </p>
+                  <div className="flex gap-3">
+                    <a
+                      href="https://github.com/shhhkun/lofiscape"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
+                    </a>
+                    <a
+                      href="https://lofiscape.vercel.app"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Live Demo
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Project Card 9 */}
             <div
               className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
@@ -216,10 +277,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     Chromatica
                   </h3>
                   <p className="flex-grow">
-                    A web app that connects with the Spotify API to
-                    generate unique color palettes based on your top tracks
-                    and artists. It was built with a Next.js frontend, a Next.js
-                    API routes backend with Prisma, and a PostgreSQL database.
+                    A web app that connects with the Spotify API to generate
+                    unique color palettes based on your top tracks and artists.
+                    It was built with a Next.js frontend, a Next.js API routes
+                    backend with Prisma, and a PostgreSQL database.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -682,9 +743,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     A simple 2D game built in Construct 3 to explore core game
                     design principles. As a key member of a small team, I
                     implemented all of the event-based logic, as well as
-                    contributed to level design and asset creation. Due to
-                    engine export limitations, a live demo of the game is not
-                    available.
+                    contributed to level design and asset creation.
                   </p>
                 </div>
                 <div className="mt-4">
