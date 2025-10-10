@@ -211,7 +211,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     React, Next.js, Tailwind CSS, Youtube Player API, Vercel
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://lofiscape.vercel.app"
                       target="_blank"
@@ -219,6 +219,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://www.figma.com/design/gsf9eDUKs9j6X2RoKSLkIu/LofiScape?node-id=0-1&t=o49jsYXOxh7WWJCm-1"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Figma Prototype
                     </a>
                     <a
                       href="https://github.com/shhhkun/lofiscape"
@@ -271,7 +279,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     React, Next.js, Tailwind CSS, Spotify API & OAuth 2.0,
                     Prisma & PostgreSQL, Vercel
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://chromatica-music.vercel.app"
                       target="_blank"
@@ -330,7 +338,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     React, Next.js, Tailwind CSS, Express.js, PostgreSQL,
                     Node.js, Vercel
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://ramentimer.vercel.app"
                       target="_blank"
@@ -388,7 +396,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     React, Vite, Node.js, Electron, TypeScript
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/Trashu"
                       target="_blank"
@@ -438,7 +446,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     React, Vite, Firebase/Firestore, Node.js
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://productivityapp-eb15a.web.app/"
                       target="_blank"
@@ -504,7 +512,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     React/React Native, Node.js, Python, Raspberry Pi, BLE,
                     JavaScript
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/SmartMirror"
                       target="_blank"
@@ -561,7 +569,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     C
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/CSE130/tree/main/asgn4"
                       target="_blank"
@@ -618,7 +626,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     C
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn5"
                       target="_blank"
@@ -675,7 +683,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     C
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn6"
                       target="_blank"
@@ -727,7 +735,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   >
                     Construct 3
                   </p>
-                  <div className="flex gap-3">
+                  <div className="flex flex-wrap gap-3">
                     <a
                       href="https://github.com/shhhkun/dollhouse"
                       target="_blank"
