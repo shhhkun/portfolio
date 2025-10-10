@@ -14,7 +14,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://serjo.vercel.app/og-image.jpg",
+        url: "https://serjo.vercel.app/og-image.png",
         width: 1200,
         height: 630,
         alt: "Serjo's Website Preview",
