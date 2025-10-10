@@ -199,9 +199,9 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </h3>
                   <p className="flex-grow">
                     Curate your perfect productivity environment. Mix calming
-                    LoFi beats with custom ambient soundscapes, from gentle rain to
-                    a lively cafe. Built with Next.js, Tailwind CSS, and
-                    the Youtube Player API.
+                    LoFi beats with custom ambient soundscapes, from gentle rain
+                    to a lively cafe. Built with Next.js, Tailwind CSS, and the
+                    Youtube Player API.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -213,20 +213,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com/shhhkun/lofiscape"
-                      target="_blank"
-                      className="pill-button"
-                      onClick={() => playAudio1(0.2)}
-                    >
-                      GitHub Repo
-                    </a>
-                    <a
                       href="https://lofiscape.vercel.app"
                       target="_blank"
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/shhhkun/lofiscape"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
                     </a>
                   </div>
                 </div>
@@ -273,20 +273,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com/shhhkun/chromatica"
-                      target="_blank"
-                      className="pill-button"
-                      onClick={() => playAudio1(0.2)}
-                    >
-                      GitHub Repo
-                    </a>
-                    <a
                       href="https://chromatica-music.vercel.app"
                       target="_blank"
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/shhhkun/chromatica"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
                     </a>
                   </div>
                 </div>
@@ -332,20 +332,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com/shhhkun/ramentimer"
-                      target="_blank"
-                      className="pill-button"
-                      onClick={() => playAudio1(0.2)}
-                    >
-                      GitHub Repo
-                    </a>
-                    <a
                       href="https://ramentimer.vercel.app"
                       target="_blank"
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/shhhkun/ramentimer"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
                     </a>
                   </div>
                 </div>
@@ -440,20 +440,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex gap-3">
                     <a
-                      href="https://github.com/shhhkun/Kept"
-                      target="_blank"
-                      className="pill-button"
-                      onClick={() => playAudio1(0.2)}
-                    >
-                      GitHub Repo
-                    </a>
-                    <a
                       href="https://productivityapp-eb15a.web.app/"
                       target="_blank"
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://github.com/shhhkun/Kept"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      GitHub Repo
                     </a>
                   </div>
                 </div>
