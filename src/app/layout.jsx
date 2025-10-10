@@ -7,6 +7,9 @@ import Home from "./components/Home";
 export const metadata = {
   title: "Serjo's Website",
   description: "My personal website showcasing my latest projects and work.",
+  icons: {
+    icon: "/favicon.ico",
+  },
   openGraph: {
     title: "Serjo's Website",
     description: "My personal website showcasing my latest projects and work.",
