@@ -289,6 +289,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       Live Demo
                     </a>
                     <a
+                      href="https://www.figma.com/design/xGFkHzn1fG5u96a8Hh1O0V/Vibe-Palette?node-id=0-1&t=YqybfchkBCkxq6n2-1"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Figma Prototype
+                    </a>
+                    <a
                       href="https://github.com/shhhkun/chromatica"
                       target="_blank"
                       className="pill-button"
@@ -346,6 +354,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
+                    </a>
+                    <a
+                      href="https://www.figma.com/design/P67iWewggnoDCZJU85Jkxq/Timer?node-id=0-1&t=jq6jeZ1cptalgGGs-1"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Figma Prototype
                     </a>
                     <a
                       href="https://github.com/shhhkun/ramentimer"
