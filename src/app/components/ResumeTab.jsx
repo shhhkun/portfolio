@@ -213,6 +213,30 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </h2>
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
+                <span className="font-bold">LoFi Scape</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
+                  10/2025 – Present
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
+              >
+                React, Next.js, Tailwind CSS, Youtube Player API, Vercel
+              </p>
+              <p
+                className="mt-4"
+                style={{
+                  color: "var(--text4)",
+                }}
+              >
+                Engineered a minimal web application using the Youtube iFrame
+                Player API to blend lofi music with custom ambient soundscapes,
+                creating a focused, distraction-free environment.
+              </p>
+            </div>
+            <div style={{ fontSize: "1rem" }}>
+              <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Chromatica</span>
                 <span className="italic" style={{ color: "var(--text4)" }}>
                   09/2025 – Present
@@ -222,7 +246,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Node.js, Prisma & PostgreSQL, Vercel
+                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL, Spotify API, Vercel
               </p>
               <p
                 className="mt-4"
@@ -230,10 +254,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   color: "var(--text4)",
                 }}
               >
-                Engineered a full-stack web application that utilizes the
-                Spotify API to generate unique color palettes based on your top
-                tracks and artists. Deployed a responsive, user-facing
-                experience that showcases expertise in OAuth integration.
+                Engineered a full-stack web application that leverages the
+                Spotify API and PostgreSQL to analyze user listening data and
+                generate unique color palettes based on your top tracks and
+                artists. Deployed a responsive, user-facing experience utilizing
+                OAuth integration.
               </p>
             </div>
             <div style={{ fontSize: "1rem" }}>
@@ -247,7 +272,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Express.js, Node.js, PostgreSQL, Vercel
+                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL, Vercel
               </p>
               <p
                 className="mt-4"
