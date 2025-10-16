@@ -6,7 +6,9 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
+  const [isVisible, setIsVisible] = useState(false);
   const nodeRef = useRef(null);
+  const barRef = useRef(null);
 
   const [bounds, setBounds] = useState({
     top: 0,
@@ -35,6 +37,33 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
     window.addEventListener("resize", handleResize);
 
     return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  useEffect(() => {
+    if (!barRef.current) return; // prevent run before mount
+
+    // observer config
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        // if the element is visible (intersecting viewport)
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          // stop observing once it has appeared
+          observer.unobserve(entry.target);
+        }
+      },
+      // trigger when 50% of the element is visible
+      { threshold: 0.5 }
+    );
+
+    observer.observe(barRef.current);
+
+    // cleanup on unmount
+    return () => {
+      if (barRef.current) {
+        observer.unobserve(barRef.current);
+      }
+    };
   }, []);
 
   return (
@@ -224,10 +253,11 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </h2>
             <div
               className="flex flex-col mt-5 gap-y-4"
+              ref={barRef}
               style={{ color: "var(--text2)", fontSize: "1.125rem" }}
             >
               {/* English */}
-              <div className="flex flex-col gap-y-1 group">
+              <div className="flex flex-col gap-y-1">
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">English</span>
                   <div
@@ -235,8 +265,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className="bar-english h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
-                      style={{ width: "100%", backgroundColor: "#a8e6cf" }}
+                      className={`bar-english h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        isVisible ? "scale-y-125" : ""
+                      } transform origin-left`}
+                      style={{
+                        width: isVisible ? "100%" : "0%",
+                        backgroundColor: "#a8e6cf",
+                      }}
                     ></div>
                   </div>
                 </div>
@@ -246,7 +281,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
 
               {/* Tagalog */}
-              <div className="flex flex-col gap-y-1 group">
+              <div className="flex flex-col gap-y-1">
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">Tagalog</span>
                   <div
@@ -254,8 +289,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className="bar-tagalog h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
-                      style={{ width: "50%", backgroundColor: "#fdfd96" }}
+                      className={`bar-tagalog h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        isVisible ? "scale-y-125" : ""
+                      } transform origin-left`}
+                      style={{
+                        width: isVisible ? "50%" : "0%",
+                        backgroundColor: "#fdfd96",
+                      }}
                     ></div>
                   </div>
                 </div>
@@ -265,7 +305,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
 
               {/* Japanese */}
-              <div className="flex flex-col gap-y-1 group">
+              <div className="flex flex-col gap-y-1">
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">Japanese</span>
                   <div
@@ -273,8 +313,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className="bar-japanese h-full absolute left-0 rounded-full transition-all duration-300 ease-in-out group-hover:scale-y-125"
-                      style={{ width: "20%", backgroundColor: "#ffb3b3" }}
+                      className={`bar-japanese h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        isVisible ? "scale-y-125" : ""
+                      } transform origin-left`}
+                      style={{
+                        width: isVisible ? "20%" : "0%",
+                        backgroundColor: "#ffb3b3",
+                      }}
                     ></div>
                   </div>
                 </div>
