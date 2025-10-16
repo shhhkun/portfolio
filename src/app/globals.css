@@ -121,7 +121,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Animation keyframes for the fill effect */
-@keyframes fillUpEnglish {
+/* @keyframes fillUpEnglish {
   0% {
     width: 100%;
   }
@@ -153,14 +153,14 @@ h1, h2, h3, h4, h5, h6 {
   100% {
     width: 20%;
   }
-}
+} */
 
 /*
    * Apply a custom, dynamic timing function on hover.
    * `cubic-bezier(0.25, 1, 0.5, 1)` provides a smooth ease-out effect.
    * The animation will also persist its final state with `forwards`.
    */
-.group:hover .bar-english {
+/* .group:hover .bar-english {
   animation: fillUpEnglish 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
 }
 .group:hover .bar-tagalog {
@@ -168,7 +168,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .group:hover .bar-japanese {
   animation: fillUpJapanese 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
+} */
 
 .skill-pill {
   background-color: var(--bg);
