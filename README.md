@@ -26,6 +26,14 @@ This is a personal portfolio website built to showcase my skills, projects, and 
 
 - **react-draggable:** A React component used to make the windows draggable.
 
+## Potential Future Features:
+
+- **Interactive AI Chatbot**: For quick information, FAQ, etc.
+
+- **Built-In Contact/Email Form**
+
+- **More Animations**: Fade into view cards (for projects card)
+
 ## Getting Started
 
 To run this project locally:
