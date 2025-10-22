@@ -136,6 +136,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="skill-pill">Agile</div>
                   <div className="skill-pill">Scrum</div>
                   <div className="skill-pill">CI/CD</div>
+                  <div className="skill-pill">Docker</div>
                   <div className="skill-pill">Visual Studio</div>
                   <div className="skill-pill">Figma</div>
                   <div className="skill-pill">Linux</div>
