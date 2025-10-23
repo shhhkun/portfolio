@@ -153,6 +153,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">PostgreSQL</div>
                   <div className="skill-pill">Firebase/Firestore</div>
+                  <div className="skill-pill">REST APIs</div>
                   <div className="skill-pill">OAuth 2.0</div>
                 </div>
               </div>
