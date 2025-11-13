@@ -214,6 +214,138 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
           </div>
 
+          {/* EXPERIENCE */}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "var(--card-bg2)" }}
+          >
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              style={{
+                fontSize: "1.5rem",
+              }}
+            >
+              EXPERIENCE
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Software Engineer Intern
+                </span>
+                <span
+                  className="italic"
+                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
+                >
+                  10/2025 – Present
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+              >
+                BotStacks – San Francisco, CA
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Engineered and refactored user onboarding flows using React
+                  and Next.js, improving UX and streamlining the path from
+                  signup to dashboard for SaaS chatbot platform.
+                </li>
+                <li className="mb-2">
+                  Migrated documentation to BookStack using Docker, organizing
+                  50+ technical documents from Notion.
+                </li>
+                <li className="mb-2">
+                  Conducted technical research and built proof-of-concepts for
+                  authentication systems, evaluating solutions and auditing
+                  codebase to prepare for AIM layer integration.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Computer Systems and C Programming Reader
+                </span>
+                <span
+                  className="italic"
+                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
+                >
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+              >
+                Baskin School of Engineering – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Graded and provided feedback on weekly lab reports for over
+                  200 students in systems programming and C.
+                </li>
+                <li className="mb-2">
+                  Explained technical concepts clearly to support student
+                  learning and LaTeX formatting conventions.
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  Tech Manager
+                </span>
+                <span
+                  className="italic"
+                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
+                >
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+              >
+                Slug Anime and Manga Association – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Managed AV, streaming, and live troubleshooting for weekly
+                  meetings and SlugCon, a 1000+ person convention.
+                </li>
+                <li className="mb-2">
+                  Coordinated technical logistics and relayed setup plans across
+                  officers, guests, and event partners.
+                </li>
+                <li className="mb-2">
+                  Provided ongoing tech support and contributed to outreach and
+                  event funding initiatives.
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* PROJECTS */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
@@ -273,7 +405,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="italic"
                 style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL, Spotify API, Vercel
+                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL,
+                Spotify API, Vercel
               </p>
               <p
                 className="mt-4"
@@ -305,7 +438,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="italic"
                 style={{ fontSize: "1.125rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL, Vercel
+                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL,
+                Vercel
               </p>
               <p
                 className="mt-4"
@@ -314,10 +448,10 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   color: "var(--text4)",
                 }}
               >
-                Developed and deployed a mobile-first ramen timer
-                web app with a nostalgic, pixel-art aesthetic. Built to record timer
-                data for your favorite ramen brands, showcasing fundamental
-                full-stack development skills with PostgreSQL.
+                Developed and deployed a mobile-first ramen timer web app with a
+                nostalgic, pixel-art aesthetic. Built to record timer data for
+                your favorite ramen brands, showcasing fundamental full-stack
+                development skills with PostgreSQL.
               </p>
             </div>
             <div>
@@ -416,96 +550,6 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
           </div>
 
-          {/* EXPERIENCE */}
-          <div
-            className="rounded-lg shadow-lg p-8 mb-8"
-            style={{ backgroundColor: "var(--card-bg2)" }}
-          >
-            <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
-              style={{
-                fontSize: "1.5rem",
-              }}
-            >
-              EXPERIENCE
-            </h2>
-            <div>
-              <div className="flex justify-between items-center mt-2">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Computer Systems and C Programming Reader
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  09/2023 – 06/2024
-                </span>
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-              >
-                Baskin School of Engineering – Santa Cruz, CA
-              </p>
-              <ul
-                className="list-disc ml-8 mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  Graded and provided feedback on weekly lab reports for over
-                  200 students in systems programming and C.
-                </li>
-                <li className="mb-2">
-                  Explained technical concepts clearly to support student
-                  learning and LaTeX formatting conventions.
-                </li>
-              </ul>
-            </div>
-
-            <div>
-              <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Tech Manager
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  09/2023 – 06/2024
-                </span>
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-              >
-                Slug Anime and Manga Association – Santa Cruz, CA
-              </p>
-              <ul
-                className="list-disc ml-8 mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  Managed AV, streaming, and live troubleshooting for weekly
-                  meetings and SlugCon, a 1000+ person convention.
-                </li>
-                <li className="mb-2">
-                  Coordinated technical logistics and relayed setup plans across
-                  officers, guests, and event partners.
-                </li>
-                <li className="mb-2">
-                  Provided ongoing tech support and contributed to outreach and
-                  event funding initiatives.
-                </li>
-              </ul>
-            </div>
-          </div>
-
           {/* SKILLS */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
@@ -549,7 +593,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools:
                 </span>{" "}
-                Git, GitHub, Vercel, CI/CD, Docker, REST APIs, Visual Studio, Figma, LaTeX
+                Git, GitHub, Vercel, CI/CD, Docker, REST APIs, Visual Studio,
+                Figma, LaTeX
               </li>
             </ul>
           </div>

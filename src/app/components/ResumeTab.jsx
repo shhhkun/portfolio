@@ -198,6 +198,124 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
           </div>
 
+          {/* EXPERIENCE */}
+          <div
+            className="rounded-lg shadow-lg p-4 mb-8"
+            style={{ backgroundColor: "var(--card-bg2)" }}
+          >
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              style={{
+                fontSize: "1.25rem",
+              }}
+            >
+              EXPERIENCE
+            </h2>
+            <div style={{ fontSize: "1rem" }}>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold">
+                  Software Engineer Intern
+                </span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
+                  10/2025 – Present
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
+              >
+                BotStacks – San Francisco, CA
+              </p>
+              <ul
+                className="list-disc ml-6 mt-4"
+                style={{
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Engineered and refactored user onboarding flows using React
+                  and Next.js, improving UX and streamlining the path from
+                  signup to dashboard for SaaS chatbot platform.
+                </li>
+                <li className="mb-2">
+                  Migrated documentation to BookStack using Docker, organizing
+                  50+ technical documents from Notion.
+                </li>
+                <li className="mb-2">
+                  Conducted technical research and built proof-of-concepts for
+                  authentication systems, evaluating solutions and auditing
+                  codebase to prepare for AIM layer integration.
+                </li>
+              </ul>
+            </div>
+
+            <div style={{ fontSize: "1rem" }}>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold">
+                  Computer Systems and C Programming Reader
+                </span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
+              >
+                Baskin School of Engineering – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-6 mt-4"
+                style={{
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Graded and provided feedback on weekly lab reports for over
+                  200 students in systems programming and C.
+                </li>
+                <li className="mb-2">
+                  Explained technical concepts clearly to support student
+                  learning and LaTeX formatting conventions.
+                </li>
+              </ul>
+            </div>
+
+            <div style={{ fontSize: "1rem" }}>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold">Tech Manager</span>
+                <span className="italic" style={{ color: "var(--text4)" }}>
+                  09/2023 – 06/2024
+                </span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
+              >
+                Slug Anime and Manga Association – Santa Cruz, CA
+              </p>
+              <ul
+                className="list-disc ml-6 mt-4"
+                style={{
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Managed AV, streaming, and live troubleshooting for weekly
+                  meetings and SlugCon, a 1000+ person convention.
+                </li>
+                <li className="mb-2">
+                  Coordinated technical logistics and relayed setup plans across
+                  officers, guests, and event partners.
+                </li>
+                <li className="mb-2">
+                  Provided ongoing tech support and contributed to outreach and
+                  event funding initiatives.
+                </li>
+              </ul>
+            </div>
+          </div>
+
           {/* PROJECTS */}
           <div
             className="rounded-lg shadow-lg p-4 mb-8"
@@ -361,86 +479,6 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 communication between a Raspberry Pi and a React Native mobile
                 app.
               </p>
-            </div>
-          </div>
-
-          {/* EXPERIENCE */}
-          <div
-            className="rounded-lg shadow-lg p-4 mb-8"
-            style={{ backgroundColor: "var(--card-bg2)" }}
-          >
-            <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
-              style={{
-                fontSize: "1.25rem",
-              }}
-            >
-              EXPERIENCE
-            </h2>
-            <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-2">
-                <span className="font-bold">
-                  Computer Systems and C Programming Reader
-                </span>
-                <span className="italic" style={{ color: "var(--text4)" }}>
-                  09/2023 – 06/2024
-                </span>
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
-              >
-                Baskin School of Engineering – Santa Cruz, CA
-              </p>
-              <ul
-                className="list-disc ml-6 mt-4"
-                style={{
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  Graded and provided feedback on weekly lab reports for over
-                  200 students in systems programming and C.
-                </li>
-                <li className="mb-2">
-                  Explained technical concepts clearly to support student
-                  learning and LaTeX formatting conventions.
-                </li>
-              </ul>
-            </div>
-
-            <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
-                <span className="font-bold">Tech Manager</span>
-                <span className="italic" style={{ color: "var(--text4)" }}>
-                  09/2023 – 06/2024
-                </span>
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
-              >
-                Slug Anime and Manga Association – Santa Cruz, CA
-              </p>
-              <ul
-                className="list-disc ml-6 mt-4"
-                style={{
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  Managed AV, streaming, and live troubleshooting for weekly
-                  meetings and SlugCon, a 1000+ person convention.
-                </li>
-                <li className="mb-2">
-                  Coordinated technical logistics and relayed setup plans across
-                  officers, guests, and event partners.
-                </li>
-                <li className="mb-2">
-                  Provided ongoing tech support and contributed to outreach and
-                  event funding initiatives.
-                </li>
-              </ul>
             </div>
           </div>
 
