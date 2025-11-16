@@ -149,9 +149,18 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="pl-2"
                 style={{ color: "var(--text)", fontSize: "1.125rem" }}
               >
-                Full-Stack Developer
+                Full-Stack Developer, UI/UX Enthusiast
                 <br />
-                UI/UX Enthusiast
+                Current Software Engineer Intern at{" "}
+                <a
+                  href="https://www.botstacks.ai/"
+                  target="_blank"
+                  className="underline"
+                  style={{ color: "var(--text3)" }}
+                  onClick={() => playAudio1(0.2)}
+                >
+                  BotStacks
+                </a>
               </h3>
             </div>
           </div>

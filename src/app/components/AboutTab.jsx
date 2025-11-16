@@ -122,11 +122,22 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
             >
               Serjo Barron
             </h2>
-            <h3 style={{ color: "var(--text)", fontSize: "1rem" }}>
-              Full-Stack Developer
-            </h3>
-            <h3 style={{ color: "var(--text)", fontSize: "1rem" }}>
-              UI/UX Enthusiast
+            <h3
+              className="text-center"
+              style={{ color: "var(--text)", fontSize: "1rem" }}
+            >
+              Full-Stack Developer, UI/UX Enthusiast
+              <br />
+              Current Software Engineer Intern at{" "}
+              <a
+                href="https://www.botstacks.ai/"
+                target="_blank"
+                className="underline"
+                style={{ color: "var(--text3)" }}
+                onClick={() => playAudio1(0.2)}
+              >
+                BotStacks
+              </a>
             </h3>
           </div>
 
