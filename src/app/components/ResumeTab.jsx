@@ -141,7 +141,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </span>
                 <a
                   href="mailto:serjobarron@gmail.com"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
@@ -162,7 +162,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   href="https://linkedin.com/in/serjobarron"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
@@ -180,7 +180,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   href="https://github.com/shhhkun"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
