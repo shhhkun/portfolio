@@ -228,7 +228,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               EXPERIENCE
             </h2>
             <div>
-              <div className="flex justify-between items-center mt-2">
+              <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Software Engineer Intern
                 </span>
@@ -270,7 +270,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
 
             <div>
-              <div className="flex justify-between items-center mt-2">
+              <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Computer Systems and C Programming Reader
                 </span>

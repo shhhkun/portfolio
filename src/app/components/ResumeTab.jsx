@@ -211,11 +211,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             >
               EXPERIENCE
             </h2>
+
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-2">
-                <span className="font-bold">
-                  Software Engineer Intern
-                </span>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold">Software Engineer Intern</span>
                 <span className="italic" style={{ color: "var(--text4)" }}>
                   10/2025 – Present
                 </span>
@@ -250,7 +249,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-2">
+              <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">
                   Computer Systems and C Programming Reader
                 </span>
@@ -353,6 +352,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 creating a focused, distraction-free environment.
               </p>
             </div>
+
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Chromatica</span>
@@ -364,7 +364,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL, Spotify API, Vercel
+                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL,
+                Spotify API, Vercel
               </p>
               <p
                 className="mt-4"
@@ -379,6 +380,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 OAuth integration.
               </p>
             </div>
+
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Ramen Timer</span>
@@ -390,7 +392,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL, Vercel
+                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL,
+                Vercel
               </p>
               <p
                 className="mt-4"
@@ -404,6 +407,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 development skills with PostgreSQL.
               </p>
             </div>
+
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Trashu</span>
@@ -429,6 +433,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 translating complex data into an intuitive interface.
               </p>
             </div>
+
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Kept</span>
@@ -453,6 +458,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 increased user engagement by an estimated 20%.
               </p>
             </div>
+
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">SmartMirror</span>
@@ -525,7 +531,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools:
                 </span>{" "}
-                Git, GitHub, Vercel, CI/CD, Docker, REST APIs Visual Studio, Figma, LaTeX
+                Git, GitHub, Vercel, CI/CD, Docker, REST APIs Visual Studio,
+                Figma, LaTeX
               </li>
             </ul>
           </div>
