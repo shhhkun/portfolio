@@ -218,3 +218,108 @@ h1, h2, h3, h4, h5, h6 {
 .download-button:hover {
   background-color: var(--button-hover);
 }
+
+
+
+
+/* ===== Color Group Hover Effects - MUTUALLY EXCLUSIVE ===== */
+
+/* Reset skill pills to base state */
+.skill-pill {
+  background-color: var(--bg);
+  border: 1px solid var(--border2);
+  border-radius: 0.375rem;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.skill-pill:hover {
+  transform: translateY(-2px);
+}
+
+/* Group 1: Core Web Technologies */
+.skill-pill.group-core-web.active,
+.skill-pill.group-core-web.highlight {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(59, 130, 246, 0.3);
+}
+
+/* Group 2: JavaScript Ecosystem */
+.skill-pill.group-js-ecosystem.active,
+.skill-pill.group-js-ecosystem.highlight {
+  background: linear-gradient(135deg, #10b981 0%, #059669 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(16, 185, 129, 0.3);
+}
+
+/* Group 3: Backend & APIs */
+.skill-pill.group-backend.active,
+.skill-pill.group-backend.highlight {
+  background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(139, 92, 246, 0.3);
+}
+
+/* Group 4: Databases */
+.skill-pill.group-database.active,
+.skill-pill.group-database.highlight {
+  background: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(245, 158, 11, 0.3);
+}
+
+/* Group 5: DevOps & Tools */
+.skill-pill.group-devops.active,
+.skill-pill.group-devops.highlight {
+  background: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(239, 68, 68, 0.3);
+}
+
+/* Group 6: Programming Languages */
+.skill-pill.group-language.active,
+.skill-pill.group-language.highlight {
+  background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(236, 72, 153, 0.3);
+}
+
+/* Group 7: Desktop & Systems */
+.skill-pill.group-desktop.active,
+.skill-pill.group-desktop.highlight {
+  background: linear-gradient(135deg, #06b6d4 0%, #0891b2 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(6, 182, 212, 0.3);
+}
+
+/* Group 8: Project Management */
+.skill-pill.group-management.active,
+.skill-pill.group-management.highlight {
+  background: linear-gradient(135deg, #84cc16 0%, #65a30d 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(132, 204, 22, 0.3);
+}
+
+/* Active skill gets extra elevation */
+.skill-pill.active {
+  transform: translateY(-4px) scale(1.05);
+  z-index: 10;
+}
+
+/* Highlighted skills get slight elevation */
+.skill-pill.highlight {
+  transform: translateY(-2px);
+  z-index: 5;
+}

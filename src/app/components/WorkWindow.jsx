@@ -5,9 +5,83 @@ import Draggable from "react-draggable";
 import { GithubLogoIcon } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
+// ===== MUTUALLY EXCLUSIVE SKILL GROUPS =====
+const skillGroups = {
+  // Group 1: Core Web Technologies (HTML/CSS)
+  "group-core-web": ["HTML", "CSS"],
+
+  // Group 2: JavaScript Ecosystem (JS/TS and frameworks)
+  "group-js-ecosystem": [
+    "JavaScript",
+    "TypeScript",
+    "React",
+    "Next.js",
+    "Vite",
+    "Electron",
+  ],
+
+  // Group 3: Backend & APIs
+  "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth 2.0"],
+
+  // Group 4: Databases
+  "group-database": ["PostgreSQL", "Prisma", "Firebase/Firestore"],
+
+  // Group 5: DevOps & Tools
+  "group-devops": [
+    "Git",
+    "GitHub",
+    "CI/CD",
+    "Docker",
+    "Visual Studio",
+    "Figma",
+  ],
+
+  // Group 6: Programming Languages (non-JS)
+  "group-language": ["Python", "C/C++", "Verilog"],
+
+  // Group 7: Desktop & Systems
+  "group-desktop": ["Linux", "Windows", "LaTeX"],
+
+  // Group 8: Project Management
+  "group-management": ["Agile", "Scrum"],
+};
+
+// Helper to assign each skill to exactly one group
+const assignSkillToGroup = (skill) => {
+  for (const [groupName, skills] of Object.entries(skillGroups)) {
+    if (skills.includes(skill)) {
+      return groupName;
+    }
+  }
+  return null; // Shouldn't happen
+};
+
+// ===== SKILL PILL COMPONENT =====
+const SkillPill = ({ skill, activeSkill, setActiveSkill }) => {
+  const group = assignSkillToGroup(skill);
+  const isActive = activeSkill === skill;
+
+  // Check if this skill should be highlighted (same group as active skill)
+  const shouldHighlight =
+    activeSkill && group === assignSkillToGroup(activeSkill) && !isActive;
+
+  return (
+    <div
+      className={`skill-pill ${group} ${isActive ? "active" : ""} ${
+        shouldHighlight ? "highlight" : ""
+      }`}
+      onMouseEnter={() => setActiveSkill(skill)}
+      onMouseLeave={() => setActiveSkill(null)}
+    >
+      {skill}
+    </div>
+  );
+};
+
 const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
+  const [activeSkill, setActiveSkill] = useState(null);
 
   const [bounds, setBounds] = useState({
     top: 0,
@@ -131,19 +205,29 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   TOOLS
                 </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
-                  <div className="skill-pill">Git</div>
-                  <div className="skill-pill">GitHub</div>
-                  <div className="skill-pill">Agile</div>
-                  <div className="skill-pill">Scrum</div>
-                  <div className="skill-pill">CI/CD</div>
-                  <div className="skill-pill">Docker</div>
-                  <div className="skill-pill">Visual Studio</div>
-                  <div className="skill-pill">Figma</div>
-                  <div className="skill-pill">Linux</div>
-                  <div className="skill-pill">Windows</div>
-                  <div className="skill-pill">LaTeX</div>
+                  {[
+                    "Git",
+                    "GitHub",
+                    "Agile",
+                    "Scrum",
+                    "CI/CD",
+                    "Docker",
+                    "Visual Studio",
+                    "Figma",
+                    "Linux",
+                    "Windows",
+                    "LaTeX",
+                  ].map((skill) => (
+                    <SkillPill
+                      key={skill}
+                      skill={skill}
+                      activeSkill={activeSkill}
+                      setActiveSkill={setActiveSkill}
+                    />
+                  ))}
                 </div>
               </div>
+
               {/* Development Column */}
               <div className="skill-column flex-1">
                 <h2
@@ -153,24 +237,33 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   DEVELOPMENT
                 </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
-                  <div className="skill-pill">JavaScript</div>
-                  <div className="skill-pill">TypeScript</div>
-                  <div className="skill-pill">HTML</div>
-                  <div className="skill-pill">CSS</div>
-                  <div className="skill-pill">Python</div>
-                  <div className="skill-pill">C/C++</div>
-                  <div className="skill-pill">Verilog</div>
-                  <div className="skill-pill">Next.js</div>
-                  <div className="skill-pill">React</div>
-                  <div className="skill-pill">Node.js</div>
-                  <div className="skill-pill">Express.js</div>
-                  <div className="skill-pill">Vite</div>
-                  <div className="skill-pill">Electron</div>
-                  <div className="skill-pill">Prisma</div>
-                  <div className="skill-pill">PostgreSQL</div>
-                  <div className="skill-pill">Firebase/Firestore</div>
-                  <div className="skill-pill">REST APIs</div>
-                  <div className="skill-pill">OAuth 2.0</div>
+                  {[
+                    "JavaScript",
+                    "TypeScript",
+                    "HTML",
+                    "CSS",
+                    "Python",
+                    "C/C++",
+                    "Verilog",
+                    "Next.js",
+                    "React",
+                    "Node.js",
+                    "Express.js",
+                    "Vite",
+                    "Electron",
+                    "Prisma",
+                    "PostgreSQL",
+                    "Firebase/Firestore",
+                    "REST APIs",
+                    "OAuth 2.0",
+                  ].map((skill) => (
+                    <SkillPill
+                      key={skill}
+                      skill={skill}
+                      activeSkill={activeSkill}
+                      setActiveSkill={setActiveSkill}
+                    />
+                  ))}
                 </div>
               </div>
             </div>
@@ -181,7 +274,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
-          {/* Projects Section */}
+          {/* Projects */}
           <h2
             className="section-title font-semibold mb-4"
             style={{
