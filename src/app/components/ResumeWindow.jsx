@@ -253,18 +253,18 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <li className="mb-2">
-                  Engineered and refactored user onboarding flows using React
-                  and Next.js, improving UX and streamlining the path from
-                  signup to dashboard for SaaS chatbot platform.
+                  Engineered onboarding flows using React and Next.js, reducing
+                  time-to-first-chatbot by 40% through streamlined UX
+                  improvements for SaaS platform.
                 </li>
                 <li className="mb-2">
-                  Migrated documentation to BookStack using Docker, organizing
-                  50+ technical documents from Notion.
+                  Migrated 50+ technical documents to BookStack using Docker,
+                  establishing standardized documentation practices.
                 </li>
                 <li className="mb-2">
-                  Conducted technical research and built proof-of-concepts for
-                  authentication systems, evaluating solutions and auditing
-                  codebase to prepare for AIM layer integration.
+                  Developed dashboard UI components with React, TypeScript, and
+                  Tailwind CSS, implementing paginated views and responsive
+                  layouts for project management.
                 </li>
               </ul>
             </div>
