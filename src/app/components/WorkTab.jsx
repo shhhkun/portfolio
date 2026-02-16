@@ -143,7 +143,6 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <div className="skill-pill">CSS</div>
                   <div className="skill-pill">Python</div>
                   <div className="skill-pill">C/C++</div>
-                  <div className="skill-pill">Verilog</div>
                   <div className="skill-pill">Next.js</div>
                   <div className="skill-pill">React</div>
                   <div className="skill-pill">Node.js</div>

@@ -37,7 +37,7 @@ const skillGroups = {
   ],
 
   // Group 6: Programming Languages (non-JS)
-  "group-language": ["Python", "C/C++", "Verilog"],
+  "group-language": ["Python", "C/C++"],
 
   // Group 7: Desktop & Systems
   "group-desktop": ["Linux", "Windows", "LaTeX"],
@@ -244,7 +244,6 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     "CSS",
                     "Python",
                     "C/C++",
-                    "Verilog",
                     "Next.js",
                     "React",
                     "Node.js",
