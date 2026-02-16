@@ -151,7 +151,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 Full-Stack Developer, UI/UX Enthusiast
                 <br />
-                Current Software Engineer Intern at{" "}
+                Former Software Engineer Intern at{" "}
                 <a
                   href="https://www.botstacks.ai/"
                   target="_blank"
