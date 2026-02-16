@@ -236,7 +236,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
-                  10/2025 – Present
+                  10/2025 – 02/2026
                 </span>
               </div>
               <p
@@ -253,18 +253,21 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <li className="mb-2">
-                  Engineered onboarding flows using React and Next.js, reducing
-                  time-to-first-chatbot by 40% through streamlined UX
-                  improvements for SaaS platform.
+                  Designed and implemented full-stack dashboard features
+                  integrating REST APIs and custom backend endpoints, enabling
+                  real-time project analytics that replaced manual status
+                  checks.
                 </li>
                 <li className="mb-2">
-                  Migrated 50+ technical documents to BookStack using Docker,
-                  establishing standardized documentation practices.
+                  Reengineered onboarding flow with React/Next.js, building
+                  distinct setup paths for free, pro, and team tiers that
+                  reduced configuration steps across all plan types and
+                  eliminated confusion around plan-specific features.
                 </li>
                 <li className="mb-2">
-                  Developed dashboard UI components with React, TypeScript, and
-                  Tailwind CSS, implementing paginated views and responsive
-                  layouts for project management.
+                  Migrated 50+ internal documents to Docker-deployed BookStack
+                  wiki, creating single source of truth that eliminated version
+                  confusion across engineering and product teams.
                 </li>
               </ul>
             </div>
@@ -364,12 +367,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   LoFi Scape
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   10/2025 – Present
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -394,12 +397,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Chromatica
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   09/2025 – Present
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -427,12 +430,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Ramen Timer
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   09/2025
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -459,12 +462,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Trashu
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   08/2025 – Present
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -490,12 +493,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Kept
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   07/2025 – 08/2025
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -520,12 +523,12 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   SmartMirror
                 </span>
-                <span
+                {/* <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
                   01/2024 – 06/2024
-                </span>
+                </span> */}
               </div>
               <p
                 className="italic"
@@ -540,12 +543,10 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   color: "var(--text4)",
                 }}
               >
-                Developed an IoT device and mobile app designed to reduce phone
-                reliance in the morning and improve mental health. Orchestrated
-                a real-time data exchange pipeline that achieved sub-second data
-                transfer via Bluetooth Low Energy (BLE), enabling seamless
-                communication between a Raspberry Pi and a React Native mobile
-                app.
+                Developed IoT smart mirror and companion mobile app reducing
+                morning phone reliance, with BLE pipeline achieving sub-second
+                synchronization between Raspberry Pi hardware and React Native
+                clients.
               </p>
             </div>
           </div>
@@ -574,27 +575,25 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Programming Languages:
                 </span>{" "}
-                Python, C, C++, JavaScript, TypeScript, HTML, CSS, Verilog
+                Python, C, C++, JavaScript, TypeScript, HTML/CSS
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Frameworks & Libraries:
+                  Frontend:
                 </span>{" "}
-                React, Next.js, Node.js, Express.js, Tailwind CSS, Vite,
-                Electron, Firebase, Prisma
+                React, Next.js, Tailwind CSS, Vite
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Databases:
+                  Backend & Databases:
                 </span>{" "}
-                PostgreSQL, Firestore
+                Node.js, Express.js, PostgreSQL, Firestore, Prisma, REST APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Tools:
+                  Tools & Infrastructure:
                 </span>{" "}
-                Git, GitHub, Vercel, CI/CD, Docker, REST APIs, Visual Studio,
-                Figma, LaTeX
+                Docker, Git, CI/CD, Vercel, Visual Studio, Figma, LaTeX
               </li>
             </ul>
           </div>
@@ -644,10 +643,8 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <span className="font-bold" style={{ color: "var(--text)" }}>
                     Relevant Coursework:
                   </span>{" "}
-                  Data Structures & Algorithms, Computer Architecture, Computer
-                  System Design, Embedded System Design, Computer Networks,
-                  Network Programming, Electronic Circuits, Logic Design,
-                  Signals & Systems
+                  Data Structures, Computer Architecture, Systems Programming,
+                  Computer Networks
                 </li>
               </ul>
             </div>
