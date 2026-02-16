@@ -82,7 +82,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           width: "640px",
           height: "400px",
           borderRadius: "10px",
-          border: "2px solid ",
+          border: "2px solid var(--border)",
           boxSizing: "border-box",
           position: "absolute",
         }}

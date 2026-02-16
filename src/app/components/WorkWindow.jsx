@@ -128,7 +128,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           width: "1056px",
           height: "600px",
           borderRadius: "10px",
-          border: "2px solid ",
+          border: "2px solid var(--border)",
           boxSizing: "border-box",
           position: "absolute",
         }}

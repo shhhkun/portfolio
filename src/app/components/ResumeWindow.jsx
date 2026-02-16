@@ -65,7 +65,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           width: "1058px",
           height: "600px",
           borderRadius: "10px",
-          border: "2px solid ",
+          border: "2px solid var(--border)",
           boxSizing: "border-box",
           position: "absolute",
         }}
