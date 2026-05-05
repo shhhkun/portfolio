@@ -24,7 +24,7 @@ const skillGroups = {
   "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth 2.0"],
 
   // Group 4: Databases
-  "group-database": ["PostgreSQL", "Prisma", "Firebase/Firestore"],
+  "group-database": ["SQL", "PostgreSQL", "Prisma", "Firebase/Firestore"],
 
   // Group 5: DevOps & Tools
   "group-devops": [
@@ -251,6 +251,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     "Vite",
                     "Electron",
                     "Prisma",
+                    "SQL",
                     "PostgreSQL",
                     "Firebase/Firestore",
                     "REST APIs",
