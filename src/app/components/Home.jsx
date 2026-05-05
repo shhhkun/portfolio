@@ -39,7 +39,7 @@ const Home = ({ children }) => {
         </p>
 
         <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
-        <FloatingObject />
+        {/* <FloatingObject /> */}
 
         {children}
       </div>
