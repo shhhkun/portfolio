@@ -119,7 +119,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           <h2 className="font-bold mb-4" style={{ fontSize: "1.5rem" }}>
-            You've got mail!
+            Let’s Connect
           </h2>
 
           <p style={{ fontSize: "1.25rem" }}>

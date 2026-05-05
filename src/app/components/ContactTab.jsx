@@ -104,7 +104,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
           style={{ backgroundColor: "var(--card-bg)", fontSize: "1rem" }}
         >
           <h2 className="font-bold mb-4" style={{ fontSize: "1.25rem" }}>
-            You've got mail!
+            Let’s Connect
           </h2>
 
           <p>
