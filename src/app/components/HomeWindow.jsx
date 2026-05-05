@@ -9,6 +9,7 @@ import {
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
+import { TypeAnimation } from "react-type-animation";
 
 const HomeWindow = ({ handleOpen, isMobile }) => {
   const { playAudio1 } = useAudioPlayer();
@@ -29,7 +30,19 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
             fontSize: "1.25rem",
           }}
         >
-          Full-stack developer, web and app creator.
+          <TypeAnimation
+              sequence={[
+                "Software Engineer",
+                2000, // 2sec
+                "Full-Stack Developer",
+                2000,
+                "Web and App Creator",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
         </h2>
 
         {/* Desktop Icons */}
@@ -201,7 +214,19 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               fontSize: "1.5rem",
             }}
           >
-            Full-stack developer, web and app creator.
+            <TypeAnimation
+              sequence={[
+                "Software Engineer",
+                2000, // 2sec
+                "Full-Stack Developer",
+                2000,
+                "Web and App Creator",
+                2000,
+              ]}
+              wrapper="span"
+              speed={50}
+              repeat={Infinity}
+            />
           </h2>
 
           {/* Desktop Icons */}

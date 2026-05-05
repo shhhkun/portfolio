@@ -149,7 +149,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 className="pl-2"
                 style={{ color: "var(--text)", fontSize: "1.125rem" }}
               >
-                Full-Stack Developer, UI/UX Enthusiast
+                Software Engineer, Full-Stack Developer, UI/UX Enthusiast
                 <br />
                 Former Software Engineer Intern at{" "}
                 <a
@@ -177,9 +177,9 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           >
             <div style={{ fontSize: "1.25rem" }}>
               <p>
-                Hi there! I'm Serjo, a full-stack developer who leverages a
-                Computer Engineering background to build robust, efficient, and
-                creatively designed applications. I focus on...
+                Hi there! I’m Serjo. I’m a Software Engineer and Full-Stack
+                Developer dedicated to building software that is as reliable as
+                it is intuitive. I specialize in...
               </p>
               <ul className="list-disc mt-5 ml-5">
                 <li>

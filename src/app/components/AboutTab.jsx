@@ -42,7 +42,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
         }
       },
       // trigger when 50% of the element is visible
-      { threshold: 0.5 }
+      { threshold: 0.5 },
     );
 
     observer.observe(barRef.current);
@@ -126,7 +126,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
               className="text-center"
               style={{ color: "var(--text)", fontSize: "1rem" }}
             >
-              Full-Stack Developer, UI/UX Enthusiast
+              Software Engineer, Full-Stack Developer, UI/UX Enthusiast
               <br />
               Former Software Engineer Intern at{" "}
               <a
@@ -152,9 +152,9 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
           >
             <div style={{ fontSize: "1rem" }}>
               <p>
-                Hi there! I'm Serjo, a full-stack developer who leverages a
-                Computer Engineering background to build robust, efficient, and
-                creatively designed applications. I focus on...
+                Hi there! I’m Serjo. I’m a Software Engineer and Full-Stack
+                Developer dedicated to building software that is as reliable as
+                it is intuitive. I specialize in...
               </p>
               <ul className="list-disc mt-5 ml-5">
                 <li>

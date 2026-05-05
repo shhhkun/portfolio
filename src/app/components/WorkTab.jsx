@@ -93,8 +93,9 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               </a>
             </h3>
             <p className="mt-2" style={{ fontSize: "1rem" }}>
-              My expertise includes full-stack development, with a focus on
-              creating robust, user-friendly software for web and apps.
+              My expertise lies in Full-Stack Development, where I apply
+              Software Engineering principles to create efficient and
+              user-friendly applications.
             </p>
           </div>
 
