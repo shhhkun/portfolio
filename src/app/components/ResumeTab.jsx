@@ -525,7 +525,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Backend & Databases:
                 </span>{" "}
-                Node.js, Express.js, PostgreSQL, Firestore, Prisma, REST APIs
+                Node.js, Express.js, SQL, PostgreSQL, Firestore, Prisma, REST APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
