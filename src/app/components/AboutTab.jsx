@@ -151,11 +151,33 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
             style={{ color: "var(--text)" }}
           >
             <div style={{ fontSize: "1rem" }}>
-              <p>
-                Hi there! I’m Serjo. I’m a Software Engineer and Full-Stack
-                Developer dedicated to building software that is as reliable as
-                it is intuitive. I specialize in...
+              <p style={{ marginBottom: "0.5rem" }}>
+                <strong>Hi there!</strong> I’m Serjo.
               </p>
+
+              <p style={{ marginBottom: "0.5rem" }}>
+                I’m a Software Engineer and Full-Stack Developer dedicated to
+                building digital experiences that are as reliable under the hood
+                as they are intuitive to the user.
+              </p>
+
+              <p style={{ marginBottom: "0.5rem" }}>
+                My path into engineering wasn't a straight line; it was driven
+                by a lifelong knack for building things. While pursuing my
+                Computer Engineering degree at UC Santa Cruz, I navigated
+                low-level systems, hardware architecture, and physics. I found
+                the hardware world fascinating, but realized the
+                research-focused nature of embedded systems wasn't where I
+                wanted to leave my mark. Instead, I discovered a passion for
+                modern software development—specifically the fast-paced,
+                collaborative cycle of building, testing, and refining
+                applications. Today, I thrive on finding elegant code solutions,
+                cross-functional collaboration, and continuously improving a
+                product.
+              </p>
+
+              <p style={{ marginBottom: "0.5rem" }}>I specialize in...</p>
+
               <ul className="list-disc mt-5 ml-5">
                 <li>
                   <span style={{ color: "var(--text3)" }}>
@@ -179,19 +201,6 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
                   solutions.
                 </li>
               </ul>
-              <p className="mt-5">
-                If you're interested in collaborating or just want to chat about
-                development, feel free to reach out to me at{" "}
-                <a
-                  href="mailto:serjobarron@gmail.com"
-                  className="underline"
-                  style={{ color: "var(--text3)" }}
-                  onClick={() => playAudio1(0.2)}
-                >
-                  serjobarron@gmail.com
-                </a>
-                !
-              </p>
             </div>
 
             <h2
@@ -220,10 +229,10 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
               HOBBIES
             </h2>
             <ul className="list-disc mt-5 ml-5">
-              <li>Dabbling in Digital Art & Animation</li>
+              <li>Digital Art, Anime & Comics</li>
               <li>Physical Fitness & Training</li>
-              <li>Music (violin; genres like K-Hip-Hop and orchestral)</li>
-              <li>Anime & Manga</li>
+              <li>Playing Violin</li>
+              <li>Gaming (Sandbox & Online)</li>
             </ul>
 
             <h2
