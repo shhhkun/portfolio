@@ -108,7 +108,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             className="flex justify-between items-center mb-8 p-8 rounded-lg shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
-            <div className="flex flex-col">
+            <div className="flex flex-col w-full">
               <div className="flex flex-row justify-between">
                 <h1 className="font-bold" style={{ fontSize: "1.75rem" }}>
                   SERJO BARRON
@@ -125,7 +125,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </button>
               </div>
               <div
-                className="flex flex-wrap gap-6 mt-4"
+                className="flex flex-wrap justify-between mt-4"
                 style={{
                   color: "var(--text4)",
                   fontSize: "1.25rem",
@@ -214,6 +214,56 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
           </div>
 
+          {/* EDUCATION */}
+          <div
+            className="rounded-lg shadow-lg p-8 mb-8"
+            style={{ backgroundColor: "var(--card-bg2)" }}
+          >
+            <h2
+              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              style={{
+                fontSize: "1.5rem",
+              }}
+            >
+              EDUCATION
+            </h2>
+            <div>
+              <div className="flex justify-between items-center mt-2">
+                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
+                  University of California, Santa Cruz
+                </span>
+                <span
+                  className="italic"
+                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
+                >
+                  Sep 2020 – Jun 2024
+                </span>
+              </div>
+              <p style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
+                Bachelor of Science &mdash; Computer Engineering -{" "}
+                <span className="font-bold" style={{ color: "var(--text)" }}>
+                  GPA:
+                </span>{" "}
+                3.70
+              </p>
+              {/* <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  fontSize: "1.25rem",
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  <span className="font-bold" style={{ color: "var(--text)" }}>
+                    Relevant Coursework:
+                  </span>{" "}
+                  Data Structures, Computer Architecture, Systems Programming,
+                  Computer Networks
+                </li>
+              </ul> */}
+            </div>
+          </div>
+
           {/* EXPERIENCE */}
           <div
             className="rounded-lg shadow-lg p-8 mb-8"
@@ -236,7 +286,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
-                  10/2025 – 02/2026
+                  Oct 2025 – Feb 2026
                 </span>
               </div>
               <p
@@ -253,21 +303,23 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <li className="mb-2">
-                  Designed and implemented full-stack dashboard features
-                  integrating REST APIs and custom backend endpoints, enabling
-                  real-time project analytics that replaced manual status
-                  checks.
+                  Built reusable UI components and dashboard analytics features
+                  in <strong>TypeScript</strong> within a large-scale monorepo,
+                  integrating <strong>REST APIs</strong> to surface
+                  user-specific project metrics and improve data visibility
                 </li>
                 <li className="mb-2">
-                  Reengineered onboarding flow with React/Next.js, building
-                  distinct setup paths for free, pro, and team tiers that
-                  reduced configuration steps across all plan types and
-                  eliminated confusion around plan-specific features.
+                  Revamped the platform onboarding flow across{" "}
+                  <strong>free, pro, and team</strong> account tiers,
+                  collaborating with backend engineers on{" "}
+                  <strong>PostgreSQL</strong>-backed features to align frontend
+                  and data layers.
                 </li>
                 <li className="mb-2">
-                  Migrated 50+ internal documents to Docker-deployed BookStack
-                  wiki, creating single source of truth that eliminated version
-                  confusion across engineering and product teams.
+                  Centralized <strong>50+</strong> internal engineering
+                  documents into a <strong>Docker</strong>-deployed BookStack
+                  wiki, improving knowledge sharing and reducing versioning
+                  inconsistencies across teams.
                 </li>
               </ul>
             </div>
@@ -275,13 +327,13 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <div>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Computer Systems and C Programming Reader
+                  Computer Science Reader
                 </span>
                 <span
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
-                  09/2023 – 06/2024
+                  Sep 2023 – Jun 2024
                 </span>
               </div>
               <p
@@ -298,12 +350,10 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <li className="mb-2">
-                  Graded and provided feedback on weekly lab reports for over
-                  200 students in systems programming and C.
-                </li>
-                <li className="mb-2">
-                  Explained technical concepts clearly to support student
-                  learning and LaTeX formatting conventions.
+                  Evaluated weekly lab reports and provided technical feedback
+                  for <strong>200+</strong> students on systems-level C projects
+                  spanning abstract data structures, path-finding algorithms,
+                  Huffman coding, and cryptographic implementations.
                 </li>
               </ul>
             </div>
@@ -317,7 +367,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   className="italic"
                   style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                 >
-                  09/2023 – 06/2024
+                  Sep 2023 – Jun 2024
                 </span>
               </div>
               <p
@@ -334,16 +384,17 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <li className="mb-2">
-                  Managed AV, streaming, and live troubleshooting for weekly
-                  meetings and SlugCon, a 1000+ person convention.
+                  Managed AV, streaming, and real-time troubleshooting for
+                  weekly events and SlugCon, supporting{" "}
+                  <strong>1,000+ attendees</strong>.
                 </li>
                 <li className="mb-2">
-                  Coordinated technical logistics and relayed setup plans across
-                  officers, guests, and event partners.
+                  Coordinated technical logistics and setup plans among
+                  officers, volunteers, and event partners.
                 </li>
                 <li className="mb-2">
-                  Provided ongoing tech support and contributed to outreach and
-                  event funding initiatives.
+                  Provided live technical support and assisted with sponsorship
+                  outreach to support event growth.
                 </li>
               </ul>
             </div>
@@ -367,12 +418,6 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   LoFi Scape
                 </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  10/2025 – Present
-                </span> */}
               </div>
               <p
                 className="italic"
@@ -380,29 +425,31 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 React, Next.js, Tailwind CSS, Youtube Player API, Vercel
               </p>
-              <p
-                className="mt-4"
+              <ul
+                className="list-disc ml-8 mt-4"
                 style={{
                   fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
-                Engineered a minimal web application using the Youtube iFrame
-                Player API to blend lofi music with custom ambient soundscapes,
-                creating a focused, distraction-free environment.
-              </p>
+                <li className="mb-2">
+                  Built a browser-based ambient mixing tool allowing users to
+                  independently control and blend multiple ambient soundscapes
+                  (MP4/M4A) alongside lofi music streamed via the{" "}
+                  <strong>YouTube iFrame Player API</strong>.
+                </li>
+                <li className="mb-2">
+                  Implemented per-track volume control through React state
+                  management and applied custom theming support for a polished,
+                  distraction-free UI.
+                </li>
+              </ul>
             </div>
             <div>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Chromatica
                 </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  09/2025 – Present
-                </span> */}
               </div>
               <p
                 className="italic"
@@ -411,94 +458,32 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL,
                 Spotify API, Vercel
               </p>
-              <p
-                className="mt-4"
+              <ul
+                className="list-disc ml-8 mt-4"
                 style={{
                   fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
-                Engineered a full-stack web application that leverages the
-                Spotify API and PostgreSQL to analyze user listening data and
-                generate unique color palettes based on your top tracks and
-                artists. Deployed a responsive, user-facing experience utilizing
-                OAuth integration.
-              </p>
-            </div>
-            <div>
-              <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Ramen Timer
-                </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  09/2025
-                </span> */}
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-              >
-                React, Next.js, Tailwind CSS, Express.js, Node.js, PostgreSQL,
-                Vercel
-              </p>
-              <p
-                className="mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                Developed and deployed a mobile-first ramen timer web app with a
-                nostalgic, pixel-art aesthetic. Built to record timer data for
-                your favorite ramen brands, showcasing fundamental full-stack
-                development skills with PostgreSQL.
-              </p>
-            </div>
-            <div>
-              <div className="flex justify-between items-center mt-4">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  Trashu
-                </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  08/2025 – Present
-                </span> */}
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-              >
-                React, Vite, Node.js, Electron
-              </p>
-              <p
-                className="mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                Engineered a desktop app for storage management that saves users
-                an estimated 15-20 minutes weekly by intelligently detecting
-                duplicate and unused files. Designed the UI with Figma,
-                translating complex data into an intuitive interface.
-              </p>
+                <li className="mb-2">
+                  Integrated <strong>Spotify OAuth</strong> to fetch
+                  personalized listening data — top tracks, artists, and
+                  configurable time windows — and extracted dominant colors from
+                  album art using <strong>node-vibrant</strong> to drive dynamic
+                  UI theming.
+                </li>
+                <li className="mb-2">
+                  Rendered extracted palettes as gradients and animated floating
+                  bubble backgrounds, translating raw API data into a fully
+                  reactive visual experience.
+                </li>
+              </ul>
             </div>
             <div>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   Kept
                 </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  07/2025 – 08/2025
-                </span> */}
               </div>
               <p
                 className="italic"
@@ -506,29 +491,26 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 React, Vite, Firebase/Firestore, Node.js
               </p>
-              <p
-                className="mt-4"
+              <ul
+                className="list-disc ml-8 mt-4"
                 style={{
                   fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
-                Developed and deployed a productivity scheduler web application
-                with a gamified system of XP, badges, and animations that
-                increased user engagement by an estimated 20%.
-              </p>
+                <li className="mb-2">
+                  Developed and deployed a full-stack productivity scheduler
+                  with a gamified progression system featuring{" "}
+                  <strong>XP, badges, and animations,</strong> driving an
+                  estimated <strong>20% increase</strong> in user engagement.
+                </li>
+              </ul>
             </div>
             <div>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                   SmartMirror
                 </span>
-                {/* <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  01/2024 – 06/2024
-                </span> */}
               </div>
               <p
                 className="italic"
@@ -536,24 +518,33 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 React/React Native, Node.js, Electron, Python, BLE, Raspberry Pi
               </p>
-              <p
-                className="mt-4"
+              <ul
+                className="list-disc ml-8 mt-4"
                 style={{
                   fontSize: "1.25rem",
                   color: "var(--text4)",
                 }}
               >
-                Developed IoT smart mirror and companion mobile app reducing
-                morning phone reliance, with BLE pipeline achieving sub-second
-                synchronization between Raspberry Pi hardware and React Native
-                clients.
-              </p>
+                <li className="mb-2">
+                  Contributed to a cross-functional team of{" "}
+                  <strong>6 engineers</strong> to design and deploy an IoT smart
+                  mirror with a companion React Native mobile app built for{" "}
+                  <strong>cross-platform</strong> compatibility.
+                </li>
+                <li className="mb-2">
+                  Owned <strong>BLE integration</strong> end-to-end — authored
+                  the Python BLE script handling all device I/O, conducted
+                  hardware research, and troubleshot sensor and backend
+                  connectivity between the Raspberry Pi and mobile client,
+                  achieving <strong>sub-second synchronization</strong>.
+                </li>
+              </ul>
             </div>
           </div>
 
           {/* SKILLS */}
           <div
-            className="rounded-lg shadow-lg p-8 mb-8"
+            className="rounded-lg shadow-lg p-8"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
@@ -573,7 +564,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             >
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Programming Languages:
+                  Languages:
                 </span>{" "}
                 Python, C, C++, JavaScript, TypeScript, HTML/CSS
               </li>
@@ -587,68 +578,18 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Backend & Databases:
                 </span>{" "}
-                Node.js, Express.js, SQL, PostgreSQL, Firestore, Prisma, REST APIs
+                Node.js, Express.js, SQL, PostgreSQL, Firestore, Prisma, REST
+                APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Tools & Infrastructure:
+                  Tools:
                 </span>{" "}
                 Docker, Git, CI/CD, Vercel, Visual Studio, Figma, LaTeX
               </li>
             </ul>
           </div>
 
-          {/* EDUCATION */}
-          <div
-            className="rounded-lg shadow-lg p-8"
-            style={{ backgroundColor: "var(--card-bg2)" }}
-          >
-            <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
-              style={{
-                fontSize: "1.5rem",
-              }}
-            >
-              EDUCATION
-            </h2>
-            <div>
-              <div className="flex justify-between items-center mt-2">
-                <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                  University of California, Santa Cruz
-                </span>
-                <span
-                  className="italic"
-                  style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                >
-                  09/2020 – 06/2024
-                </span>
-              </div>
-              <p style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
-                Bachelor of Science &mdash; Computer Engineering
-              </p>
-              <ul
-                className="list-disc ml-8 mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  <span className="font-bold" style={{ color: "var(--text)" }}>
-                    GPA:
-                  </span>{" "}
-                  3.70
-                </li>
-                <li className="mb-2">
-                  <span className="font-bold" style={{ color: "var(--text)" }}>
-                    Relevant Coursework:
-                  </span>{" "}
-                  Data Structures, Computer Architecture, Systems Programming,
-                  Computer Networks
-                </li>
-              </ul>
-            </div>
-          </div>
           {/* placeholder */}
         </div>
       </div>
