@@ -149,7 +149,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
           }}
         >
           <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            work
+            projects
           </p>
           <button
             onClick={() => {

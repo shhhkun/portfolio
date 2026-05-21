@@ -59,7 +59,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           }}
         >
           <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            {windowId}
+            projects
           </p>
           <button
             onClick={() => {

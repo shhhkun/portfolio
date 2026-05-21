@@ -31,18 +31,18 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
           }}
         >
           <TypeAnimation
-              sequence={[
-                "Software Engineer",
-                2000, // 2sec
-                "Full-Stack Developer",
-                2000,
-                "Web and App Creator",
-                2000,
-              ]}
-              wrapper="span"
-              speed={50}
-              repeat={Infinity}
-            />
+            sequence={[
+              "Software Engineer",
+              2000, // 2sec
+              "Full-Stack Developer",
+              2000,
+              "Web and App Creator",
+              2000,
+            ]}
+            wrapper="span"
+            speed={50}
+            repeat={Infinity}
+          />
         </h2>
 
         {/* Desktop Icons */}
@@ -112,7 +112,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 </div>
               </div>
               <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
-                work
+                projects
               </p>
             </button>
 
@@ -337,7 +337,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   className="absolute top-0 left-0 z-10"
                 />
               </div>
-              <p className="font-bold mt-2">work</p>
+              <p className="font-bold mt-2">projects</p>
             </button>
 
             {/* Mail/Contact Button */}
