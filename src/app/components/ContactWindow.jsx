@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { useAudioPlayer } from "./AudioPlayer";
 
@@ -74,95 +75,111 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
     >
       <div
         ref={nodeRef}
-        className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
           width: "584px",
           height: "400px",
-          borderRadius: "10px",
-          border: "2px solid var(--border)",
-          boxSizing: "border-box",
           position: "absolute",
         }}
         onMouseDown={onFocus}
       >
-        {/* Window Header */}
-        <div
-          className="handle cursor-grab flex items-center justify-between px-6 py-2"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.85 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+          className="flex flex-col overflow-hidden"
           style={{
-            fontSize: "1.25rem",
-            backgroundColor: "var(--card-header)",
-            height: "48px",
-            borderBottom: "2px solid var(--border)",
-            display: "flex",
-            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            zIndex: zIndex,
+            borderRadius: "10px",
+            border: "2px solid var(--border)",
+            boxSizing: "border-box",
           }}
         >
-          <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            contact
-          </p>
-          <button
-            onClick={() => {
-              onClose();
-              playAudio2(0.1);
-            }}
-            className="cursor-pointer font-bold transition-transform hover:scale-110"
-            style={{ color: "var(--text-header)" }}
-          >
-            x
-          </button>
-        </div>
-
-        {/* Main Content Area */}
-        <div
-          className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
-          style={{ backgroundColor: "var(--card-bg)" }}
-        >
-          <h2 className="font-bold mb-4" style={{ fontSize: "1.5rem" }}>
-            Let’s Connect
-          </h2>
-
-          <p style={{ fontSize: "1.25rem" }}>
-            Feel free to reach out if you have a question, a project idea, or
-            just want to say hi. I'm always happy to chat.
-          </p>
-
-          <p
-            className="relative cursor-pointer mt-4"
-            style={{ fontSize: "1.25rem" }}
-            onClick={() => {
-              handleCopyEmail();
-              playAudio1(0.2);
+          {/* Window Header */}
+          <div
+            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            style={{
+              fontSize: "1.25rem",
+              backgroundColor: "var(--card-header)",
+              height: "48px",
+              borderBottom: "2px solid var(--border)",
+              display: "flex",
+              alignItems: "center",
             }}
           >
-            reach out at:{" "}
-            <span
-              style={{ color: "var(--text3)", textDecoration: "underline" }}
+            <p className="font-bold" style={{ color: "var(--text-header)" }}>
+              contact
+            </p>
+            <button
+              onClick={() => {
+                onClose();
+                playAudio2(0.1);
+              }}
+              className="cursor-pointer font-bold transition-transform hover:scale-110"
+              style={{ color: "var(--text-header)" }}
             >
-              {emailAddress}
-            </span>
-            {toastMessage && (
-              <span
-                className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2"
-                style={{ color: "#ffffff", fontSize: "0.75rem" }}
-              >
-                {toastMessage}
-              </span>
-            )}
-          </p>
+              x
+            </button>
+          </div>
 
-          {/* Email Me Button */}
-          <button
-            onClick={() => {
-              handleEmailButtonClick();
-              playAudio1(0.2);
-            }}
-            className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
-            style={{ fontSize: "1.25rem" }}
+          {/* Main Content Area */}
+          <div
+            className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
+            style={{ backgroundColor: "var(--card-bg)" }}
           >
-            send me an email!
-          </button>
-        </div>
+            <h2 className="font-bold mb-4" style={{ fontSize: "1.5rem" }}>
+              Let’s Connect
+            </h2>
+
+            <p style={{ fontSize: "1.25rem" }}>
+              Feel free to reach out if you have a question, a project idea, or
+              just want to say hi. I'm always happy to chat.
+            </p>
+
+            <p
+              className="relative cursor-pointer mt-4"
+              style={{ fontSize: "1.25rem" }}
+              onClick={() => {
+                handleCopyEmail();
+                playAudio1(0.2);
+              }}
+            >
+              reach out at:{" "}
+              <span
+                style={{ color: "var(--text3)", textDecoration: "underline" }}
+              >
+                {emailAddress}
+              </span>
+              {toastMessage && (
+                <span
+                  className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2"
+                  style={{ color: "#ffffff", fontSize: "0.75rem" }}
+                >
+                  {toastMessage}
+                </span>
+              )}
+            </p>
+
+            {/* Email Me Button */}
+            <button
+              onClick={() => {
+                handleEmailButtonClick();
+                playAudio1(0.2);
+              }}
+              className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
+              style={{ fontSize: "1.25rem" }}
+            >
+              send me an email!
+            </button>
+          </div>
+        </motion.div>
       </div>
     </Draggable>
   );

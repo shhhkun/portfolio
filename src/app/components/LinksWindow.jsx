@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import {
   GithubLogoIcon,
@@ -76,178 +77,194 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
     >
       <div
         ref={nodeRef}
-        className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
           width: "640px",
           height: "400px",
-          borderRadius: "10px",
-          border: "2px solid var(--border)",
-          boxSizing: "border-box",
           position: "absolute",
         }}
         onMouseDown={onFocus}
       >
-        {/* Window Header */}
-        <div
-          className="handle cursor-grab flex items-center justify-between px-6 py-2"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.85 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+          className="flex flex-col overflow-hidden"
           style={{
-            fontSize: "1.25rem",
-            backgroundColor: "var(--card-header)",
-            height: "48px",
-            borderBottom: "2px solid var(--border)",
-            display: "flex",
-            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            zIndex: zIndex,
+            borderRadius: "10px",
+            border: "2px solid var(--border)",
+            boxSizing: "border-box",
           }}
         >
-          <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            links
-          </p>
-          <button
-            onClick={() => {
-              onClose();
-              playAudio2(0.1);
+          {/* Window Header */}
+          <div
+            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            style={{
+              fontSize: "1.25rem",
+              backgroundColor: "var(--card-header)",
+              height: "48px",
+              borderBottom: "2px solid var(--border)",
+              display: "flex",
+              alignItems: "center",
             }}
-            className="cursor-pointer font-bold transition-transform hover:scale-110"
-            style={{ color: "var(--text-header)" }}
           >
-            x
-          </button>
-        </div>
-
-        {/* Main Content Area */}
-        <div
-          className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
-          style={{ backgroundColor: "var(--card-bg)" }}
-        >
-          {/* Link Icons */}
-          <div className="flex flex-row items-center justify-center gap-8 p-4">
-            {/* GitHub Button */}
-            <a
-              href="https://github.com/shhhkun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => playAudio1(0.2)}
+            <p className="font-bold" style={{ color: "var(--text-header)" }}>
+              links
+            </p>
+            <button
+              onClick={() => {
+                onClose();
+                playAudio2(0.1);
+              }}
+              className="cursor-pointer font-bold transition-transform hover:scale-110"
+              style={{ color: "var(--text-header)" }}
             >
-              <div className="relative w-16 h-16">
-                <GithubLogoIcon
-                  size={64}
-                  color="var(--bg)"
-                  weight="fill"
-                  className="absolute top-0 left-0"
-                />
-                <GithubLogoIcon
-                  size={64}
-                  color="var(--text)"
-                  weight="light"
-                  className="absolute top-0 left-0 z-10"
-                />
-              </div>
-              <p className="font-bold mt-2">github</p>
-            </a>
+              x
+            </button>
+          </div>
 
-            {/* LeetCode Button */}
-            <a
-              href="https://leetcode.com/u/shhhkun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => playAudio1(0.2)}
-            >
-              <div className="relative w-16 h-16">
-                <SquareIcon
-                  size={64}
-                  color="var(--bg)"
-                  weight="fill"
-                  className="absolute top-0 left-0"
-                  style={{
-                    transform:
-                      "rotate(45deg) translateY(4px) translateX(3px) scaleY(0.7) scaleX(0.7)",
-                  }}
-                />
-                <LeetCodeLogo
-                  size={64}
-                  color="var(--text)"
-                  weight="regular"
-                  className="absolute top-0 left-0 z-10"
-                />
-              </div>
-              <p className="font-bold mt-2">leetcode</p>
-            </a>
-
-            {/* LinkedIn Button */}
-            <a
-              href="https://linkedin.com/in/serjobarron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => playAudio1(0.2)}
-            >
-              <div className="relative w-16 h-16">
-                <LinkedinLogoIcon
-                  size={64}
-                  color="var(--bg)"
-                  weight="fill"
-                  className="absolute top-0 left-0"
-                />
-                <LinkedinLogoIcon
-                  size={64}
-                  color="var(--text)"
-                  weight="light"
-                  className="absolute top-0 left-0 z-10"
-                />
-              </div>
-              <p className="font-bold mt-2">linkedin</p>
-            </a>
-
-            {/* Discord Button */}
-            <div className="relative">
-              <button
-                onClick={() => {
-                  handleCopyDiscord();
-                  playAudio1(0.2);
-                }}
+          {/* Main Content Area */}
+          <div
+            className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
+            style={{ backgroundColor: "var(--card-bg)" }}
+          >
+            {/* Link Icons */}
+            <div className="flex flex-row items-center justify-center gap-8 p-4">
+              {/* GitHub Button */}
+              <a
+                href="https://github.com/shhhkun"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                onClick={() => playAudio1(0.2)}
               >
                 <div className="relative w-16 h-16">
-                  <DiscordLogoIcon
+                  <GithubLogoIcon
                     size={64}
                     color="var(--bg)"
                     weight="fill"
                     className="absolute top-0 left-0"
                   />
-                  <DiscordLogoIcon
+                  <GithubLogoIcon
                     size={64}
                     color="var(--text)"
                     weight="light"
                     className="absolute top-0 left-0 z-10"
                   />
                 </div>
-                <p className="font-bold mt-2">discord</p>
-              </button>
+                <p className="font-bold mt-2">github</p>
+              </a>
 
-              {/* Toast Notification */}
-              {toastMessage && (
-                <span
-                  className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-4 left-1/2 transform -translate-x-1/2"
-                  style={{ color: "#ffffff", fontSize: "0.75rem" }}
+              {/* LeetCode Button */}
+              <a
+                href="https://leetcode.com/u/shhhkun"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                onClick={() => playAudio1(0.2)}
+              >
+                <div className="relative w-16 h-16">
+                  <SquareIcon
+                    size={64}
+                    color="var(--bg)"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                    style={{
+                      transform:
+                        "rotate(45deg) translateY(4px) translateX(3px) scaleY(0.7) scaleX(0.7)",
+                    }}
+                  />
+                  <LeetCodeLogo
+                    size={64}
+                    color="var(--text)"
+                    weight="regular"
+                    className="absolute top-0 left-0 z-10"
+                  />
+                </div>
+                <p className="font-bold mt-2">leetcode</p>
+              </a>
+
+              {/* LinkedIn Button */}
+              <a
+                href="https://linkedin.com/in/serjobarron"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                onClick={() => playAudio1(0.2)}
+              >
+                <div className="relative w-16 h-16">
+                  <LinkedinLogoIcon
+                    size={64}
+                    color="var(--bg)"
+                    weight="fill"
+                    className="absolute top-0 left-0"
+                  />
+                  <LinkedinLogoIcon
+                    size={64}
+                    color="var(--text)"
+                    weight="light"
+                    className="absolute top-0 left-0 z-10"
+                  />
+                </div>
+                <p className="font-bold mt-2">linkedin</p>
+              </a>
+
+              {/* Discord Button */}
+              <div className="relative">
+                <button
+                  onClick={() => {
+                    handleCopyDiscord();
+                    playAudio1(0.2);
+                  }}
+                  className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
                 >
-                  {toastMessage}
-                </span>
-              )}
+                  <div className="relative w-16 h-16">
+                    <DiscordLogoIcon
+                      size={64}
+                      color="var(--bg)"
+                      weight="fill"
+                      className="absolute top-0 left-0"
+                    />
+                    <DiscordLogoIcon
+                      size={64}
+                      color="var(--text)"
+                      weight="light"
+                      className="absolute top-0 left-0 z-10"
+                    />
+                  </div>
+                  <p className="font-bold mt-2">discord</p>
+                </button>
+
+                {/* Toast Notification */}
+                {toastMessage && (
+                  <span
+                    className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-4 left-1/2 transform -translate-x-1/2"
+                    style={{ color: "#ffffff", fontSize: "0.75rem" }}
+                  >
+                    {toastMessage}
+                  </span>
+                )}
+              </div>
+            </div>
+            {/* Intro Card */}
+            <div
+              className="intro-card rounded-lg text-center mx-auto py-4 px-16"
+              style={{
+                backgroundColor: "var(--card-bg2)",
+              }}
+            >
+              <p>All the places to say hi</p>
             </div>
           </div>
-          {/* Intro Card */}
-          <div
-            className="intro-card rounded-lg text-center mx-auto py-4 px-16"
-            style={{
-              backgroundColor: "var(--card-bg2)",
-            }}
-          >
-            <p>All the places to say hi</p>
-          </div>
-        </div>
+        </motion.div>
       </div>
     </Draggable>
   );

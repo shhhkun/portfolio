@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
+import { AnimatePresence } from "framer-motion";
 import HomeWindow from "./components/HomeWindow";
 import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
@@ -119,35 +120,37 @@ const Page = () => {
       </div>
 
       {/* dynamically render windows based on their `isOpen` state */}
-      {Object.entries(windows).map(([windowId, windowState]) => {
-        let ComponentToRender = null;
-        let props = {};
+      <AnimatePresence>
+        {Object.entries(windows).map(([windowId, windowState]) => {
+          let ComponentToRender = null;
+          let props = {};
 
-        if (isMobile) {
-          ComponentToRender = tabComponents[windowId];
-          props = {
-            windowId: windowId,
-            isOpen: windowState.isOpen,
-            handleClose: handleClose,
-          };
-        } else {
-          if (!windowState.isOpen) return null;
+          if (isMobile) {
+            ComponentToRender = tabComponents[windowId];
+            props = {
+              windowId: windowId,
+              isOpen: windowState.isOpen,
+              handleClose: handleClose,
+            };
+          } else {
+            if (!windowState.isOpen) return null;
 
-          ComponentToRender = windowComponents[windowId];
-          props = {
-            onClose: () => handleClose(windowId),
-            onFocus: () => handleFocus(windowId),
-            onStop: (e, ui) => handleStop(windowId, e, ui),
-            zIndex: windowState.zIndex,
-            position: windowState.position,
-          };
-        }
+            ComponentToRender = windowComponents[windowId];
+            props = {
+              onClose: () => handleClose(windowId),
+              onFocus: () => handleFocus(windowId),
+              onStop: (e, ui) => handleStop(windowId, e, ui),
+              zIndex: windowState.zIndex,
+              position: windowState.position,
+            };
+          }
 
-        if (ComponentToRender) {
-          return <ComponentToRender key={windowId} {...props} />;
-        }
-        return null;
-      })}
+          if (ComponentToRender) {
+            return <ComponentToRender key={windowId} {...props} />;
+          }
+          return null;
+        })}
+      </AnimatePresence>
     </main>
   );
 };

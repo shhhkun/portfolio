@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useRef, useEffect } from "react";
+import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { useAudioPlayer } from "./AudioPlayer";
 
@@ -76,278 +77,297 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
     >
       <div
         ref={nodeRef}
-        className="flex flex-col overflow-hidden"
         style={{
           zIndex: zIndex,
           width: "900px",
           height: "560px",
-          borderRadius: "10px",
-          border: "2px solid var(--border)",
-          boxSizing: "border-box",
           position: "absolute",
         }}
         onMouseDown={onFocus}
       >
-        {/* Window Header */}
-        <div
-          className="handle cursor-grab flex items-center justify-between px-6 py-2"
+        <motion.div
+          initial={{ opacity: 0, scale: 0.85 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.85 }}
+          transition={{
+            type: "spring",
+            stiffness: 260,
+            damping: 20,
+          }}
+          className="flex flex-col overflow-hidden"
           style={{
-            fontSize: "1.25rem",
-            backgroundColor: "var(--card-header)",
-            height: "48px",
-            borderBottom: "2px solid var(--border)",
-            display: "flex",
-            alignItems: "center",
+            width: "100%",
+            height: "100%",
+            zIndex: zIndex,
+            borderRadius: "10px",
+            border: "2px solid var(--border)",
+            boxSizing: "border-box",
           }}
         >
-          <p className="font-bold" style={{ color: "var(--text-header)" }}>
-            about
-          </p>
-          <button
-            onClick={() => {
-              onClose();
-              playAudio2(0.1);
+          {/* Window Header */}
+          <div
+            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            style={{
+              fontSize: "1.25rem",
+              backgroundColor: "var(--card-header)",
+              height: "48px",
+              borderBottom: "2px solid var(--border)",
+              display: "flex",
+              alignItems: "center",
             }}
-            className="cursor-pointer font-bold transition-transform hover:scale-110"
-            style={{ color: "var(--text-header)" }}
           >
-            x
-          </button>
-        </div>
-
-        {/* Main Content Area */}
-        <div
-          className="flex flex-col flex-grow min-h-0"
-          style={{ backgroundColor: "var(--card-bg)" }}
-        >
-          {/* Profile Picture and Name */}
-          <div className="flex items-center px-12 py-8">
-            <div
-              className="rounded-full overflow-hidden cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              style={{
-                width: "136px",
-                height: "136px",
+            <p className="font-bold" style={{ color: "var(--text-header)" }}>
+              about
+            </p>
+            <button
+              onClick={() => {
+                onClose();
+                playAudio2(0.1);
               }}
+              className="cursor-pointer font-bold transition-transform hover:scale-110"
+              style={{ color: "var(--text-header)" }}
             >
-              <img
-                src="/pfp.webp"
-                alt="Serjo Barron Profile"
-                className="w-full h-full object-cover"
-              />
-            </div>
-            <div className="ml-12">
-              <h2
+              x
+            </button>
+          </div>
+
+          {/* Main Content Area */}
+          <div
+            className="flex flex-col flex-grow min-h-0"
+            style={{ backgroundColor: "var(--card-bg)" }}
+          >
+            {/* Profile Picture and Name */}
+            <div className="flex items-center px-12 py-8">
+              <div
+                className="rounded-full overflow-hidden cursor-pointer transition-transform duration-300 transform hover:scale-110"
                 style={{
-                  fontWeight: "500",
-                  color: "var(--text3)",
-                  fontSize: "3rem",
+                  width: "136px",
+                  height: "136px",
                 }}
               >
-                Serjo Barron
-              </h2>
-              <h3
-                className="pl-2"
-                style={{ color: "var(--text)", fontSize: "1.125rem" }}
-              >
-                Software Engineer, Full-Stack Developer, UI/UX Enthusiast
-                <br />
-                Former Software Engineer Intern at{" "}
-                <a
-                  href="https://www.botstacks.ai/"
-                  target="_blank"
-                  className="underline"
-                  style={{ color: "var(--text3)" }}
-                  onClick={() => playAudio1(0.2)}
+                <img
+                  src="/pfp.webp"
+                  alt="Serjo Barron Profile"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+              <div className="ml-12">
+                <h2
+                  style={{
+                    fontWeight: "500",
+                    color: "var(--text3)",
+                    fontSize: "3rem",
+                  }}
                 >
-                  BotStacks
-                </a>
-              </h3>
-            </div>
-          </div>
-
-          <div
-            className="h-1"
-            style={{ backgroundColor: "var(--border2)", height: "1px" }}
-          ></div>
-
-          {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}
-          <div
-            className="custom-scrollbar p-12 text-white flex-grow overflow-y-auto"
-            style={{ color: "var(--text)" }}
-          >
-            <div style={{ fontSize: "1.25rem" }}>
-              <p style={{ marginBottom: "0.625rem" }}>
-                <strong>Hi there!</strong> I’m Serjo.
-              </p>
-
-              <p style={{ marginBottom: "0.625rem" }}>
-                I’m a Software Engineer and Full-Stack Developer dedicated to
-                building digital experiences that are as reliable under the hood
-                as they are intuitive to the user.
-              </p>
-
-              <p style={{ marginBottom: "0.625rem" }}>
-                My path into engineering wasn't a straight line; it was driven
-                by a lifelong knack for building things. While pursuing my
-                Computer Engineering degree at UC Santa Cruz, I navigated
-                low-level systems, hardware architecture, and physics. I found
-                the hardware world fascinating, but realized the
-                research-focused nature of embedded systems wasn't where I
-                wanted to leave my mark. Instead, I discovered a passion for
-                modern software development—specifically the fast-paced,
-                collaborative cycle of building, testing, and refining
-                applications. Today, I thrive on finding elegant code solutions,
-                cross-functional collaboration, and continuously improving a
-                product.
-              </p>
-
-              <p style={{ marginBottom: "0.625rem" }}>I specialize in...</p>
-
-              <ul className="list-disc mt-5 ml-5">
-                <li>
-                  <span style={{ color: "var(--text3)" }}>
-                    <b>Full-Stack Development: </b>
-                  </span>
-                  Bringing innovative ideas to life from the backend to the user
-                  interface.
-                </li>
-                <li>
-                  <span style={{ color: "var(--text3)" }}>
-                    <b>User Experience: </b>
-                  </span>
-                  Designing and building intuitive applications that are a
-                  pleasure to use.
-                </li>
-                <li>
-                  <span style={{ color: "var(--text3)" }}>
-                    <b>Problem-Solving: </b>
-                  </span>
-                  Translating complex concepts into elegant and user-friendly
-                  solutions.
-                </li>
-              </ul>
+                  Serjo Barron
+                </h2>
+                <h3
+                  className="pl-2"
+                  style={{ color: "var(--text)", fontSize: "1.125rem" }}
+                >
+                  Software Engineer, Full-Stack Developer, UI/UX Enthusiast
+                  <br />
+                  Former Software Engineer Intern at{" "}
+                  <a
+                    href="https://www.botstacks.ai/"
+                    target="_blank"
+                    className="underline"
+                    style={{ color: "var(--text3)" }}
+                    onClick={() => playAudio1(0.2)}
+                  >
+                    BotStacks
+                  </a>
+                </h3>
+              </div>
             </div>
 
-            <h2
-              className="mt-5 font-bold"
-              style={{ color: "var(--text)", fontSize: "1.5rem" }}
-            >
-              EDUCATION
-            </h2>
-            <blockquote
-              className="p-3 mt-5"
-              style={{
-                fontSize: "1.25rem",
-                borderLeft: "6px solid var(--border2)",
-              }}
-            >
-              <h3 style={{ fontSize: "1.25rem" }}>
-                B.S. in Computer Engineering
-              </h3>
-              <p style={{ fontSize: "1rem" }}>
-                University of California, Santa Cruz &mdash; 2024, Highest
-                Honors
-              </p>
-            </blockquote>
-
-            <h2
-              className="mt-5 font-bold"
-              style={{ color: "var(--text)", fontSize: "1.5rem" }}
-            >
-              HOBBIES
-            </h2>
-            <ul className="list-disc mt-5 ml-5" style={{ fontSize: "1.25rem" }}>
-              <li>Digital Art, Anime & Comics</li>
-              <li>Physical Fitness & Training</li>
-              <li>Playing Violin</li>
-              <li>Gaming (Sandbox & Online)</li>
-            </ul>
-
-            <h2
-              className="mt-5 font-bold"
-              style={{ color: "var(--text)", fontSize: "1.5rem" }}
-            >
-              LANGUAGE PROFICIENCY
-            </h2>
             <div
-              className="flex flex-col mt-5 gap-y-4"
-              ref={barRef}
-              style={{ color: "var(--text2)", fontSize: "1.125rem" }}
+              className="h-1"
+              style={{ backgroundColor: "var(--border2)", height: "1px" }}
+            ></div>
+
+            {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}
+            <div
+              className="custom-scrollbar p-12 text-white flex-grow overflow-y-auto"
+              style={{ color: "var(--text)" }}
             >
-              {/* English */}
-              <div className="flex flex-col gap-y-1">
-                <div className="flex items-center gap-x-4">
-                  <span className="w-24">English</span>
-                  <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "var(--bar-bg)" }}
-                  >
-                    <div
-                      className={`bar-english h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
-                        isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
-                      style={{
-                        width: isVisible ? "100%" : "0%",
-                        backgroundColor: "#a8e6cf",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <span className="text-right" style={{ fontSize: "0.875rem" }}>
-                  Proficient
-                </span>
+              <div style={{ fontSize: "1.25rem" }}>
+                <p style={{ marginBottom: "0.625rem" }}>
+                  <strong>Hi there!</strong> I’m Serjo.
+                </p>
+
+                <p style={{ marginBottom: "0.625rem" }}>
+                  I’m a Software Engineer and Full-Stack Developer dedicated to
+                  building digital experiences that are as reliable under the
+                  hood as they are intuitive to the user.
+                </p>
+
+                <p style={{ marginBottom: "0.625rem" }}>
+                  My path into engineering wasn't a straight line; it was driven
+                  by a lifelong knack for building things. While pursuing my
+                  Computer Engineering degree at UC Santa Cruz, I navigated
+                  low-level systems, hardware architecture, and physics. I found
+                  the hardware world fascinating, but realized the
+                  research-focused nature of embedded systems wasn't where I
+                  wanted to leave my mark. Instead, I discovered a passion for
+                  modern software development—specifically the fast-paced,
+                  collaborative cycle of building, testing, and refining
+                  applications. Today, I thrive on finding elegant code
+                  solutions, cross-functional collaboration, and continuously
+                  improving a product.
+                </p>
+
+                <p style={{ marginBottom: "0.625rem" }}>I specialize in...</p>
+
+                <ul className="list-disc mt-5 ml-5">
+                  <li>
+                    <span style={{ color: "var(--text3)" }}>
+                      <b>Full-Stack Development: </b>
+                    </span>
+                    Bringing innovative ideas to life from the backend to the
+                    user interface.
+                  </li>
+                  <li>
+                    <span style={{ color: "var(--text3)" }}>
+                      <b>User Experience: </b>
+                    </span>
+                    Designing and building intuitive applications that are a
+                    pleasure to use.
+                  </li>
+                  <li>
+                    <span style={{ color: "var(--text3)" }}>
+                      <b>Problem-Solving: </b>
+                    </span>
+                    Translating complex concepts into elegant and user-friendly
+                    solutions.
+                  </li>
+                </ul>
               </div>
 
-              {/* Tagalog */}
-              <div className="flex flex-col gap-y-1">
-                <div className="flex items-center gap-x-4">
-                  <span className="w-24">Tagalog</span>
-                  <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "var(--bar-bg)" }}
-                  >
-                    <div
-                      className={`bar-tagalog h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
-                        isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
-                      style={{
-                        width: isVisible ? "50%" : "0%",
-                        backgroundColor: "#fdfd96",
-                      }}
-                    ></div>
-                  </div>
-                </div>
-                <span className="text-right" style={{ fontSize: "0.875rem" }}>
-                  Elementary
-                </span>
-              </div>
+              <h2
+                className="mt-5 font-bold"
+                style={{ color: "var(--text)", fontSize: "1.5rem" }}
+              >
+                EDUCATION
+              </h2>
+              <blockquote
+                className="p-3 mt-5"
+                style={{
+                  fontSize: "1.25rem",
+                  borderLeft: "6px solid var(--border2)",
+                }}
+              >
+                <h3 style={{ fontSize: "1.25rem" }}>
+                  B.S. in Computer Engineering
+                </h3>
+                <p style={{ fontSize: "1rem" }}>
+                  University of California, Santa Cruz &mdash; 2024, Highest
+                  Honors
+                </p>
+              </blockquote>
 
-              {/* Japanese */}
-              <div className="flex flex-col gap-y-1">
-                <div className="flex items-center gap-x-4">
-                  <span className="w-24">Japanese</span>
-                  <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
-                    style={{ backgroundColor: "var(--bar-bg)" }}
-                  >
+              <h2
+                className="mt-5 font-bold"
+                style={{ color: "var(--text)", fontSize: "1.5rem" }}
+              >
+                HOBBIES
+              </h2>
+              <ul
+                className="list-disc mt-5 ml-5"
+                style={{ fontSize: "1.25rem" }}
+              >
+                <li>Digital Art, Anime & Comics</li>
+                <li>Physical Fitness & Training</li>
+                <li>Playing Violin</li>
+                <li>Gaming (Sandbox & Online)</li>
+              </ul>
+
+              <h2
+                className="mt-5 font-bold"
+                style={{ color: "var(--text)", fontSize: "1.5rem" }}
+              >
+                LANGUAGE PROFICIENCY
+              </h2>
+              <div
+                className="flex flex-col mt-5 gap-y-4"
+                ref={barRef}
+                style={{ color: "var(--text2)", fontSize: "1.125rem" }}
+              >
+                {/* English */}
+                <div className="flex flex-col gap-y-1">
+                  <div className="flex items-center gap-x-4">
+                    <span className="w-24">English</span>
                     <div
-                      className={`bar-japanese h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
-                        isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
-                      style={{
-                        width: isVisible ? "20%" : "0%",
-                        backgroundColor: "#ffb3b3",
-                      }}
-                    ></div>
+                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      style={{ backgroundColor: "var(--bar-bg)" }}
+                    >
+                      <div
+                        className={`bar-english h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                          isVisible ? "scale-y-125" : ""
+                        } transform origin-left`}
+                        style={{
+                          width: isVisible ? "100%" : "0%",
+                          backgroundColor: "#a8e6cf",
+                        }}
+                      ></div>
+                    </div>
                   </div>
+                  <span className="text-right" style={{ fontSize: "0.875rem" }}>
+                    Proficient
+                  </span>
                 </div>
-                <span className="text-right" style={{ fontSize: "0.875rem" }}>
-                  Beginner
-                </span>
+
+                {/* Tagalog */}
+                <div className="flex flex-col gap-y-1">
+                  <div className="flex items-center gap-x-4">
+                    <span className="w-24">Tagalog</span>
+                    <div
+                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      style={{ backgroundColor: "var(--bar-bg)" }}
+                    >
+                      <div
+                        className={`bar-tagalog h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                          isVisible ? "scale-y-125" : ""
+                        } transform origin-left`}
+                        style={{
+                          width: isVisible ? "50%" : "0%",
+                          backgroundColor: "#fdfd96",
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                  <span className="text-right" style={{ fontSize: "0.875rem" }}>
+                    Elementary
+                  </span>
+                </div>
+
+                {/* Japanese */}
+                <div className="flex flex-col gap-y-1">
+                  <div className="flex items-center gap-x-4">
+                    <span className="w-24">Japanese</span>
+                    <div
+                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      style={{ backgroundColor: "var(--bar-bg)" }}
+                    >
+                      <div
+                        className={`bar-japanese h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                          isVisible ? "scale-y-125" : ""
+                        } transform origin-left`}
+                        style={{
+                          width: isVisible ? "20%" : "0%",
+                          backgroundColor: "#ffb3b3",
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                  <span className="text-right" style={{ fontSize: "0.875rem" }}>
+                    Beginner
+                  </span>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </motion.div>
       </div>
     </Draggable>
   );
