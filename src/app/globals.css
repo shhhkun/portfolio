@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
 /* default: light */
@@ -23,6 +23,8 @@
   --button-hover: #9da9b8;
   --scroll: #a0a0a0;
   --logo-theme: light;
+  --accent: #60a5fa;
+  --accent2: #a78bfa;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -46,6 +48,8 @@
     --button-hover: #3e5470; /* for contact & download */
     --scroll: #273b54;
     --logo-theme: dark;
+    --accent: #3b82f6;
+    --accent2: #7c3aed;
   }
 }
 
@@ -69,6 +73,8 @@ html.light {
   --button-hover: #9da9b8;
   --scroll: #a0a0a0;
   --logo-theme: light;
+  --accent: #60a5fa;
+  --accent2: #a78bfa;
 }
 
 html.dark {
@@ -91,6 +97,8 @@ html.dark {
   --button-hover: #3e5470; /* for contact & download */
   --scroll: #273b54;
   --logo-theme: dark;
+  --accent: #3b82f6;
+  --accent2: #7c3aed;
 }
 
 body {
@@ -99,8 +107,13 @@ body {
   font-family: "Inter", Arial, sans-serif;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Oswald', Arial, sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Oswald", Arial, sans-serif;
 }
 
 /* Custom scrollbar styles */
@@ -123,56 +136,6 @@ h1, h2, h3, h4, h5, h6 {
   background-color: var(--scroll);
   border-radius: 8px;
 }
-
-/* Animation keyframes for the fill effect */
-/* @keyframes fillUpEnglish {
-  0% {
-    width: 100%;
-  }
-  1% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes fillUpTagalog {
-  0% {
-    width: 50%;
-  }
-  1% {
-    width: 0%;
-  }
-  100% {
-    width: 50%;
-  }
-}
-@keyframes fillUpJapanese {
-  0% {
-    width: 20%;
-  }
-  1% {
-    width: 0%;
-  }
-  100% {
-    width: 20%;
-  }
-} */
-
-/*
-   * Apply a custom, dynamic timing function on hover.
-   * `cubic-bezier(0.25, 1, 0.5, 1)` provides a smooth ease-out effect.
-   * The animation will also persist its final state with `forwards`.
-   */
-/* .group:hover .bar-english {
-  animation: fillUpEnglish 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-.group:hover .bar-tagalog {
-  animation: fillUpTagalog 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-}
-.group:hover .bar-japanese {
-  animation: fillUpJapanese 1.5s cubic-bezier(0.25, 1, 0.5, 1) forwards;
-} */
 
 .skill-pill {
   background-color: var(--bg);
@@ -203,6 +166,14 @@ h1, h2, h3, h4, h5, h6 {
   transition: transform 0.2s ease-in-out;
 }
 
+.pill-button--accent {
+  background-color: var(--accent);
+}
+
+.pill-button--accent2 {
+  background-color: var(--accent2);
+}
+
 .pill-button:hover {
   transform: translateY(-0.125rem);
 }
@@ -222,9 +193,6 @@ h1, h2, h3, h4, h5, h6 {
 .download-button:hover {
   background-color: var(--button-hover);
 }
-
-
-
 
 /* ===== Color Group Hover Effects - MUTUALLY EXCLUSIVE ===== */
 

@@ -3,6 +3,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import Draggable from "react-draggable";
 import { GithubLogoIcon } from "@phosphor-icons/react";
+import GitHubLogo from "../utils/GitHubLogo";
+import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
 
 // ===== MUTUALLY EXCLUSIVE SKILL GROUPS =====
@@ -329,7 +331,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <a
                       href="https://lofiscape.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -340,7 +342,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/lofiscape"
@@ -348,7 +351,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -399,7 +403,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <a
                       href="https://chromatica-music.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -410,7 +414,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/chromatica"
@@ -418,7 +423,16 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
+                    </a>
+                    <a
+                      href="/Chromatica_Case_Study.pdf"
+                      target="_blank"
+                      className="pill-button pill-button--accent2"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Write-Up
                     </a>
                   </div>
                 </div>
@@ -469,7 +483,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <a
                       href="https://ramentimer.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -480,7 +494,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/ramentimer"
@@ -488,7 +503,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -541,7 +557,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -591,7 +608,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     <a
                       href="https://productivityapp-eb15a.web.app/"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -602,6 +619,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
+                      <GitHubLogo />
                       GitHub Repo
                     </a>
                   </div>
@@ -659,7 +677,16 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
+                    </a>
+                    <a
+                      href="/SmartMirror_Design.pdf"
+                      target="_blank"
+                      className="pill-button pill-button--accent2"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Write-Up
                     </a>
                   </div>
                 </div>
@@ -715,7 +742,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -771,7 +799,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -827,7 +856,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -880,7 +910,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>

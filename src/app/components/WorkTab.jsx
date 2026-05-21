@@ -1,5 +1,7 @@
 import React from "react";
 import { GithubLogoIcon } from "@phosphor-icons/react";
+import GitHubLogo from "../utils/GitHubLogo";
+import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
@@ -218,7 +220,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     <a
                       href="https://lofiscape.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -229,7 +231,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/lofiscape"
@@ -237,7 +240,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -286,7 +290,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     <a
                       href="https://chromatica-music.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -297,7 +301,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/chromatica"
@@ -305,7 +310,16 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
+                    </a>
+                    <a
+                      href="/Chromatica_Case_Study.pdf"
+                      target="_blank"
+                      className="pill-button pill-button--accent2"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Write-Up
                     </a>
                   </div>
                 </div>
@@ -353,7 +367,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     <a
                       href="https://ramentimer.vercel.app"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -364,7 +378,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      Figma Prototype
+                      <FigmaLogo />
+                      Figma
                     </a>
                     <a
                       href="https://github.com/shhhkun/ramentimer"
@@ -372,7 +387,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -422,7 +438,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -469,7 +486,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     <a
                       href="https://productivityapp-eb15a.web.app/"
                       target="_blank"
-                      className="pill-button"
+                      className="pill-button pill-button--accent"
                       onClick={() => playAudio1(0.2)}
                     >
                       Live Demo
@@ -480,7 +497,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -538,7 +556,16 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
+                    </a>
+                    <a
+                      href="/SmartMirror_Design.pdf"
+                      target="_blank"
+                      className="pill-button pill-button--accent2"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Write-Up
                     </a>
                   </div>
                 </div>
@@ -595,7 +622,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -652,7 +680,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -709,7 +738,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
@@ -761,7 +791,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       className="pill-button"
                       onClick={() => playAudio1(0.2)}
                     >
-                      GitHub Repo
+                      <GitHubLogo />
+                      GitHub
                     </a>
                   </div>
                 </div>
