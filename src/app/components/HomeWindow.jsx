@@ -72,7 +72,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
             </button>
 
             {/* Links Button */}
-            <button
+            {/* <button
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("links");
@@ -92,7 +92,8 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
                 links
               </p>
-            </button>
+            </button> */}
+
             {/* Work Button */}
             <button
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -117,7 +118,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
             </button>
 
             {/* Mail/Contact Button */}
-            <button
+            {/* <button
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("contact");
@@ -137,7 +138,8 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
                 contact
               </p>
-            </button>
+            </button> */}
+
             {/* Resume/CV Button */}
             <button
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
@@ -169,7 +171,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
       <div
         className="flex flex-col w-full overflow-hidden"
         style={{
-          //width: "800px",
+          width: "708px",
           height: "560px",
           borderRadius: "10px",
           border: "2px solid var(--border)",
@@ -257,7 +259,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
             </button>
 
             {/* Links Button */}
-            <button
+            {/* <button
               className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("links");
@@ -265,7 +267,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               }}
             >
               <div className="relative w-16 h-16">
-                {/* Center filler */}
                 <div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                   style={{
@@ -276,7 +277,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                     transform: "rotate(-42.5deg)",
                   }}
                 />
-                {/* Bottom-left filler */}
                 <div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                   style={{
@@ -288,7 +288,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                       "rotate(-42.5deg) translateX(-12px) translateY(-4px)",
                   }}
                 />
-                {/* Top-right filler. */}
                 <div
                   className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
                   style={{
@@ -310,7 +309,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 </div>
               </div>
               <p className="font-bold mt-2">links</p>
-            </button>
+            </button> */}
 
             {/* Work Button */}
             <button
@@ -341,7 +340,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
             </button>
 
             {/* Mail/Contact Button */}
-            <button
+            {/* <button
               className="flex flex-col p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("contact");
@@ -366,7 +365,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 />
               </div>
               <p className="font-bold mt-2">contact</p>
-            </button>
+            </button> */}
 
             {/* Resume/CV Button */}
             <button
