@@ -651,17 +651,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
-                  className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  style={{ backgroundColor: "#b3e6ff", width: "420px" }}
+                  className="project-image-container relative rounded-tl-lg rounded-bl-lg"
+                  style={{ backgroundColor: "transparent", width: "420px" }}
                 >
-                  <div className="relative w-16 h-16">
-                    <GithubLogoIcon
-                      size={64}
-                      color="var(--bg)"
-                      weight="fill"
-                      className="absolute top-0 left-0"
-                    />
-                  </div>
+                  <img
+                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    src="/smartmirror.webp"
+                    alt="Placeholder for project 5"
+                  />
                 </div>
                 <div className="project-details p-6 flex flex-col justify-between w-full">
                   <div>
@@ -775,7 +772,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               >
                 <div
                   className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
-                  style={{ backgroundColor: "#fdfd96", width: "420px" }}
+                  style={{ backgroundColor: "#b3e6ff", width: "420px" }}
                 >
                   <div className="relative w-16 h-16">
                     <GithubLogoIcon

@@ -511,19 +511,12 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               className="project-card rounded-lg flex flex-col"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div
-                className="project-image-container relative flex items-center justify-center overflow-hidden
-                           rounded-t-lg aspect-video group"
-                style={{ backgroundColor: "#b3e6ff" }}
-              >
-                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
-                  <GithubLogoIcon
-                    size={56}
-                    color="var(--bg)"
-                    weight="fill"
-                    className="absolute top-0 left-0"
-                  />
-                </div>
+              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+                <img
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
+                  src="/smartmirror.webp"
+                  alt="Placeholder for project 5"
+                />
               </div>
               <div className="project-details p-6 flex flex-col justify-between w-full">
                 <div>
@@ -639,7 +632,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div
                 className="project-image-container relative flex items-center justify-center overflow-hidden
                            rounded-t-lg aspect-video group"
-                style={{ backgroundColor: "#fdfd96" }}
+                style={{ backgroundColor: "#b3e6ff" }}
               >
                 <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
