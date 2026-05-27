@@ -205,8 +205,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <p className="flex-grow">
                     Curate your perfect productivity environment. Mix calming
                     LoFi beats with custom ambient soundscapes, from gentle rain
-                    to a lively cafe. Built with Next.js, Tailwind CSS, and the
-                    Youtube Player API.
+                    to a lively cafe. Built with Next.js, Tailwind CSS, and the{" "}
+                    <strong>Youtube Player API</strong>.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -272,10 +272,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     Chromatica
                   </h3>
                   <p className="flex-grow">
-                    A web app that connects with the Spotify API to generate
-                    unique color palettes based on your top tracks and artists.
-                    It was built with a Next.js frontend, a Next.js API routes
-                    backend with Prisma, and a PostgreSQL database.
+                    A web app that connects to the <strong>Spotify API</strong>{" "}
+                    to generate dynamic color palettes based on your top tracks
+                    and artists, extracting dominant colors from album art to
+                    drive a fully reactive UI.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -349,10 +349,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     Ramen Timer
                   </h3>
                   <p className="flex-grow">
-                    A simple, mobile-first ramen timer web app with a nostalgic,
-                    pixel-art aesthetic. It was built using a Next.js frontend,
-                    an Express.js backend, and a PostgreSQL database to record
-                    timer data for my favorite ramen brands.
+                    A mobile-first ramen timer with a nostalgic{" "}
+                    <strong>pixel-art</strong> aesthetic, built full-stack with
+                    a Next.js frontend, Express.js backend, and PostgreSQL
+                    database.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -421,7 +421,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     A desktop storage manager app built with Electron and React
                     to intelligently manage and optimize local storage. It uses
                     smart cleanup metrics to provide recommendations, all within
-                    a playful, "panda" themed UI.
+                    a playful, <strong>panda themed UI</strong>.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -470,9 +470,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </h3>
                   <p className="flex-grow">
                     A personalized task scheduler with a 24-hour timetable and a
-                    gamified system that uses XP and badges to encourage
-                    consistent productivity. It integrates with Firebase for
-                    secure data persistence & Firestore for profiles.
+                    gamified system that uses <strong>XP and badges</strong> to
+                    encourage consistent productivity. It integrates with
+                    Firebase for secure data persistence & Firestore for
+                    profiles.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -535,10 +536,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     SmartMirror
                   </h3>
                   <p className="flex-grow">
-                    An IoT device that enables real-time data exchange between a
-                    Raspberry Pi and a mobile app via Bluetooth Low Energy. The
-                    project involved designing modular protocols and working in
-                    an Agile team environment.
+                    IoT smart mirror and companion mobile app connected via a
+                    Python BLE pipeline authored end-to-end, achieving{" "}
+                    <strong>sub-second synchronization</strong> between a
+                    Raspberry Pi and React Native client.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -602,10 +603,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     Multi-Threaded HTTP Server
                   </h3>
                   <p className="flex-grow">
-                    Developed a HTTP server that handles GET and PUT requests
-                    using POSIX threads for concurrency. The project includes a
-                    dedicated logging file to monitor all incoming and outgoing
-                    traffic.
+                    An HTTP server handling GET and PUT requests using{" "}
+                    <strong>POSIX threads</strong> for concurrency, with a
+                    dedicated logging system to monitor all incoming and
+                    outgoing traffic.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -661,9 +662,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </h3>
                   <p className="flex-grow">
                     A command-line tool that efficiently compresses and
-                    decompresses files using the Huffman encoding algorithm. The
-                    project's core is an implementation that leverages classic
-                    data structures like priority queues and binary trees.
+                    decompresses files using the{" "}
+                    <strong>Huffman encoding</strong> algorithm. The project's
+                    core is an implementation that leverages classic data
+                    structures like priority queues and binary trees.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -718,10 +720,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     RSA Public Key Cryptography
                   </h3>
                   <p className="flex-grow">
-                    Built a command-line tool that implements the RSA public key
-                    cryptography algorithm from the ground up. The program
-                    securely encrypts and decrypts messages by generating public
-                    and private keys.
+                    Built a command-line tool that implements the{" "}
+                    <strong>RSA</strong> public key cryptography algorithm from
+                    the ground up. The program securely encrypts and decrypts
+                    messages by generating public and private keys.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -769,12 +771,11 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     DollHouse
                   </h3>
                   <p className="flex-grow">
-                    A simple 2D game built in Construct 3 to explore core game
-                    design principles. As a key member of a small team, I
-                    implemented all of the event-based logic, as well as
-                    contributed to level design and asset creation. Due to
-                    engine export limitations, a live demo of the game is not
-                    available.
+                    A 2D game built in Construct 3 to explore core game design
+                    principles. As a key member of a small team, I implemented
+                    all of the event-based logic, as well as contributed to
+                    level design and asset creation. Due to engine export
+                    limitations, a live demo of the game is not available.
                   </p>
                 </div>
                 <div className="mt-4">
