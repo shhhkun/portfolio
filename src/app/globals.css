@@ -19,8 +19,7 @@
   --border2: #adc0d3;
   --button-bg: #c8d1d9;
   --button-bg2: #b2b8c0;
-  --button-bg3: #a9b3bd;
-  --button-hover: #9da9b8;
+  --button-hover: #5b9cec;
   --scroll: #a0a0a0;
   --logo-theme: light;
   --accent: #60a5fa;
@@ -44,8 +43,7 @@
     --border2: #5f5b82; /* for inside cards */
     --button-bg: #273b54; /* for contact */
     --button-bg2: #384158; /* for pill-button */
-    --button-bg3: #34465d; /* for download */
-    --button-hover: #3e5470; /* for contact & download */
+    --button-hover: #3679e4; /* for download */
     --scroll: #273b54;
     --logo-theme: dark;
     --accent: #3b82f6;
@@ -69,8 +67,7 @@ html.light {
   --border2: #adc0d3;
   --button-bg: #c8d1d9;
   --button-bg2: #b2b8c0;
-  --button-bg3: #a9b3bd;
-  --button-hover: #9da9b8;
+  --button-hover: #5b9cec;
   --scroll: #a0a0a0;
   --logo-theme: light;
   --accent: #60a5fa;
@@ -93,8 +90,7 @@ html.dark {
   --border2: #5f5b82; /* for inside cards */
   --button-bg: #273b54; /* for contact */
   --button-bg2: #384158; /* for pill-button */
-  --button-bg3: #34465d; /* for download */
-  --button-hover: #3e5470; /* for contact & download */
+  --button-hover: #3679e4; /* for download */
   --scroll: #273b54;
   --logo-theme: dark;
   --accent: #3b82f6;
