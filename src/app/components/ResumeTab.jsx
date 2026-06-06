@@ -280,17 +280,19 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built reusable UI components and dashboard analytics features
-                  in <strong>TypeScript</strong> within a large-scale monorepo,
-                  integrating <strong>REST APIs</strong> to surface
-                  user-specific project metrics and improve data visibility
+                  Built reusable UI components and{" "}
+                  <strong>dashboard analytics</strong> features in TypeScript
+                  within a large-scale monorepo, integrating{" "}
+                  <strong>REST APIs</strong> to surface user-specific project
+                  metrics and improve data visibility
                 </li>
                 <li className="mb-2">
-                  Revamped the platform onboarding flow across{" "}
+                  Designed and built the platform onboarding flow across{" "}
                   <strong>free, pro, and team</strong> account tiers,
-                  collaborating with backend engineers on{" "}
-                  <strong>PostgreSQL</strong>-backed features to align frontend
-                  and data layers.
+                  implementing <strong>OAuth</strong> authentication,{" "}
+                  <strong>Stripe</strong> payment integration, and tier-specific
+                  user configuration in collaboration with backend engineers on
+                  PostgreSQL-backed features.
                 </li>
                 <li className="mb-2">
                   Centralized <strong>50+</strong> internal engineering
@@ -355,11 +357,9 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </li>
                 <li className="mb-2">
                   Coordinated technical logistics and setup plans among
-                  officers, volunteers, and event partners.
-                </li>
-                <li className="mb-2">
-                  Provided live technical support and assisted with sponsorship
-                  outreach to support event growth.
+                  officers, volunteers, and event partners, providing live
+                  support and assisting with sponsorship outreach to support
+                  event growth.
                 </li>
               </ul>
             </div>
