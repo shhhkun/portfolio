@@ -8,45 +8,28 @@ import GitHubLogo from "../utils/GitHubLogo";
 import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
 
-// ===== MUTUALLY EXCLUSIVE SKILL GROUPS =====
+// SKILL GROUPS
 const skillGroups = {
-  // Group 1: Core Web Technologies (HTML/CSS)
-  "group-core-web": ["HTML", "CSS"],
+  // Group 1: Programming Languages
+  "group-language": ["JavaScript", "TypeScript", "Python", "C/C++"],
 
-  // Group 2: JavaScript Ecosystem (JS/TS and frameworks)
-  "group-js-ecosystem": [
-    "JavaScript",
-    "TypeScript",
-    "React",
-    "Next.js",
-    "Vite",
-    "Electron",
-  ],
+  // Group 2: Web Fundamentals
+  "group-web": ["HTML/CSS"],
 
-  // Group 3: Backend & APIs
-  "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth 2.0"],
+  // Group 3: Frontend
+  "group-frontend": ["React", "Next.js", "Tailwind CSS", "Vite"],
 
-  // Group 4: Databases
+  // Group 4: Backend & API
+  "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth", "LLM APIs"],
+
+  // Group 5: Databases
   "group-database": ["SQL", "PostgreSQL", "Prisma", "Firebase/Firestore"],
 
-  // Group 5: DevOps & Tools
-  "group-devops": [
-    "Git",
-    "GitHub",
-    "CI/CD",
-    "Docker",
-    "Visual Studio",
-    "Figma",
-  ],
-
-  // Group 6: Programming Languages (non-JS)
-  "group-language": ["Python", "C/C++"],
+  // Group 6: Dev Tools & Deployment
+  "group-dev": ["Git", "GitHub", "Docker", "Vercel", "Figma"],
 
   // Group 7: Desktop & Systems
-  "group-desktop": ["Linux", "Windows", "LaTeX"],
-
-  // Group 8: Project Management
-  "group-management": ["Agile", "Scrum"],
+  "group-desktop": ["Linux", "Windows", "Electron", "LaTeX"],
 };
 
 // Helper to assign each skill to exactly one group
@@ -227,14 +210,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     {[
                       "Git",
                       "GitHub",
-                      "Agile",
-                      "Scrum",
-                      "CI/CD",
                       "Docker",
-                      "Visual Studio",
-                      "Figma",
+                      "Vercel",
                       "Linux",
                       "Windows",
+                      "Figma",
                       "LaTeX",
                     ].map((skill) => (
                       <SkillPill
@@ -257,24 +237,34 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </h2>
                   <div className="skill-grid flex flex-wrap gap-2">
                     {[
+                      // Languages
                       "JavaScript",
                       "TypeScript",
-                      "HTML",
-                      "CSS",
                       "Python",
                       "C/C++",
-                      "Next.js",
+                      "HTML/CSS",
+
+                      // Frontend
                       "React",
+                      "Next.js",
+                      "Tailwind CSS",
+                      "Vite",
+
+                      // Backend
                       "Node.js",
                       "Express.js",
-                      "Vite",
-                      "Electron",
+                      "REST APIs",
+                      "OAuth",
+                      "LLM APIs",
+
+                      // Databases
+                      "PostgreSQL",
                       "Prisma",
                       "SQL",
-                      "PostgreSQL",
                       "Firebase/Firestore",
-                      "REST APIs",
-                      "OAuth 2.0",
+
+                      // Desktop
+                      "Electron",
                     ].map((skill) => (
                       <SkillPill
                         key={skill}
