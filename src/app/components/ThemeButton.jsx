@@ -17,14 +17,14 @@ const ThemeButton = ({ theme, setTheme }) => {
 
   return (
     <button
-      className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+      className="flex transform cursor-pointer flex-col items-center rounded-xl border-none bg-transparent p-4 transition-transform duration-300 hover:scale-110"
       onClick={() => {
         toggleTheme();
         theme === "dark" ? playAudio4(0.1) : playAudio5(0.1);
       }}
     >
       {theme === "dark" ? (
-        <div className="relative w-8 h-8">
+        <div className="relative h-8 w-8">
           <SunIcon
             size={32}
             color="var(--text)"
@@ -33,7 +33,7 @@ const ThemeButton = ({ theme, setTheme }) => {
           />
         </div>
       ) : (
-        <div className="relative w-8 h-8">
+        <div className="relative h-8 w-8">
           <MoonIcon
             size={32}
             color="var(--text)"

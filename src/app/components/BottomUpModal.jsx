@@ -27,15 +27,14 @@ const BottomUpModal = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[90vh] bg-gray-800 text-white z-50 
-                   flex flex-col transition-transform duration-500 ease-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[90vh] w-full flex-col bg-gray-800 text-white transition-transform duration-500 ease-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex justify-between relative rounded-t-lg px-6 py-2 flex-shrink-0 "
+          className="relative flex flex-shrink-0 justify-between rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -56,10 +55,9 @@ const BottomUpModal = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="flex flex-col flex-1 overflow-y-auto"
+          className="flex flex-1 flex-col overflow-y-auto"
           style={{ backgroundColor: "var(--card-bg)" }}
-        >
-        </div>
+        ></div>
       </div>
     </>
   );

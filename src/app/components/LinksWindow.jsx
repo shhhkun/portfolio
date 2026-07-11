@@ -106,7 +106,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Window Header */}
           <div
-            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            className="handle flex cursor-grab items-center justify-between px-6 py-2"
             style={{
               fontSize: "1.25rem",
               backgroundColor: "var(--card-header)",
@@ -133,7 +133,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Main Content Area */}
           <div
-            className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
+            className="flex min-h-0 flex-grow flex-col items-center justify-center p-12"
             style={{ backgroundColor: "var(--card-bg)" }}
           >
             {/* Link Icons */}
@@ -143,10 +143,10 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 href="https://github.com/shhhkun"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => playAudio1(0.2)}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative h-16 w-16">
                   <GithubLogoIcon
                     size={64}
                     color="var(--bg)"
@@ -160,7 +160,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="absolute top-0 left-0 z-10"
                   />
                 </div>
-                <p className="font-bold mt-2">github</p>
+                <p className="mt-2 font-bold">github</p>
               </a>
 
               {/* LeetCode Button */}
@@ -168,10 +168,10 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 href="https://leetcode.com/u/shhhkun"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => playAudio1(0.2)}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative h-16 w-16">
                   <SquareIcon
                     size={64}
                     color="var(--bg)"
@@ -189,7 +189,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="absolute top-0 left-0 z-10"
                   />
                 </div>
-                <p className="font-bold mt-2">leetcode</p>
+                <p className="mt-2 font-bold">leetcode</p>
               </a>
 
               {/* LinkedIn Button */}
@@ -197,10 +197,10 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 href="https://linkedin.com/in/serjobarron"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => playAudio1(0.2)}
               >
-                <div className="relative w-16 h-16">
+                <div className="relative h-16 w-16">
                   <LinkedinLogoIcon
                     size={64}
                     color="var(--bg)"
@@ -214,7 +214,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     className="absolute top-0 left-0 z-10"
                   />
                 </div>
-                <p className="font-bold mt-2">linkedin</p>
+                <p className="mt-2 font-bold">linkedin</p>
               </a>
 
               {/* Discord Button */}
@@ -224,9 +224,9 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     handleCopyDiscord();
                     playAudio1(0.2);
                   }}
-                  className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                  className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 >
-                  <div className="relative w-16 h-16">
+                  <div className="relative h-16 w-16">
                     <DiscordLogoIcon
                       size={64}
                       color="var(--bg)"
@@ -240,13 +240,13 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="absolute top-0 left-0 z-10"
                     />
                   </div>
-                  <p className="font-bold mt-2">discord</p>
+                  <p className="mt-2 font-bold">discord</p>
                 </button>
 
                 {/* Toast Notification */}
                 {toastMessage && (
                   <span
-                    className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-4 left-1/2 transform -translate-x-1/2"
+                    className="bg-opacity-75 absolute -bottom-4 left-1/2 -translate-x-1/2 transform rounded-md bg-black px-2 py-1"
                     style={{ color: "#ffffff", fontSize: "0.75rem" }}
                   >
                     {toastMessage}
@@ -256,7 +256,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
             {/* Intro Card */}
             <div
-              className="intro-card rounded-lg text-center mx-auto py-4 px-16"
+              className="intro-card mx-auto rounded-lg px-16 py-4 text-center"
               style={{
                 backgroundColor: "var(--card-bg2)",
               }}

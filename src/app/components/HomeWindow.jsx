@@ -16,7 +16,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
   if (isMobile) {
     return (
-      <div className="flex flex-col items-center mb-42">
+      <div className="mb-42 flex flex-col items-center">
         <h1
           className="font-bold"
           style={{
@@ -47,17 +47,17 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
         {/* Desktop Icons */}
         <div className="flex flex-col items-center justify-center pt-8">
-          <div className="max-w-64 flex flex-wrap justify-center gap-4">
+          <div className="flex max-w-64 flex-wrap justify-center gap-4">
             {/* About Button */}
             <button
-              className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("about");
                 playAudio1(0.2);
               }}
             >
-              <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
-                <div className="relative w-14 h-14">
+              <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">
+                <div className="relative h-14 w-14">
                   <UserCircleIcon
                     size={56}
                     color="var(--text)"
@@ -66,7 +66,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   />
                 </div>
               </div>
-              <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
+              <p className="mt-2 font-bold" style={{ fontSize: "0.75rem" }}>
                 about
               </p>
             </button>
@@ -96,14 +96,14 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Work Button */}
             <button
-              className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("work");
                 playAudio1(0.2);
               }}
             >
-              <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
-                <div className="relative w-14 h-14">
+              <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">
+                <div className="relative h-14 w-14">
                   <BriefcaseIcon
                     size={56}
                     color="var(--text)"
@@ -112,7 +112,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   />
                 </div>
               </div>
-              <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
+              <p className="mt-2 font-bold" style={{ fontSize: "0.75rem" }}>
                 projects
               </p>
             </button>
@@ -142,14 +142,14 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Resume/CV Button */}
             <button
-              className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("resume");
                 playAudio1(0.2);
               }}
             >
-              <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
-                <div className="relative w-14 h-14">
+              <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">
+                <div className="relative h-14 w-14">
                   <ReadCvLogoIcon
                     size={56}
                     color="var(--text)"
@@ -158,7 +158,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   />
                 </div>
               </div>
-              <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
+              <p className="mt-2 font-bold" style={{ fontSize: "0.75rem" }}>
                 resume
               </p>
             </button>
@@ -169,7 +169,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
   } else {
     return (
       <div
-        className="flex flex-col w-full overflow-hidden"
+        className="flex w-full flex-col overflow-hidden"
         style={{
           width: "708px",
           height: "560px",
@@ -198,7 +198,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
         {/* Main Content Area */}
         <div
-          className="w-full justify-end items-center flex flex-grow flex-col p-12"
+          className="flex w-full flex-grow flex-col items-center justify-end p-12"
           style={{
             backgroundColor: "var(--card-bg)",
           }}
@@ -235,13 +235,13 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
           <div className="flex flex-row items-center justify-center gap-4 p-8">
             {/* About Button */}
             <button
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("about");
                 playAudio1(0.2);
               }}
             >
-              <div className="relative w-16 h-16">
+              <div className="relative h-16 w-16">
                 <CircleIcon
                   size={64}
                   color="var(--bg)"
@@ -255,7 +255,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   className="absolute top-0 left-0 z-10"
                 />
               </div>
-              <p className="font-bold mt-2">about</p>
+              <p className="mt-2 font-bold">about</p>
             </button>
 
             {/* Links Button */}
@@ -313,13 +313,13 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Work Button */}
             <button
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("work");
                 playAudio1(0.2);
               }}
             >
-              <div className="relative w-16 h-16">
+              <div className="relative h-16 w-16">
                 <RectangleIcon
                   size={64}
                   color="var(--bg)"
@@ -336,7 +336,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   className="absolute top-0 left-0 z-10"
                 />
               </div>
-              <p className="font-bold mt-2">projects</p>
+              <p className="mt-2 font-bold">projects</p>
             </button>
 
             {/* Mail/Contact Button */}
@@ -369,13 +369,13 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
 
             {/* Resume/CV Button */}
             <button
-              className="flex flex-col p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col p-4 transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("resume");
                 playAudio1(0.2);
               }}
             >
-              <div className="relative w-16 h-16">
+              <div className="relative h-16 w-16">
                 <RectangleIcon
                   size={64}
                   color="var(--bg)"
@@ -393,7 +393,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   className="absolute top-0 left-0 z-10"
                 />
               </div>
-              <p className="font-bold mt-2">resume</p>
+              <p className="mt-2 font-bold">resume</p>
             </button>
           </div>
         </div>

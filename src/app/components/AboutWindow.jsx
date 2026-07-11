@@ -106,7 +106,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Window Header */}
           <div
-            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            className="handle flex cursor-grab items-center justify-between px-6 py-2"
             style={{
               fontSize: "1.25rem",
               backgroundColor: "var(--card-header)",
@@ -133,13 +133,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Main Content Area */}
           <div
-            className="flex flex-col flex-grow min-h-0"
+            className="flex min-h-0 flex-grow flex-col"
             style={{ backgroundColor: "var(--card-bg)" }}
           >
             {/* Profile Picture and Name */}
             <div className="flex items-center px-12 py-8">
               <div
-                className="rounded-full overflow-hidden cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="transform cursor-pointer overflow-hidden rounded-full transition-transform duration-300 hover:scale-110"
                 style={{
                   width: "136px",
                   height: "136px",
@@ -148,7 +148,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <img
                   src="/pfp.webp"
                   alt="Serjo Barron Profile"
-                  className="w-full h-full object-cover"
+                  className="h-full w-full object-cover"
                 />
               </div>
               <div className="ml-12">
@@ -188,7 +188,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* SCROLLABLE BOTTOM SECTION: The rest of the content */}
             <div
-              className="custom-scrollbar p-12 text-white flex-grow overflow-y-auto"
+              className="custom-scrollbar flex-grow overflow-y-auto p-12 text-white"
               style={{ color: "var(--text)" }}
             >
               <div style={{ fontSize: "1.25rem" }}>
@@ -219,7 +219,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
                 <p style={{ marginBottom: "0.625rem" }}>I specialize in...</p>
 
-                <ul className="list-disc mt-5 ml-5">
+                <ul className="mt-5 ml-5 list-disc">
                   <li>
                     <span style={{ color: "var(--text3)" }}>
                       <b>Full-Stack Development: </b>
@@ -251,7 +251,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 EDUCATION
               </h2>
               <blockquote
-                className="p-3 mt-5"
+                className="mt-5 p-3"
                 style={{
                   fontSize: "1.25rem",
                   borderLeft: "6px solid var(--border2)",
@@ -273,7 +273,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 HOBBIES
               </h2>
               <ul
-                className="list-disc mt-5 ml-5"
+                className="mt-5 ml-5 list-disc"
                 style={{ fontSize: "1.25rem" }}
               >
                 <li>Digital Art, Anime & Comics</li>
@@ -289,7 +289,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 LANGUAGE PROFICIENCY
               </h2>
               <div
-                className="flex flex-col mt-5 gap-y-4"
+                className="mt-5 flex flex-col gap-y-4"
                 ref={barRef}
                 style={{ color: "var(--text2)", fontSize: "1.125rem" }}
               >
@@ -298,13 +298,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="flex items-center gap-x-4">
                     <span className="w-24">English</span>
                     <div
-                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      className="relative h-4 flex-grow overflow-hidden rounded-full"
                       style={{ backgroundColor: "var(--bar-bg)" }}
                     >
                       <div
-                        className={`bar-english h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        className={`bar-english absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                           isVisible ? "scale-y-125" : ""
-                        } transform origin-left`}
+                        } origin-left transform`}
                         style={{
                           width: isVisible ? "100%" : "0%",
                           backgroundColor: "#a8e6cf",
@@ -322,13 +322,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="flex items-center gap-x-4">
                     <span className="w-24">Tagalog</span>
                     <div
-                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      className="relative h-4 flex-grow overflow-hidden rounded-full"
                       style={{ backgroundColor: "var(--bar-bg)" }}
                     >
                       <div
-                        className={`bar-tagalog h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        className={`bar-tagalog absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                           isVisible ? "scale-y-125" : ""
-                        } transform origin-left`}
+                        } origin-left transform`}
                         style={{
                           width: isVisible ? "50%" : "0%",
                           backgroundColor: "#fdfd96",
@@ -346,13 +346,13 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="flex items-center gap-x-4">
                     <span className="w-24">Japanese</span>
                     <div
-                      className="flex-grow rounded-full h-4 relative overflow-hidden"
+                      className="relative h-4 flex-grow overflow-hidden rounded-full"
                       style={{ backgroundColor: "var(--bar-bg)" }}
                     >
                       <div
-                        className={`bar-japanese h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                        className={`bar-japanese absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                           isVisible ? "scale-y-125" : ""
-                        } transform origin-left`}
+                        } origin-left transform`}
                         style={{
                           width: isVisible ? "20%" : "0%",
                           backgroundColor: "#ffb3b3",

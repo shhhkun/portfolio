@@ -9,7 +9,7 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
   <div
-    className="w-12 h-1 rounded-full mx-auto"
+    className="mx-auto h-1 w-12 rounded-full"
     style={{ backgroundColor: "var(--text-header)" }}
   />
 );
@@ -70,15 +70,14 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[85vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[85vh] w-full flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
+          className="flex flex-shrink-0 flex-row items-center rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -93,7 +92,7 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             <HandleBar />
@@ -102,11 +101,11 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="flex flex-col flex-1 p-8 gap-4 overflow-y-auto"
+          className="flex flex-1 flex-col gap-4 overflow-y-auto p-8"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           <div
-            className="flex flex-row items-center p-2 border border-[var(--border2)] rounded-xl"
+            className="flex flex-row items-center rounded-xl border border-[var(--border2)] p-2"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             {/* GitHub Button */}
@@ -114,10 +113,10 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
               href="https://github.com/shhhkun"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col transition-transform duration-300 hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
-              <div className="relative w-14 h-14">
+              <div className="relative h-14 w-14">
                 <GithubLogoIcon
                   size={56}
                   color="var(--text)"
@@ -126,21 +125,21 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
                 />
               </div>
             </a>
-            <p className="font-bold pl-4">github</p>
+            <p className="pl-4 font-bold">github</p>
           </div>
 
           <div
-            className="flex flex-row items-center p-2 border border-[var(--border2)] rounded-xl"
+            className="flex flex-row items-center rounded-xl border border-[var(--border2)] p-2"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <a
               href="https://leetcode.com/u/shhhkun"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col transition-transform duration-300 hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
-              <div className="relative w-14 h-14">
+              <div className="relative h-14 w-14">
                 <LeetCodeLogo
                   size={56}
                   color="var(--text)"
@@ -149,21 +148,21 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
                 />
               </div>
             </a>
-            <p className="font-bold pl-4">leetcode</p>
+            <p className="pl-4 font-bold">leetcode</p>
           </div>
 
           <div
-            className="flex flex-row items-center p-2 border border-[var(--border2)] rounded-xl"
+            className="flex flex-row items-center rounded-xl border border-[var(--border2)] p-2"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <a
               href="https://linkedin.com/in/serjobarron"
               target="_blank"
               rel="noopener noreferrer"
-              className="flex flex-col cursor-pointer transition-transform duration-300 transform hover:scale-110"
+              className="flex transform cursor-pointer flex-col transition-transform duration-300 hover:scale-110"
               onClick={() => playAudio1(0.2)}
             >
-              <div className="relative w-14 h-14">
+              <div className="relative h-14 w-14">
                 <LinkedinLogoIcon
                   size={56}
                   color="var(--text)"
@@ -172,11 +171,11 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
                 />
               </div>
             </a>
-            <p className="font-bold pl-4">linkedin</p>
+            <p className="pl-4 font-bold">linkedin</p>
           </div>
 
           <div
-            className="flex flex-row items-center p-2 border border-[var(--border2)] rounded-xl"
+            className="flex flex-row items-center rounded-xl border border-[var(--border2)] p-2"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             {/* Discord Button */}
@@ -186,9 +185,9 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
                   handleCopyDiscord();
                   playAudio1(0.2);
                 }}
-                className="flex flex-col cursor-pointer transition-transform duration-300 transform hover:scale-110"
+                className="flex transform cursor-pointer flex-col transition-transform duration-300 hover:scale-110"
               >
-                <div className="relative w-14 h-14">
+                <div className="relative h-14 w-14">
                   <DiscordLogoIcon
                     size={56}
                     color="var(--text)"
@@ -198,12 +197,12 @@ const LinksTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
               </button>
             </div>
-            <p className="font-bold pl-4">discord</p>
+            <p className="pl-4 font-bold">discord</p>
 
             {/* Toast Notification */}
             {toastMessage && (
               <span
-                className="bg-black bg-opacity-75 rounded-md px-2 py-1 ml-4"
+                className="bg-opacity-75 ml-4 rounded-md bg-black px-2 py-1"
                 style={{ color: "#ffffff", fontSize: "0.75rem" }}
               >
                 {toastMessage}

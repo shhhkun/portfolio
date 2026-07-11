@@ -3,7 +3,7 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
   <div
-    className="w-12 h-1 rounded-full mx-auto"
+    className="mx-auto h-1 w-12 rounded-full"
     style={{ backgroundColor: "var(--text-header)" }}
   />
 );
@@ -68,15 +68,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[85vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[85vh] w-full flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
+          className="flex flex-shrink-0 flex-row items-center rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -91,7 +90,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             <HandleBar />
@@ -100,10 +99,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="justify-center items-center flex flex-col p-8"
+          className="flex flex-col items-center justify-center p-8"
           style={{ backgroundColor: "var(--card-bg)", fontSize: "1rem" }}
         >
-          <h2 className="font-bold mb-4" style={{ fontSize: "1.25rem" }}>
+          <h2 className="mb-4 font-bold" style={{ fontSize: "1.25rem" }}>
             Let’s Connect
           </h2>
 
@@ -113,7 +112,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
           </p>
 
           <p
-            className="relative cursor-pointer mt-4"
+            className="relative mt-4 cursor-pointer"
             onClick={() => {
               handleCopyEmail();
               playAudio1(0.2);
@@ -127,7 +126,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </span>
             {toastMessage && (
               <span
-                className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2"
+                className="bg-opacity-75 absolute -bottom-8 left-1/2 -translate-x-1/2 transform rounded-md bg-black px-2 py-1"
                 style={{ color: "#ffffff", fontSize: "0.75rem" }}
               >
                 {toastMessage}
@@ -141,7 +140,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               handleEmailButtonClick();
               playAudio1(0.2);
             }}
-            className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
+            className="contact-button mt-10 cursor-pointer rounded-md px-4 py-2"
           >
             send me an email!
           </button>

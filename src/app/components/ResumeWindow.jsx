@@ -89,7 +89,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Window Header */}
           <div
-            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            className="handle flex cursor-grab items-center justify-between px-6 py-2"
             style={{
               fontSize: "1.25rem",
               backgroundColor: "var(--card-header)",
@@ -116,15 +116,15 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Main Content Area */}
           <div
-            className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
+            className="custom-scrollbar min-h-0 flex-grow overflow-y-auto p-12"
             style={{ backgroundColor: "var(--card-bg)" }}
           >
             {/* HEADER */}
             <div
-              className="flex justify-between items-center mb-8 p-8 rounded-lg shadow-lg"
+              className="mb-8 flex items-center justify-between rounded-lg p-8 shadow-lg"
               style={{ backgroundColor: "var(--card-bg2)" }}
             >
-              <div className="flex flex-col w-full">
+              <div className="flex w-full flex-col">
                 <div className="flex flex-row justify-between">
                   <h1 className="font-bold" style={{ fontSize: "1.75rem" }}>
                     SERJO BARRON
@@ -134,14 +134,14 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       downloadResume();
                       playAudio1(0.2);
                     }}
-                    className="download-button cursor-pointer flex items-center px-4 py-2 rounded-md"
+                    className="download-button flex cursor-pointer items-center rounded-md px-4 py-2"
                     style={{ fontSize: "1.25rem" }}
                   >
                     Download PDF
                   </button>
                 </div>
                 <div
-                  className="flex flex-wrap justify-between mt-4"
+                  className="mt-4 flex flex-wrap justify-between"
                   style={{
                     color: "var(--text4)",
                     fontSize: "1.25rem",
@@ -149,7 +149,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <span className="flex items-center">
                     <span className="mr-1">
-                      <div className="relative w-6 h-6">
+                      <div className="relative h-6 w-6">
                         <MapPinIcon
                           size={24}
                           weight="fill"
@@ -161,7 +161,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </span>
                   <span className="flex items-center">
                     <span className="mr-1">
-                      <div className="relative w-6 h-6">
+                      <div className="relative h-6 w-6">
                         <PhoneIcon
                           size={24}
                           weight="fill"
@@ -173,11 +173,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </span>
                   <a
                     href="mailto:serjobarron@gmail.com"
-                    className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                    className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                     onClick={() => playAudio1(0.2)}
                   >
                     <span className="mr-1">
-                      <div className="relative w-6 h-6">
+                      <div className="relative h-6 w-6">
                         <EnvelopeSimpleIcon
                           size={24}
                           weight="fill"
@@ -195,11 +195,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     href="https://linkedin.com/in/serjobarron"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                    className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                     onClick={() => playAudio1(0.2)}
                   >
                     <span className="mr-1">
-                      <div className="relative w-6 h-6">
+                      <div className="relative h-6 w-6">
                         <LinkedinLogoIcon
                           size={24}
                           weight="fill"
@@ -213,11 +213,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     href="https://github.com/shhhkun"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                    className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                     onClick={() => playAudio1(0.2)}
                   >
                     <span className="mr-1">
-                      <div className="relative w-6 h-6">
+                      <div className="relative h-6 w-6">
                         <GithubLogoIcon
                           size={24}
                           weight="fill"
@@ -233,11 +233,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* EDUCATION */}
             <div
-              className="rounded-lg shadow-lg p-8 mb-8"
+              className="mb-8 rounded-lg p-8 shadow-lg"
               style={{ backgroundColor: "var(--card-bg2)" }}
             >
               <h2
-                className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+                className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
                 style={{
                   fontSize: "1.5rem",
                 }}
@@ -245,7 +245,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 EDUCATION
               </h2>
               <div>
-                <div className="flex justify-between items-center mt-2">
+                <div className="mt-2 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     University of California, Santa Cruz
                   </span>
@@ -283,11 +283,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* EXPERIENCE */}
             <div
-              className="rounded-lg shadow-lg p-8 mb-8"
+              className="mb-8 rounded-lg p-8 shadow-lg"
               style={{ backgroundColor: "var(--card-bg2)" }}
             >
               <h2
-                className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+                className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
                 style={{
                   fontSize: "1.5rem",
                 }}
@@ -295,7 +295,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 EXPERIENCE
               </h2>
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Software Engineer Intern
                   </span>
@@ -313,7 +313,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   BotStacks – San Francisco, CA
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -344,7 +344,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
 
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Computer Science Reader
                   </span>
@@ -362,7 +362,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   Baskin School of Engineering – Santa Cruz, CA
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -379,7 +379,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </div>
 
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Tech Manager
                   </span>
@@ -397,7 +397,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   Slug Anime and Manga Association – Santa Cruz, CA
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -420,11 +420,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* PROJECTS */}
             <div
-              className="rounded-lg shadow-lg p-8 mb-8"
+              className="mb-8 rounded-lg p-8 shadow-lg"
               style={{ backgroundColor: "var(--card-bg2)" }}
             >
               <h2
-                className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+                className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
                 style={{
                   fontSize: "1.5rem",
                 }}
@@ -432,7 +432,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 PROJECTS
               </h2>
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     CaseFile
                   </span>
@@ -445,7 +445,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   API, Wikipedia API
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -469,7 +469,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </ul>
               </div>
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Chromatica
                   </span>
@@ -481,7 +481,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -529,7 +529,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </ul>
               </div> */}
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     SmartMirror
                   </span>
@@ -542,7 +542,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   Pi
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -564,7 +564,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 </ul>
               </div>
               <div>
-                <div className="flex justify-between items-center mt-4">
+                <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     LoFi Scape
                   </span>
@@ -576,7 +576,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   React, Next.js, Youtube Player API
                 </p>
                 <ul
-                  className="list-disc ml-8 mt-4"
+                  className="mt-4 ml-8 list-disc"
                   style={{
                     fontSize: "1.25rem",
                     color: "var(--text4)",
@@ -599,11 +599,11 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
             {/* SKILLS */}
             <div
-              className="rounded-lg shadow-lg p-8"
+              className="rounded-lg p-8 shadow-lg"
               style={{ backgroundColor: "var(--card-bg2)" }}
             >
               <h2
-                className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+                className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
                 style={{
                   fontSize: "1.5rem",
                 }}
@@ -611,7 +611,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 SKILLS
               </h2>
               <ul
-                className="list-disc ml-8"
+                className="ml-8 list-disc"
                 style={{
                   fontSize: "1.25rem",
                   color: "var(--text4)",

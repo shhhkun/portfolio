@@ -6,7 +6,7 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
   <div
-    className="w-12 h-1 rounded-full mx-auto"
+    className="mx-auto h-1 w-12 rounded-full"
     style={{ backgroundColor: "var(--text-header)" }}
   />
 );
@@ -43,15 +43,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[85vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[85vh] w-full flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
+          className="flex flex-shrink-0 flex-row items-center rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -66,7 +65,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             <HandleBar />
@@ -75,7 +74,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="custom-scrollbar-thin p-8 overflow-y-auto"
+          className="custom-scrollbar-thin overflow-y-auto p-8"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Intro Card */}
@@ -102,17 +101,17 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           </div>
 
           <div
-            className="h-1 my-8 mx-[-32px]"
+            className="mx-[-32px] my-8 h-1"
             style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
           {/* Development & Tools Section */}
           <div className="skills-section">
-            <div className="skills-container flex flex-col md:flex-row gap-6 md:gap-12">
+            <div className="skills-container flex flex-col gap-6 md:flex-row md:gap-12">
               {/* Tools Column */}
               <div className="skill-column flex-1">
                 <h2
-                  className="font-semibold mb-4"
+                  className="mb-4 font-semibold"
                   style={{ fontSize: "1.25rem" }}
                 >
                   TOOLS
@@ -134,7 +133,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               {/* Development Column */}
               <div className="skill-column flex-1">
                 <h2
-                  className="font-semibold mb-4"
+                  className="mb-4 font-semibold"
                   style={{ fontSize: "1.25rem" }}
                 >
                   DEVELOPMENT
@@ -164,13 +163,13 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           </div>
 
           <div
-            className="h-1 my-8 mx-[-32px]"
+            className="mx-[-32px] my-8 h-1"
             style={{ backgroundColor: "var(--border2)", height: "1px" }}
           ></div>
 
           {/* Projects Section */}
           <h2
-            className="section-title font-semibold mb-4"
+            className="section-title mb-4 font-semibold"
             style={{
               fontSize: "1.25rem",
             }}
@@ -181,10 +180,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           <div className="projects-section flex flex-col gap-8">
             {/* Project Card 10 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/lofiscape.webp"
@@ -192,10 +191,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 />
               </div>
 
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -211,7 +210,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Next.js, Tailwind CSS, Youtube Player API, Vercel
@@ -250,10 +249,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 9 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/chromatica.webp"
@@ -261,10 +260,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 />
               </div>
 
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -280,7 +279,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Next.js, Tailwind CSS, Spotify API & OAuth 2.0,
@@ -328,20 +327,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 8 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/ramentimer.webp"
                   alt="Placeholder for project 8"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -357,7 +356,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Next.js, Tailwind CSS, Express.js, PostgreSQL,
@@ -397,20 +396,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 7 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/trashu.webp"
                   alt="Placeholder for project 7"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -426,7 +425,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Vite, Node.js, Electron, TypeScript
@@ -448,20 +447,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 6 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/kept2.webp"
                   alt="Placeholder for project 6"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -478,7 +477,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React, Vite, Firebase/Firestore, Node.js
@@ -508,20 +507,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 5 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/smartmirror.webp"
                   alt="Placeholder for project 5"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -537,7 +536,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     React/React Native, Node.js, Python, Raspberry Pi, BLE,
@@ -568,15 +567,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 4 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center overflow-hidden
-                           rounded-t-lg aspect-video group"
+                className="project-image-container group relative flex aspect-video items-center justify-center overflow-hidden rounded-t-lg"
                 style={{ backgroundColor: "#ffb3b3" }}
               >
-                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
                     size={56}
                     color="var(--bg)"
@@ -585,10 +583,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   />
                 </div>
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -604,7 +602,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
@@ -626,15 +624,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 3 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center overflow-hidden
-                           rounded-t-lg aspect-video group"
+                className="project-image-container group relative flex aspect-video items-center justify-center overflow-hidden rounded-t-lg"
                 style={{ backgroundColor: "#b3e6ff" }}
               >
-                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
                     size={56}
                     color="var(--bg)"
@@ -643,10 +640,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   />
                 </div>
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -663,7 +660,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
@@ -685,15 +682,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 2 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
               <div
-                className="project-image-container relative flex items-center justify-center overflow-hidden
-                           rounded-t-lg aspect-video group"
+                className="project-image-container group relative flex aspect-video items-center justify-center overflow-hidden rounded-t-lg"
                 style={{ backgroundColor: "#a8e6cf" }}
               >
-                <div className="relative w-14 h-14 transition-transform duration-300 group-hover:scale-110">
+                <div className="relative h-14 w-14 transition-transform duration-300 group-hover:scale-110">
                   <GithubLogoIcon
                     size={56}
                     color="var(--bg)"
@@ -702,10 +698,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   />
                 </div>
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -721,7 +717,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     C
@@ -743,20 +739,20 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
             {/* Project Card 1 */}
             <div
-              className="project-card rounded-lg flex flex-col"
+              className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
-              <div className="project-image-container relative overflow-hidden rounded-t-lg aspect-video">
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
                   src="/dollhouse.webp"
                   alt="Placeholder for project 1"
                 />
               </div>
-              <div className="project-details p-6 flex flex-col justify-between w-full">
+              <div className="project-details flex w-full flex-col justify-between p-6">
                 <div>
                   <h3
-                    className="font-semibold mb-2"
+                    className="mb-2 font-semibold"
                     style={{
                       fontSize: "1.25rem",
                     }}
@@ -773,7 +769,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </div>
                 <div className="mt-4">
                   <p
-                    className="font-medium mb-2"
+                    className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
                     Construct 3

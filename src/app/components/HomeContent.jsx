@@ -8,19 +8,19 @@ const HomeContent = ({ children, theme, setTheme }) => {
 
   return (
     <div
-      className="min-h-dvh relative"
+      className="relative min-h-dvh"
       style={{
         backgroundColor: "var(--bg)",
         overflow: "hidden",
       }}
     >
-      <div className="absolute flex flex-row top-4 left-4 z-10">
+      <div className="absolute top-4 left-4 z-10 flex flex-row">
         <ThemeButton theme={theme} setTheme={setTheme} />
         <MuteButton />
       </div>
 
       <div
-        className="absolute flex w-full justify-center bottom-0 font-light mb-2 z-11"
+        className="absolute bottom-0 z-11 mb-2 flex w-full justify-center font-light"
         style={{ fontSize: "0.875rem" }}
       >
         <div className="flex flex-col items-center gap-2">

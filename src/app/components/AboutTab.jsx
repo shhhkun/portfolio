@@ -3,7 +3,7 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
   <div
-    className="w-12 h-1 rounded-full mx-auto"
+    className="mx-auto h-1 w-12 rounded-full"
     style={{ backgroundColor: "var(--text-header)" }}
   />
 );
@@ -69,15 +69,14 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[85vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[85vh] w-full flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
+          className="flex flex-shrink-0 flex-row items-center rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -92,7 +91,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             <HandleBar />
@@ -101,16 +100,16 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="custom-scrollbar-thin flex flex-col flex-1 overflow-y-auto"
+          className="custom-scrollbar-thin flex flex-1 flex-col overflow-y-auto"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* Profile Picture and Name */}
-          <div className="flex flex-col items-center px-12 py-8 flex-shrink-0">
-            <div className="max-w-34 max-h-34 rounded-full overflow-hidden cursor-pointer transition-transform duration-300 transform hover:scale-110">
+          <div className="flex flex-shrink-0 flex-col items-center px-12 py-8">
+            <div className="max-h-34 max-w-34 transform cursor-pointer overflow-hidden rounded-full transition-transform duration-300 hover:scale-110">
               <img
                 src="/pfp.webp"
                 alt="Serjo Barron Profile"
-                className="w-full h-full object-cover"
+                className="h-full w-full object-cover"
               />
             </div>
             <h2
@@ -142,12 +141,12 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
           </div>
 
           <div
-            className="w-full flex-shrink-0 h-[1px]"
+            className="h-[1px] w-full flex-shrink-0"
             style={{ backgroundColor: "var(--border2)" }}
           ></div>
 
           <div
-            className="custom-scrollbar p-8 text-white flex-grow"
+            className="custom-scrollbar flex-grow p-8 text-white"
             style={{ color: "var(--text)" }}
           >
             <div style={{ fontSize: "1rem" }}>
@@ -178,7 +177,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
 
               <p style={{ marginBottom: "0.5rem" }}>I specialize in...</p>
 
-              <ul className="list-disc mt-5 ml-5">
+              <ul className="mt-5 ml-5 list-disc">
                 <li>
                   <span style={{ color: "var(--text3)" }}>
                     <b>Full-Stack Development: </b>
@@ -210,7 +209,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
               EDUCATION
             </h2>
             <blockquote
-              className="p-3 mt-5"
+              className="mt-5 p-3"
               style={{
                 borderLeft: "6px solid var(--border2)",
               }}
@@ -228,7 +227,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
             >
               HOBBIES
             </h2>
-            <ul className="list-disc mt-5 ml-5">
+            <ul className="mt-5 ml-5 list-disc">
               <li>Digital Art, Anime & Comics</li>
               <li>Physical Fitness & Training</li>
               <li>Playing Violin</li>
@@ -242,7 +241,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
               LANGUAGE PROFICIENCY
             </h2>
             <div
-              className="flex flex-col mt-5 gap-y-4"
+              className="mt-5 flex flex-col gap-y-4"
               ref={barRef}
               style={{ color: "var(--text2)" }}
             >
@@ -251,13 +250,13 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">English</span>
                   <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
+                    className="relative h-4 flex-grow overflow-hidden rounded-full"
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className={`bar-english h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                      className={`bar-english absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                         isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
+                      } origin-left transform`}
                       style={{
                         width: isVisible ? "100%" : "0%",
                         backgroundColor: "#a8e6cf",
@@ -275,13 +274,13 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">Tagalog</span>
                   <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
+                    className="relative h-4 flex-grow overflow-hidden rounded-full"
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className={`bar-tagalog h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                      className={`bar-tagalog absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                         isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
+                      } origin-left transform`}
                       style={{
                         width: isVisible ? "50%" : "0%",
                         backgroundColor: "#fdfd96",
@@ -299,13 +298,13 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
                 <div className="flex items-center gap-x-4">
                   <span className="w-24">Japanese</span>
                   <div
-                    className="flex-grow rounded-full h-4 relative overflow-hidden"
+                    className="relative h-4 flex-grow overflow-hidden rounded-full"
                     style={{ backgroundColor: "var(--bar-bg)" }}
                   >
                     <div
-                      className={`bar-japanese h-full absolute left-0 rounded-full transition-all duration-1000 ease-out ${
+                      className={`bar-japanese absolute left-0 h-full rounded-full transition-all duration-1000 ease-out ${
                         isVisible ? "scale-y-125" : ""
-                      } transform origin-left`}
+                      } origin-left transform`}
                       style={{
                         width: isVisible ? "20%" : "0%",
                         backgroundColor: "#ffb3b3",

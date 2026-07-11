@@ -46,7 +46,7 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
     >
       <div
         ref={nodeRef}
-        className="rounded-2xl shadow-2xl overflow-hidden bg-purple-800"
+        className="overflow-hidden rounded-2xl bg-purple-800 shadow-2xl"
         style={{
           zIndex: zIndex,
           width: "400px",
@@ -56,18 +56,18 @@ const DraggableWrapper = ({ onClose, onFocus, onStop, zIndex, position }) => {
         onMouseDown={onFocus}
       >
         {/* Window Header */}
-        <div className="handle p-4 bg-purple-600 text-white cursor-grab flex items-center justify-between">
+        <div className="handle flex cursor-grab items-center justify-between bg-purple-600 p-4 text-white">
           <p className="font-bold">Drag Me!</p>
           <button
             onClick={onClose}
-            className="text-white bg-transparent border-none p-1 leading-none text-xl font-bold rounded-full hover:bg-purple-700 transition-colors"
+            className="rounded-full border-none bg-transparent p-1 text-xl leading-none font-bold text-white transition-colors hover:bg-purple-700"
           >
             &times;
           </button>
         </div>
 
         {/* Main Content Area */}
-        <div className="p-4 flex-grow">
+        <div className="flex-grow p-4">
           <p className="text-white">
             This is the content of the draggable window. This content can be
             hidden when dragged below the viewport.

@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "format": "prettier --write \"src/**/*.{js,jsx,css}\""
   },
   "dependencies": {
     "@phosphor-icons/react": "^2.1.10",
@@ -25,6 +26,8 @@
     "@tailwindcss/postcss": "^4.1.13",
     "eslint": "^9",
     "eslint-config-next": "15.5.2",
+    "prettier": "^3.9.5",
+    "prettier-plugin-tailwindcss": "^0.8.0",
     "tailwindcss": "^4.1.13"
   }
 }

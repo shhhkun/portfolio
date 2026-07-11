@@ -9,11 +9,11 @@ const MuteButton = () => {
 
   return (
     <button
-      className="flex flex-col items-center bg-transparent border-none p-4 rounded-xl cursor-pointer transition-transform duration-300 transform hover:scale-110"
+      className="flex transform cursor-pointer flex-col items-center rounded-xl border-none bg-transparent p-4 transition-transform duration-300 hover:scale-110"
       onClick={toggleMute}
     >
       {isMuted ? (
-        <div className="relative w-8 h-8">
+        <div className="relative h-8 w-8">
           <SpeakerXIcon
             size={32}
             color="var(--text)"
@@ -22,7 +22,7 @@ const MuteButton = () => {
           />
         </div>
       ) : (
-        <div className="relative w-8 h-8">
+        <div className="relative h-8 w-8">
           <SpeakerNoneIcon
             size={32}
             color="var(--text)"

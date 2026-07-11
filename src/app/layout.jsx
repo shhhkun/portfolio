@@ -29,7 +29,7 @@ export const metadata = {
 const Layout = ({ children }) => {
   return (
     <html lang="en">
-      <body className="m-0 p-0 overflow-x-hidden">
+      <body className="m-0 overflow-x-hidden p-0">
         <Analytics />
         <Home children={children} />
       </body>

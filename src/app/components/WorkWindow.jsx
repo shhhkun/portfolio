@@ -154,7 +154,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Window Header */}
           <div
-            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            className="handle flex cursor-grab items-center justify-between px-6 py-2"
             style={{
               fontSize: "1.25rem",
               backgroundColor: "var(--card-header)",
@@ -181,7 +181,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Main Content Area */}
           <div
-            className="custom-scrollbar p-12 flex-grow min-h-0 overflow-y-auto"
+            className="custom-scrollbar min-h-0 flex-grow overflow-y-auto p-12"
             style={{ backgroundColor: "var(--card-bg)" }}
           >
             {/* Intro Card */}
@@ -208,17 +208,17 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
 
             <div
-              className="h-1 my-8"
+              className="my-8 h-1"
               style={{ backgroundColor: "var(--border2)", height: "1px" }}
             ></div>
 
             {/* Development & Tools Section */}
             <div className="skills-section">
-              <div className="skills-container flex flex-col md:flex-row gap-6 md:gap-12">
+              <div className="skills-container flex flex-col gap-6 md:flex-row md:gap-12">
                 {/* Tools Column */}
                 <div className="skill-column flex-1">
                   <h2
-                    className="font-semibold mb-4"
+                    className="mb-4 font-semibold"
                     style={{ fontSize: "1.5rem" }}
                   >
                     TOOLS
@@ -250,7 +250,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 {/* Development Column */}
                 <div className="skill-column flex-1">
                   <h2
-                    className="font-semibold mb-4"
+                    className="mb-4 font-semibold"
                     style={{ fontSize: "1.5rem" }}
                   >
                     DEVELOPMENT
@@ -289,13 +289,13 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </div>
 
             <div
-              className="h-1 my-8"
+              className="my-8 h-1"
               style={{ backgroundColor: "var(--border2)", height: "1px" }}
             ></div>
 
             {/* Projects */}
             <h2
-              className="section-title font-semibold mb-4"
+              className="section-title mb-4 font-semibold"
               style={{
                 fontSize: "1.5rem",
               }}
@@ -306,7 +306,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <div className="projects-section flex flex-col gap-8">
               {/* Project Card 10 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -314,15 +314,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/lofiscape.webp"
                     alt="Placeholder for project 10"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -338,7 +338,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React, Next.js, Tailwind CSS, Youtube Player API, Vercel
@@ -377,7 +377,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 9 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -385,15 +385,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/chromatica.webp"
                     alt="Placeholder for project 9"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -410,7 +410,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React, Next.js, Tailwind CSS, Spotify API & OAuth 2.0,
@@ -458,7 +458,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 8 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -466,15 +466,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/ramentimer.webp"
                     alt="Placeholder for project 8"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -490,7 +490,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React, Next.js, Tailwind CSS, Express.js, PostgreSQL,
@@ -530,7 +530,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 7 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -538,15 +538,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/trashu2.webp"
                     alt="Placeholder for project 7"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -562,7 +562,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React, Vite, Node.js, Electron, TypeScript
@@ -584,7 +584,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 6 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -592,15 +592,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/kept2.webp"
                     alt="Placeholder for project 6"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -617,7 +617,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React, Vite, Firebase/Firestore, Node.js
@@ -647,7 +647,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 5 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -655,15 +655,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/smartmirror.webp"
                     alt="Placeholder for project 5"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -679,7 +679,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       React/React Native, Node.js, Python, Raspberry Pi, BLE,
@@ -710,14 +710,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 4 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
-                  className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image-container relative flex h-64 items-center justify-center rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                   style={{ backgroundColor: "#ffb3b3", width: "420px" }}
                 >
-                  <div className="relative w-16 h-16">
+                  <div className="relative h-16 w-16">
                     <GithubLogoIcon
                       size={64}
                       color="var(--bg)"
@@ -726,10 +726,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     />
                   </div>
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -745,7 +745,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       C
@@ -767,14 +767,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 3 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
-                  className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image-container relative flex h-64 items-center justify-center rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                   style={{ backgroundColor: "#b3e6ff", width: "420px" }}
                 >
-                  <div className="relative w-16 h-16">
+                  <div className="relative h-16 w-16">
                     <GithubLogoIcon
                       size={64}
                       color="var(--bg)"
@@ -783,10 +783,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     />
                   </div>
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -803,7 +803,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       C
@@ -825,14 +825,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 2 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
-                  className="project-image-container relative flex items-center justify-center h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                  className="project-image-container relative flex h-64 items-center justify-center rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                   style={{ backgroundColor: "#a8e6cf", width: "420px" }}
                 >
-                  <div className="relative w-16 h-16">
+                  <div className="relative h-16 w-16">
                     <GithubLogoIcon
                       size={64}
                       color="var(--bg)"
@@ -841,10 +841,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     />
                   </div>
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -860,7 +860,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       C
@@ -882,7 +882,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
               {/* Project Card 1 */}
               <div
-                className="project-card rounded-lg flex flex-row animate-[slideIn_0.6s_ease-out]"
+                className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
                 <div
@@ -890,15 +890,15 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   style={{ backgroundColor: "transparent", width: "420px" }}
                 >
                   <img
-                    className="project-image w-full h-64 object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg rounded-tl-lg rounded-bl-lg"
+                    className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
                     src="/dollhouse.webp"
                     alt="Placeholder for project 1"
                   />
                 </div>
-                <div className="project-details p-6 flex flex-col justify-between w-full">
+                <div className="project-details flex w-full flex-col justify-between p-6">
                   <div>
                     <h3
-                      className="font-semibold mb-2"
+                      className="mb-2 font-semibold"
                       style={{
                         fontSize: "1.375rem",
                       }}
@@ -914,7 +914,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   </div>
                   <div className="mt-4">
                     <p
-                      className="font-medium mb-2"
+                      className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
                       Construct 3

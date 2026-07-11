@@ -104,7 +104,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         >
           {/* Window Header */}
           <div
-            className="handle cursor-grab flex items-center justify-between px-6 py-2"
+            className="handle flex cursor-grab items-center justify-between px-6 py-2"
             style={{
               fontSize: "1.25rem",
               backgroundColor: "var(--card-header)",
@@ -131,10 +131,10 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
           {/* Main Content Area */}
           <div
-            className="justify-center items-center flex flex-col flex-grow min-h-0 p-12"
+            className="flex min-h-0 flex-grow flex-col items-center justify-center p-12"
             style={{ backgroundColor: "var(--card-bg)" }}
           >
-            <h2 className="font-bold mb-4" style={{ fontSize: "1.5rem" }}>
+            <h2 className="mb-4 font-bold" style={{ fontSize: "1.5rem" }}>
               Let’s Connect
             </h2>
 
@@ -144,7 +144,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             </p>
 
             <p
-              className="relative cursor-pointer mt-4"
+              className="relative mt-4 cursor-pointer"
               style={{ fontSize: "1.25rem" }}
               onClick={() => {
                 handleCopyEmail();
@@ -159,7 +159,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               </span>
               {toastMessage && (
                 <span
-                  className="absolute bg-black bg-opacity-75 rounded-md px-2 py-1 -bottom-8 left-1/2 transform -translate-x-1/2"
+                  className="bg-opacity-75 absolute -bottom-8 left-1/2 -translate-x-1/2 transform rounded-md bg-black px-2 py-1"
                   style={{ color: "#ffffff", fontSize: "0.75rem" }}
                 >
                   {toastMessage}
@@ -173,7 +173,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 handleEmailButtonClick();
                 playAudio1(0.2);
               }}
-              className="contact-button cursor-pointer mt-10 px-4 py-2 rounded-md"
+              className="contact-button mt-10 cursor-pointer rounded-md px-4 py-2"
               style={{ fontSize: "1.25rem" }}
             >
               send me an email!

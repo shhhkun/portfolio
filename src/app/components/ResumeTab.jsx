@@ -10,7 +10,7 @@ import { useAudioPlayer } from "./AudioPlayer";
 
 const HandleBar = () => (
   <div
-    className="w-12 h-1 rounded-full mx-auto"
+    className="mx-auto h-1 w-12 rounded-full"
     style={{ backgroundColor: "var(--text-header)" }}
   />
 );
@@ -52,15 +52,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
       {/* Modal Container (Fixed at the bottom, full width) */}
       <div
-        className={`fixed bottom-0 left-0 w-full max-h-[85vh] z-50 
-                   flex flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
+        className={`fixed bottom-0 left-0 z-50 flex max-h-[85vh] w-full flex-col transition-transform duration-500 ease-in-out ${transformClass} overflow-hidden`}
         role="dialog"
         aria-modal="true"
         aria-hidden={!isOpen}
       >
         {/* Header */}
         <div
-          className="flex flex-row items-center rounded-t-lg px-6 py-2 flex-shrink-0"
+          className="flex flex-shrink-0 flex-row items-center rounded-t-lg px-6 py-2"
           style={{
             fontSize: "1.25rem",
             backgroundColor: "var(--card-header)",
@@ -75,7 +74,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               closeModal();
               playAudio2(0.1);
             }}
-            className="absolute left-1/2 transform -translate-x-1/2 cursor-pointer font-bold transition-transform hover:scale-110"
+            className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
           >
             <HandleBar />
@@ -84,12 +83,12 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
         {/* Main Content Area */}
         <div
-          className="custom-scrollbar-thin p-8 overflow-y-auto"
+          className="custom-scrollbar-thin overflow-y-auto p-8"
           style={{ backgroundColor: "var(--card-bg)" }}
         >
           {/* HEADER */}
           <div
-            className="flex justify-between items-center mb-8 p-4 rounded-lg shadow-lg"
+            className="mb-8 flex items-center justify-between rounded-lg p-4 shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <div className="flex flex-col">
@@ -102,14 +101,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                     downloadResume();
                     playAudio1(0.2);
                   }}
-                  className="download-button cursor-pointer flex items-center px-4 py-2 rounded-md"
+                  className="download-button flex cursor-pointer items-center rounded-md px-4 py-2"
                   style={{ fontSize: "1rem" }}
                 >
                   Download PDF
                 </button>
               </div>
               <div
-                className="flex flex-wrap gap-6 mt-4"
+                className="mt-4 flex flex-wrap gap-6"
                 style={{
                   color: "var(--text4)",
                   fontSize: "1rem",
@@ -117,7 +116,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               >
                 <span className="flex items-center">
                   <span className="mr-1">
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <MapPinIcon
                         size={24}
                         weight="fill"
@@ -129,7 +128,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </span>
                 <span className="flex items-center">
                   <span className="mr-1">
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <PhoneIcon
                         size={24}
                         weight="fill"
@@ -141,11 +140,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </span>
                 <a
                   href="mailto:serjobarron@gmail.com"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                  className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <EnvelopeSimpleIcon
                         size={24}
                         weight="fill"
@@ -162,11 +161,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   href="https://linkedin.com/in/serjobarron"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                  className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <LinkedinLogoIcon
                         size={24}
                         weight="fill"
@@ -180,11 +179,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   href="https://github.com/shhhkun"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center no-underline cursor-pointer transition-transform duration-300 transform hover:scale-105"
+                  className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
                   onClick={() => playAudio1(0.2)}
                 >
                   <span className="mr-1">
-                    <div className="relative w-6 h-6">
+                    <div className="relative h-6 w-6">
                       <GithubLogoIcon
                         size={24}
                         weight="fill"
@@ -200,11 +199,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
           {/* EDUCATION */}
           <div
-            className="rounded-lg shadow-lg p-4 mb-8"
+            className="mb-8 rounded-lg p-4 shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
               style={{
                 fontSize: "1.25rem",
               }}
@@ -212,7 +211,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               EDUCATION
             </h2>
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-2">
+              <div className="mt-2 flex items-center justify-between">
                 <span className="font-bold">
                   University of California, Santa Cruz
                 </span>
@@ -248,11 +247,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
           {/* EXPERIENCE */}
           <div
-            className="rounded-lg shadow-lg p-4 mb-8"
+            className="mb-8 rounded-lg p-4 shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
               style={{
                 fontSize: "1.25rem",
               }}
@@ -261,7 +260,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </h2>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">Software Engineer Intern</span>
                 <span className="italic" style={{ color: "var(--text4)" }}>
                   Oct 2025 – Feb 2026
@@ -274,7 +273,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 BotStacks – San Francisco, CA
               </p>
               <ul
-                className="list-disc ml-6 mt-4"
+                className="mt-4 ml-6 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -304,7 +303,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">Computer Science Reader</span>
                 <span className="italic" style={{ color: "var(--text4)" }}>
                   Sep 2023 – Jun 2024
@@ -317,7 +316,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 Baskin School of Engineering – Santa Cruz, CA
               </p>
               <ul
-                className="list-disc ml-6 mt-4"
+                className="mt-4 ml-6 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -332,7 +331,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">Tech Manager</span>
                 <span className="italic" style={{ color: "var(--text4)" }}>
                   Sep 2023 – Jun 2024
@@ -345,7 +344,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 Slug Anime and Manga Association – Santa Cruz, CA
               </p>
               <ul
-                className="list-disc ml-6 mt-4"
+                className="mt-4 ml-6 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -367,11 +366,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
           {/* PROJECTS */}
           <div
-            className="rounded-lg shadow-lg p-4 mb-8"
+            className="mb-8 rounded-lg p-4 shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
               style={{
                 fontSize: "1.25rem",
               }}
@@ -379,7 +378,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               PROJECTS
             </h2>
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">CaseFile</span>
               </div>
               <p
@@ -390,7 +389,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 API, Wikipedia API
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="mt-4 ml-8 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -412,7 +411,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">Chromatica</span>
               </div>
               <p
@@ -422,7 +421,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="mt-4 ml-8 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -468,7 +467,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div> */}
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">SmartMirror</span>
               </div>
               <p
@@ -478,7 +477,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 React/React Native, Node.js, Electron, Python, BLE, Raspberry Pi
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="mt-4 ml-8 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -500,7 +499,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
+              <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">LoFi Scape</span>
               </div>
               <p
@@ -510,7 +509,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 React, Next.js, Youtube Player API
               </p>
               <ul
-                className="list-disc ml-8 mt-4"
+                className="mt-4 ml-8 list-disc"
                 style={{
                   color: "var(--text4)",
                 }}
@@ -532,11 +531,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
 
           {/* SKILLS */}
           <div
-            className="rounded-lg shadow-lg p-4"
+            className="rounded-lg p-4 shadow-lg"
             style={{ backgroundColor: "var(--card-bg2)" }}
           >
             <h2
-              className="font-bold mb-6 border-b-1 border-[#5f5b82] pb-4"
+              className="mb-6 border-b-1 border-[#5f5b82] pb-4 font-bold"
               style={{
                 fontSize: "1.25rem",
               }}
@@ -544,7 +543,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               SKILLS
             </h2>
             <ul
-              className="list-disc ml-6"
+              className="ml-6 list-disc"
               style={{
                 fontSize: "1rem",
                 color: "var(--text4)",

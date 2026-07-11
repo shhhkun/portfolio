@@ -56,7 +56,7 @@ const Waves = ({ style }) => {
       {/* Wave 1: The bottom, darkest gradient layer */}
       <Wave
         fill="url(#gradient-wave1)"
-        className="z-9 absolute bottom-0 h-60 w-full"
+        className="absolute bottom-0 z-9 h-60 w-full"
         options={{
           amplitude: 35,
         }}
@@ -70,7 +70,7 @@ const Waves = ({ style }) => {
       </Wave>
 
       {/* Wave 2: The middle gradient layer */}
-      <div className="z-8 absolute bottom-0 h-80 w-full">
+      <div className="absolute bottom-0 z-8 h-80 w-full">
         <Wave
           fill="url(#gradient-wave2)"
           options={{

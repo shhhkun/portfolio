@@ -112,7 +112,7 @@ const FloatingObject = ({
     <div
       ref={containerRef}
       id="floating-container"
-      className={`absolute left-0 w-full flex justify-start z-12 ${containerBottomClass}`}
+      className={`absolute left-0 z-12 flex w-full justify-start ${containerBottomClass}`}
     >
       <div
         className={`relative ${objectSizeClass}`}
@@ -125,7 +125,7 @@ const FloatingObject = ({
         <img
           src="/bears.png"
           alt="Bear"
-          className="w-full h-full object-contain"
+          className="h-full w-full object-contain"
         />
       </div>
     </div>
