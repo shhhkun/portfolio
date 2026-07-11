@@ -380,13 +380,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             </h2>
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
-                <span className="font-bold">LoFi Scape</span>
+                <span className="font-bold">CaseFile</span>
               </div>
               <p
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Youtube Player API, Vercel
+                React, Next.js, Node.js, TypeScript, Groq API, CourtListener
+                API, Wikipedia API
               </p>
               <ul
                 className="list-disc ml-8 mt-4"
@@ -395,15 +396,17 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built a browser-based ambient mixing tool allowing users to
-                  independently control and blend multiple ambient soundscapes
-                  (MP4/M4A) alongside lofi music streamed via the{" "}
-                  <strong>YouTube iFrame Player API</strong>.
+                  Built an AI-assisted legal case analysis platform that accepts
+                  arbitrary URLs, extracts <strong>legal case metadata</strong>,
+                  and gener- ates structured case overviews through a{" "}
+                  <strong>multi-stage retrieval and LLM pipeline</strong>.
                 </li>
                 <li className="mb-2">
-                  Implemented per-track volume control through React state
-                  management and applied custom theming support for a polished,
-                  distraction-free UI.
+                  Designed a{" "}
+                  <strong>retrieval and evidence synthesis pipeline</strong>{" "}
+                  using metadata extraction, candidate ranking across legal data
+                  sources, and evidence-grounded overview generation while
+                  handling noisy transcripts and long-form source content.
                 </li>
               </ul>
             </div>
@@ -416,8 +419,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Tailwind CSS, Node.js, Prisma & PostgreSQL,
-                Spotify API, Vercel
+                React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
               </p>
               <ul
                 className="list-disc ml-8 mt-4"
@@ -440,7 +442,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               </ul>
             </div>
 
-            <div style={{ fontSize: "1rem" }}>
+            {/* <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
                 <span className="font-bold">Kept</span>
               </div>
@@ -463,7 +465,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   estimated <strong>20% increase</strong> in user engagement.
                 </li>
               </ul>
-            </div>
+            </div> */}
 
             <div style={{ fontSize: "1rem" }}>
               <div className="flex justify-between items-center mt-4">
@@ -493,6 +495,36 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   hardware research, and troubleshot sensor and backend
                   connectivity between the Raspberry Pi and mobile client,
                   achieving <strong>sub-second synchronization</strong>.
+                </li>
+              </ul>
+            </div>
+
+            <div style={{ fontSize: "1rem" }}>
+              <div className="flex justify-between items-center mt-4">
+                <span className="font-bold">LoFi Scape</span>
+              </div>
+              <p
+                className="italic"
+                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
+              >
+                React, Next.js, Youtube Player API
+              </p>
+              <ul
+                className="list-disc ml-8 mt-4"
+                style={{
+                  color: "var(--text4)",
+                }}
+              >
+                <li className="mb-2">
+                  Built a browser-based ambient mixing tool allowing users to
+                  independently control and blend multiple ambient soundscapes
+                  (MP4/M4A) alongside lofi music streamed via the{" "}
+                  <strong>YouTube iFrame Player API</strong>.
+                </li>
+                <li className="mb-2">
+                  Implemented per-track volume control through React state
+                  management and applied custom theming support for a polished,
+                  distraction-free UI.
                 </li>
               </ul>
             </div>
@@ -535,13 +567,13 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   Backend & Databases:
                 </span>{" "}
                 Node.js, Express.js, SQL, PostgreSQL, Firestore, Prisma, REST
-                APIs
+                APIs, LLM APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools & Infrastructure:
                 </span>{" "}
-                Docker, Git, CI/CD, Vercel, Visual Studio, Figma, LaTeX
+                Git, Docker, Linux, Vercel, Figma, LaTeX
               </li>
             </ul>
           </div>
