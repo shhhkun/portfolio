@@ -185,6 +185,60 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
           </h2>
 
           <div className="projects-section flex flex-col gap-8">
+            {/* Project Card 11 */}
+            <div
+              className="project-card flex flex-col rounded-lg"
+              style={{ backgroundColor: "var(--card-bg3)" }}
+            >
+              <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
+                <img
+                  className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
+                  src="/casefile.webp"
+                  alt="Placeholder for project 11"
+                />
+              </div>
+
+              <div className="project-details flex w-full flex-col justify-between p-6">
+                <div>
+                  <h3
+                    className="mb-2 font-semibold"
+                    style={{
+                      fontSize: "1.25rem",
+                    }}
+                  >
+                    LoFi Scape
+                  </h3>
+                  <p className="flex-grow">
+                    Analyze legal content from online sources by extracting{" "}
+                    <strong>case metadata</strong>, retrieving relevant records
+                    from <strong>legal databases</strong>, and generating{" "}
+                    <strong>structured case overviews</strong> through an
+                    AI-powered pipeline.
+                  </p>
+                </div>
+                <div className="mt-4">
+                  <p
+                    className="mb-2 font-medium"
+                    style={{ color: "var(--text4)", fontSize: "0.875rem" }}
+                  >
+                    React, Next.js, Node.js, TypeScript, Groq API, CourtListener
+                    API, Wikipedia API
+                  </p>
+                  <div className="flex flex-wrap gap-3">
+                    <a
+                      href="https://github.com/shhhkun/casefile"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      <GitHubLogo />
+                      GitHub
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+
             {/* Project Card 10 */}
             <div
               className="project-card flex flex-col rounded-lg"
@@ -220,7 +274,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Next.js, Tailwind CSS, Youtube Player API, Vercel
+                    React, Next.js, Youtube Player API
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -289,8 +343,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Next.js, Tailwind CSS, Spotify API & OAuth 2.0,
-                    Prisma & PostgreSQL, Vercel
+                    React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -366,8 +419,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Next.js, Tailwind CSS, Express.js, PostgreSQL,
-                    Node.js, Vercel
+                    React, Next.js, Node.js, Express.js, PostgreSQL
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -435,7 +487,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Vite, Node.js, Electron, TypeScript
+                    React, TypeScript, Vite, Node.js, Electron
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -487,7 +539,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Vite, Firebase/Firestore, Node.js
+                    React, Vite, Node.js, Firebase/Firestore
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
@@ -546,8 +598,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React/React Native, Node.js, Python, Raspberry Pi, BLE,
-                    JavaScript
+                    React/React Native, Node.js, Electron, Python, BLE,
+                    Raspberry Pi
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
