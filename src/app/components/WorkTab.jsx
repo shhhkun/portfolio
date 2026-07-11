@@ -119,14 +119,11 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 <div className="skill-grid flex flex-wrap gap-2">
                   <div className="skill-pill">Git</div>
                   <div className="skill-pill">GitHub</div>
-                  <div className="skill-pill">Agile</div>
-                  <div className="skill-pill">Scrum</div>
-                  <div className="skill-pill">CI/CD</div>
                   <div className="skill-pill">Docker</div>
-                  <div className="skill-pill">Visual Studio</div>
-                  <div className="skill-pill">Figma</div>
+                  <div className="skill-pill">Vercel</div>
                   <div className="skill-pill">Linux</div>
                   <div className="skill-pill">Windows</div>
+                  <div className="skill-pill">Figma</div>
                   <div className="skill-pill">LaTeX</div>
                 </div>
               </div>
@@ -139,24 +136,34 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   DEVELOPMENT
                 </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
+                  {/* Languages */}
                   <div className="skill-pill">JavaScript</div>
                   <div className="skill-pill">TypeScript</div>
-                  <div className="skill-pill">HTML</div>
-                  <div className="skill-pill">CSS</div>
                   <div className="skill-pill">Python</div>
                   <div className="skill-pill">C/C++</div>
-                  <div className="skill-pill">Next.js</div>
+                  <div className="skill-pill">HTML/CSS</div>
+
+                  {/* Frontend */}
                   <div className="skill-pill">React</div>
+                  <div className="skill-pill">Next.js</div>
+                  <div className="skill-pill">Tailwind CSS</div>
+                  <div className="skill-pill">Vite</div>
+
+                  {/* Backend */}
                   <div className="skill-pill">Node.js</div>
                   <div className="skill-pill">Express.js</div>
-                  <div className="skill-pill">Vite</div>
-                  <div className="skill-pill">Electron</div>
+                  <div className="skill-pill">REST APIs</div>
+                  <div className="skill-pill">OAuth</div>
+                  <div className="skill-pill">LLM APIs</div>
+
+                  {/* Databases */}
+                  <div className="skill-pill">PostgreSQL</div>
                   <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">SQL</div>
-                  <div className="skill-pill">PostgreSQL</div>
                   <div className="skill-pill">Firebase/Firestore</div>
-                  <div className="skill-pill">REST APIs</div>
-                  <div className="skill-pill">OAuth 2.0</div>
+
+                  {/* Desktop */}
+                  <div className="skill-pill">Electron</div>
                 </div>
               </div>
             </div>
