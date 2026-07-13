@@ -226,6 +226,15 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
+                      href="https://www.figma.com/design/QbmcxNeZD4xR2BIVhmKK68/CaseFile?node-id=0-1&t=lWEb4JSG6KLiGcSp-1"
+                      target="_blank"
+                      className="pill-button"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      <FigmaLogo />
+                      Figma
+                    </a>
+                    <a
                       href="https://github.com/shhhkun/casefile"
                       target="_blank"
                       className="pill-button"
