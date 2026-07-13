@@ -2,55 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
 @import "tailwindcss";
 
-/* default: light */
-:root {
-  --bg: #f0f4f8;
-  --card-header: #9db3c2;
-  --card-bg: #eaf0f6;
-  --card-bg2: #d3dce5;
-  --card-bg3: #c0c8d1;
-  --bar-bg: #e0e8f0;
-  --text: #2d3e50;
-  --text2: #5f7386;
-  --text3: #34495e;
-  --text4: #6b7786;
-  --text-header: #2d3e50;
-  --border: #c8d1d9;
-  --border2: #adc0d3;
-  --button-bg: #c8d1d9;
-  --button-bg2: #b2b8c0;
-  --button-hover: #5b9cec;
-  --scroll: #a0a0a0;
-  --logo-theme: light;
-  --accent: #60a5fa;
-  --accent2: #a78bfa;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #171717;
-    --card-header: #171717;
-    --card-bg: #132135;
-    --card-bg2: #273b54; /* smaller inner cards */
-    --card-bg3: #161b22; /* project cards */
-    --bar-bg: #273b54;
-    --text: #ffffff;
-    --text2: #d8dade;
-    --text3: #c0faff; /* accent text */
-    --text4: #a0a0a0; /* resume info/italic text */
-    --text-header: #ffffff;
-    --border: #ffffff; /* window borders */
-    --border2: #5f5b82; /* for inside cards */
-    --button-bg: #273b54; /* for contact */
-    --button-bg2: #384158; /* for pill-button */
-    --button-hover: #3679e4; /* for download */
-    --scroll: #273b54;
-    --logo-theme: dark;
-    --accent: #3b82f6;
-    --accent2: #7c3aed;
-  }
-}
-
+:root,
 html.light {
   --bg: #f0f4f8;
   --card-header: #9db3c2;
@@ -95,6 +47,31 @@ html.dark {
   --logo-theme: dark;
   --accent: #3b82f6;
   --accent2: #7c3aed;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #171717;
+    --card-header: #171717;
+    --card-bg: #132135;
+    --card-bg2: #273b54; /* smaller inner cards */
+    --card-bg3: #161b22; /* project cards */
+    --bar-bg: #273b54;
+    --text: #ffffff;
+    --text2: #d8dade;
+    --text3: #c0faff; /* accent text */
+    --text4: #a0a0a0; /* resume info/italic text */
+    --text-header: #ffffff;
+    --border: #ffffff; /* window borders */
+    --border2: #5f5b82; /* for inside cards */
+    --button-bg: #273b54; /* for contact */
+    --button-bg2: #384158; /* for pill-button */
+    --button-hover: #3679e4; /* for download */
+    --scroll: #273b54;
+    --logo-theme: dark;
+    --accent: #3b82f6;
+    --accent2: #7c3aed;
+  }
 }
 
 body {
