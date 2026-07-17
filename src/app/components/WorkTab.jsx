@@ -226,6 +226,14 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
+                      href="https://casefile-demo.vercel.app"
+                      target="_blank"
+                      className="pill-button pill-button--accent"
+                      onClick={() => playAudio1(0.2)}
+                    >
+                      Live Demo
+                    </a>
+                    <a
                       href="https://www.figma.com/design/QbmcxNeZD4xR2BIVhmKK68/CaseFile?node-id=0-1&t=lWEb4JSG6KLiGcSp-1"
                       target="_blank"
                       className="pill-button"
