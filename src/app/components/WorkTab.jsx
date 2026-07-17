@@ -206,7 +206,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       fontSize: "1.25rem",
                     }}
                   >
-                    LoFi Scape
+                    CaseFile
                   </h3>
                   <p className="flex-grow">
                     Analyze legal content from online sources by extracting{" "}
