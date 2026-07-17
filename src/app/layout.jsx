@@ -1,5 +1,6 @@
 import React from "react";
 import { Analytics } from "@vercel/analytics/next";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import "./globals.css";
 
 import Home from "./components/Home";
@@ -31,6 +32,7 @@ const Layout = ({ children }) => {
     <html lang="en">
       <body className="m-0 overflow-x-hidden p-0">
         <Analytics />
+        <SpeedInsights />
         <Home children={children} />
       </body>
     </html>
