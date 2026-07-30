@@ -23,7 +23,13 @@ const skillGroups = {
   "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth", "LLM APIs"],
 
   // Group 5: Databases
-  "group-database": ["SQL", "PostgreSQL", "Prisma", "Firebase/Firestore"],
+  "group-database": [
+    "SQL",
+    "PostgreSQL",
+    "Redis",
+    "Prisma",
+    "Firebase/Firestore",
+  ],
 
   // Group 6: Dev Tools & Deployment
   "group-dev": ["Git", "GitHub", "Docker", "Vercel", "Figma"],
@@ -259,9 +265,10 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
 
                       // Databases
                       "PostgreSQL",
-                      "Prisma",
                       "SQL",
-                      "Firebase/Firestore",
+                      "Prisma",
+                      "Redis",
+                      //"Firebase/Firestore",
 
                       // Desktop
                       "Electron",
@@ -332,8 +339,8 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
-                      React, Next.js, Node.js, TypeScript, Groq API,
-                      CourtListener API, Wikipedia API
+                      React, Next.js, Node.js, TypeScript, Redis, Groq API,
+                      CourtListener API
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a

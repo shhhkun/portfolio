@@ -158,9 +158,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
 
                   {/* Databases */}
                   <div className="skill-pill">PostgreSQL</div>
-                  <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">SQL</div>
-                  <div className="skill-pill">Firebase/Firestore</div>
+                  <div className="skill-pill">Prisma</div>
+                  <div className="skill-pill">Redis</div>
+                  {/* <div className="skill-pill">Firebase/Firestore</div> */}
 
                   {/* Desktop */}
                   <div className="skill-pill">Electron</div>
@@ -221,8 +222,8 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     className="mb-2 font-medium"
                     style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                   >
-                    React, Next.js, Node.js, TypeScript, Groq API, CourtListener
-                    API, Wikipedia API
+                    React, Next.js, Node.js, TypeScript, Redis, Groq API,
+                    CourtListener API
                   </p>
                   <div className="flex flex-wrap gap-3">
                     <a
