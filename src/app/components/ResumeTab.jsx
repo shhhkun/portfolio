@@ -385,8 +385,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, Node.js, TypeScript, Groq API, CourtListener
-                API, Wikipedia API
+                React, Next.js, Node.js, TypeScript, Redis, Groq API,
+                CourtListener API
               </p>
               <ul
                 className="mt-4 ml-8 list-disc"
@@ -403,9 +403,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <li className="mb-2">
                   Designed a{" "}
                   <strong>retrieval and evidence synthesis pipeline</strong>{" "}
-                  using metadata extraction, candidate ranking across legal data
-                  sources, and evidence-grounded overview generation while
-                  handling noisy transcripts and long-form source content.
+                  with candidate ranking and{" "}
+                  <strong>TTL-based Redis caching</strong> to reduce redundant
+                  LLM inference and API requests while handling noisy
+                  speech-to-text transcripts.
                 </li>
               </ul>
             </div>
@@ -565,8 +566,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Backend & Databases:
                 </span>{" "}
-                Node.js, Express.js, SQL, PostgreSQL, Firestore, Prisma, REST
-                APIs, LLM APIs
+                Node.js, Express.js, SQL, PostgreSQL, Redis, Prisma, REST APIs,
+                LLM APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
