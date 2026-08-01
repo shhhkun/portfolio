@@ -32,10 +32,17 @@ const skillGroups = {
   ],
 
   // Group 6: Dev Tools & Deployment
-  "group-dev": ["Git", "GitHub", "Docker", "Vercel", "Figma"],
+  "group-dev": [
+    "Git",
+    "Docker",
+    "GitHub Actions",
+    "Playwright",
+    "Vercel",
+    "Figma",
+  ],
 
   // Group 7: Desktop & Systems
-  "group-desktop": ["Linux", "Windows", "Electron", "LaTeX"],
+  "group-desktop": ["Linux", "Electron", "LaTeX"],
 };
 
 // Helper to assign each skill to exactly one group
@@ -215,11 +222,11 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                   <div className="skill-grid flex flex-wrap gap-2">
                     {[
                       "Git",
-                      "GitHub",
                       "Docker",
-                      "Vercel",
+                      "GitHub Actions",
+                      "Playwright",
                       "Linux",
-                      "Windows",
+                      "Vercel",
                       "Figma",
                       "LaTeX",
                     ].map((skill) => (

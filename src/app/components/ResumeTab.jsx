@@ -573,7 +573,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools & Infrastructure:
                 </span>{" "}
-                Git, Docker, Linux, Vercel, Figma, LaTeX
+                Git, Docker, GitHub Actions, Playwright, Linux, Vercel, Figma
               </li>
             </ul>
           </div>

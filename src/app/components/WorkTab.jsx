@@ -118,11 +118,11 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
                   <div className="skill-pill">Git</div>
-                  <div className="skill-pill">GitHub</div>
                   <div className="skill-pill">Docker</div>
-                  <div className="skill-pill">Vercel</div>
+                  <div className="skill-pill">GitHub Actions</div>
+                  <div className="skill-pill">Playwright</div>
                   <div className="skill-pill">Linux</div>
-                  <div className="skill-pill">Windows</div>
+                  <div className="skill-pill">Vercel</div>
                   <div className="skill-pill">Figma</div>
                   <div className="skill-pill">LaTeX</div>
                 </div>
