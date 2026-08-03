@@ -338,7 +338,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                       <strong>case metadata</strong>, retrieving relevant
                       records from <strong>legal databases</strong>, and
                       generating <strong>structured case overviews</strong>{" "}
-                      through an AI-powered pipeline.
+                      through an LLM-powered pipeline.
                     </p>
                   </div>
                   <div className="mt-4">

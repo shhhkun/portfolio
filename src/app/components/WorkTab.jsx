@@ -214,7 +214,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     <strong>case metadata</strong>, retrieving relevant records
                     from <strong>legal databases</strong>, and generating{" "}
                     <strong>structured case overviews</strong> through an
-                    AI-powered pipeline.
+                    LLM-powered pipeline.
                   </p>
                 </div>
                 <div className="mt-4">
