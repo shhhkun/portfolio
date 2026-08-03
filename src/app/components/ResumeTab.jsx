@@ -220,11 +220,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </span>
               </div>
               <p style={{ color: "var(--text4)" }}>
-                Bachelor of Science &mdash; Computer Engineering -{" "}
-                <span className="font-bold" style={{ color: "var(--text)" }}>
-                  GPA:
-                </span>{" "}
-                3.70
+                Bachelor of Science - Computer Engineering |{" "}
+                <span style={{ color: "var(--text)" }}>GPA:</span> 3.70
               </p>
               {/* <ul
                 className="list-disc ml-6 mt-4"
@@ -286,12 +283,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   metrics and improve data visibility
                 </li>
                 <li className="mb-2">
-                  Designed and built the platform onboarding flow across{" "}
-                  <strong>free, pro, and team</strong> account tiers,
-                  implementing <strong>OAuth</strong> authentication,{" "}
-                  <strong>Stripe</strong> payment integration, and tier-specific
-                  user configuration in collaboration with backend engineers on
-                  PostgreSQL-backed features.
+                  Designed and built the platform onboarding flow across free,
+                  pro, and team account tiers, implementing{" "}
+                  <strong>OAuth</strong> authentication, <strong>Stripe</strong>{" "}
+                  payment integration, and tier-specific user configuration in
+                  collaboration with backend engineers on PostgreSQL features.
                 </li>
                 <li className="mb-2">
                   Centralized <strong>50+</strong> internal engineering
@@ -397,13 +393,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <li className="mb-2">
                   Built an AI-assisted legal case analysis platform that accepts
                   arbitrary URLs, extracts <strong>legal case metadata</strong>,
-                  and gener- ates structured case overviews through a{" "}
+                  and generates structured case overviews through a{" "}
                   <strong>multi-stage retrieval and LLM pipeline</strong>.
                 </li>
                 <li className="mb-2">
-                  Designed a{" "}
-                  <strong>retrieval and evidence synthesis pipeline</strong>{" "}
-                  with candidate ranking and{" "}
+                  Designed supporting workflows with{" "}
                   <strong>TTL-based Redis caching</strong> to reduce redundant
                   LLM inference and API requests while handling noisy
                   speech-to-text transcripts.
@@ -428,44 +422,17 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Integrated <strong>Spotify OAuth</strong> to fetch
-                  personalized listening data — top tracks, artists, and
-                  configurable time windows — and extracted dominant colors from
-                  album art using <strong>node-vibrant</strong> to drive dynamic
-                  UI theming.
+                  Integrated <strong>Spotify OAuth</strong> to retrieve
+                  personalized listening data and transform API responses into
+                  dynamic visualizations driven by album work.
                 </li>
                 <li className="mb-2">
-                  Rendered extracted palettes as gradients and animated floating
-                  bubble backgrounds, translating raw API data into a fully
-                  reactive visual experience.
+                  Built a reactive interface that generated dynamic themes from
+                  extracted color palettes, turning listening data into a
+                  interactive visual experience.
                 </li>
               </ul>
             </div>
-
-            {/* <div style={{ fontSize: "1rem" }}>
-              <div className="flex justify-between items-center mt-4">
-                <span className="font-bold">Kept</span>
-              </div>
-              <p
-                className="italic"
-                style={{ fontSize: "0.875rem", color: "var(--text4)" }}
-              >
-                React, Vite, Firebase/Firestore, Node.js
-              </p>
-              <ul
-                className="list-disc ml-8 mt-4"
-                style={{
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  Developed and deployed a full-stack productivity scheduler
-                  with a gamified progression system featuring{" "}
-                  <strong>XP, badges, and animations,</strong> driving an
-                  estimated <strong>20% increase</strong> in user engagement.
-                </li>
-              </ul>
-            </div> */}
 
             <div style={{ fontSize: "1rem" }}>
               <div className="mt-4 flex items-center justify-between">
@@ -494,7 +461,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   the Python BLE script handling all device I/O, conducted
                   hardware research, and troubleshot sensor and backend
                   connectivity between the Raspberry Pi and mobile client,
-                  achieving <strong>sub-second synchronization</strong>.
+                  achieving sub-second synchronization.
                 </li>
               </ul>
             </div>
@@ -516,15 +483,9 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built a browser-based ambient mixing tool allowing users to
-                  independently control and blend multiple ambient soundscapes
-                  (MP4/M4A) alongside lofi music streamed via the{" "}
+                  Built a browser-based ambient mixing tool to blend multiple
+                  ambient soundscapes alongside lofi music streamed through the{" "}
                   <strong>YouTube iFrame Player API</strong>.
-                </li>
-                <li className="mb-2">
-                  Implemented per-track volume control through React state
-                  management and applied custom theming support for a polished,
-                  distraction-free UI.
                 </li>
               </ul>
             </div>
