@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from "react";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const HandleBar = () => (
   <div
     className="mx-auto h-1 w-12 rounded-full"
@@ -107,7 +109,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
           <div className="flex flex-shrink-0 flex-col items-center px-12 py-8">
             <div className="max-h-34 max-w-34 transform cursor-pointer overflow-hidden rounded-full transition-transform duration-300 hover:scale-110">
               <img
-                src="/pfp.webp"
+                src={`${assetBase}/images/pfp.webp`}
                 alt="Serjo Barron Profile"
                 className="h-full w-full object-cover"
               />
