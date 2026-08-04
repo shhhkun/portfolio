@@ -5,6 +5,8 @@ import "./globals.css";
 
 import Home from "./components/Home";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 export const metadata = {
   title: "Serjo's Website",
   description: "My personal website showcasing my latest projects and work.",
@@ -18,7 +20,7 @@ export const metadata = {
     type: "website",
     images: [
       {
-        url: "https://serjo.vercel.app/og-image.png",
+        url: `${assetBase}/images/og-image.png`,
         width: 1200,
         height: 630,
         alt: "Serjo's Website Preview",
