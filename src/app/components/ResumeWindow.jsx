@@ -12,6 +12,8 @@ import {
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
@@ -46,7 +48,7 @@ const ResumeWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   }, []);
 
   const downloadResume = () => {
-    const resumeUrl = "/Serjo_Barron_Resume.pdf";
+    const resumeUrl = `${assetBase}/documents/Serjo_Barron_Resume.pdf`;
     window.open(resumeUrl, "_blank");
   };
 
