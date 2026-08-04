@@ -8,6 +8,8 @@ import GitHubLogo from "../utils/GitHubLogo";
 import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 // SKILL GROUPS
 const skillGroups = {
   // Group 1: Programming Languages
@@ -319,7 +321,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/casefile.webp"
+                    src={`${assetBase}/projects/casefile.webp`}
                     alt="Placeholder for project 11"
                   />
                 </div>
@@ -392,7 +394,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/lofiscape.webp"
+                    src={`${assetBase}/projects/lofiscape.webp`}
                     alt="Placeholder for project 10"
                   />
                 </div>
@@ -463,7 +465,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/chromatica.webp"
+                    src={`${assetBase}/projects/chromatica.webp`}
                     alt="Placeholder for project 9"
                   />
                 </div>
@@ -520,7 +522,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                         GitHub
                       </a>
                       <a
-                        href="/Chromatica_Case_Study.pdf"
+                        href={`${assetBase}/documents/Chromatica_Case_Study.pdf`}
                         target="_blank"
                         className="pill-button pill-button--accent2"
                         onClick={() => playAudio1(0.2)}
@@ -543,7 +545,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/ramentimer.webp"
+                    src={`${assetBase}/projects/ramentimer.webp`}
                     alt="Placeholder for project 8"
                   />
                 </div>
@@ -614,7 +616,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/trashu2.webp"
+                    src={`${assetBase}/projects/trashu2.webp`}
                     alt="Placeholder for project 7"
                   />
                 </div>
@@ -668,7 +670,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/kept2.webp"
+                    src={`${assetBase}/projects/kept2.webp`}
                     alt="Placeholder for project 6"
                   />
                 </div>
@@ -731,7 +733,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/smartmirror.webp"
+                    src={`${assetBase}/projects/smartmirror.webp`}
                     alt="Placeholder for project 5"
                   />
                 </div>
@@ -771,7 +773,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                         GitHub
                       </a>
                       <a
-                        href="/SmartMirror_Design.pdf"
+                        href={`${assetBase}/documents/SmartMirror_Design.pdf`}
                         target="_blank"
                         className="pill-button pill-button--accent2"
                         onClick={() => playAudio1(0.2)}
@@ -966,7 +968,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 >
                   <img
                     className="project-image h-64 w-full rounded-tl-lg rounded-bl-lg object-cover transition-transform duration-300 hover:scale-110 hover:rounded-lg"
-                    src="/dollhouse.webp"
+                    src={`${assetBase}/projects/dollhouse.webp`}
                     alt="Placeholder for project 1"
                   />
                 </div>
