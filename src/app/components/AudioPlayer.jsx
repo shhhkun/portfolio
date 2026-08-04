@@ -8,6 +8,8 @@ import React, {
   useState,
 } from "react";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const AudioPlayerContext = createContext();
 
 // custom hook
@@ -21,11 +23,11 @@ export const AudioPlayerProvider = ({ children }) => {
 
   useEffect(() => {
     audioRefs.current = {
-      audio1: new Audio("/mouseclick.wav"),
-      audio2: new Audio("/pop.mp3"),
-      audio3: new Audio("/unmute.mp3"),
-      audio4: new Audio("/sun.mp3"),
-      audio5: new Audio("/moon.mp3"),
+      audio1: new Audio(`${assetBase}/audio/mouseclick.wav`),
+      audio2: new Audio(`${assetBase}/audio/pop.mp3`),
+      audio3: new Audio(`${assetBase}/audio/unmute.mp3`),
+      audio4: new Audio(`${assetBase}/audio/sun.mp3`),
+      audio5: new Audio(`${assetBase}/audio/moon.mp3`),
     };
   }, []);
 
