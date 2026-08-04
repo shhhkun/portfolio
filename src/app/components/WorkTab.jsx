@@ -4,6 +4,8 @@ import GitHubLogo from "../utils/GitHubLogo";
 import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const HandleBar = () => (
   <div
     className="mx-auto h-1 w-12 rounded-full"
@@ -194,7 +196,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/casefile.webp"
+                  src={`${assetBase}/projects/casefile.webp`}
                   alt="Placeholder for project 11"
                 />
               </div>
@@ -265,7 +267,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/lofiscape.webp"
+                  src={`${assetBase}/projects/lofiscape.webp`}
                   alt="Placeholder for project 10"
                 />
               </div>
@@ -334,7 +336,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/chromatica.webp"
+                  src={`${assetBase}/projects/chromatica.webp`}
                   alt="Placeholder for project 9"
                 />
               </div>
@@ -391,7 +393,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       GitHub
                     </a>
                     <a
-                      href="/Chromatica_Case_Study.pdf"
+                      href={`${assetBase}/documents/Chromatica_Case_Study.pdf`}
                       target="_blank"
                       className="pill-button pill-button--accent2"
                       onClick={() => playAudio1(0.2)}
@@ -411,7 +413,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/ramentimer.webp"
+                  src={`${assetBase}/projects/ramentimer.webp`}
                   alt="Placeholder for project 8"
                 />
               </div>
@@ -479,7 +481,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/trashu.webp"
+                  src={`${assetBase}/projects/trashu.webp`}
                   alt="Placeholder for project 7"
                 />
               </div>
@@ -530,7 +532,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/kept2.webp"
+                  src={`${assetBase}/projects/kept.webp`}
                   alt="Placeholder for project 6"
                 />
               </div>
@@ -590,7 +592,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/smartmirror.webp"
+                  src={`${assetBase}/projects/smartmirror.webp`}
                   alt="Placeholder for project 5"
                 />
               </div>
@@ -630,7 +632,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                       GitHub
                     </a>
                     <a
-                      href="/SmartMirror_Design.pdf"
+                      href={`${assetBase}/documents/SmartMirror_Design.pdf`}
                       target="_blank"
                       className="pill-button pill-button--accent2"
                       onClick={() => playAudio1(0.2)}
@@ -822,7 +824,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
               <div className="project-image-container relative aspect-video overflow-hidden rounded-t-lg">
                 <img
                   className="project-image w-full object-cover transition-transform duration-300 hover:scale-110"
-                  src="/dollhouse.webp"
+                  src={`${assetBase}/projects/dollhouse.webp`}
                   alt="Placeholder for project 1"
                 />
               </div>
