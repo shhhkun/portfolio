@@ -278,24 +278,22 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built reusable UI components and{" "}
-                  <strong>dashboard analytics</strong> features in TypeScript
-                  within a large-scale monorepo, integrating{" "}
-                  <strong>REST APIs</strong> to surface user-specific project
-                  metrics and improve data visibility
+                  Built reusable UI components and analytics dashboards in
+                  TypeScript within a large-scale monorepo, integrating REST
+                  APIs and GraphQL operations to surface user-specific usage
+                  metrics.
                 </li>
                 <li className="mb-2">
-                  Designed and built the platform onboarding flow across free,
+                  Redesigned the platform onboarding experience across free,
                   pro, and team account tiers, implementing{" "}
                   <strong>OAuth</strong> authentication, <strong>Stripe</strong>{" "}
-                  payment integration, and tier-specific user configuration in
-                  collaboration with backend engineers on PostgreSQL features.
+                  payment flows, and tier-specific user provisioning.
                 </li>
                 <li className="mb-2">
-                  Centralized <strong>50+</strong> internal engineering
-                  documents into a <strong>Docker</strong>-deployed BookStack
-                  wiki, improving knowledge sharing and reducing versioning
-                  inconsistencies across teams.
+                  Evaluated approaches for modernizing the platform's fragmented{" "}
+                  <strong>identity and access management</strong> architecture
+                  by researching third-party IAM solutions and developing
+                  proof-of-concept implementations to inform platform direction.
                 </li>
               </ul>
             </div>
@@ -348,15 +346,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Managed AV, streaming, and real-time troubleshooting for
-                  weekly events and SlugCon, supporting{" "}
+                  Managed AV systems, live streaming, and technical operations
+                  for weekly events and SlugCon, supporting{" "}
                   <strong>1,000+ attendees</strong>.
                 </li>
                 <li className="mb-2">
-                  Coordinated technical logistics and setup plans among
-                  officers, volunteers, and event partners, providing live
-                  support and assisting with sponsorship outreach to support
-                  event growth.
+                  Coordinated event logistics across officers, volunteers, and
+                  external partners, contributing to venue planning, sponsorship
+                  outreach, technical setup, and live event execution.
                 </li>
               </ul>
             </div>
@@ -393,16 +390,16 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built an AI-assisted legal case analysis platform that accepts
-                  arbitrary URLs, extracts <strong>legal case metadata</strong>,
-                  and generates structured case overviews through a{" "}
-                  <strong>multi-stage retrieval and LLM pipeline</strong>.
+                  Designed a <strong>multi-stage retrieval pipeline</strong>{" "}
+                  that analyzes arbitrary URLs, extracts structured{" "}
+                  <strong>legal case metadata</strong>, and generates case
+                  summaries through LLM inference and external legal data
+                  sources.
                 </li>
                 <li className="mb-2">
-                  Designed supporting workflows with{" "}
-                  <strong>TTL-based Redis caching</strong> to reduce redundant
-                  LLM inference and API requests while handling noisy
-                  speech-to-text transcripts.
+                  Implemented <strong>TTL-based Redis caching</strong> workflows
+                  to reduce redundant LLM inference and API requests while
+                  improving resilience against noisy speech-to-text transcripts.
                 </li>
               </ul>
             </div>
@@ -425,13 +422,14 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               >
                 <li className="mb-2">
                   Integrated <strong>Spotify OAuth</strong> to retrieve
-                  personalized listening data and transform API responses into
-                  dynamic visualizations driven by album work.
+                  personalized listening data, storing user records and API
+                  credentials through Prisma and PostgreSQL while generating
+                  dynamic visualizations from Spotify responses.
                 </li>
                 <li className="mb-2">
-                  Built a reactive interface that generated dynamic themes from
-                  extracted color palettes, turning listening data into a
-                  interactive visual experience.
+                  Developed a reactive interface that generated dynamic themes
+                  from extracted album artwork color palettes, creating
+                  personalized visual experiences from user listening history.
                 </li>
               </ul>
             </div>
@@ -485,9 +483,9 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built a browser-based ambient mixing tool to blend multiple
-                  ambient soundscapes alongside lofi music streamed through the{" "}
-                  <strong>YouTube iFrame Player API</strong>.
+                  Built a browser-based ambient mixing tool integrating the{" "}
+                  <strong>YouTube iFrame Player API</strong> to synchronize
+                  music playback with customizable ambient soundscapes.
                 </li>
               </ul>
             </div>
@@ -536,7 +534,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools & Infrastructure:
                 </span>{" "}
-                Git, Docker, GitHub Actions, Playwright, Linux, Vercel, Figma
+                Git, Docker, AWS (S3, CloudFront, IAM), GitHub Actions,
+                Playwright, Linux, Vercel, Figma
               </li>
             </ul>
           </div>
