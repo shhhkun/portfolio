@@ -29,6 +29,7 @@ html.light {
   --window-shadow-active: 0 18px 45px -10px rgba(45, 62, 80, 0.4);
   --taskbar-bg: rgba(224, 232, 240, 0.85);
   --taskbar-border: #c8d1d9;
+  --taskbar-accent: #60a5fa;
   --taskbar-hover: rgba(45, 62, 80, 0.08);
   --taskbar-active: rgba(96, 165, 250, 0.25);
 }
@@ -59,8 +60,9 @@ html.dark {
   --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
   --taskbar-bg: rgba(23, 23, 23, 0.85);
   --taskbar-border: #273b54;
+  --taskbar-accent: #da9b68;
   --taskbar-hover: rgba(255, 255, 255, 0.08);
-  --taskbar-active: rgba(59, 130, 246, 0.3);
+  --taskbar-active: rgba(176, 212, 124, 0.3);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -90,6 +92,7 @@ html.dark {
     --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
     --taskbar-bg: rgba(23, 23, 23, 0.85);
     --taskbar-border: #273b54;
+    --taskbar-accent: #da9b68;
     --taskbar-hover: rgba(255, 255, 255, 0.08);
     --taskbar-active: rgba(59, 130, 246, 0.3);
   }
@@ -332,7 +335,7 @@ h6 {
 
 .taskbar-button--active {
   background-color: var(--taskbar-active);
-  box-shadow: inset 0 0 0 1px var(--accent);
+  box-shadow: inset 0 0 0 1px var(--taskbar-accent);
 }
 
 .taskbar-button--minimized {
@@ -355,8 +358,7 @@ h6 {
 
 /* ===== Active window highlight ===== */
 .window-active {
-  outline: 2px solid var(--accent);
-  outline-offset: -2px;
+  outline: transparent;
 }
 
 /* ===== Reduced motion ===== */
