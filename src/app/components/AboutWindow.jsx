@@ -3,6 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Draggable from "react-draggable";
+import { MinusIcon, XIcon } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
@@ -134,28 +135,28 @@ const AboutWindow = ({
             <p className="font-bold" style={{ color: "var(--text-header)" }}>
               about
             </p>
-            <div className="flex items-center gap-2">
+            <div className="flex items-center gap-4">
               <button
                 onClick={() => {
                   onMinimize && onMinimize();
                   playAudio2(0.1);
                 }}
-                className="cursor-pointer pb-1 font-bold transition-transform hover:scale-110"
-                style={{ color: "var(--text-header)", lineHeight: "1" }}
+                className="cursor-pointer transition-transform hover:scale-110"
+                style={{ color: "var(--text-header)" }}
                 aria-label="Minimize window"
               >
-                _
+                <MinusIcon weight="bold" />
               </button>
               <button
                 onClick={() => {
                   onClose();
                   playAudio2(0.1);
                 }}
-                className="cursor-pointer font-bold transition-transform hover:scale-110"
+                className="cursor-pointer transition-transform hover:scale-110"
                 style={{ color: "var(--text-header)" }}
                 aria-label="Close window"
               >
-                x
+                <XIcon weight="bold" />
               </button>
             </div>
           </div>
