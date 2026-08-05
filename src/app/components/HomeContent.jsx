@@ -1,10 +1,20 @@
-import { useAudioPlayer } from "./AudioPlayer";
+"use client";
+
+import React, { useState, useEffect } from "react";
 import MuteButton from "./MuteButton";
 import ThemeButton from "./ThemeButton";
 import Waves from "./Waves";
 
 const HomeContent = ({ children, theme, setTheme }) => {
-  const { playAudio1 } = useAudioPlayer();
+  const [reducedMotion, setReducedMotion] = useState(false);
+
+  useEffect(() => {
+    const mediaQuery = window.matchMedia("(prefers-reduced-motion: reduce)");
+    const updatePref = () => setReducedMotion(mediaQuery.matches);
+    updatePref();
+    mediaQuery.addEventListener("change", updatePref);
+    return () => mediaQuery.removeEventListener("change", updatePref);
+  }, []);
 
   return (
     <div
@@ -19,49 +29,21 @@ const HomeContent = ({ children, theme, setTheme }) => {
         <MuteButton />
       </div>
 
+      {/* Subtle radial glow behind the hero card — helps the 3D tilt read */}
       <div
-        className="absolute bottom-0 z-11 mb-2 flex w-full justify-center font-light"
-        style={{ fontSize: "0.875rem" }}
-      >
-        <div className="flex flex-col items-center gap-2">
-          <div
-            className="flex flex-row gap-4"
-            style={{ color: "var(--accent)" }}
-          >
-            <a
-              href="https://linkedin.com/in/serjobarron"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-              onClick={() => playAudio1(0.2)}
-            >
-              LinkedIn
-            </a>
-            <a
-              href="https://github.com/shhhkun"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-              onClick={() => playAudio1(0.2)}
-            >
-              GitHub
-            </a>
-            <a
-              href="mailto:serjobarron@gmail.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="hover:underline"
-              onClick={() => playAudio1(0.2)}
-            >
-              Email
-            </a>
-          </div>
-          <p>© {new Date().getFullYear()} Serjo Barron</p>
-        </div>
-      </div>
+        className="pointer-events-none absolute inset-0"
+        style={{
+          background:
+            "radial-gradient(ellipse 55% 45% at 50% 42%, var(--hero-glow) 0%, transparent 70%)",
+          opacity: reducedMotion ? 0.35 : 1,
+          transition: "opacity 0.6s ease",
+        }}
+      />
 
-      <Waves style={theme === "dark" ? "sunset" : "starryNight"} />
-      {/* <FloatingObject /> */}
+      <Waves
+        style={theme === "dark" ? "sunset" : "starryNight"}
+        paused={reducedMotion}
+      />
 
       {children}
     </div>

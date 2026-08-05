@@ -1,7 +1,7 @@
 import React from "react";
 import Wave from "react-wavify";
 
-const Waves = ({ style }) => {
+const Waves = ({ style, paused = false }) => {
   // color palettes
   const themes = {
     starryNight: {
@@ -57,6 +57,7 @@ const Waves = ({ style }) => {
       <Wave
         fill="url(#gradient-wave1)"
         className="absolute bottom-0 z-9 h-60 w-full"
+        paused={paused}
         options={{
           amplitude: 35,
         }}
@@ -73,6 +74,7 @@ const Waves = ({ style }) => {
       <div className="absolute bottom-0 z-8 h-80 w-full">
         <Wave
           fill="url(#gradient-wave2)"
+          paused={paused}
           options={{
             amplitude: 15,
           }}
@@ -93,6 +95,7 @@ const Waves = ({ style }) => {
       <div className="absolute bottom-0 h-83 w-full">
         <Wave
           fill={palette.wave3_fill}
+          paused={paused}
           options={{
             amplitude: 25,
           }}

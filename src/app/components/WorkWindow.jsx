@@ -80,7 +80,15 @@ const SkillPill = ({ skill, activeSkill, setActiveSkill }) => {
   );
 };
 
-const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+const WorkWindow = ({
+  onClose,
+  onFocus,
+  onMinimize,
+  onStop,
+  zIndex,
+  position,
+  isActive,
+}) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
   const [activeSkill, setActiveSkill] = useState(null);
@@ -141,7 +149,9 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             stiffness: 260,
             damping: 20,
           }}
-          className="flex flex-col overflow-hidden"
+          className={`flex flex-col overflow-hidden ${
+            isActive ? "window-active" : ""
+          }`}
           style={{
             width: "100%",
             height: "100%",
@@ -149,6 +159,9 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             borderRadius: "10px",
             border: "2px solid var(--border)",
             boxSizing: "border-box",
+            boxShadow: isActive
+              ? "var(--window-shadow-active)"
+              : "var(--window-shadow)",
           }}
         >
           {/* Window Header */}
@@ -166,16 +179,30 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <p className="font-bold" style={{ color: "var(--text-header)" }}>
               projects
             </p>
-            <button
-              onClick={() => {
-                onClose();
-                playAudio2(0.1);
-              }}
-              className="cursor-pointer font-bold transition-transform hover:scale-110"
-              style={{ color: "var(--text-header)" }}
-            >
-              x
-            </button>
+            <div className="flex items-center gap-2">
+              <button
+                onClick={() => {
+                  onMinimize && onMinimize();
+                  playAudio2(0.1);
+                }}
+                className="cursor-pointer pb-1 font-bold transition-transform hover:scale-110"
+                style={{ color: "var(--text-header)", lineHeight: "1" }}
+                aria-label="Minimize window"
+              >
+                _
+              </button>
+              <button
+                onClick={() => {
+                  onClose();
+                  playAudio2(0.1);
+                }}
+                className="cursor-pointer font-bold transition-transform hover:scale-110"
+                style={{ color: "var(--text-header)" }}
+                aria-label="Close window"
+              >
+                x
+              </button>
+            </div>
           </div>
 
           {/* Main Content Area */}
