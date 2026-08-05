@@ -517,7 +517,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Programming Languages:
                 </span>{" "}
-                Python, C, C++, JavaScript, TypeScript, HTML/CSS
+                Python, C, C++, JavaScript, TypeScript, SQL, HTML/CSS
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
@@ -529,8 +529,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Backend & Databases:
                 </span>{" "}
-                Node.js, Express.js, SQL, PostgreSQL, Redis, Prisma, REST APIs,
-                LLM APIs
+                Node.js, Express.js, PostgreSQL, Redis, Prisma, OAuth/JWT, REST
+                APIs, LLM APIs
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
