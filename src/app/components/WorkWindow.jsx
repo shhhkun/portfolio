@@ -37,6 +37,7 @@ const skillGroups = {
   "group-dev": [
     "Git",
     "Docker",
+    "AWS",
     "GitHub Actions",
     "Playwright",
     "Vercel",
@@ -225,6 +226,7 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                     {[
                       "Git",
                       "Docker",
+                      "AWS",
                       "GitHub Actions",
                       "Playwright",
                       "Linux",
