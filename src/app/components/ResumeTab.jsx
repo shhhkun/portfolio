@@ -8,6 +8,8 @@ import {
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const HandleBar = () => (
   <div
     className="mx-auto h-1 w-12 rounded-full"
@@ -34,7 +36,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
   };
 
   const downloadResume = () => {
-    const resumeUrl = "/Serjo_Barron_Resume.pdf";
+    const resumeUrl = `${assetBase}/documents/Serjo_Barron_Resume.pdf`;
     window.open(resumeUrl, "_blank");
   };
 

@@ -5,6 +5,8 @@ import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { useAudioPlayer } from "./AudioPlayer";
 
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
 const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const [isVisible, setIsVisible] = useState(false);
@@ -146,7 +148,7 @@ const AboutWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 }}
               >
                 <img
-                  src="/pfp.webp"
+                  src={`${assetBase}/images/pfp.webp`}
                   alt="Serjo Barron Profile"
                   className="h-full w-full object-cover"
                 />
