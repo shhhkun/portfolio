@@ -3,7 +3,7 @@
 import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Draggable from "react-draggable";
-import { GithubLogoIcon } from "@phosphor-icons/react";
+import { GithubLogoIcon, MinusIcon, XIcon } from "@phosphor-icons/react";
 import GitHubLogo from "../utils/GitHubLogo";
 import FigmaLogo from "../utils/FigmaLogo";
 import { useAudioPlayer } from "./AudioPlayer";
@@ -80,7 +80,15 @@ const SkillPill = ({ skill, activeSkill, setActiveSkill }) => {
   );
 };
 
-const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
+const WorkWindow = ({
+  onClose,
+  onFocus,
+  onMinimize,
+  onStop,
+  zIndex,
+  position,
+  isActive,
+}) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
   const nodeRef = useRef(null);
   const [activeSkill, setActiveSkill] = useState(null);
@@ -98,12 +106,14 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
         const headerHeight = 48;
+        const taskbarHeight =
+          document.querySelector(".taskbar")?.offsetHeight ?? 48;
 
         setBounds({
           top: 0,
           left: 0,
           right: window.innerWidth - windowWidth,
-          bottom: window.innerHeight - headerHeight,
+          bottom: window.innerHeight - headerHeight - taskbarHeight,
         });
       }
     };
@@ -141,7 +151,9 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             stiffness: 260,
             damping: 20,
           }}
-          className="flex flex-col overflow-hidden"
+          className={`flex flex-col overflow-hidden ${
+            isActive ? "window-active" : ""
+          }`}
           style={{
             width: "100%",
             height: "100%",
@@ -149,6 +161,9 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             borderRadius: "10px",
             border: "2px solid var(--border)",
             boxSizing: "border-box",
+            boxShadow: isActive
+              ? "var(--window-shadow-active)"
+              : "var(--window-shadow)",
           }}
         >
           {/* Window Header */}
@@ -166,16 +181,30 @@ const WorkWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <p className="font-bold" style={{ color: "var(--text-header)" }}>
               projects
             </p>
-            <button
-              onClick={() => {
-                onClose();
-                playAudio2(0.1);
-              }}
-              className="cursor-pointer font-bold transition-transform hover:scale-110"
-              style={{ color: "var(--text-header)" }}
-            >
-              x
-            </button>
+            <div className="flex items-center gap-4">
+              <button
+                onClick={() => {
+                  onMinimize && onMinimize();
+                  playAudio2(0.1);
+                }}
+                className="cursor-pointer transition-transform hover:scale-110"
+                style={{ color: "var(--text-header)" }}
+                aria-label="Minimize window"
+              >
+                <MinusIcon weight="bold" />
+              </button>
+              <button
+                onClick={() => {
+                  onClose();
+                  playAudio2(0.1);
+                }}
+                className="cursor-pointer transition-transform hover:scale-110"
+                style={{ color: "var(--text-header)" }}
+                aria-label="Close window"
+              >
+                <XIcon weight="bold" />
+              </button>
+            </div>
           </div>
 
           {/* Main Content Area */}
