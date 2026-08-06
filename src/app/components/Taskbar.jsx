@@ -27,12 +27,20 @@ const Taskbar = ({
 }) => {
   const { playAudio1 } = useAudioPlayer();
   const [time, setTime] = useState("");
+  const [date, setDate] = useState("");
 
   useEffect(() => {
     const updateClock = () => {
       const now = new Date();
       setTime(
         now.toLocaleTimeString([], { hour: "numeric", minute: "2-digit" }),
+      );
+      setDate(
+        now.toLocaleDateString([], {
+          month: "numeric",
+          day: "numeric",
+          year: "numeric",
+        }),
       );
     };
     updateClock();
@@ -66,8 +74,8 @@ const Taskbar = ({
 
   return (
     <div className="taskbar">
-      {/* Socials */}
-      <div className="taskbar-section">
+      {/* Socials (left) */}
+      <div className="taskbar-section taskbar-section--left">
         {socials.map(({ label, href, icon: Icon }) => (
           <a
             key={label}
@@ -83,8 +91,8 @@ const Taskbar = ({
         ))}
       </div>
 
-      {/* Open windows */}
-      <div className="taskbar-section">
+      {/* Open windows (center) */}
+      <div className="taskbar-section taskbar-section--center">
         {openWindows.map(([id, { label, icon: Icon }]) => {
           const win = windows[id];
           const isActive = id === activeWindowId;
@@ -115,12 +123,15 @@ const Taskbar = ({
         })}
       </div>
 
-      {/* Clock + copyright */}
-      <div className="taskbar-section">
+      {/* Clock + copyright (right) */}
+      <div className="taskbar-section taskbar-section--right">
         <span className="taskbar-copyright">
           © {new Date().getFullYear()} Serjo Barron
         </span>
-        <span className="taskbar-clock">{time}</span>
+        <div className="taskbar-clock">
+          <span className="taskbar-clock-time">{time}</span>
+          <span className="taskbar-clock-date">{date}</span>
+        </div>
       </div>
     </div>
   );
