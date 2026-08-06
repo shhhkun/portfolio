@@ -35,12 +35,14 @@ const AboutWindow = ({
         const windowWidth = nodeRef.current.offsetWidth;
         const windowHeight = nodeRef.current.offsetHeight;
         const headerHeight = 48;
+        const taskbarHeight =
+          document.querySelector(".taskbar")?.offsetHeight ?? 48;
 
         setBounds({
           top: 0,
           left: 0,
           right: window.innerWidth - windowWidth,
-          bottom: window.innerHeight - headerHeight,
+          bottom: window.innerHeight - headerHeight - taskbarHeight,
         });
       }
     };
