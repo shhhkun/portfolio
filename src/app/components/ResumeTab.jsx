@@ -279,21 +279,24 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               >
                 <li className="mb-2">
                   Built reusable UI components and analytics dashboards in
-                  TypeScript within a large-scale monorepo, integrating REST
-                  APIs and GraphQL operations to surface user-specific usage
-                  metrics.
+                  TypeScript for a modular AI chatbot platform, integrating
+                  GraphQL operations and REST APIs to surface user-specific
+                  usage metrics.
                 </li>
                 <li className="mb-2">
-                  Redesigned the platform onboarding experience across free,
-                  pro, and team account tiers, implementing{" "}
-                  <strong>OAuth</strong> authentication, <strong>Stripe</strong>{" "}
-                  payment flows, and tier-specific user provisioning.
+                  Redesigned onboarding workflows across free, pro, and team
+                  tiers, streamlining account setup, workspace creation, chatbot
+                  configuration, and tier-specific provisioning while
+                  integrating <strong>OAuth</strong> authentication and{" "}
+                  <strong>Stripe</strong> payments.
                 </li>
                 <li className="mb-2">
-                  Evaluated approaches for modernizing the platform's fragmented{" "}
+                  Designed and prototyped a centralized{" "}
                   <strong>identity and access management</strong> architecture
-                  by researching third-party IAM solutions and developing
-                  proof-of-concept implementations to inform platform direction.
+                  to address fragmented authentication logic across{" "}
+                  <strong>4 core platform services</strong>, evaluating Clerk
+                  and APISIX-based solutions while defining token, session, and
+                  authorization workflows.
                 </li>
               </ul>
             </div>
@@ -398,8 +401,9 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </li>
                 <li className="mb-2">
                   Implemented <strong>TTL-based Redis caching</strong> workflows
-                  to reduce redundant LLM inference and API requests while
-                  improving resilience against noisy speech-to-text transcripts.
+                  that reduced repeat-request latency by up to{" "}
+                  <strong>96%</strong> by eliminating redundant LLM inference
+                  and external API requests.
                 </li>
               </ul>
             </div>
@@ -457,11 +461,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   <strong>cross-platform</strong> compatibility.
                 </li>
                 <li className="mb-2">
-                  Owned <strong>BLE integration</strong> end-to-end — authored
-                  the Python BLE script handling all device I/O, conducted
-                  hardware research, and troubleshot sensor and backend
-                  connectivity between the Raspberry Pi and mobile client,
-                  achieving sub-second synchronization.
+                  Owned <strong>BLE integration</strong> end-to-end by
+                  engineering the Python communication layer, conducting
+                  hardware integration, and synchronizing communication between
+                  the Raspberry Pi and iOS/Android clients.
                 </li>
               </ul>
             </div>
@@ -515,27 +518,26 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Programming Languages:
                 </span>{" "}
-                Python, C, C++, JavaScript, TypeScript, SQL, HTML/CSS
+                Python, TypeScript, JavaScript, C, C++, SQL, HTML/CSS
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Frontend:
+                  Frameworks & Libraries:
                 </span>{" "}
-                React, Next.js, Tailwind CSS, Vite
+                React, Next.js, Node.js, Express.js, Tailwind CSS, Prisma
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Backend & Databases:
+                  Databases & Cloud:
                 </span>{" "}
-                Node.js, Express.js, PostgreSQL, Redis, Prisma, OAuth/JWT, REST
-                APIs, LLM APIs
+                PostgreSQL, Redis, AWS (S3, CloudFront, IAM), Vercel
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Tools & Infrastructure:
+                  Tools & Platforms:
                 </span>{" "}
-                Git, Docker, AWS (S3, CloudFront, IAM), GitHub Actions,
-                Playwright, Linux, Vercel, Figma
+                Git, Docker, GitHub Actions, Linux, Playwright, OAuth, REST
+                APIs, LLM APIs, Figma
               </li>
             </ul>
           </div>
