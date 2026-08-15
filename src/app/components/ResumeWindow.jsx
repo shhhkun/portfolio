@@ -293,21 +293,6 @@ const ResumeWindow = ({
                   Bachelor of Science - Computer Engineering |{" "}
                   <span style={{ color: "var(--text)" }}>GPA:</span> 3.70
                 </p>
-                {/* <ul
-                className="list-disc ml-8 mt-4"
-                style={{
-                  fontSize: "1.25rem",
-                  color: "var(--text4)",
-                }}
-              >
-                <li className="mb-2">
-                  <span className="font-bold" style={{ color: "var(--text)" }}>
-                    Relevant Coursework:
-                  </span>{" "}
-                  Data Structures, Computer Architecture, Systems Programming,
-                  Computer Networks
-                </li>
-              </ul> */}
               </div>
             </div>
 
@@ -359,15 +344,15 @@ const ResumeWindow = ({
                     Redesigned onboarding workflows across free, pro, and team
                     tiers, streamlining account setup, workspace creation,
                     chatbot configuration, and tier-specific provisioning while
-                    integrating <strong>OAuth</strong> authentication and{" "}
+                    integrating <strong>Google OAuth</strong> and{" "}
                     <strong>Stripe</strong> payments.
                   </li>
                   <li className="mb-2">
-                    Designed and prototyped a centralized{" "}
+                    Designed a centralized{" "}
                     <strong>identity and access management</strong> architecture
                     to address fragmented authentication logic across{" "}
-                    <strong>4 core platform services</strong>, evaluating Clerk
-                    and APISIX-based solutions while defining token, session,
+                    <strong>4 core platform services</strong>, developing Clerk
+                    and APISIX proof-of-concepts while defining token, session,
                     and authorization workflows.
                   </li>
                 </ul>
@@ -399,11 +384,15 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Evaluated weekly lab reports and provided technical feedback
-                    for <strong>200+</strong> students on systems-level C
-                    projects spanning abstract data structures, path-finding
-                    algorithms, Huffman coding, and cryptographic
-                    implementations.
+                    Evaluated weekly lab reports for{" "}
+                    <strong>200 + students</strong>, assessing C implementations
+                    and algorithmic reasoning across data structures, sorting,
+                    graph algorithms, Huffman coding, and cryptography.
+                  </li>
+                  <li className="mb-2">
+                    Provided technical feedback while coordinating grading
+                    workflows with faculty, teaching assistants, and fellow
+                    readers.
                   </li>
                 </ul>
               </div>
@@ -417,7 +406,7 @@ const ResumeWindow = ({
                     className="italic"
                     style={{ fontSize: "1.25rem", color: "var(--text4)" }}
                   >
-                    Sep 2023 – Jun 2024
+                    Jun 2023 – Jun 2024
                   </span>
                 </div>
                 <p
@@ -434,15 +423,17 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Managed AV systems, live streaming, and technical operations
-                    for weekly events and SlugCon, supporting{" "}
-                    <strong>1,000+ attendees</strong>.
+                    Maintained and optimized the organization's
+                    TypeScript/Next.js website, managing artist, vendor, and
+                    sponsor assets while improving application reliability,
+                    gallery presentation, and event information delivery.
                   </li>
                   <li className="mb-2">
-                    Coordinated event logistics across officers, volunteers, and
-                    external partners, contributing to venue planning,
-                    sponsorship outreach, technical setup, and live event
-                    execution.
+                    Coordinated event logistics, venue planning, and sponsorship
+                    outreach while managing AV systems, live streaming, and
+                    technical operations for the organization's annual SlugCon
+                    anime convention, supporting{" "}
+                    <strong>1,000+ attendees</strong>.
                   </li>
                 </ul>
               </div>
@@ -461,6 +452,7 @@ const ResumeWindow = ({
               >
                 PROJECTS
               </h2>
+
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
@@ -471,8 +463,8 @@ const ResumeWindow = ({
                   className="italic"
                   style={{ fontSize: "1.125rem", color: "var(--text4)" }}
                 >
-                  React, Next.js, Node.js, TypeScript, Redis, Groq API,
-                  CourtListener API
+                  React, Next.js, TypeScript, PostgreSQL, pgvector, Redis,
+                  Transformers.js
                 </p>
                 <ul
                   className="mt-4 ml-8 list-disc"
@@ -483,19 +475,27 @@ const ResumeWindow = ({
                 >
                   <li className="mb-2">
                     Designed a <strong>multi-stage retrieval pipeline</strong>{" "}
-                    that analyzes arbitrary URLs, extracts structured{" "}
-                    <strong>legal case metadata</strong>, and generates case
-                    summaries through LLM inference and external legal data
-                    sources.
+                    that analyzes arbitrary URLs, extracts structured legal case
+                    metadata, and assembles evidence from CourtListener,
+                    Wikipedia, and semantic retrieval for LLM-powered case
+                    overview generation.
                   </li>
                   <li className="mb-2">
-                    Implemented <strong>TTL-based Redis caching</strong>{" "}
-                    workflows that reduced repeat-request latency by up to{" "}
-                    <strong>96%</strong> by eliminating redundant LLM inference
-                    and external API requests.
+                    Implemented a persistent <strong>RAG knowledge base</strong>{" "}
+                    using Transformers.js embeddings, PostgreSQL, and pgvector,
+                    ingesting and chunking full legal opinions and articles
+                    while reducing repeat-request latency by up to{" "}
+                    <strong>96%</strong> through TTL-based Redis caching.
+                  </li>
+                  <li className="mb-2">
+                    Evaluated retrieval performance across news, articles, and
+                    transcripts, achieving <strong>98.3% Recall@3</strong> and{" "}
+                    <strong>0.931 MRR</strong> over 60 queries spanning 10 legal
+                    cases.
                   </li>
                 </ul>
               </div>
+
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
@@ -506,7 +506,7 @@ const ResumeWindow = ({
                   className="italic"
                   style={{ fontSize: "1.125rem", color: "var(--text4)" }}
                 >
-                  React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
+                  React, Next.js, JavaScript, Prisma, PostgreSQL, Spotify API
                 </p>
                 <ul
                   className="mt-4 ml-8 list-disc"
@@ -522,12 +522,13 @@ const ResumeWindow = ({
                     dynamic visualizations from Spotify responses.
                   </li>
                   <li className="mb-2">
-                    Developed a reactive interface that generated dynamic themes
+                    Developed a reactive interface that generates dynamic themes
                     from extracted album artwork color palettes, creating
                     personalized visual experiences from user listening history.
                   </li>
                 </ul>
               </div>
+
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
@@ -538,8 +539,7 @@ const ResumeWindow = ({
                   className="italic"
                   style={{ fontSize: "1.125rem", color: "var(--text4)" }}
                 >
-                  React/React Native, Node.js, Electron, Python, BLE, Raspberry
-                  Pi
+                  React/React Native, Electron, Python, C++, BLE, Raspberry Pi
                 </p>
                 <ul
                   className="mt-4 ml-8 list-disc"
@@ -549,42 +549,18 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Contributed to a cross-functional team of{" "}
+                    Collaborated with a cross-functional team of{" "}
                     <strong>6 engineers</strong> to design and deploy an IoT
                     smart mirror with a companion React Native mobile app built
-                    for <strong>cross-platform</strong> compatibility.
+                    for cross-platform compatibility.
                   </li>
                   <li className="mb-2">
                     Owned <strong>BLE integration</strong> end-to-end by
-                    engineering the Python communication layer, conducting
-                    hardware integration, and synchronizing communication
-                    between the Raspberry Pi and iOS/Android clients.
-                  </li>
-                </ul>
-              </div>
-              <div>
-                <div className="mt-4 flex items-center justify-between">
-                  <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                    LoFi Scape
-                  </span>
-                </div>
-                <p
-                  className="italic"
-                  style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-                >
-                  React, Next.js, YouTube Player API
-                </p>
-                <ul
-                  className="mt-4 ml-8 list-disc"
-                  style={{
-                    fontSize: "1.25rem",
-                    color: "var(--text4)",
-                  }}
-                >
-                  <li className="mb-2">
-                    Built a browser-based ambient mixing tool integrating the{" "}
-                    <strong>YouTube iFrame Player API</strong> to synchronize
-                    music playback with customizable ambient soundscapes.
+                    engineering a Python GATT peripheral with{" "}
+                    <strong>16 custom characteristics</strong> to map mobile
+                    controls to the Raspberry Pi application, achieving{" "}
+                    <strong>100% communication reliability</strong> across 50+
+                    tests.
                   </li>
                 </ul>
               </div>
@@ -620,7 +596,8 @@ const ResumeWindow = ({
                   <span className="font-bold" style={{ color: "var(--text)" }}>
                     Frameworks & Libraries:
                   </span>{" "}
-                  React, Next.js, Node.js, Express.js, Tailwind CSS, Prisma
+                  React, Next.js, Node.js, Express.js, Tailwind CSS, Prisma,
+                  pgvector, Transformers.js
                 </li>
                 <li className="mb-2">
                   <span className="font-bold" style={{ color: "var(--text)" }}>
@@ -633,7 +610,7 @@ const ResumeWindow = ({
                     Tools & Platforms:
                   </span>{" "}
                   Git, Docker, GitHub Actions, Linux, Playwright, OAuth, REST
-                  APIs, LLM APIs, Figma
+                  APIs, LLM APIs
                 </li>
               </ul>
             </div>
