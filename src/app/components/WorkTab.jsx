@@ -165,7 +165,6 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">Redis</div>
                   <div className="skill-pill">pgvector</div>
-                  {/* <div className="skill-pill">Firebase/Firestore</div> */}
 
                   {/* Desktop */}
                   <div className="skill-pill">Electron</div>
@@ -216,9 +215,9 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <p className="flex-grow">
                     Analyze legal content from online sources by extracting{" "}
                     <strong>case metadata</strong>, retrieving relevant records
-                    from <strong>legal databases</strong>, and generating{" "}
-                    <strong>structured case overviews</strong> through an
-                    LLM-powered pipeline.
+                    and evidence through{" "}
+                    <strong>semantic search and RAG</strong>, and generating
+                    structured case overviews with an LLM-powered pipeline.
                   </p>
                 </div>
                 <div className="mt-4">
@@ -609,10 +608,11 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                     SmartMirror
                   </h3>
                   <p className="flex-grow">
-                    IoT smart mirror and companion mobile app connected via a
-                    Python BLE pipeline authored end-to-end, achieving{" "}
-                    <strong>sub-second synchronization</strong> between a
-                    Raspberry Pi and React Native client.
+                    IoT smart mirror and companion mobile app connected through
+                    a Python <strong>BLE</strong> pipeline, with{" "}
+                    <strong>16 custom GATT characteristics</strong>{" "}
+                    synchronizing configuration controls between a Raspberry Pi
+                    and React Native client.
                   </p>
                 </div>
                 <div className="mt-4">
