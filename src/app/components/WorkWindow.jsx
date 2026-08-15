@@ -373,8 +373,8 @@ const WorkWindow = ({
                       className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
-                      React, Next.js, Node.js, TypeScript, Redis, Groq API,
-                      CourtListener API
+                      React, Next.js, TypeScript, PostgreSQL, pgvector, Redis,
+                      Transformers.js
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a
@@ -517,7 +517,7 @@ const WorkWindow = ({
                       className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
-                      React, Next.js, Node.js, Prisma & PostgreSQL, Spotify API
+                      React, Next.js, Prisma, PostgreSQL, Spotify API
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a
@@ -785,8 +785,8 @@ const WorkWindow = ({
                       className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
-                      React/React Native, Node.js, Electron, Python, BLE,
-                      Raspberry Pi
+                      React/React Native, Electron, Python, C++, BLE, Raspberry
+                      Pi
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a
