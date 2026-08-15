@@ -704,7 +704,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
             </div>
 
             {/* Project Card 3 */}
-            <div
+            {/* <div
               className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
@@ -759,10 +759,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Project Card 2 */}
-            <div
+            {/* <div
               className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
@@ -816,10 +816,10 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* Project Card 1 */}
-            <div
+            {/* <div
               className="project-card flex flex-col rounded-lg"
               style={{ backgroundColor: "var(--card-bg3)" }}
             >
@@ -868,7 +868,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>

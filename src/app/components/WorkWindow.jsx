@@ -869,7 +869,7 @@ const WorkWindow = ({
               </div>
 
               {/* Project Card 3 */}
-              <div
+              {/* <div
                 className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
@@ -924,10 +924,10 @@ const WorkWindow = ({
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Project Card 2 */}
-              <div
+              {/* <div
                 className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
@@ -981,10 +981,10 @@ const WorkWindow = ({
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
 
               {/* Project Card 1 */}
-              <div
+              {/* <div
                 className="project-card flex animate-[slideIn_0.6s_ease-out] flex-row rounded-lg"
                 style={{ backgroundColor: "var(--card-bg3)" }}
               >
@@ -1035,7 +1035,7 @@ const WorkWindow = ({
                     </div>
                   </div>
                 </div>
-              </div>
+              </div> */}
             </div>
           </div>
         </motion.div>
