@@ -164,6 +164,7 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <div className="skill-pill">SQL</div>
                   <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">Redis</div>
+                  <div className="skill-pill">pgvector</div>
                   {/* <div className="skill-pill">Firebase/Firestore</div> */}
 
                   {/* Desktop */}

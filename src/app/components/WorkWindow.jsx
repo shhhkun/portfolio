@@ -25,13 +25,7 @@ const skillGroups = {
   "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth", "LLM APIs"],
 
   // Group 5: Databases
-  "group-database": [
-    "SQL",
-    "PostgreSQL",
-    "Redis",
-    "Prisma",
-    "Firebase/Firestore",
-  ],
+  "group-database": ["SQL", "PostgreSQL", "Redis", "Prisma", "pgvector"],
 
   // Group 6: Dev Tools & Deployment
   "group-dev": [
@@ -308,7 +302,7 @@ const WorkWindow = ({
                       "SQL",
                       "Prisma",
                       "Redis",
-                      //"Firebase/Firestore",
+                      "pgvector",
 
                       // Desktop
                       "Electron",
