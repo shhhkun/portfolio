@@ -8,14 +8,16 @@ import Home from "./components/Home";
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 
 export const metadata = {
-  title: "Serjo's Website",
-  description: "My personal website showcasing my latest projects and work.",
+  title: "Serjo Barron | Software Engineer",
+  description:
+    "My portfolio showcasing software projects, technical experience, and development work.",
   icons: {
     icon: "/favicon.ico",
   },
   openGraph: {
-    title: "Serjo's Website",
-    description: "My personal website showcasing my latest projects and work.",
+    title: "Serjo Barron | Software Engineer",
+    description:
+      "My portfolio showcasing software projects, technical experience, and development work.",
     url: "https://serjo.vercel.app/",
     type: "website",
     images: [
