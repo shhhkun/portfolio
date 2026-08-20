@@ -262,10 +262,11 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Built reusable UI components and analytics dashboards in
-                  TypeScript for a modular AI chatbot platform, integrating
-                  GraphQL operations and REST APIs to surface user-specific
-                  usage metrics.
+                  Built reusable UI components and dashboard interfaces in
+                  TypeScript for an AI chatbot platform, integrating GraphQL and
+                  REST APIs while developing against its{" "}
+                  <strong>LangChain runner</strong> for LLM execution and usage
+                  analytics.
                 </li>
                 <li className="mb-2">
                   Redesigned onboarding workflows across free, pro, and team
@@ -312,8 +313,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </li>
                 <li className="mb-2">
                   Provided technical feedback while coordinating grading
-                  workflows with faculty, teaching assistants, and fellow
-                  readers.
+                  workflows with faculty, teaching assistants, and readers.
                 </li>
               </ul>
             </div>
@@ -338,10 +338,10 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Maintained and optimized the organization's TypeScript/Next.js
-                  website, managing artist, vendor, and sponsor assets while
-                  improving application reliability, gallery presentation, and
-                  event information delivery.
+                  Maintained and optimized a TypeScript/Next.js website,
+                  improving application reliability, frontend presentation, and
+                  performance while managing artist, vendor, and sponsor content
+                  for recurring events.
                 </li>
                 <li className="mb-2">
                   Coordinated event logistics, venue planning, and sponsorship
@@ -376,8 +376,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 className="italic"
                 style={{ fontSize: "0.875rem", color: "var(--text4)" }}
               >
-                React, Next.js, TypeScript, PostgreSQL, pgvector, Redis,
-                Transformers.js
+                Python, FastAPI, React, Next.js, TypeScript, PyTorch,
+                PostgreSQL, pgvector, Redis
               </p>
               <ul
                 className="mt-4 ml-8 list-disc"
@@ -386,7 +386,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Designed a <strong>multi-stage retrieval pipeline</strong>{" "}
+                  Designed a <strong>Python/FastAPI retrieval pipeline</strong>{" "}
                   that analyzes arbitrary URLs, extracts structured legal case
                   metadata, and assembles evidence from CourtListener,
                   Wikipedia, and semantic retrieval for LLM-powered case
@@ -394,10 +394,9 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 </li>
                 <li className="mb-2">
                   Implemented a persistent <strong>RAG knowledge base</strong>{" "}
-                  using Transformers.js embeddings, PostgreSQL, and pgvector,
-                  ingesting and chunking full legal opinions and articles while
-                  reducing repeat-request latency by up to <strong>96%</strong>{" "}
-                  through TTL-based Redis caching.
+                  with PostgreSQL and pgvector, embedding chunked legal
+                  documents while reducing repeat-request latency by up to{" "}
+                  <strong>96%</strong> through TTL-based Redis caching.
                 </li>
                 <li className="mb-2">
                   Evaluated retrieval performance across news, articles, and
@@ -456,15 +455,15 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
               >
                 <li className="mb-2">
                   Collaborated with a cross-functional team of{" "}
-                  <strong>6 engineers</strong> to design and deploy an IoT smart
-                  mirror with a companion React Native mobile app built for
-                  cross-platform compatibility.
+                  <strong>6 engineers</strong> to design and deploy an embedded
+                  IoT smart mirror with a companion React Native mobile app for
+                  managing user profiles and display settings.
                 </li>
                 <li className="mb-2">
                   Owned <strong>BLE integration</strong> end-to-end by
-                  engineering a Python GATT peripheral with{" "}
-                  <strong>16 custom characteristics</strong> to map mobile
-                  controls to the Raspberry Pi application, achieving{" "}
+                  engineering a Python GATT peripheral with 16 custom
+                  characteristics to map mobile controls to the Raspberry Pi
+                  application, achieving{" "}
                   <strong>100% communication reliability</strong> across 50+
                   tests.
                 </li>
@@ -494,7 +493,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             >
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
-                  Programming Languages:
+                  Languages:
                 </span>{" "}
                 Python, TypeScript, JavaScript, C, C++, SQL, HTML/CSS
               </li>
@@ -502,8 +501,8 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Frameworks & Libraries:
                 </span>{" "}
-                React, Next.js, Node.js, Express.js, Tailwind CSS, Prisma,
-                pgvector, Transformers.js
+                React, Next.js, FastAPI, Node.js, Express.js, PyTorch, Prisma,
+                Tailwind CSS, pgvector
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
