@@ -140,9 +140,9 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                 </h2>
                 <div className="skill-grid flex flex-wrap gap-2">
                   {/* Languages */}
-                  <div className="skill-pill">JavaScript</div>
-                  <div className="skill-pill">TypeScript</div>
                   <div className="skill-pill">Python</div>
+                  <div className="skill-pill">TypeScript</div>
+                  <div className="skill-pill">JavaScript</div>
                   <div className="skill-pill">C/C++</div>
                   <div className="skill-pill">HTML/CSS</div>
 
@@ -150,24 +150,24 @@ const WorkTab = ({ isOpen, windowId, handleClose }) => {
                   <div className="skill-pill">React</div>
                   <div className="skill-pill">Next.js</div>
                   <div className="skill-pill">Tailwind CSS</div>
-                  <div className="skill-pill">Vite</div>
 
                   {/* Backend */}
                   <div className="skill-pill">Node.js</div>
                   <div className="skill-pill">Express.js</div>
+                  <div className="skill-pill">FastAPI</div>
                   <div className="skill-pill">REST APIs</div>
                   <div className="skill-pill">OAuth</div>
-                  <div className="skill-pill">LLM APIs</div>
 
                   {/* Databases */}
                   <div className="skill-pill">PostgreSQL</div>
                   <div className="skill-pill">SQL</div>
                   <div className="skill-pill">Prisma</div>
                   <div className="skill-pill">Redis</div>
-                  <div className="skill-pill">pgvector</div>
 
-                  {/* Desktop */}
-                  <div className="skill-pill">Electron</div>
+                  {/* AI */}
+                  <div className="skill-pill">PyTorch</div>
+                  <div className="skill-pill">LLM APIs</div>
+                  <div className="skill-pill">pgvector</div>
                 </div>
               </div>
             </div>

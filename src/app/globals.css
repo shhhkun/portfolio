@@ -254,7 +254,7 @@ h6 {
   box-shadow: 0 8px 20px -5px rgba(239, 68, 68, 0.3);
 }
 
-/* Group 6: Dev Tools & Deployment */
+/* Group 6: Development & Tools */
 .skill-pill.group-dev.active,
 .skill-pill.group-dev.highlight {
   background: linear-gradient(135deg, #ec4899 0%, #db2777 100%);
@@ -270,6 +270,15 @@ h6 {
   color: white;
   border-color: transparent;
   box-shadow: 0 8px 20px -5px rgba(132, 204, 22, 0.3);
+}
+
+/* Group 8: AI / ML */
+.skill-pill.group-ai.active,
+.skill-pill.group-ai.highlight {
+  background: linear-gradient(135deg, #3b82f6 0%, #2563eb 100%);
+  color: white;
+  border-color: transparent;
+  box-shadow: 0 8px 20px -5px rgba(59, 130, 246, 0.3);
 }
 
 /* Active skill gets extra elevation */

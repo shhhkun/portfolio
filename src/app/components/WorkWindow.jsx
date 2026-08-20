@@ -19,15 +19,15 @@ const skillGroups = {
   "group-web": ["HTML/CSS"],
 
   // Group 3: Frontend
-  "group-frontend": ["React", "Next.js", "Tailwind CSS", "Vite"],
+  "group-frontend": ["React", "Next.js", "Tailwind CSS"],
 
   // Group 4: Backend & API
-  "group-backend": ["Node.js", "Express.js", "REST APIs", "OAuth", "LLM APIs"],
+  "group-backend": ["Node.js", "Express.js", "FastAPI", "REST APIs", "OAuth"],
 
   // Group 5: Databases
-  "group-database": ["SQL", "PostgreSQL", "Redis", "Prisma", "pgvector"],
+  "group-database": ["SQL", "PostgreSQL", "Redis", "Prisma"],
 
-  // Group 6: Dev Tools & Deployment
+  // Group 6: Development & Tools
   "group-dev": [
     "Git",
     "Docker",
@@ -39,7 +39,10 @@ const skillGroups = {
   ],
 
   // Group 7: Desktop & Systems
-  "group-desktop": ["Linux", "Electron", "LaTeX"],
+  "group-desktop": ["Linux", "LaTeX"],
+
+  // Group 8: AI / ML
+  "group-ai": ["PyTorch", "LLM APIs", "pgvector"],
 };
 
 // Helper to assign each skill to exactly one group
@@ -278,9 +281,9 @@ const WorkWindow = ({
                   <div className="skill-grid flex flex-wrap gap-2">
                     {[
                       // Languages
-                      "JavaScript",
-                      "TypeScript",
                       "Python",
+                      "TypeScript",
+                      "JavaScript",
                       "C/C++",
                       "HTML/CSS",
 
@@ -288,24 +291,24 @@ const WorkWindow = ({
                       "React",
                       "Next.js",
                       "Tailwind CSS",
-                      "Vite",
 
                       // Backend
                       "Node.js",
                       "Express.js",
+                      "FastAPI",
                       "REST APIs",
                       "OAuth",
-                      "LLM APIs",
 
                       // Databases
                       "PostgreSQL",
                       "SQL",
                       "Prisma",
                       "Redis",
-                      "pgvector",
 
-                      // Desktop
-                      "Electron",
+                      // AI
+                      "PyTorch",
+                      "LLM APIs",
+                      "pgvector",
                     ].map((skill) => (
                       <SkillPill
                         key={skill}
