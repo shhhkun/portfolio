@@ -373,8 +373,8 @@ const WorkWindow = ({
                       className="mb-2 font-medium"
                       style={{ color: "var(--text4)", fontSize: "0.875rem" }}
                     >
-                      React, Next.js, TypeScript, PostgreSQL, pgvector, Redis,
-                      Transformers.js
+                      Python, FastAPI, React, Next.js, TypeScript, PyTorch,
+                      PostgreSQL, pgvector, Redis
                     </p>
                     <div className="flex flex-wrap gap-3">
                       <a
