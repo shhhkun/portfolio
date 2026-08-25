@@ -4,7 +4,7 @@ import React, { useState, useEffect } from "react";
 import MuteButton from "./MuteButton";
 import ThemeButton from "./ThemeButton";
 import Waves from "./Waves";
-import NightSky from "./stars/NightSky";
+import Sky from "./stars/Sky";
 
 const HomeContent = ({ children, theme, setTheme }) => {
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -30,7 +30,7 @@ const HomeContent = ({ children, theme, setTheme }) => {
         <MuteButton />
       </div>
 
-      <NightSky theme={theme} />
+      <Sky theme={theme} />
 
       <Waves
         style={theme === "dark" ? "sunset" : "starryNight"}
