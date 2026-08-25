@@ -28,9 +28,6 @@ const getDirection = (vx, vy) => {
  * The container is pointer-events-none and aria-hidden, so it never blocks
  * clicks, drags, or keyboard focus on the site above it.
  *
- * NOTE: in tsParticles v4 the drawn color lives under
- * `particles.paint.fill.color` — the legacy `particles.color` key is ignored
- * by the painter.
  *
  * Props:
  *  - color:     single star color shared by all layers — a real CSS color
