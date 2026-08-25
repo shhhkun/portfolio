@@ -20,6 +20,9 @@ export const useAudioPlayer = () => {
 export const AudioPlayerProvider = ({ children }) => {
   const [isMuted, setIsMuted] = useState(false);
   const audioRefs = useRef({});
+  // browsers block audio until the user interacts with the document;
+  // hover events don't count, so track activation ourselves
+  const hasInteractedRef = useRef(false);
 
   useEffect(() => {
     audioRefs.current = {
@@ -28,7 +31,19 @@ export const AudioPlayerProvider = ({ children }) => {
       audio3: new Audio(`${assetBase}/audio/unmute.mp3`),
       audio4: new Audio(`${assetBase}/audio/sun.mp3`),
       audio5: new Audio(`${assetBase}/audio/moon.mp3`),
+      audio6: new Audio(`${assetBase}/audio/windchime.mp3`),
     };
+
+    const markInteracted = () => {
+      hasInteractedRef.current = true;
+    };
+    // any of these count as user activation for autoplay policies
+    const events = ["pointerdown", "keydown", "touchstart", "click"];
+    events.forEach((e) =>
+      window.addEventListener(e, markInteracted, { once: true }),
+    );
+    return () =>
+      events.forEach((e) => window.removeEventListener(e, markInteracted));
   }, []);
 
   // play a specific audio file
@@ -39,6 +54,11 @@ export const AudioPlayerProvider = ({ children }) => {
       return;
     }
 
+    // skip silently before first interaction — play() would just be rejected
+    if (!hasInteractedRef.current) {
+      return;
+    }
+
     const audio = audioRefs.current[audioName];
     if (audio) {
       // set the volume before playing, ensure it's within the valid range
@@ -46,7 +66,10 @@ export const AudioPlayerProvider = ({ children }) => {
       // pause and reset the audio to allow it to play again if it's already playing
       audio.currentTime = 0;
       audio.play().catch((error) => {
-        console.error(`Error playing audio ${audioName}:`, error);
+        // NotAllowedError here is benign (activation expired, etc.) — stay quiet
+        if (error?.name !== "NotAllowedError") {
+          console.error(`Error playing audio ${audioName}:`, error);
+        }
       });
     }
   };
@@ -67,6 +90,7 @@ export const AudioPlayerProvider = ({ children }) => {
     playAudio3: (volume) => playAudio("audio3", volume),
     playAudio4: (volume) => playAudio("audio4", volume),
     playAudio5: (volume) => playAudio("audio5", volume),
+    playAudio6: (volume) => playAudio("audio6", volume),
     isMuted,
     toggleMute,
   };
