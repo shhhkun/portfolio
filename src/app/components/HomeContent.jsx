@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import MuteButton from "./MuteButton";
 import ThemeButton from "./ThemeButton";
 import Waves from "./Waves";
+import NightSky from "./stars/NightSky";
 
 const HomeContent = ({ children, theme, setTheme }) => {
   const [reducedMotion, setReducedMotion] = useState(false);
@@ -29,16 +30,7 @@ const HomeContent = ({ children, theme, setTheme }) => {
         <MuteButton />
       </div>
 
-      {/* Subtle radial glow behind the hero card — helps the 3D tilt read */}
-      <div
-        className="pointer-events-none absolute inset-0"
-        style={{
-          background:
-            "radial-gradient(ellipse 55% 45% at 50% 42%, var(--hero-glow) 0%, transparent 70%)",
-          opacity: reducedMotion ? 0.35 : 1,
-          transition: "opacity 0.6s ease",
-        }}
-      />
+      <NightSky theme={theme} />
 
       <Waves
         style={theme === "dark" ? "sunset" : "starryNight"}
