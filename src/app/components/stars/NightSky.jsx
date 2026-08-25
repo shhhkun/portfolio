@@ -5,21 +5,15 @@ import StarfieldBackground from "./StarfieldBackground";
 import Moon from "./Moon";
 
 /**
- * Specialized starfield tuned for this portfolio's night sky:
- * subtle, slow, mostly-horizontal drift across three depth layers.
- *
- * Star color follows the `theme` prop (an explicit `color` prop overrides).
+ * Specialized night sky: subtle drifting starfield + moon.
+ * Stars are a dark-theme-only feature, so the color is fixed here
+ * (an explicit `color` prop still overrides).
  */
-const STAR_COLORS = {
-  dark: "#ffffff",
-  light: "#000000",
-};
-
-const NightSky = ({ color, theme, ...props }) => {
+const NightSky = ({ color = "#ffffff", ...props }) => {
   return (
     <>
       <StarfieldBackground
-        color={color ?? STAR_COLORS[theme]}
+        color={color}
         layers={3}
         density={125}
         velocityX={0.15}
@@ -37,7 +31,6 @@ const NightSky = ({ color, theme, ...props }) => {
         pulseSpeed={5 * 0.8}
         radialGlowSize={1640}
         radialGlowAlpha={0.22}
-        {...props}
       />
     </>
   );
