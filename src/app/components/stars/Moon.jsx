@@ -1,6 +1,7 @@
 "use client";
 
-import React from "react";
+import React, { useRef } from "react";
+import { useAudioPlayer } from "../AudioPlayer";
 
 /**
  * A simple, controllable moon for the night sky.
@@ -48,6 +49,18 @@ const Moon = ({
   radialX, // optional
   radialY, // optional
 }) => {
+  const { playAudio1, playAudio5 } = useAudioPlayer();
+
+  // cooldown so jittery cursor movement doesn't machine-gun the sfx
+  const HOVER_COOLDOWN_MS = 1500;
+  const lastHoverRef = useRef(0);
+  const handleHover = () => {
+    const now = Date.now();
+    if (now - lastHoverRef.current < HOVER_COOLDOWN_MS) return;
+    lastHoverRef.current = now;
+    playAudio5(0.1);
+  };
+
   const glowX = radialX ?? x;
   const glowY = radialY ?? y;
 
@@ -102,14 +115,11 @@ const Moon = ({
   };
 
   return (
-    <div
-      aria-hidden="true"
-      className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
-    >
+    <div className="pointer-events-none absolute inset-0 z-50 overflow-hidden">
       <style>{MOON_PULSE_KEYFRAMES}</style>
 
-      {/* large ambient moonlight wash */}
-      <div style={radialGlowStyle} />
+      {/* large ambient moonlight wash (decorative) */}
+      <div style={radialGlowStyle} aria-hidden="true" />
 
       {/* moon + border glow, positioned together */}
       <div
@@ -123,7 +133,21 @@ const Moon = ({
         }}
       >
         <div style={borderGlowStyle} />
-        <div style={discStyle} />
+        <button
+          type="button"
+          aria-label="Moon"
+          onClick={() => {
+            handleHover;
+            playAudio1(0.2);
+          }}
+          onMouseEnter={handleHover}
+          className="cursor-pointer transition-[filter] duration-300 hover:drop-shadow-[0_0_8px_var(--glow-color)]"
+          style={{
+            ...discStyle,
+            pointerEvents: "auto",
+            "--glow-color": toRgba(color, 0.9),
+          }}
+        />
       </div>
     </div>
   );
