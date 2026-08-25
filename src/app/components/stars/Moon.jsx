@@ -8,24 +8,24 @@ import React from "react";
  * Layers (back to front):
  *  1. Large radial "moonlight" gradient that washes the surrounding sky
  *     (defaults to being centered on the moon; offsettable via radialX/radialY)
- *  2. A border-hugging glow around the moon disc, with a slow pulse
- *  3. The moon disc itself
+ *  2. A border-hugging glow around the moon disc, with a pulse
+ *  3. The moon itself
  *
  * All positions are percentages of the parent container. The parent must be
- * `relative` (NightSky's root already is). pointer-events are disabled.
+ * `relative`.
  *
  * Props:
- *  - size:             moon diameter in px (default 80)
- *  - x / y:            moon center position, % of container (default 76 / 18)
- *  - color:            base moon surface color, 6-digit hex (default "#d1c19a")
- *  - glow:             base glow color, 6-digit hex (default "#f1efe2")
- *  - moonGlowSize:     border-glow spread in px (default 28)
- *  - moonGlowIntensity:border-glow peak strength 0..1 (default 0.7)
- *  - pulseSpeed:       seconds per glow pulse; 0 disables the pulse (default 5)
- *  - radialGlowSize:   moonlight gradient diameter in px (default 560)
- *  - radialGlowAlpha:  moonlight gradient peak alpha 0..1 (default 0.22)
- *  - radialX / radialY:moonlight gradient center, % of container;
- *                      defaults to the moon's x/y so it stays centered
+ *  - size:              moon diameter in px (default 80)
+ *  - x / y:             moon center position, % of container (default 76 / 18)
+ *  - color:             base moon surface color, 6-digit hex (default "#d1c19a")
+ *  - glow:              base glow color, 6-digit hex (default "#f1efe2")
+ *  - moonGlowSize:      border-glow spread in px (default 28)
+ *  - moonGlowIntensity: border-glow peak strength 0..1 (default 0.7)
+ *  - pulseSpeed:        seconds per glow pulse; 0 disables the pulse (default 5)
+ *  - radialGlowSize:    moonlight gradient diameter in px (default 560)
+ *  - radialGlowAlpha:   moonlight gradient peak alpha 0..1 (default 0.22)
+ *  - radialX / radialY: moonlight gradient center, % of container;
+ *                       defaults to the moon's x/y so it stays centered
  */
 const MOON_PULSE_KEYFRAMES = `
 @keyframes moon-border-pulse {
@@ -35,31 +35,19 @@ const MOON_PULSE_KEYFRAMES = `
 `;
 
 const Moon = ({
-  size,
-  x,
-  y,
-  color,
-  glow,
-  moonGlowSize,
-  moonGlowIntensity,
-  pulseSpeed,
-  radialGlowSize,
-  radialGlowAlpha,
-  radialX,
-  radialY,
+  size = 80,
+  x = 76,
+  y = 18,
+  color = "#d1c19a",
+  glow = "f1efe2",
+  moonGlowSize = 28,
+  moonGlowIntensity = 0.7,
+  pulseSpeed = 5,
+  radialGlowSize = 560,
+  radialGlowAlpha = 0.22,
+  radialX, // optional
+  radialY, // optional
 }) => {
-  // Defaults are owned by NightSky; fall back here only for direct usage.
-  size = size ?? 80;
-  x = x ?? 76;
-  y = y ?? 18;
-  color = color ?? "#f1efe2";
-  glow = glow ?? "#f1efe2";
-  moonGlowSize = moonGlowSize ?? 28;
-  moonGlowIntensity = moonGlowIntensity ?? 0.7;
-  pulseSpeed = pulseSpeed ?? 5;
-  radialGlowSize = radialGlowSize ?? 560;
-  radialGlowAlpha = radialGlowAlpha ?? 0.22;
-
   const glowX = radialX ?? x;
   const glowY = radialY ?? y;
 
