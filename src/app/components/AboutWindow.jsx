@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { MinusIcon, XIcon } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
+import Tooltip from "./Tooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 
@@ -138,28 +139,32 @@ const AboutWindow = ({
               about
             </p>
             <div className="flex items-center gap-4">
-              <button
-                onClick={() => {
-                  onMinimize && onMinimize();
-                  playAudio2(0.1);
-                }}
-                className="cursor-pointer transition-transform hover:scale-110"
-                style={{ color: "var(--text-header)" }}
-                aria-label="Minimize window"
-              >
-                <MinusIcon weight="bold" />
-              </button>
-              <button
-                onClick={() => {
-                  onClose();
-                  playAudio2(0.1);
-                }}
-                className="cursor-pointer transition-transform hover:scale-110"
-                style={{ color: "var(--text-header)" }}
-                aria-label="Close window"
-              >
-                <XIcon weight="bold" />
-              </button>
+              <Tooltip title="Minimize" offsetX={0} offsetY={-40}>
+                <button
+                  onClick={() => {
+                    onMinimize && onMinimize();
+                    playAudio2(0.1);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-110"
+                  style={{ color: "var(--text-header)" }}
+                  aria-label="Minimize window"
+                >
+                  <MinusIcon weight="bold" />
+                </button>
+              </Tooltip>
+              <Tooltip title="Close" offsetX={0} offsetY={-40}>
+                <button
+                  onClick={() => {
+                    onClose();
+                    playAudio2(0.1);
+                  }}
+                  className="cursor-pointer transition-transform hover:scale-110"
+                  style={{ color: "var(--text-header)" }}
+                  aria-label="Close window"
+                >
+                  <XIcon weight="bold" />
+                </button>
+              </Tooltip>
             </div>
           </div>
 
