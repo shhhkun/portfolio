@@ -15,7 +15,7 @@ const NightSky = ({ color = "#ffffff", ...props }) => {
       <StarfieldBackground
         color={color}
         layers={3}
-        density={125}
+        density={100}
         velocityX={0.15}
         velocityY={0.05}
         {...props}
