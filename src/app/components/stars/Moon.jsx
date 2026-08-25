@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { useAudioPlayer } from "../AudioPlayer";
+import Tooltip from "../Tooltip";
 
 /**
  * A simple, controllable moon for the night sky.
@@ -133,18 +134,25 @@ const Moon = ({
         }}
       >
         <div style={borderGlowStyle} />
-        <button
-          type="button"
-          aria-label="Moon"
-          onClick={() => playAudio1(0.2)}
-          onMouseEnter={handleHover}
-          className="cursor-pointer transition-[filter] duration-300 hover:drop-shadow-[0_0_8px_var(--glow-color)]"
-          style={{
-            ...discStyle,
-            pointerEvents: "auto",
-            "--glow-color": toRgba(color, 0.9),
-          }}
-        />
+        <Tooltip
+          title="THE MOON"
+          text="Quiet companion of the night sky."
+          offsetX={0}
+          offsetY={100}
+        >
+          <button
+            type="button"
+            aria-label="Moon"
+            onClick={() => playAudio1(0.2)}
+            onMouseEnter={handleHover}
+            className="cursor-pointer transition-[filter] duration-300 hover:drop-shadow-[0_0_8px_var(--glow-color)]"
+            style={{
+              ...discStyle,
+              pointerEvents: "auto",
+              "--glow-color": toRgba(color, 0.9),
+            }}
+          />
+        </Tooltip>
       </div>
     </div>
   );
