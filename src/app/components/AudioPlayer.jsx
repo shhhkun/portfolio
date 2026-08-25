@@ -66,7 +66,7 @@ export const AudioPlayerProvider = ({ children }) => {
       // pause and reset the audio to allow it to play again if it's already playing
       audio.currentTime = 0;
       audio.play().catch((error) => {
-        // NotAllowedError here is benign (activation expired, etc.) — stay quiet
+        // NotAllowedError here is not harmful (activation expired, etc.)
         if (error?.name !== "NotAllowedError") {
           console.error(`Error playing audio ${audioName}:`, error);
         }
