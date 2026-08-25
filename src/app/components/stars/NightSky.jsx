@@ -15,20 +15,6 @@ const STAR_COLORS = {
   light: "#000000",
 };
 
-// Moon tuning
-const MOON_DEFAULTS = {
-  size: 80, // diameter in px
-  x: 76, // moon center, % of viewport
-  y: 18,
-  color: "#d1c19a", // surface + glow tint (6-digit hex)
-  glow: "#8a8a8a",
-  moonGlowSize: 28, // border-glow spread in px
-  moonGlowIntensity: 0.7, // border-glow strength 0..1
-  pulseSpeed: 5 * 0.8, // seconds per pulse; 0 = static
-  radialGlowSize: 1640, // moonlight wash diameter in px
-  radialGlowAlpha: 0.22, // wash intensity 0..1
-};
-
 const NightSky = ({ color, theme, ...props }) => {
   return (
     <>
@@ -40,7 +26,19 @@ const NightSky = ({ color, theme, ...props }) => {
         velocityY={0.05}
         {...props}
       />
-      <Moon {...MOON_DEFAULTS} />
+      <Moon
+        size={80}
+        x={76}
+        y={18}
+        color={"#d1c19a"}
+        glow={"#8a8a8a"}
+        moonGlowSize={28}
+        moonGlowIntensity={0.7}
+        pulseSpeed={5 * 0.8}
+        radialGlowSize={1640}
+        radialGlowAlpha={0.22}
+        {...props}
+      />
     </>
   );
 };
