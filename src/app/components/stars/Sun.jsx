@@ -49,7 +49,7 @@ const Sun = ({
   radialX, // optional
   radialY, // optional
 }) => {
-  const { playAudio1, playAudio4 } = useAudioPlayer();
+  const { playAudio1, playAudio6 } = useAudioPlayer();
 
   // Defaults are owned by DaySky; fall back here only for direct usage.
   size = size ?? 80;
@@ -70,7 +70,7 @@ const Sun = ({
     const now = Date.now();
     if (now - lastHoverRef.current < HOVER_COOLDOWN_MS) return;
     lastHoverRef.current = now;
-    playAudio4(0.1);
+    playAudio6(0.15);
   };
 
   const glowX = radialX ?? x;

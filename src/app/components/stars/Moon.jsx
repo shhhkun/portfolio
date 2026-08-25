@@ -49,7 +49,7 @@ const Moon = ({
   radialX, // optional
   radialY, // optional
 }) => {
-  const { playAudio1, playAudio5 } = useAudioPlayer();
+  const { playAudio1, playAudio6 } = useAudioPlayer();
 
   // cooldown so jittery cursor movement doesn't machine-gun the sfx
   const HOVER_COOLDOWN_MS = 1500;
@@ -58,7 +58,7 @@ const Moon = ({
     const now = Date.now();
     if (now - lastHoverRef.current < HOVER_COOLDOWN_MS) return;
     lastHoverRef.current = now;
-    playAudio5(0.1);
+    playAudio6(0.15);
   };
 
   const glowX = radialX ?? x;
@@ -136,10 +136,7 @@ const Moon = ({
         <button
           type="button"
           aria-label="Moon"
-          onClick={() => {
-            handleHover;
-            playAudio1(0.2);
-          }}
+          onClick={() => playAudio1(0.2)}
           onMouseEnter={handleHover}
           className="cursor-pointer transition-[filter] duration-300 hover:drop-shadow-[0_0_8px_var(--glow-color)]"
           style={{
