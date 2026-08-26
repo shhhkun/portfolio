@@ -51,10 +51,10 @@ html.dark {
   --border2: #5f5b82; /* for inside cards */
   --button-bg: #273b54; /* for contact */
   --button-bg2: #384158; /* for pill-button */
-  --button-hover: #3679e4; /* for download */
+  --button-hover: #c58d5f; /* for download */
   --scroll: #273b54;
   --logo-theme: dark;
-  --accent: #3b82f6;
+  --accent: #da9b68;
   --accent2: #7c3aed;
   --window-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5);
   --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
@@ -84,10 +84,10 @@ html.dark {
     --border2: #5f5b82; /* for inside cards */
     --button-bg: #273b54; /* for contact */
     --button-bg2: #384158; /* for pill-button */
-    --button-hover: #3679e4; /* for download */
+    --button-hover: #c58d5f; /* for download */
     --scroll: #273b54;
     --logo-theme: dark;
-    --accent: #3b82f6;
+    --accent: #da9b68;
     --accent2: #7c3aed;
     --window-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5);
     --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
