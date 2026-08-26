@@ -5,8 +5,10 @@ import MuteButton from "./MuteButton";
 import ThemeButton from "./ThemeButton";
 import Waves from "./Waves";
 import Sky from "./stars/Sky";
+import { useTheme } from "./ThemeContext";
 
-const HomeContent = ({ children, theme, setTheme }) => {
+const HomeContent = ({ children }) => {
+  const { theme, setTheme } = useTheme();
   const [reducedMotion, setReducedMotion] = useState(false);
 
   useEffect(() => {
