@@ -10,6 +10,19 @@ import {
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./AudioPlayer";
+import ThumbnailTooltip from "./ThumbnailTooltip";
+
+const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
+
+const previewImage = {
+  "about-dark": `${assetBase}/images/about-preview-dark.webp`,
+  "work-dark": `${assetBase}/images/projects-preview-dark.webp`,
+  "resume-dark": `${assetBase}/images/resume-preview-dark.webp`,
+
+  "about-light": `${assetBase}/images/about-preview-light.webp`,
+  "work-light": `${assetBase}/images/projects-preview-light.webp`,
+  "resume-light": `${assetBase}/images/resume-preview-light.webp`,
+};
 
 const windowMeta = {
   about: { label: "about", icon: UserCircleIcon },
@@ -24,6 +37,7 @@ const Taskbar = ({
   handleMinimize,
   handleRestore,
   isMobile,
+  theme,
 }) => {
   const { playAudio1 } = useAudioPlayer();
   const [time, setTime] = useState("");
@@ -97,28 +111,34 @@ const Taskbar = ({
           const win = windows[id];
           const isActive = id === activeWindowId;
           return (
-            <button
+            <ThumbnailTooltip
               key={id}
-              className={`taskbar-button ${
-                isActive ? "taskbar-button--active" : ""
-              } ${win.isMinimized ? "taskbar-button--minimized" : ""}`}
-              onClick={() => {
-                playAudio1(0.2);
-                if (win.isMinimized) {
-                  // restore from taskbar: un-minimize + bring to front
-                  handleRestore(id);
-                } else if (isActive) {
-                  // collapse the active window
-                  handleMinimize(id);
-                } else {
-                  // bring an open window to the front
-                  handleFocus(id);
-                }
-              }}
+              title={label}
+              image={previewImage[`${id}-${theme}`]}
+              offsetY={-200}
             >
-              <Icon size={20} weight="fill" />
-              <span>{label}</span>
-            </button>
+              <button
+                className={`taskbar-button ${
+                  isActive ? "taskbar-button--active" : ""
+                } ${win.isMinimized ? "taskbar-button--minimized" : ""}`}
+                onClick={() => {
+                  playAudio1(0.2);
+                  if (win.isMinimized) {
+                    // restore from taskbar: un-minimize + bring to front
+                    handleRestore(id);
+                  } else if (isActive) {
+                    // collapse the active window
+                    handleMinimize(id);
+                  } else {
+                    // bring an open window to the front
+                    handleFocus(id);
+                  }
+                }}
+              >
+                <Icon size={20} weight="fill" />
+                <span>{label}</span>
+              </button>
+            </ThumbnailTooltip>
           );
         })}
       </div>
