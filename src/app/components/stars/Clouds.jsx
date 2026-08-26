@@ -108,7 +108,8 @@ const Clouds = ({
         if (cloud._x + cloud.w < -cloud.w * 0.2) cloud._x = vw + cloud.w * 0.2;
         if (velocityY !== 0) {
           if (cloud._y > vh + cloud.h) cloud._y = -cloud.h * 1.2;
-          if (cloud._y + cloud.h < -cloud.h * 0.2) cloud._y = vh + cloud.h * 0.2;
+          if (cloud._y + cloud.h < -cloud.h * 0.2)
+            cloud._y = vh + cloud.h * 0.2;
         } else {
           cloud._y = maxY; // hold the assigned band
         }
@@ -124,7 +125,10 @@ const Clouds = ({
   }, [clouds, velocityX, velocityY]);
 
   return (
-    <div aria-hidden="true" className="pointer-events-none absolute inset-0 z-0 overflow-hidden">
+    <div
+      aria-hidden="true"
+      className="pointer-events-none absolute inset-0 z-0 overflow-hidden"
+    >
       {clouds.map((cloud, i) => (
         <div
           key={cloud.id}

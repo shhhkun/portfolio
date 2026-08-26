@@ -38,8 +38,8 @@ const DaySky = (props) => {
         size={80}
         x={76}
         y={18}
-        color={"#f4a940"} //"#ffc259"
-        glow={"#e8933a"} //"#ff9e40"
+        color={"#f4a940"}
+        glow={"#e8933a"}
         sunGlowSize={28}
         sunGlowIntensity={0.8}
         pulseSpeed={5 * 0.8}
