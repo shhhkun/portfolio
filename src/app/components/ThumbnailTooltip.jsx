@@ -11,13 +11,19 @@ import { createPortal } from "react-dom";
  * clipped by the taskbar's overflow and stays put regardless of scaling.
  *
  * Props:
- *  - title:   small heading shown in --tooltip-text
- *  - image:   image src shown below the title
- *  - offsetX: horizontal px offset from the trigger's center (default 0)
- *  - offsetY: vertical px offset from the trigger's top (default 8)
- *  - children:the taskbar button hovered to reveal the preview
+ *  - title:    small heading shown in --tooltip-text
+ *  - image:    image src shown below the title
+ *  - offsetX:  horizontal px offset from the trigger's center (default 0)
+ *  - offsetY:  vertical px offset from the trigger's top (default 8)
+ *  - children: the taskbar button hovered to reveal the preview
  */
-const ThumbnailTooltip = ({ title, image, offsetX = 0, offsetY = 8, children }) => {
+const ThumbnailTooltip = ({
+  title,
+  image,
+  offsetX = 0,
+  offsetY = 8,
+  children,
+}) => {
   const triggerRef = useRef(null);
   const tipRef = useRef(null);
   const [mounted, setMounted] = useState(false);
