@@ -116,7 +116,7 @@ const Moon = ({
   };
 
   return (
-    <div className="pointer-events-none absolute inset-0 z-50 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 z-25 overflow-hidden">
       <style>{MOON_PULSE_KEYFRAMES}</style>
 
       {/* large ambient moonlight wash (decorative) */}

@@ -193,7 +193,7 @@ const Page = () => {
   return (
     <main>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="z-10">
+        <div className="z-50">
           <HomeWindow handleOpen={handleOpen} isMobile={isMobile} />
         </div>
       </div>

@@ -128,8 +128,7 @@ const Sun = ({
   };
 
   return (
-    // z-50: above sky/backdrop layers, below open windows (reserved >= 100)
-    <div className="pointer-events-none absolute inset-0 z-50 overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 z-25 overflow-hidden">
       <style>{SUN_PULSE_KEYFRAMES}</style>
 
       {/* large ambient sunlight wash (decorative) */}
