@@ -10,7 +10,7 @@ import {
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "./audio/AudioPlayer";
 import { TypeAnimation } from "react-type-animation";
-import TiltCard from "./TiltCard";
+import TiltCard from "./desktop/TiltCard";
 
 const HomeWindow = ({ handleOpen, isMobile }) => {
   const { playAudio1 } = useAudioPlayer();

@@ -3,15 +3,15 @@
 import React, { useState, useEffect } from "react";
 import { AnimatePresence } from "framer-motion";
 import HomeWindow from "./components/HomeWindow";
-import AboutWindow from "./components/AboutWindow";
-import WorkWindow from "./components/WorkWindow";
-import ResumeWindow from "./components/ResumeWindow";
+import AboutWindow from "./components/desktop/AboutWindow";
+import WorkWindow from "./components/desktop/WorkWindow";
+import ResumeWindow from "./components/desktop/ResumeWindow";
 
 import AboutTab from "./components/mobile/AboutTab";
 import WorkTab from "./components/mobile/WorkTab";
 import ResumeTab from "./components/mobile/ResumeTab";
 
-import Taskbar from "./components/Taskbar";
+import Taskbar from "./components/desktop/Taskbar";
 import { useTheme } from "./components/ThemeContext";
 
 const useIsMobile = () => {

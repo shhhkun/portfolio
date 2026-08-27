@@ -4,10 +4,10 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { GithubLogoIcon, MinusIcon, XIcon } from "@phosphor-icons/react";
-import GitHubLogo from "../utils/GitHubLogo";
-import FigmaLogo from "../utils/FigmaLogo";
-import { useAudioPlayer } from "./audio/AudioPlayer";
-import Tooltip from "./Tooltip";
+import GitHubLogo from "../../utils/GitHubLogo";
+import FigmaLogo from "../../utils/FigmaLogo";
+import { useAudioPlayer } from "../audio/AudioPlayer";
+import Tooltip from "../Tooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 
