@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import MuteButton from "./MuteButton";
-import ThemeButton from "./ThemeButton";
+import MuteButton from "./buttons/MuteButton";
+import ThemeButton from "./buttons/ThemeButton";
 import Waves from "./animated-bg/Waves";
 import Sky from "./animated-bg/Sky";
 import { useTheme } from "./ThemeContext";
