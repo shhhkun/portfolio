@@ -12,6 +12,15 @@ const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 
 const AudioPlayerContext = createContext();
 
+const volumeControl = {
+  audio1: 0.2,
+  audio2: 0.1,
+  audio3: 0.1,
+  audio4: 0.1,
+  audio5: 0.1,
+  audio6: 0.15,
+};
+
 // custom hook
 export const useAudioPlayer = () => {
   return useContext(AudioPlayerContext);
@@ -78,19 +87,19 @@ export const AudioPlayerProvider = ({ children }) => {
     setIsMuted((prev) => {
       const newMuteState = !prev;
       if (!newMuteState) {
-        playAudio("audio3", 0.1);
+        playAudio("audio3", volumeControl["audio3"]);
       }
       return newMuteState;
     });
   };
 
   const value = {
-    playAudio1: (volume) => playAudio("audio1", volume),
-    playAudio2: (volume) => playAudio("audio2", volume),
-    playAudio3: (volume) => playAudio("audio3", volume),
-    playAudio4: (volume) => playAudio("audio4", volume),
-    playAudio5: (volume) => playAudio("audio5", volume),
-    playAudio6: (volume) => playAudio("audio6", volume),
+    playAudio1: () => playAudio("audio1", volumeControl["audio1"]),
+    playAudio2: () => playAudio("audio2", volumeControl["audio2"]),
+    playAudio3: () => playAudio("audio3", volumeControl["audio3"]),
+    playAudio4: () => playAudio("audio4", volumeControl["audio4"]),
+    playAudio5: () => playAudio("audio5", volumeControl["audio5"]),
+    playAudio6: () => playAudio("audio6", volumeControl["audio6"]),
     isMuted,
     toggleMute,
   };
