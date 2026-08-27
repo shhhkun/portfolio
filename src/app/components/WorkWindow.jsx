@@ -184,7 +184,7 @@ const WorkWindow = ({
                 <button
                   onClick={() => {
                     onMinimize && onMinimize();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -197,7 +197,7 @@ const WorkWindow = ({
                 <button
                   onClick={() => {
                     onClose();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -225,7 +225,7 @@ const WorkWindow = ({
                   href="mailto:serjobarron@gmail.com"
                   className="underline"
                   style={{ color: "var(--text3)" }}
-                  onClick={() => playAudio1(0.2)}
+                  onClick={() => playAudio1()}
                 >
                   serjobarron@gmail.com
                 </a>
@@ -389,7 +389,7 @@ const WorkWindow = ({
                         href="https://casefile-demo.vercel.app"
                         target="_blank"
                         className="pill-button pill-button--accent"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Live Demo
                       </a>
@@ -397,7 +397,7 @@ const WorkWindow = ({
                         href="https://www.figma.com/design/QbmcxNeZD4xR2BIVhmKK68/CaseFile?node-id=0-1&t=lWEb4JSG6KLiGcSp-1"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <FigmaLogo />
                         Figma
@@ -406,7 +406,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/casefile"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -460,7 +460,7 @@ const WorkWindow = ({
                         href="https://lofiscape.vercel.app"
                         target="_blank"
                         className="pill-button pill-button--accent"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Live Demo
                       </a>
@@ -468,7 +468,7 @@ const WorkWindow = ({
                         href="https://www.figma.com/design/gsf9eDUKs9j6X2RoKSLkIu/LofiScape?node-id=0-1&t=o49jsYXOxh7WWJCm-1"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <FigmaLogo />
                         Figma
@@ -477,7 +477,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/lofiscape"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -532,7 +532,7 @@ const WorkWindow = ({
                         href="https://chromatica-music.vercel.app"
                         target="_blank"
                         className="pill-button pill-button--accent"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Live Demo
                       </a>
@@ -540,7 +540,7 @@ const WorkWindow = ({
                         href="https://www.figma.com/design/xGFkHzn1fG5u96a8Hh1O0V/Vibe-Palette?node-id=0-1&t=YqybfchkBCkxq6n2-1"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <FigmaLogo />
                         Figma
@@ -549,7 +549,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/chromatica"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -558,7 +558,7 @@ const WorkWindow = ({
                         href={`${assetBase}/documents/Chromatica_Case_Study.pdf`}
                         target="_blank"
                         className="pill-button pill-button--accent2"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Write-Up
                       </a>
@@ -611,7 +611,7 @@ const WorkWindow = ({
                         href="https://ramentimer.vercel.app"
                         target="_blank"
                         className="pill-button pill-button--accent"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Live Demo
                       </a>
@@ -619,7 +619,7 @@ const WorkWindow = ({
                         href="https://www.figma.com/design/P67iWewggnoDCZJU85Jkxq/Timer?node-id=0-1&t=jq6jeZ1cptalgGGs-1"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <FigmaLogo />
                         Figma
@@ -628,7 +628,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/ramentimer"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -682,7 +682,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/Trashu"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -737,7 +737,7 @@ const WorkWindow = ({
                         href="https://productivityapp-eb15a.web.app/"
                         target="_blank"
                         className="pill-button pill-button--accent"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Live Demo
                       </a>
@@ -745,7 +745,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/Kept"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub Repo
@@ -801,7 +801,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/SmartMirror"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -810,7 +810,7 @@ const WorkWindow = ({
                         href={`${assetBase}/documents/SmartMirror_Design.pdf`}
                         target="_blank"
                         className="pill-button pill-button--accent2"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         Write-Up
                       </a>
@@ -866,7 +866,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/CSE130/tree/main/asgn4"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -924,7 +924,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn5"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -981,7 +981,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/CSE13S-Projects/tree/main/asgn6"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub
@@ -1035,7 +1035,7 @@ const WorkWindow = ({
                         href="https://github.com/shhhkun/dollhouse"
                         target="_blank"
                         className="pill-button"
-                        onClick={() => playAudio1(0.2)}
+                        onClick={() => playAudio1()}
                       >
                         <GitHubLogo />
                         GitHub

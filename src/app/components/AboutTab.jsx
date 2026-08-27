@@ -64,7 +64,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
         className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
         onClick={() => {
           closeModal();
-          playAudio2(0.1);
+          playAudio2();
         }}
         aria-hidden={!isOpen}
       />
@@ -91,7 +91,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
           <button
             onClick={() => {
               closeModal();
-              playAudio2(0.1);
+              playAudio2();
             }}
             className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
@@ -135,7 +135,7 @@ const AboutTab = ({ isOpen, windowId, handleClose }) => {
                 target="_blank"
                 className="underline"
                 style={{ color: "var(--text3)" }}
-                onClick={() => playAudio1(0.2)}
+                onClick={() => playAudio1()}
               >
                 BotStacks
               </a>

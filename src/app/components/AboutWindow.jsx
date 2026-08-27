@@ -143,7 +143,7 @@ const AboutWindow = ({
                 <button
                   onClick={() => {
                     onMinimize && onMinimize();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -156,7 +156,7 @@ const AboutWindow = ({
                 <button
                   onClick={() => {
                     onClose();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -210,7 +210,7 @@ const AboutWindow = ({
                     target="_blank"
                     className="underline"
                     style={{ color: "var(--text3)" }}
-                    onClick={() => playAudio1(0.2)}
+                    onClick={() => playAudio1()}
                   >
                     BotStacks
                   </a>

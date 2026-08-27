@@ -127,7 +127,7 @@ const ResumeWindow = ({
                 <button
                   onClick={() => {
                     onMinimize && onMinimize();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -140,7 +140,7 @@ const ResumeWindow = ({
                 <button
                   onClick={() => {
                     onClose();
-                    playAudio2(0.1);
+                    playAudio2();
                   }}
                   className="cursor-pointer transition-transform hover:scale-110"
                   style={{ color: "var(--text-header)" }}
@@ -170,7 +170,7 @@ const ResumeWindow = ({
                   <button
                     onClick={() => {
                       downloadResume();
-                      playAudio1(0.2);
+                      playAudio1();
                     }}
                     className="download-button flex cursor-pointer items-center rounded-md px-4 py-2"
                     style={{ fontSize: "1.25rem" }}
@@ -212,7 +212,7 @@ const ResumeWindow = ({
                   <a
                     href="mailto:serjobarron@gmail.com"
                     className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                    onClick={() => playAudio1(0.2)}
+                    onClick={() => playAudio1()}
                   >
                     <span className="mr-1">
                       <div className="relative h-6 w-6">
@@ -234,7 +234,7 @@ const ResumeWindow = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                    onClick={() => playAudio1(0.2)}
+                    onClick={() => playAudio1()}
                   >
                     <span className="mr-1">
                       <div className="relative h-6 w-6">
@@ -252,7 +252,7 @@ const ResumeWindow = ({
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                    onClick={() => playAudio1(0.2)}
+                    onClick={() => playAudio1()}
                   >
                     <span className="mr-1">
                       <div className="relative h-6 w-6">

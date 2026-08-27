@@ -97,7 +97,7 @@ const Taskbar = ({
             target={href.startsWith("mailto") ? undefined : "_blank"}
             rel="noopener noreferrer"
             className="taskbar-button"
-            onClick={() => playAudio1(0.2)}
+            onClick={() => playAudio1()}
           >
             <Icon size={20} weight="fill" />
             <span>{label}</span>
@@ -122,7 +122,7 @@ const Taskbar = ({
                   isActive ? "taskbar-button--active" : ""
                 } ${win.isMinimized ? "taskbar-button--minimized" : ""}`}
                 onClick={() => {
-                  playAudio1(0.2);
+                  playAudio1();
                   if (win.isMinimized) {
                     // restore from taskbar: un-minimize + bring to front
                     handleRestore(id);

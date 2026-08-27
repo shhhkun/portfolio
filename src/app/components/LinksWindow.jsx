@@ -122,7 +122,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <button
               onClick={() => {
                 onClose();
-                playAudio2(0.1);
+                playAudio2();
               }}
               className="cursor-pointer font-bold transition-transform hover:scale-110"
               style={{ color: "var(--text-header)" }}
@@ -144,7 +144,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
-                onClick={() => playAudio1(0.2)}
+                onClick={() => playAudio1()}
               >
                 <div className="relative h-16 w-16">
                   <GithubLogoIcon
@@ -169,7 +169,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
-                onClick={() => playAudio1(0.2)}
+                onClick={() => playAudio1()}
               >
                 <div className="relative h-16 w-16">
                   <SquareIcon
@@ -198,7 +198,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
-                onClick={() => playAudio1(0.2)}
+                onClick={() => playAudio1()}
               >
                 <div className="relative h-16 w-16">
                   <LinkedinLogoIcon
@@ -222,7 +222,7 @@ const LinksWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
                 <button
                   onClick={() => {
                     handleCopyDiscord();
-                    playAudio1(0.2);
+                    playAudio1();
                   }}
                   className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 >

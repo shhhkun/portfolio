@@ -54,7 +54,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("about");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">

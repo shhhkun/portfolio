@@ -2,6 +2,7 @@
 
 import React, { useRef } from "react";
 import { useAudioPlayer } from "../AudioPlayer";
+import { useBGM } from "../BGMPlayer";
 import Tooltip from "../Tooltip";
 
 /**
@@ -51,6 +52,7 @@ const Moon = ({
   radialY, // optional
 }) => {
   const { playAudio1, playAudio6 } = useAudioPlayer();
+  const { toggleBGM, isPlaying: bgmPlaying } = useBGM();
 
   // cooldown so jittery cursor movement doesn't machine-gun the sfx
   const HOVER_COOLDOWN_MS = 1500;
@@ -59,7 +61,7 @@ const Moon = ({
     const now = Date.now();
     if (now - lastHoverRef.current < HOVER_COOLDOWN_MS) return;
     lastHoverRef.current = now;
-    playAudio6(0.15);
+    playAudio6();
   };
 
   const glowX = radialX ?? x;
@@ -143,7 +145,10 @@ const Moon = ({
           <button
             type="button"
             aria-label="Moon"
-            onClick={() => playAudio1(0.2)}
+            onClick={() => {
+              playAudio1();
+              toggleBGM();
+            }}
             onMouseEnter={handleHover}
             className="cursor-pointer transition-[filter] duration-300 hover:drop-shadow-[0_0_8px_var(--glow-color)]"
             style={{

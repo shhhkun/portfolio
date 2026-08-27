@@ -47,7 +47,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
         className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
         onClick={() => {
           closeModal();
-          playAudio2(0.1);
+          playAudio2();
         }}
         aria-hidden={!isOpen}
       />
@@ -74,7 +74,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
           <button
             onClick={() => {
               closeModal();
-              playAudio2(0.1);
+              playAudio2();
             }}
             className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
@@ -101,7 +101,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <button
                   onClick={() => {
                     downloadResume();
-                    playAudio1(0.2);
+                    playAudio1();
                   }}
                   className="download-button flex cursor-pointer items-center rounded-md px-4 py-2"
                   style={{ fontSize: "1rem" }}
@@ -143,7 +143,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                 <a
                   href="mailto:serjobarron@gmail.com"
                   className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                  onClick={() => playAudio1(0.2)}
+                  onClick={() => playAudio1()}
                 >
                   <span className="mr-1">
                     <div className="relative h-6 w-6">
@@ -164,7 +164,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                  onClick={() => playAudio1(0.2)}
+                  onClick={() => playAudio1()}
                 >
                   <span className="mr-1">
                     <div className="relative h-6 w-6">
@@ -182,7 +182,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex transform cursor-pointer items-center no-underline transition-transform duration-300 hover:scale-105"
-                  onClick={() => playAudio1(0.2)}
+                  onClick={() => playAudio1()}
                 >
                   <span className="mr-1">
                     <div className="relative h-6 w-6">
