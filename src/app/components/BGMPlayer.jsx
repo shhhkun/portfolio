@@ -15,7 +15,7 @@ const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 // Sun/Moon are themed toggles for this one track:
 //   - "start" resumes playback from where it last paused (fade-in)
 //   - "pause" fades out, keeps position, suspends playback
-const TRACK_URL = `${assetBase}/audio/bgm-1.wav`;
+const TRACK_URL = `${assetBase}/audio/bgm-2.wav`;
 
 const BGMContext = createContext();
 
@@ -24,7 +24,7 @@ export const useBGM = () => useContext(BGMContext);
 export const BGMProvider = ({ children }) => {
   const { isMuted } = useAudioPlayer(); // global mute also silences BGM
   //steady listening level the track settles at after its fade-in
-  const BASE_VOLUME = 0.5;
+  const BASE_VOLUME = 0.05;
   const FADE_IN_MS = 2500;
   const FADE_OUT_MS = 1500;
 
