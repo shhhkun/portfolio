@@ -17,7 +17,7 @@ const HandleBar = () => (
   />
 );
 
-const ContactTab = ({ isOpen, windowId, handleClose }) => {
+const ResumeTab = ({ isOpen, windowId, handleClose }) => {
   const { playAudio1, playAudio2 } = useAudioPlayer();
 
   // determine the translation state for the sliding animation
@@ -527,4 +527,4 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
   );
 };
 
-export default ContactTab;
+export default ResumeTab;
