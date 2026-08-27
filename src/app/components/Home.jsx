@@ -2,6 +2,7 @@
 
 import React from "react";
 import { AudioPlayerProvider } from "./AudioPlayer";
+import { BGMProvider } from "./BGMPlayer";
 import { ThemeProvider } from "./ThemeContext";
 import HomeContent from "./HomeContent";
 
@@ -9,7 +10,9 @@ const Home = ({ children }) => {
   return (
     <ThemeProvider>
       <AudioPlayerProvider>
-        <HomeContent>{children}</HomeContent>
+        <BGMProvider>
+          <HomeContent>{children}</HomeContent>
+        </BGMProvider>
       </AudioPlayerProvider>
     </ThemeProvider>
   );
