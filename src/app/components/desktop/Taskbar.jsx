@@ -10,7 +10,7 @@ import {
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
 import { useAudioPlayer } from "../audio/AudioPlayer";
-import ThumbnailTooltip from "../ThumbnailTooltip";
+import ThumbnailTooltip from "../tooltips/ThumbnailTooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 

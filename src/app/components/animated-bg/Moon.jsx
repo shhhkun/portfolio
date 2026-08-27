@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { useAudioPlayer } from "../audio/AudioPlayer";
 import { useBGM } from "../audio/BGMPlayer";
-import Tooltip from "../Tooltip";
+import Tooltip from "../tooltips/Tooltip";
 
 /**
  * A simple, controllable moon for the night sky.

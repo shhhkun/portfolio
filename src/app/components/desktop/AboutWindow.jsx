@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { MinusIcon, XIcon } from "@phosphor-icons/react";
 import { useAudioPlayer } from "../audio/AudioPlayer";
-import Tooltip from "../Tooltip";
+import Tooltip from "../tooltips/Tooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 

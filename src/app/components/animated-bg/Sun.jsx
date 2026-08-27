@@ -3,7 +3,7 @@
 import React, { useRef } from "react";
 import { useAudioPlayer } from "../audio/AudioPlayer";
 import { useBGM } from "../audio/BGMPlayer";
-import Tooltip from "../Tooltip";
+import Tooltip from "../tooltips/Tooltip";
 
 /**
  * A simple, controllable sun for the day sky. Structural twin of Moon.jsx,
