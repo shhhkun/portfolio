@@ -72,29 +72,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               </p>
             </button>
 
-            {/* Links Button */}
-            {/* <button
-              className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => {
-                handleOpen("links");
-                playAudio1();
-              }}
-            >
-              <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
-                <div className="relative w-14 h-14">
-                  <LinkIcon
-                    size={56}
-                    color="var(--text)"
-                    weight="light"
-                    className="absolute top-0 left-0 z-10"
-                  />
-                </div>
-              </div>
-              <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
-                links
-              </p>
-            </button> */}
-
             {/* Work Button */}
             <button
               className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
@@ -117,29 +94,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 projects
               </p>
             </button>
-
-            {/* Mail/Contact Button */}
-            {/* <button
-              className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => {
-                handleOpen("contact");
-                playAudio1();
-              }}
-            >
-              <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
-                <div className="relative w-14 h-14">
-                  <EnvelopeSimpleIcon
-                    size={56}
-                    color="var(--text)"
-                    weight="light"
-                    className="absolute top-0 left-0 z-10"
-                  />
-                </div>
-              </div>
-              <p className="font-bold mt-2" style={{ fontSize: "0.75rem" }}>
-                contact
-              </p>
-            </button> */}
 
             {/* Resume/CV Button */}
             <button
@@ -261,59 +215,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 <p className="mt-2 font-bold">about</p>
               </button>
 
-              {/* Links Button */}
-              {/* <button
-              className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => {
-                handleOpen("links");
-                playAudio1();
-              }}
-            >
-              <div className="relative w-16 h-16">
-                <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  style={{
-                    backgroundColor: "var(--bg)",
-                    width: "60px",
-                    height: "19px",
-                    borderRadius: "9999px",
-                    transform: "rotate(-42.5deg)",
-                  }}
-                />
-                <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  style={{
-                    backgroundColor: "var(--bg)",
-                    width: "32px",
-                    height: "19px",
-                    borderRadius: "9999px",
-                    transform:
-                      "rotate(-42.5deg) translateX(-12px) translateY(-4px)",
-                  }}
-                />
-                <div
-                  className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2"
-                  style={{
-                    backgroundColor: "var(--bg)",
-                    width: "32px",
-                    height: "19px",
-                    borderRadius: "9999px",
-                    transform:
-                      "rotate(-42.5deg) translateX(12px) translateY(4px)",
-                  }}
-                />
-                <div className="relative w-16 h-16 flex items-center justify-center">
-                  <LinkIcon
-                    size={64}
-                    color="var(--text)"
-                    weight="light"
-                    className="absolute z-10"
-                  />
-                </div>
-              </div>
-              <p className="font-bold mt-2">links</p>
-            </button> */}
-
               {/* Work Button */}
               <button
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
@@ -341,34 +242,6 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 </div>
                 <p className="mt-2 font-bold">projects</p>
               </button>
-
-              {/* Mail/Contact Button */}
-              {/* <button
-              className="flex flex-col p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
-              onClick={() => {
-                handleOpen("contact");
-                playAudio1();
-              }}
-            >
-              <div className="relative w-16 h-16">
-                <RectangleIcon
-                  size={64}
-                  color="var(--bg)"
-                  weight="fill"
-                  className="absolute top-0 left-0"
-                  style={{
-                    transform: "translateY(0px) scaleY(0.9) scaleX(0.9)",
-                  }}
-                />
-                <EnvelopeSimpleIcon
-                  size={64}
-                  color="var(--text)"
-                  weight="light"
-                  className="absolute top-0 left-0 z-10"
-                />
-              </div>
-              <p className="font-bold mt-2">contact</p>
-            </button> */}
 
               {/* Resume/CV Button */}
               <button
