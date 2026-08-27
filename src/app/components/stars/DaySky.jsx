@@ -43,7 +43,7 @@ const DaySky = (props) => {
         sunGlowSize={28}
         sunGlowIntensity={0.8}
         pulseSpeed={5 * 0.8}
-        radialGlowSize={1640}
+        radialGlowSize={1000}
         radialGlowAlpha={0.28}
         {...props}
       />
