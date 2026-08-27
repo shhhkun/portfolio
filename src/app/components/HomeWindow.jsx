@@ -77,7 +77,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("links");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
@@ -100,7 +100,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("work");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">
@@ -123,7 +123,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex flex-col items-center cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("contact");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="w-full h-full bg-[var(--card-bg)] p-2 rounded-lg">
@@ -146,7 +146,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex transform cursor-pointer flex-col items-center transition-transform duration-300 hover:scale-110"
               onClick={() => {
                 handleOpen("resume");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="h-full w-full rounded-lg bg-[var(--card-bg)] p-2">
@@ -241,7 +241,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => {
                   handleOpen("about");
-                  playAudio1(0.2);
+                  playAudio1();
                 }}
               >
                 <div className="relative h-16 w-16">
@@ -266,7 +266,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex flex-col items-center p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("links");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="relative w-16 h-16">
@@ -319,7 +319,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 className="flex transform cursor-pointer flex-col items-center p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => {
                   handleOpen("work");
-                  playAudio1(0.2);
+                  playAudio1();
                 }}
               >
                 <div className="relative h-16 w-16">
@@ -347,7 +347,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               className="flex flex-col p-4 cursor-pointer transition-transform duration-300 transform hover:scale-110"
               onClick={() => {
                 handleOpen("contact");
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               <div className="relative w-16 h-16">
@@ -375,7 +375,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                 className="flex transform cursor-pointer flex-col p-4 transition-transform duration-300 hover:scale-110"
                 onClick={() => {
                   handleOpen("resume");
-                  playAudio1(0.2);
+                  playAudio1();
                 }}
               >
                 <div className="relative h-16 w-16">
