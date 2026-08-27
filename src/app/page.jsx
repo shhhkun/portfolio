@@ -7,9 +7,9 @@ import AboutWindow from "./components/AboutWindow";
 import WorkWindow from "./components/WorkWindow";
 import ResumeWindow from "./components/ResumeWindow";
 
-import AboutTab from "./components/AboutTab";
-import WorkTab from "./components/WorkTab";
-import ResumeTab from "./components/ResumeTab";
+import AboutTab from "./components/mobile/AboutTab";
+import WorkTab from "./components/mobile/WorkTab";
+import ResumeTab from "./components/mobile/ResumeTab";
 
 import Taskbar from "./components/Taskbar";
 import { useTheme } from "./components/ThemeContext";
