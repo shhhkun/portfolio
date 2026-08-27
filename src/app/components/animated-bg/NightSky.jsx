@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import StarfieldBackground from "./StarfieldBackground";
+import StarfieldBackground from "./Stars";
 import Moon from "./Moon";
 
 /**

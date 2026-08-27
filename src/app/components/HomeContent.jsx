@@ -3,8 +3,8 @@
 import React, { useState, useEffect } from "react";
 import MuteButton from "./MuteButton";
 import ThemeButton from "./ThemeButton";
-import Waves from "./Waves";
-import Sky from "./stars/Sky";
+import Waves from "./animated-bg/Waves";
+import Sky from "./animated-bg/Sky";
 import { useTheme } from "./ThemeContext";
 
 const HomeContent = ({ children }) => {
