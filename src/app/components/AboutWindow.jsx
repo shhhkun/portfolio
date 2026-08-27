@@ -202,7 +202,7 @@ const AboutWindow = ({
                   className="pl-2"
                   style={{ color: "var(--text)", fontSize: "1.125rem" }}
                 >
-                  Software Engineer, Full-Stack Developer, UI/UX Enthusiast
+                  Software Engineer, Full-Stack Systems & AI/LLM
                   <br />
                   Former Software Engineer Intern at{" "}
                   <a
@@ -234,9 +234,9 @@ const AboutWindow = ({
                 </p>
 
                 <p style={{ marginBottom: "0.625rem" }}>
-                  I’m a Software Engineer and Full-Stack Developer dedicated to
-                  building digital experiences that are as reliable under the
-                  hood as they are intuitive to the user.
+                  I’m a Software Engineer focused on building digital products
+                  that are as reliable under the hood as they are intuitive to
+                  the user.
                 </p>
 
                 <p style={{ marginBottom: "0.625rem" }}>
@@ -247,7 +247,7 @@ const AboutWindow = ({
                   the hardware world fascinating, but realized the
                   research-focused nature of embedded systems wasn't where I
                   wanted to leave my mark. Instead, I discovered a passion for
-                  modern software development—specifically the fast-paced,
+                  modern software development&mdash;specifically the fast-paced,
                   collaborative cycle of building, testing, and refining
                   applications. Today, I thrive on finding elegant code
                   solutions, cross-functional collaboration, and continuously
@@ -259,24 +259,25 @@ const AboutWindow = ({
                 <ul className="mt-5 ml-5 list-disc">
                   <li>
                     <span style={{ color: "var(--text3)" }}>
-                      <b>Full-Stack Development: </b>
+                      <b>Full-Stack Systems: </b>
                     </span>
-                    Bringing innovative ideas to life from the backend to the
-                    user interface.
+                    Building applications end-to-end, from backend logic and
+                    APIs to databases and polished user interfaces.
                   </li>
                   <li>
                     <span style={{ color: "var(--text3)" }}>
-                      <b>User Experience: </b>
+                      <b>AI/LLM Integration: </b>
                     </span>
-                    Designing and building intuitive applications that are a
-                    pleasure to use.
+                    Integrating LLMs into applications and workflows to build
+                    practical AI-powered products and systems.
                   </li>
                   <li>
                     <span style={{ color: "var(--text3)" }}>
-                      <b>Problem-Solving: </b>
+                      <b>Product & UX: </b>
                     </span>
-                    Translating complex concepts into elegant and user-friendly
-                    solutions.
+                    Thinking through both the technical implementation and user
+                    experience to build software that is intuitive, useful, and
+                    reliable.
                   </li>
                 </ul>
               </div>
