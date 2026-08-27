@@ -37,7 +37,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
               2000, // 2sec
               "Full-Stack Developer",
               2000,
-              "Web and App Creator",
+              "AI/LLM Engineer",
               2000,
             ]}
             wrapper="span"
@@ -225,7 +225,7 @@ const HomeWindow = ({ handleOpen, isMobile }) => {
                   2000, // 2sec
                   "Full-Stack Developer",
                   2000,
-                  "Web and App Creator",
+                  "AI/LLM Engineer",
                   2000,
                 ]}
                 wrapper="span"
