@@ -13,12 +13,12 @@ const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 const AudioPlayerContext = createContext();
 
 const volumeControl = {
-  audio1: 0.2, // click
-  audio2: 0.1, // close
-  audio3: 0.1, // unmute
-  audio4: 0.1, // light mode transition
-  audio5: 0.1, // dark mode transition
-  audio6: 0.15, // sun/moon hover
+  audio1: 0.1, // click
+  audio2: 0.05, // close
+  audio3: 0.05, // unmute
+  audio4: 0.05, // light mode transition
+  audio5: 0.05, // dark mode transition
+  audio6: 0.1, // sun/moon hover
 };
 
 // custom hook
