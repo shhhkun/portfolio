@@ -6,7 +6,7 @@ This is my portfolio website built to showcase my skills, projects, and backgrou
 
 ## Features
 
-- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable windows for different sections (about, projects, resume), a taskbar for socials and navigation, and custom tooltips/previews.
+- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable windows for different sections (about, projects, resume), a taskbar for socials and navigation, and custom tooltips/window previews.
 
 - **Responsive Interface**: The portfolio sizes accordingly to your device viewport (works on mobile/smaller devices).
 
