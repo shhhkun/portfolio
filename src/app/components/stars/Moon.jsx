@@ -138,7 +138,7 @@ const Moon = ({
         <div style={borderGlowStyle} />
         <Tooltip
           title="THE MOON"
-          text="Quiet companion of the night sky."
+          text="Click me for some good vibes."
           offsetX={0}
           offsetY={100}
         >

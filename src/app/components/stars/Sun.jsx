@@ -150,7 +150,7 @@ const Sun = ({
         <div style={borderGlowStyle} />
         <Tooltip
           title="THE SUN"
-          text="Bright companion of the sky."
+          text="Click me for some good vibes."
           offsetX={0}
           offsetY={100}
         >
