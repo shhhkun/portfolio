@@ -9,7 +9,7 @@ import {
   BriefcaseIcon,
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 import ThumbnailTooltip from "./ThumbnailTooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;

@@ -6,7 +6,7 @@ import {
   MapPinIcon,
   PhoneIcon,
 } from "@phosphor-icons/react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 

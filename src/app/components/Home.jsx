@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { AudioPlayerProvider } from "./AudioPlayer";
-import { BGMProvider } from "./BGMPlayer";
+import { AudioPlayerProvider } from "./audio/AudioPlayer";
+import { BGMProvider } from "./audio/BGMPlayer";
 import { ThemeProvider } from "./ThemeContext";
 import HomeContent from "./HomeContent";
 

@@ -8,7 +8,7 @@ import {
   EnvelopeSimpleIcon,
   ReadCvLogoIcon,
 } from "@phosphor-icons/react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 import { TypeAnimation } from "react-type-animation";
 import TiltCard from "./TiltCard";
 

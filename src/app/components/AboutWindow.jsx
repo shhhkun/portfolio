@@ -4,7 +4,7 @@ import React, { useState, useRef, useEffect } from "react";
 import { motion } from "framer-motion";
 import Draggable from "react-draggable";
 import { MinusIcon, XIcon } from "@phosphor-icons/react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 import Tooltip from "./Tooltip";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;

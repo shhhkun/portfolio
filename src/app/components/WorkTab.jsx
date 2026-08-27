@@ -2,7 +2,7 @@ import React from "react";
 import { GithubLogoIcon } from "@phosphor-icons/react";
 import GitHubLogo from "../utils/GitHubLogo";
 import FigmaLogo from "../utils/FigmaLogo";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 
 const assetBase = process.env.NEXT_PUBLIC_ASSET_BASE_URL;
 

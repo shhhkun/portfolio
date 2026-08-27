@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 import { SpeakerNoneIcon, SpeakerXIcon } from "@phosphor-icons/react";
 
 const MuteButton = () => {

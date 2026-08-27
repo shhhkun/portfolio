@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useRef } from "react";
-import { useAudioPlayer } from "../AudioPlayer";
-import { useBGM } from "../BGMPlayer";
+import { useAudioPlayer } from "../audio/AudioPlayer";
+import { useBGM } from "../audio/BGMPlayer";
 import Tooltip from "../Tooltip";
 
 /**

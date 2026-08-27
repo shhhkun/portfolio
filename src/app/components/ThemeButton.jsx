@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useEffect } from "react";
-import { useAudioPlayer } from "./AudioPlayer";
+import { useAudioPlayer } from "./audio/AudioPlayer";
 import { SunIcon, MoonIcon } from "@phosphor-icons/react";
 
 const ThemeButton = ({ theme, setTheme }) => {
