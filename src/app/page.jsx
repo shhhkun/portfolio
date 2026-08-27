@@ -12,6 +12,7 @@ import WorkTab from "./components/WorkTab";
 import ResumeTab from "./components/ResumeTab";
 
 import Taskbar from "./components/Taskbar";
+import { useTheme } from "./components/ThemeContext";
 
 const useIsMobile = () => {
   const [isMobile, setIsMobile] = useState(false);
@@ -75,6 +76,7 @@ const Page = () => {
   const [highestZIndex, setHighestZIndex] = useState(100);
   const [openCount, setOpenCount] = useState(0);
   const isMobile = useIsMobile();
+  const { theme } = useTheme();
 
   // compute a cascade position for a freshly opened window
   const getCascadePosition = () => {
@@ -191,7 +193,7 @@ const Page = () => {
   return (
     <main>
       <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <div className="z-10">
+        <div className="z-50">
           <HomeWindow handleOpen={handleOpen} isMobile={isMobile} />
         </div>
       </div>
@@ -239,6 +241,7 @@ const Page = () => {
         handleMinimize={handleMinimize}
         handleRestore={handleRestore}
         isMobile={isMobile}
+        theme={theme}
       />
     </main>
   );

@@ -120,7 +120,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <button
               onClick={() => {
                 onClose();
-                playAudio2(0.1);
+                playAudio2();
               }}
               className="cursor-pointer font-bold transition-transform hover:scale-110"
               style={{ color: "var(--text-header)" }}
@@ -148,7 +148,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
               style={{ fontSize: "1.25rem" }}
               onClick={() => {
                 handleCopyEmail();
-                playAudio1(0.2);
+                playAudio1();
               }}
             >
               reach out at:{" "}
@@ -171,7 +171,7 @@ const ContactWindow = ({ onClose, onFocus, onStop, zIndex, position }) => {
             <button
               onClick={() => {
                 handleEmailButtonClick();
-                playAudio1(0.2);
+                playAudio1();
               }}
               className="contact-button mt-10 cursor-pointer rounded-md px-4 py-2"
               style={{ fontSize: "1.25rem" }}

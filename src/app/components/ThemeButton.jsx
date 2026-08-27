@@ -20,7 +20,7 @@ const ThemeButton = ({ theme, setTheme }) => {
       className="flex transform cursor-pointer flex-col items-center rounded-xl border-none bg-transparent p-4 transition-transform duration-300 hover:scale-110"
       onClick={() => {
         toggleTheme();
-        theme === "dark" ? playAudio4(0.1) : playAudio5(0.1);
+        theme === "dark" ? playAudio4() : playAudio5();
       }}
     >
       {theme === "dark" ? (

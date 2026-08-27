@@ -1,18 +1,18 @@
 # My Website
 
-This is a personal (portfolio) website built to showcase my skills, projects, and background.
+This is my portfolio website built to showcase my skills, projects, and background.
 
 [**Website**](https://serjo.vercel.app/)
 
 ## Features
 
-- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable windows for different sections (About Me, Projects, Contact Info).
+- **Interactive Desktop Interface:** The portfolio is presented as a virtual desktop with movable windows for different sections (about, projects, resume), a taskbar for socials and navigation, and custom tooltips/window previews.
 
 - **Responsive Interface**: The portfolio sizes accordingly to your device viewport (works on mobile/smaller devices).
 
-- **Dynamic Theming:** Users can toggle between light and dark modes.
+- **Dynamic Theming:** Users can toggle between light and dark modes, each with a unqiue animated background.
 
-- **Sound Effects:** Subtle audio cues to enhance the user experience.
+- **Sound Effects:** Subtle audio cues to enhance the user experience (clicks & hovers), as well as a BGM player.
 
 - **Dynamic Waves:** Animated wave background.
 
@@ -28,11 +28,9 @@ This is a personal (portfolio) website built to showcase my skills, projects, an
 
 ## Potential Future Features
 
-- **Interactive AI Chatbot**: For quick information, FAQ, etc.
-
 - **Built-In Contact/Email Form**
 
-- **More Animations**: Fade into view cards (for projects card)
+- **More Animations**
 
 ## Getting Started
 

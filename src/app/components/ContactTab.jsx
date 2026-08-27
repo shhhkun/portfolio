@@ -61,7 +61,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
         className={`fixed inset-0 z-40 bg-black transition-opacity duration-300 ${backdropOpacityClass} ${visibilityClass}`}
         onClick={() => {
           closeModal();
-          playAudio2(0.1);
+          playAudio2();
         }}
         aria-hidden={!isOpen}
       />
@@ -88,7 +88,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
           <button
             onClick={() => {
               closeModal();
-              playAudio2(0.1);
+              playAudio2();
             }}
             className="absolute left-1/2 -translate-x-1/2 transform cursor-pointer font-bold transition-transform hover:scale-110"
             style={{ color: "var(--text-header)" }}
@@ -115,7 +115,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
             className="relative mt-4 cursor-pointer"
             onClick={() => {
               handleCopyEmail();
-              playAudio1(0.2);
+              playAudio1();
             }}
           >
             reach out at:{" "}
@@ -138,7 +138,7 @@ const ContactTab = ({ isOpen, windowId, handleClose }) => {
           <button
             onClick={() => {
               handleEmailButtonClick();
-              playAudio1(0.2);
+              playAudio1();
             }}
             className="contact-button mt-10 cursor-pointer rounded-md px-4 py-2"
           >

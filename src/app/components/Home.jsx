@@ -1,25 +1,20 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React from "react";
 import { AudioPlayerProvider } from "./AudioPlayer";
+import { BGMProvider } from "./BGMPlayer";
+import { ThemeProvider } from "./ThemeContext";
 import HomeContent from "./HomeContent";
 
 const Home = ({ children }) => {
-  const [theme, setTheme] = useState("dark");
-
-  useEffect(() => {
-    const prefersDark = window.matchMedia(
-      "(prefers-color-scheme: dark)",
-    ).matches;
-    setTheme(prefersDark ? "dark" : "light");
-  }, []);
-
   return (
-    <AudioPlayerProvider>
-      <HomeContent theme={theme} setTheme={setTheme}>
-        {children}
-      </HomeContent>
-    </AudioPlayerProvider>
+    <ThemeProvider>
+      <AudioPlayerProvider>
+        <BGMProvider>
+          <HomeContent>{children}</HomeContent>
+        </BGMProvider>
+      </AudioPlayerProvider>
+    </ThemeProvider>
   );
 };
 

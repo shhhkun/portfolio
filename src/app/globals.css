@@ -24,7 +24,6 @@ html.light {
   --logo-theme: light;
   --accent: #60a5fa;
   --accent2: #a78bfa;
-  --hero-glow: rgba(96, 165, 250, 0.18);
   --window-shadow: 0 10px 30px -8px rgba(45, 62, 80, 0.25);
   --window-shadow-active: 0 18px 45px -10px rgba(45, 62, 80, 0.4);
   --taskbar-bg: rgba(224, 232, 240, 0.85);
@@ -32,6 +31,8 @@ html.light {
   --taskbar-accent: #60a5fa;
   --taskbar-hover: rgba(45, 62, 80, 0.08);
   --taskbar-active: rgba(96, 165, 250, 0.25);
+  --tooltip-bg: #60a5fa;
+  --tooltip-text: #00408f;
 }
 
 html.dark {
@@ -50,12 +51,11 @@ html.dark {
   --border2: #5f5b82; /* for inside cards */
   --button-bg: #273b54; /* for contact */
   --button-bg2: #384158; /* for pill-button */
-  --button-hover: #3679e4; /* for download */
+  --button-hover: #c58d5f; /* for download */
   --scroll: #273b54;
   --logo-theme: dark;
-  --accent: #3b82f6;
+  --accent: #da9b68;
   --accent2: #7c3aed;
-  --hero-glow: rgba(59, 130, 246, 0.12);
   --window-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5);
   --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
   --taskbar-bg: rgba(23, 23, 23, 0.85);
@@ -63,6 +63,8 @@ html.dark {
   --taskbar-accent: #da9b68;
   --taskbar-hover: rgba(255, 255, 255, 0.08);
   --taskbar-active: rgba(176, 212, 124, 0.3);
+  --tooltip-bg: #da9b68;
+  --tooltip-text: #a34900;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -82,12 +84,11 @@ html.dark {
     --border2: #5f5b82; /* for inside cards */
     --button-bg: #273b54; /* for contact */
     --button-bg2: #384158; /* for pill-button */
-    --button-hover: #3679e4; /* for download */
+    --button-hover: #c58d5f; /* for download */
     --scroll: #273b54;
     --logo-theme: dark;
-    --accent: #3b82f6;
+    --accent: #da9b68;
     --accent2: #7c3aed;
-    --hero-glow: rgba(59, 130, 246, 0.12);
     --window-shadow: 0 10px 30px -8px rgba(0, 0, 0, 0.5);
     --window-shadow-active: 0 18px 45px -10px rgba(0, 0, 0, 0.7);
     --taskbar-bg: rgba(23, 23, 23, 0.85);
@@ -95,6 +96,8 @@ html.dark {
     --taskbar-accent: #da9b68;
     --taskbar-hover: rgba(255, 255, 255, 0.08);
     --taskbar-active: rgba(59, 130, 246, 0.3);
+    --tooltip-bg: #da9b68;
+    --tooltip-text: #a34900;
   }
 }
 
