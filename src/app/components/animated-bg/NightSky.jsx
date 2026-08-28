@@ -22,7 +22,7 @@ const NightSky = ({ color = "#ffffff", ...props }) => {
       />
       <Moon
         size={80}
-        x={76}
+        x={80}
         y={18}
         color={"#d1c19a"}
         glow={"#8a8a8a"}

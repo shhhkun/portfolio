@@ -16,7 +16,7 @@ const DaySky = (props) => {
       <SunRings
         size={400}
         innerSize={100}
-        x={76}
+        x={80}
         y={18}
         color={"#e8933a"}
         opacity={0.2}
@@ -36,7 +36,7 @@ const DaySky = (props) => {
 
       <Sun
         size={80}
-        x={76}
+        x={80}
         y={18}
         color={"#f4a940"}
         glow={"#e8933a"}
