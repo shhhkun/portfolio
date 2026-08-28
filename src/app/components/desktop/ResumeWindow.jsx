@@ -390,14 +390,15 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Evaluated weekly lab reports for{" "}
-                    <strong>200 + students</strong>, assessing C implementations
-                    and algorithmic reasoning across data structures, sorting,
-                    graph algorithms, Huffman coding, and cryptography.
+                    Assessed weekly lab reports for{" "}
+                    <strong>200 + students</strong>, evaluating C
+                    implementations and algorithmic reasoning across data
+                    structures, sorting, graph algorithms, Huffman coding, and
+                    cryptography.
                   </li>
                   <li className="mb-2">
-                    Provided technical feedback while coordinating grading
-                    workflows with faculty, teaching assistants, and readers.
+                    Standardized staff grading workflows while guiding students
+                    through memory management and debugging issues.
                   </li>
                 </ul>
               </div>
@@ -434,11 +435,10 @@ const ResumeWindow = ({
                     content for recurring events.
                   </li>
                   <li className="mb-2">
-                    Coordinated event logistics, venue planning, and sponsorship
+                    Led event logistics, venue planning, and sponsorship
                     outreach while managing AV systems, live streaming, and
-                    technical operations for the organization's annual SlugCon
-                    anime convention, supporting{" "}
-                    <strong>1,000+ attendees</strong>.
+                    day-of technical operations for the annual SlugCon anime
+                    convention, supporting <strong>1,000+ attendees</strong>.
                   </li>
                 </ul>
               </div>
@@ -461,7 +461,7 @@ const ResumeWindow = ({
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                    CaseFile
+                    CaseFile: AI Legal Research
                   </span>
                 </div>
                 <p
@@ -504,7 +504,7 @@ const ResumeWindow = ({
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                    Chromatica
+                    Chromatica: Spotify Visualization
                   </span>
                 </div>
                 <p
@@ -537,7 +537,7 @@ const ResumeWindow = ({
               <div>
                 <div className="mt-4 flex items-center justify-between">
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
-                    SmartMirror
+                    SmartMirror: IoT Display System
                   </span>
                 </div>
                 <p
@@ -554,10 +554,10 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Collaborated with a cross-functional team of{" "}
-                    <strong>6 engineers</strong> to design and deploy an
-                    embedded IoT smart mirror with a companion React Native
-                    mobile app for managing user profiles and display settings.
+                    Led a cross-functional team of <strong>6 engineers</strong>{" "}
+                    to design and deploy an embedded IoT smart mirror with a
+                    companion React Native mobile app for managing user profiles
+                    and display settings.
                   </li>
                   <li className="mb-2">
                     Owned <strong>BLE integration</strong> end-to-end by

@@ -306,14 +306,14 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Evaluated weekly lab reports for{" "}
-                  <strong>200 + students</strong>, assessing C implementations
+                  Assessed weekly lab reports for{" "}
+                  <strong>200 + students</strong>, evaluating C implementations
                   and algorithmic reasoning across data structures, sorting,
                   graph algorithms, Huffman coding, and cryptography.
                 </li>
                 <li className="mb-2">
-                  Provided technical feedback while coordinating grading
-                  workflows with faculty, teaching assistants, and readers.
+                  Standardized staff grading workflows while guiding students
+                  through memory management and debugging issues.
                 </li>
               </ul>
             </div>
@@ -344,11 +344,10 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                   for recurring events.
                 </li>
                 <li className="mb-2">
-                  Coordinated event logistics, venue planning, and sponsorship
-                  outreach while managing AV systems, live streaming, and
-                  technical operations for the organization's annual SlugCon
-                  anime convention, supporting <strong>1,000+ attendees</strong>
-                  .
+                  Led event logistics, venue planning, and sponsorship outreach
+                  while managing AV systems, live streaming, and day-of
+                  technical operations for the annual SlugCon anime convention,
+                  supporting <strong>1,000+ attendees</strong>.
                 </li>
               </ul>
             </div>
@@ -370,7 +369,7 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
 
             <div style={{ fontSize: "1rem" }}>
               <div className="mt-4 flex items-center justify-between">
-                <span className="font-bold">CaseFile</span>
+                <span className="font-bold">CaseFile: AI Legal Research</span>
               </div>
               <p
                 className="italic"
@@ -409,7 +408,9 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
 
             <div style={{ fontSize: "1rem" }}>
               <div className="mt-4 flex items-center justify-between">
-                <span className="font-bold">Chromatica</span>
+                <span className="font-bold">
+                  Chromatica: Spotify Visualization
+                </span>
               </div>
               <p
                 className="italic"
@@ -439,7 +440,9 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
 
             <div style={{ fontSize: "1rem" }}>
               <div className="mt-4 flex items-center justify-between">
-                <span className="font-bold">SmartMirror</span>
+                <span className="font-bold">
+                  SmartMirror: IoT Display System
+                </span>
               </div>
               <p
                 className="italic"
@@ -454,10 +457,10 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 }}
               >
                 <li className="mb-2">
-                  Collaborated with a cross-functional team of{" "}
-                  <strong>6 engineers</strong> to design and deploy an embedded
-                  IoT smart mirror with a companion React Native mobile app for
-                  managing user profiles and display settings.
+                  Led a cross-functional team of <strong>6 engineers</strong> to
+                  design and deploy an embedded IoT smart mirror with a
+                  companion React Native mobile app for managing user profiles
+                  and display settings.
                 </li>
                 <li className="mb-2">
                   Owned <strong>BLE integration</strong> end-to-end by
