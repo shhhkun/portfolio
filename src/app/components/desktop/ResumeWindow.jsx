@@ -319,19 +319,24 @@ const ResumeWindow = ({
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Software Engineer Intern
                   </span>
-                  <span
-                    className="italic"
-                    style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                  >
+                  <span style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
                     Oct 2025 – Feb 2026
                   </span>
                 </div>
-                <p
-                  className="italic"
-                  style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-                >
-                  BotStacks – San Francisco, CA
-                </p>
+                <div className="flex justify-between">
+                  <span
+                    className="font-bold italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    BotStacks
+                  </span>
+                  <span
+                    className="italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    San Francisco, CA
+                  </span>
+                </div>
                 <ul
                   className="mt-4 ml-8 list-disc"
                   style={{
@@ -369,19 +374,24 @@ const ResumeWindow = ({
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Computer Science Reader
                   </span>
-                  <span
-                    className="italic"
-                    style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                  >
+                  <span style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
                     Sep 2023 – Jun 2024
                   </span>
                 </div>
-                <p
-                  className="italic"
-                  style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-                >
-                  Baskin School of Engineering – Santa Cruz, CA
-                </p>
+                <div className="flex justify-between">
+                  <span
+                    className="font-bold italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    Baskin School of Engineering
+                  </span>
+                  <span
+                    className="italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    Santa Cruz, CA
+                  </span>
+                </div>
                 <ul
                   className="mt-4 ml-8 list-disc"
                   style={{
@@ -408,19 +418,24 @@ const ResumeWindow = ({
                   <span className="font-bold" style={{ fontSize: "1.25rem" }}>
                     Tech Manager
                   </span>
-                  <span
-                    className="italic"
-                    style={{ fontSize: "1.25rem", color: "var(--text4)" }}
-                  >
+                  <span style={{ fontSize: "1.25rem", color: "var(--text4)" }}>
                     Jun 2023 – Jun 2024
                   </span>
                 </div>
-                <p
-                  className="italic"
-                  style={{ fontSize: "1.125rem", color: "var(--text4)" }}
-                >
-                  Slug Anime and Manga Association – Santa Cruz, CA
-                </p>
+                <div className="flex justify-between">
+                  <span
+                    className="font-bold italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    Slug Anime and Manga Association
+                  </span>
+                  <span
+                    className="italic"
+                    style={{ fontSize: "1.125rem", color: "var(--text4)" }}
+                  >
+                    Santa Cruz, CA
+                  </span>
+                </div>
                 <ul
                   className="mt-4 ml-8 list-disc"
                   style={{
