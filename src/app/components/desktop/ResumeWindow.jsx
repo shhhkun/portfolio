@@ -347,14 +347,13 @@ const ResumeWindow = ({
                   <li className="mb-2">
                     Built reusable UI components and dashboard interfaces in
                     TypeScript for an AI chatbot platform, integrating GraphQL
-                    and REST APIs while developing against its{" "}
-                    <strong>LangChain runner</strong> for LLM execution and
-                    usage analytics.
+                    and REST APIs to support platform features and surface{" "}
+                    <strong>LangChain runner</strong> usage analytics.
                   </li>
                   <li className="mb-2">
                     Redesigned onboarding workflows across free, pro, and team
-                    tiers, streamlining account setup, workspace creation,
-                    chatbot configuration, and tier-specific provisioning while
+                    tiers to simplify account setup, workspace creation, chatbot
+                    configuration, and tier-specific provisioning while
                     integrating <strong>Google OAuth</strong> and{" "}
                     <strong>Stripe</strong> payments.
                   </li>
@@ -407,8 +406,8 @@ const ResumeWindow = ({
                     cryptography.
                   </li>
                   <li className="mb-2">
-                    Standardized staff grading workflows while guiding students
-                    through memory management and debugging issues.
+                    Coordinated grading workflows while guiding students through
+                    memory management and debugging issues.
                   </li>
                 </ul>
               </div>
@@ -444,10 +443,9 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Maintained and optimized a TypeScript/Next.js website,
-                    improving application reliability, frontend presentation,
-                    and performance while managing artist, vendor, and sponsor
-                    content for recurring events.
+                    Maintained and enhanced a TypeScript/Next.js event website,
+                    developing artist galleries and managing vendor, sponsor,
+                    schedule, and calendar content for recurring events.
                   </li>
                   <li className="mb-2">
                     Led event logistics, venue planning, and sponsorship
@@ -495,11 +493,10 @@ const ResumeWindow = ({
                 >
                   <li className="mb-2">
                     Designed a{" "}
-                    <strong>Python/FastAPI retrieval pipeline</strong> that
-                    analyzes arbitrary URLs, extracts structured legal case
-                    metadata, and assembles evidence from CourtListener,
-                    Wikipedia, and semantic retrieval for LLM-powered case
-                    overview generation.
+                    <strong>Python/FastAPI retrieval pipeline</strong> for
+                    arbitrary URLs, extracting legal case metadata and
+                    assembling evidence from CourtListener, Wikipedia, and
+                    semantic retrieval to generate LLM-powered case overviews.
                   </li>
                   <li className="mb-2">
                     Implemented a persistent <strong>RAG knowledge base</strong>{" "}
@@ -508,8 +505,9 @@ const ResumeWindow = ({
                     <strong>96%</strong> through TTL-based Redis caching.
                   </li>
                   <li className="mb-2">
-                    Evaluated retrieval performance across news, articles, and
-                    transcripts, achieving <strong>98.3% Recall@3</strong> and{" "}
+                    Evaluated RAG retrieval performance across news, articles,
+                    and transcripts to improve evidence available for case
+                    overviews, achieving <strong>98.3% Recall@3</strong> and{" "}
                     <strong>0.931 MRR</strong> over 60 queries spanning 10 legal
                     cases.
                   </li>
