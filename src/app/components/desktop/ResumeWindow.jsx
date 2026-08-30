@@ -345,16 +345,15 @@ const ResumeWindow = ({
                   }}
                 >
                   <li className="mb-2">
-                    Built reusable UI components and dashboard interfaces in
-                    TypeScript for an AI chatbot platform, integrating GraphQL
-                    and REST APIs to support platform features and surface{" "}
-                    <strong>LangChain runner</strong> usage analytics.
+                    Shipped usage-based analytics for{" "}
+                    <strong>LangChain runners</strong> by building reusable
+                    TypeScript dashboard components and integrating GraphQL and
+                    REST APIs for a seed-stage no-code AI chatbot platform.
                   </li>
                   <li className="mb-2">
-                    Redesigned onboarding workflows across free, pro, and team
-                    tiers to simplify account setup, workspace creation, chatbot
-                    configuration, and tier-specific provisioning while
-                    integrating <strong>Google OAuth</strong> and{" "}
+                    Reduced time-to-setup across 3 user tiers by simplifying
+                    account setup, workspace creation, and chatbot configuration
+                    while integrating <strong>Google OAuth</strong> and{" "}
                     <strong>Stripe</strong> payments.
                   </li>
                   <li className="mb-2">
@@ -494,9 +493,9 @@ const ResumeWindow = ({
                   <li className="mb-2">
                     Designed a{" "}
                     <strong>Python/FastAPI retrieval pipeline</strong> for
-                    arbitrary URLs, extracting legal case metadata and
-                    assembling evidence from CourtListener, Wikipedia, and
-                    semantic retrieval to generate LLM-powered case overviews.
+                    arbitrary URLs, extracting case metadata and assembling
+                    evidence from CourtListener, Wikipedia, and semantic search
+                    to generate case overviews with gpt-oss-120b.
                   </li>
                   <li className="mb-2">
                     Implemented a persistent <strong>RAG knowledge base</strong>{" "}
