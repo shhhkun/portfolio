@@ -285,9 +285,9 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                   Designed a centralized{" "}
                   <strong>identity and access management</strong> architecture
                   to address fragmented authentication logic across{" "}
-                  <strong>4 core platform services</strong>, developing Clerk
-                  and APISIX proof-of-concepts while defining token, session,
-                  and authorization workflows.
+                  <strong>4 platform services</strong>, developing Clerk and
+                  APISIX proof-of-concepts while defining token, session, and
+                  authorization workflows.
                 </li>
               </ul>
             </div>
@@ -367,7 +367,7 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 <li className="mb-2">
                   Led event logistics, venue planning, and sponsorship outreach
                   while managing AV systems, live streaming, and day-of
-                  technical operations for the annual SlugCon anime convention,
+                  technical operations for the SlugCon anime convention,
                   supporting <strong>1,000+ attendees</strong>.
                 </li>
               </ul>
@@ -419,10 +419,9 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 </li>
                 <li className="mb-2">
                   Evaluated RAG retrieval performance across news, articles, and
-                  transcripts to improve evidence available for case overviews,
-                  achieving <strong>98.3% Recall@3</strong> and{" "}
-                  <strong>0.931 MRR</strong> over 60 queries spanning 10 legal
-                  cases.
+                  transcripts to improve available evidence, achieving{" "}
+                  <strong>98.3% Recall@3</strong> and <strong>0.931 MRR</strong>{" "}
+                  over 60 queries spanning 10 legal cases.
                 </li>
               </ul>
             </div>
@@ -430,7 +429,7 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
             <div style={{ fontSize: "1rem" }}>
               <div className="mt-4 flex items-center justify-between">
                 <span className="font-bold">
-                  Chromatica: Spotify Visualization
+                  Chromatica: Spotify Data Visualization
                 </span>
               </div>
               <p
@@ -447,14 +446,12 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
               >
                 <li className="mb-2">
                   Integrated <strong>Spotify OAuth</strong> to retrieve
-                  personalized listening data, storing user records and API
-                  credentials through Prisma and PostgreSQL while generating
-                  dynamic visualizations from Spotify responses.
+                  personalized listening data, storing user records, OAuth
+                  tokens, and session data in a persistent database.
                 </li>
                 <li className="mb-2">
-                  Developed a reactive interface that generates dynamic themes
-                  from extracted album artwork color palettes, creating
-                  personalized visual experiences from user listening history.
+                  Built a dynamic interface that extracted album artwork colors
+                  to theme the application based on user listening history.
                 </li>
               </ul>
             </div>
@@ -525,8 +522,7 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Frameworks & Libraries:
                 </span>{" "}
-                React, Next.js, FastAPI, Node.js, Express.js, PyTorch, Prisma,
-                Tailwind CSS, pgvector
+                React, Next.js, FastAPI, Node.js, Express.js, PyTorch, pgvector
               </li>
               <li className="mb-2">
                 <span className="font-bold" style={{ color: "var(--text)" }}>
@@ -538,8 +534,8 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                 <span className="font-bold" style={{ color: "var(--text)" }}>
                   Tools & Platforms:
                 </span>{" "}
-                Git, Docker, GitHub Actions, Linux, Playwright, OAuth, REST
-                APIs, LLM APIs
+                Git, Docker, Linux, GitHub Actions, Playwright, OAuth, REST
+                APIs, Figma
               </li>
             </ul>
           </div>
