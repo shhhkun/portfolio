@@ -279,15 +279,15 @@ const ResumeTab = ({ isOpen, windowId, handleClose }) => {
                   Reduced time-to-setup across 3 user tiers by simplifying
                   account setup, workspace creation, and chatbot configuration
                   while integrating <strong>Google OAuth</strong> and{" "}
-                  <strong>Stripe</strong> payments.
+                  <strong>Stripe</strong> billing.
                 </li>
                 <li className="mb-2">
                   Designed a centralized{" "}
                   <strong>identity and access management</strong> architecture
-                  to address fragmented authentication logic across{" "}
-                  <strong>4 platform services</strong>, developing Clerk and
-                  APISIX proof-of-concepts while defining token, session, and
-                  authorization workflows.
+                  to address fragmented authentication and authorization logic
+                  across <strong>4 platform services</strong>, developing Clerk
+                  and APISIX proof-of-concepts while defining token, session,
+                  and RBAC workflows.
                 </li>
               </ul>
             </div>
